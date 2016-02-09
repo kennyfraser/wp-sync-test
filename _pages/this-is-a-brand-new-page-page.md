@@ -31,7 +31,7 @@ page_header_0_show_background_image:
 page_header_0_show_background_video:
   - "0"
 page_header_0_headline:
-  - Headline
+  - Headline Headline Headline
 page_header_0_headline_size:
   - jumbo
 page_header_0_description:
@@ -106,3 +106,4 @@ page_header_0_actions_footnote:
 *   This is a Brand New Page. Page!
 *   This is a Brand New Page. Page!
 *   edit #2
+*   *   edit #3
