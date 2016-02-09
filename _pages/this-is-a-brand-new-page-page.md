@@ -60,8 +60,6 @@ hide_from_related:
   - "0"
 ---
 *   This is a Brand New Page. Page!
-*   This is a Brand New Page. Page!
-*   This is a Brand New Page. Page!
 *   This is a Brand New Page. Page!!
-
-.. Interesting ...
+*   This is a Brand New Page. Page!
+*   This is a Brand New Page. Page!
