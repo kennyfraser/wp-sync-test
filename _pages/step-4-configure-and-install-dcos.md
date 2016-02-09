@@ -194,7 +194,7 @@ In this step you create a YAML configuration file that is customized for your en
           ssh_user: <username>
           superuser_password: <admin-username>
           superuser_username: <admin-password>
-          target_hosts:
+          agent_list:
           - <target-host-1>
           - <target-host-2>
           - <target-host-3>
@@ -244,8 +244,8 @@ In this step you create a YAML configuration file that is customized for your en
     **superuser_username**
     :   This parameter specifies the Admin username. This username is required for using DCOS.
     
-    **target_hosts**
-    :   This parameter specifies a complete list of IPv4 addresses to your target DCOS hosts, including agent host names. This must be a YAML-formatted nested series (-).
+    **agent_list**
+    :   This parameter specifies a complete list of IPv4 addresses to your agent host names. This must be a YAML-formatted nested series (-).
     
     For more configuration examples and all available options, see the [configuration file options][5].
 
