@@ -31,7 +31,7 @@ page_header_0_show_background_image:
 page_header_0_show_background_video:
   - "0"
 page_header_0_headline:
-  - ""
+  - Headline
 page_header_0_headline_size:
   - jumbo
 page_header_0_description:
