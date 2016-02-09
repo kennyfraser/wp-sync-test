@@ -1,63 +1,63 @@
 ---
-ID: 3162
+ID: 3060
 post_title: 'Step 4: Configure and install DCOS (Minuteman)'
 author: Joel Hamill
-post_date: 2016-02-06 08:18:40
+post_date: 2016-02-09 11:37:35
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.mesosphere.com/step-4-configure-and-install-dcos-minuteman/
+  https://dev-mesosphere-documentation.pantheon.io/step-4-configure-and-install-dcos-minuteman-4/
 published: true
 header:
-  - "1"
+  - 'a:1:{i:0;s:1:"1";}'
 page_header:
-  - "1"
+  - 'a:1:{i:0;s:1:"1";}'
 page_options_require_authentication:
-  - ""
+  - 'a:1:{i:0;s:0:"";}'
 hide_from_navigation:
-  - "1"
+  - 'a:1:{i:0;s:1:"1";}'
 hide_from_related:
-  - "1"
+  - 'a:1:{i:0;s:1:"1";}'
 header_0_background:
-  - fill
+  - 'a:1:{i:0;s:4:"fill";}'
 header_0_background_fill_style:
-  - dark
+  - 'a:1:{i:0;s:4:"dark";}'
 header_0_logo_style:
-  - color-light
+  - 'a:1:{i:0;s:11:"color-light";}'
 header_0_navigation_style:
-  - light
+  - 'a:1:{i:0;s:5:"light";}'
 page_header_0_show_page_header:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_size:
-  - default
+  - 'a:1:{i:0;s:7:"default";}'
 page_header_0_fill_screen:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_background:
-  - transparent
+  - 'a:1:{i:0;s:11:"transparent";}'
 page_header_0_show_background_image:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_show_background_video:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_headline:
-  - ""
+  - 'a:1:{i:0;s:0:"";}'
 page_header_0_headline_size:
-  - default
+  - 'a:1:{i:0;s:7:"default";}'
 page_header_0_description:
-  - ""
+  - 'a:1:{i:0;s:0:"";}'
 page_header_0_description_size:
-  - default
+  - 'a:1:{i:0;s:7:"default";}'
 page_header_0_show_image:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_content_alignment:
-  - center
+  - 'a:1:{i:0;s:6:"center";}'
 page_header_0_content_style:
-  - dark
+  - 'a:1:{i:0;s:4:"dark";}'
 page_header_0_actions:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_show_actions_footnote:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_show_video:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 ---
 Choose your DCOS installation method:
 
@@ -242,7 +242,7 @@ In this step you create a YAML configuration file that is customized for your en
     
     **resolvers**
     
-    :   Specify a JSON-formatted list of DNS servers for your DCOS host nodes. You must include the escape characters (`\`) as shown in the template. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them.
+    :   Specify a JSON-formatted list of DNS servers for your DCOS host nodes. You must include the escape characters (``) as shown in the template. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them.
         
         *Caution:* If you set the `resolvers` parameter incorrectly, you will permanently damage your configuration and have to reinstall DCOS.
     
@@ -421,7 +421,7 @@ In this step you create a YAML configuration file that is customized for your en
     
     **resolvers**
     
-    :   Specify a JSON-formatted list of DNS servers for your DCOS host nodes. You must include the escape characters (`\`) as shown in the template. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them.
+    :   Specify a JSON-formatted list of DNS servers for your DCOS host nodes. You must include the escape characters (``) as shown in the template. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them.
         
         *Caution:* If you set the `resolvers` parameter incorrectly, you will permanently damage your configuration and have to reinstall DCOS.
     
