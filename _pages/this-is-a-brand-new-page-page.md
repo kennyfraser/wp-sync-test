@@ -9,45 +9,45 @@ permalink: >
   https://dev-mesosphere-documentation.pantheon.io/this-is-a-brand-new-page-page/
 published: true
 header_0_background:
-  - fill
+  - transparent
 header_0_background_fill_style:
-  - dark
+  - 'a:1:{i:0;s:4:"dark";}'
 header_0_logo_style:
-  - color-light
+  - color-dark
 header_0_navigation_style:
-  - light
+  - dark
 header:
   - "1"
 page_header_0_show_page_header:
-  - "0"
+  - "1"
 page_header_0_size:
   - default
 page_header_0_fill_screen:
-  - "0"
+  - "1"
 page_header_0_background:
   - transparent
 page_header_0_show_background_image:
-  - "0"
+  - "1"
 page_header_0_show_background_video:
   - "0"
 page_header_0_headline:
   - ""
 page_header_0_headline_size:
-  - default
+  - jumbo
 page_header_0_description:
-  - ""
+  - Description
 page_header_0_description_size:
-  - default
+  - large
 page_header_0_show_image:
-  - "0"
+  - "1"
 page_header_0_content_alignment:
   - center
 page_header_0_content_style:
   - dark
 page_header_0_actions:
-  - "0"
+  - "2"
 page_header_0_show_actions_footnote:
-  - "0"
+  - "1"
 page_header_0_show_video:
   - "0"
 page_header:
@@ -58,10 +58,51 @@ hide_from_navigation:
   - "0"
 hide_from_related:
   - "0"
+page_header_0_center_content_vertically:
+  - "1"
+page_header_0_fill_screen_size_limits:
+  - "0"
+page_header_0_background_image:
+  - "2262"
+page_header_0_background_image_position_horizontal:
+  - center
+page_header_0_background_image_position_vertical:
+  - center
+page_header_0_image:
+  - "2527"
+page_header_0_actions_0_label:
+  - Label
+page_header_0_actions_0_trigger:
+  - link
+page_header_0_actions_0_link_url:
+  - Label
+page_header_0_actions_0_open_link_in_new_tab:
+  - "0"
+page_header_0_actions_0_style:
+  - default
+page_header_0_actions_0_invert_style:
+  - "0"
+page_header_0_actions_0_appearance:
+  - fill
+page_header_0_actions_1_label:
+  - Label 2
+page_header_0_actions_1_trigger:
+  - link
+page_header_0_actions_1_link_url:
+  - Label 2
+page_header_0_actions_1_open_link_in_new_tab:
+  - "1"
+page_header_0_actions_1_style:
+  - default
+page_header_0_actions_1_invert_style:
+  - "0"
+page_header_0_actions_1_appearance:
+  - fill
+page_header_0_actions_footnote:
+  - Actions Footnote
 ---
 *   This is a Brand New Page. Page!
 *   This is a Brand New Page. Page!
 *   This is a Brand New Page. Page!
 *   This is a Brand New Page. Page!
-*   
-edit #1
+*   edit #2
