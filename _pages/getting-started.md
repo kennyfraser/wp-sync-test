@@ -119,6 +119,11 @@ Test 123
 Test 456
 
 This is my definition list
-:   - Dog - Cat - Bear
+- Dog
+- Cat
+- Bear
 
 Sally sells sea shells
+
+
+Panthers are black.
