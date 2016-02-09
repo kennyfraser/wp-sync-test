@@ -184,7 +184,6 @@ In this step you create a YAML configuration file that is customized for your en
 
 1.  Customize this `config.yaml` template file for your environment. <!-- do not change bootstrap_url -->
     
-        cluster_config:
           cluster_name: '<cluster-name>'
           ##########################################
           # DO NOT CHANGE the bootstrap_url value, # 
@@ -378,7 +377,6 @@ In this step you create a YAML configuration file that is customized for your en
 
 1.  Customize this `config.yaml` template file for your environment. <!-- bootstrap_url is changeable -->
     
-        cluster_config:
           bootstrap_url: http://<workstation_ip>:<your_port>       
           cluster_name: '<cluster-name>'
           exhibitor_storage_backend: zookeeper
