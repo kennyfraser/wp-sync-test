@@ -57,9 +57,9 @@ page_options_topic_page:
 page_options_require_authentication:
   - 'a:1:{i:0;s:1:"1";}'
 hide_from_navigation:
-  - "0"
+  - "1"
 hide_from_related:
-  - "0"
+  - "1"
 page_header_0_center_content_vertically:
   - "1"
 page_header_0_fill_screen_size_limits:
