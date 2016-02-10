@@ -99,10 +99,12 @@ Before installing DCOS you must prepare your computer or bootstrap node that is 
     
     Temporary outages while the cluster is running are acceptable, but shared storage should generally be up and running to support replacing failed masters.
     
-    **Tip:** To start a Zookeeper instance using Docker, run this command:
+    To start a Zookeeper instance using Docker, run this command:
     
         $ docker run -d -p 2181:2181 -p 2888:2888 -p 3888:3888 --name=dcos_int_zk jplock/zookeeper
         
+    
+    **Tip:** If you've run the `usermod` command in the previous step, you may have to log out and then back in to your installer host machine before starting Zookeeper.
 
 <!-- Amazon S3 bucket
 <dd>
