@@ -106,13 +106,9 @@ Before installing DCOS you must prepare your computer or bootstrap node that is 
     
     **Tip:** If you've run the `usermod` command in the previous step, you may have to log out and then back in to your installer host machine before starting Zookeeper.
 
-<!-- Amazon S3 bucket
-<dd>
-<p>This must be a preexisting S3 bucket. -->
+## Next step
 
-</p> 
-
-<!-- Shared file system</dd> 
-:   An Network File System (NFS) mount that Exhibitor can write to. -->
+[Step 2: Cluster prerequisites][2]
 
  [1]: http://docs.docker.com/engine/installation/
+ [2]: ../step-2-cluster-prerequisites/
