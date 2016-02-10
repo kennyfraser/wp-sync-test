@@ -6,7 +6,7 @@ post_date: 2015-12-11 10:27:18
 post_excerpt: ""
 layout: page
 permalink: >
-  http://dev-mesosphere-documentation.pantheon.io/getting-started/overview/
+  https://dev-mesosphere-documentation.pantheon.io/getting-started/overview/
 published: true
 header_0_background:
   - fill
@@ -19,19 +19,19 @@ header_0_navigation_style:
 header:
   - "1"
 page_header_0_show_page_header:
-  - "0"
+  - "1"
 page_header_0_size:
   - default
 page_header_0_fill_screen:
-  - "0"
+  - "1"
 page_header_0_background:
   - transparent
 page_header_0_show_background_image:
-  - "0"
+  - "1"
 page_header_0_show_background_video:
-  - "0"
+  - "1"
 page_header_0_headline:
-  - ""
+  - '[""]'
 page_header_0_headline_size:
   - default
 page_header_0_description:
@@ -39,27 +39,67 @@ page_header_0_description:
 page_header_0_description_size:
   - default
 page_header_0_show_image:
-  - "0"
+  - "1"
 page_header_0_content_alignment:
   - center
 page_header_0_content_style:
   - dark
 page_header_0_actions:
-  - "0"
+  - "1"
 page_header_0_show_actions_footnote:
-  - "0"
+  - "1"
 page_header_0_show_video:
-  - "0"
+  - "1"
 page_header:
   - "1"
 page_options_topic_page:
-  - ""
+  - 'a:1:{i:0;s:0:"";}'
 page_options_require_authentication:
   - ""
 hide_from_navigation:
   - "0"
 hide_from_related:
   - "0"
+page_header_0_center_content_vertically:
+  - "1"
+page_header_0_fill_screen_size_limits:
+  - "0"
+page_header_0_background_image:
+  - ""
+page_header_0_background_image_position_horizontal:
+  - center
+page_header_0_background_image_position_vertical:
+  - center
+page_header_0_background_video_webm:
+  - ""
+page_header_0_background_video_mp4:
+  - ""
+page_header_0_background_video_swf:
+  - ""
+page_header_0_background_video_ogg:
+  - ""
+page_header_0_image:
+  - ""
+page_header_0_actions_0_label:
+  - ""
+page_header_0_actions_0_trigger:
+  - link
+page_header_0_actions_0_link_url:
+  - ""
+page_header_0_actions_0_open_link_in_new_tab:
+  - "0"
+page_header_0_actions_0_style:
+  - default
+page_header_0_actions_0_invert_style:
+  - "0"
+page_header_0_actions_0_appearance:
+  - fill
+page_header_0_actions_footnote:
+  - ""
+page_header_0_video_source:
+  - youtube
+page_header_0_video_url:
+  - ""
 ---
 The Mesosphere Datacenter Operating System (DCOS) spans all of the machines in your datacenter or cloud and treats them as a single, shared set of resources. DCOS provides a highly elastic and highly scalable way to build, deploy and manage modern applications using containers, microservices and big data systems.
 
