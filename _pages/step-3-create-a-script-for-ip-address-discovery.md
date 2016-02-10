@@ -68,46 +68,56 @@ In this step you create an IP detect script to broadcast the IP address of each 
         $ mkdir -p genconf && cd genconf
         
 
-2.  Create an IP detection script for your environment and save as `genconf/ip-detect`.
-
-### Examples
-
-*   #### Query an authority
+2.  Create an IP detection script for your environment and save as `genconf/ip-detect`. You can use the examples below.
     
-    Here is another example using the AWS Metadata service to get the IP address:
-    
-        #!/bin/sh
-        # Example ip-detect script using an external authority
-        # Uses the AWS Metadata Service to get the node's internal
-        # ipv4 address
-        curl -fsSL http://169.254.169.254/latest/meta-data/local-ipv4
+    *   #### Use the AWS Metadata Server
         
-
-*   #### Use the IP address of an existing interface
-    
-    This method discovers the IP address of a particular interface of the node.
-    
-    If you have multiple generations of hardware with different internals, the interface names can change between hosts. The IP detection script must account for the interface name changes. The example script could also be confused if you attach multiple IP addresses to a single interface, or do complex Linux networking, etc.
-    
-        #!/usr/bin/env bash
-        set -o nounset -o errexit
-        export PATH=/usr/sbin:/usr/bin:$PATH
-        echo $(ip addr show eth0 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
+        This method uses the AWS Metadata service to get the IP address:
         
-
-*   #### Use the network route to the Mesos master
+            #!/bin/sh
+            # Example ip-detect script using an external authority
+            # Uses the AWS Metadata Service to get the node's internal
+            # ipv4 address
+            curl -fsSL http://169.254.169.254/latest/meta-data/local-ipv4
+            
     
-    This method uses the route to a Mesos master to find the source IP address to then communicate with that node.
+    *   #### Use the GCE Metadata Server
+        
+        This method uses the GCE Metadata Server to get the IP address:
+        
+            #!/bin/sh
+            # Example ip-detect script using an external authority
+            # Uses the GCE metadata server to get the node's internal
+            # ipv4 address
+            
+            curl -fsSl -H "Metadata-Flavor: Google" http://169.254.169.254/computeMetadata/v1/instance/network-interfaces/0/ip
+            
     
-    In this example, we assume that the Mesos master has an IP address of `172.28.128.3`. You can use any language for this script. Your Shebang line must be pointed at the correct environment for the language used and the output must be the correct IP address.
+    *   #### Use the IP address of an existing interface
+        
+        This method discovers the IP address of a particular interface of the node.
+        
+        If you have multiple generations of hardware with different internals, the interface names can change between hosts. The IP detection script must account for the interface name changes. The example script could also be confused if you attach multiple IP addresses to a single interface, or do complex Linux networking, etc.
+        
+            #!/usr/bin/env bash
+            set -o nounset -o errexit
+            export PATH=/usr/sbin:/usr/bin:$PATH
+            echo $(ip addr show eth0 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
+            
     
-        #!/usr/bin/env bash
-        set -o nounset -o errexit
+    *   #### Use the network route to the Mesos master
         
-        MASTER_IP=172.28.128.3
+        This method uses the route to a Mesos master to find the source IP address to then communicate with that node.
         
-        echo $(/usr/sbin/ip route show to match 172.28.128.3 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | tail -1)
+        In this example, we assume that the Mesos master has an IP address of `172.28.128.3`. You can use any language for this script. Your Shebang line must be pointed at the correct environment for the language used and the output must be the correct IP address.
         
+            #!/usr/bin/env bash
+            set -o nounset -o errexit
+            
+            MASTER_IP=172.28.128.3
+            
+            echo $(/usr/sbin/ip route show to match 172.28.128.3 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | tail -1)
+            
 
 ## Next step
 
