@@ -109,7 +109,7 @@ In this step you create an IP detect script to broadcast the IP address of each 
         echo $(/usr/sbin/ip route show to match 172.28.128.3 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | tail -1)
         
 
-# Next step
+## Next step
 
 [Step 4: Configure and install DCOS][2]
 
