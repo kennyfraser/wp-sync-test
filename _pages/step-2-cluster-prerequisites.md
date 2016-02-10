@@ -68,7 +68,7 @@ A supported Linux distribution must be installed on your cluster:
 *   Enterprise Linux 7 (RedHat, CentOS)
 *   CoreOS
 
-# Nodes
+# Node Hardware Requirements
 
 *   3 Mesos master nodes (2 Cores, 16 GB RAM, 60 GB HDD) <!-- A cluster of 8 or more machines with a supported Linux distribution. The recommended capacity for each node is 16 GB RAM/2 Cores and 16 GB disk space. The minimum size of a node is a machine with 10 GB of disk space and 1 GB of RAM. -->
 
@@ -83,6 +83,7 @@ A supported Linux distribution must be installed on your cluster:
 *   A High-availability (HA) load balancer, such as HAProxy to balance the following TCP ports to all master nodes: 80, 443, 8080, 8181, 2181, 5050
 
 *   Network Time Protocol (NTP) for clock synchronization must be configured and enabled on all nodes.
+
 *   All of the nodes in your cluster must be able to send and receive traffic to each other.
 *   IPv6 must be disabled for all nodes. For more information see <a href="https://wiki.centos.org/FAQ/CentOS7#head-8984faf811faccca74c7bcdd74de7467f2fcd8ee" target="_blank">How do I disable IPv6</a>.
 
