@@ -304,7 +304,7 @@ In this step you prepare your cluster for DCOS installation.
         $ sudo reboot
         
 
-# Next step
+## Next step
 
 [Step 3: Create a script for IP address discovery][4]
 
