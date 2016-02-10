@@ -75,8 +75,6 @@ Choose your DCOS installation method:
 
 2.  From your terminal, start the DCOS installer with this command.
     
-    **Important:** Contact your sales representative or <sales@mesosphere.io> to obtain the DCOS setup file.
-    
         $ sudo bash dcos_generate_config.ee.sh --web
         Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
         16:36:09 dcos_installer.action_lib.prettyprint:: ====> Starting DCOS installer in web mode
