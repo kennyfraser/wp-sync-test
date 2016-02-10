@@ -6,7 +6,7 @@ post_date: 2016-02-05 16:45:41
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.mesosphere.com/installing-enterprise-edition-1-6/enabling-authorization/
+  https://docs.mesosphere.com/installing-enterprise-edition-1-6/security-and-authentication/enabling-authorization/
 published: true
 header:
   - "1"
