@@ -65,9 +65,9 @@ Choose your DCOS installation method:
 *   [Using SSH to distribute DCOS across your nodes][2]
 *   [Manually distributing DCOS across your nodes][3]
 
-<!-- [Step 3: Configure and install DCOS using SSH to distribute DCOS across your nodes][5] -->
-
 # <a name="gui"></a>Using the GUI installer to install DCOS
+
+**Prerequisite** If your SSH key has a passphrase, you must [decrypt][4] before installing DCOS.
 
 1.  Download and save the DCOS setup file, `dcos_generate_config.ee.sh`, to the `dcos` directory on your workstation. This file is used to create your customized DCOS build file.
     
@@ -134,10 +134,10 @@ Choose your DCOS installation method:
     :   Specify the Zookeeper port. For example, `2181`.
     
     **Upstream DNS Servers**
-    :   Specify the DNS servers, which can be on your private network or the public internet. Caution: If you set this parameter incorrectly you will have to reinstall DCOS. For more information about service discovery, see this [documentation][4].
+    :   Specify the DNS servers, which can be on your private network or the public internet. Caution: If you set this parameter incorrectly you will have to reinstall DCOS. For more information about service discovery, see this [documentation][5].
     
     **IP Detect Script**
-    :   Specify an IP detect script to broadcast the IP address of each node across the cluster. For more information, see the [documentation][5].
+    :   Specify an IP detect script to broadcast the IP address of each node across the cluster. For more information, see the [documentation][6].
 
 6.  Click **Run Pre-Flight**. The preflight script validates that your cluster is installable. This step can take up to 15 minutes to complete. If errors any errors are found, fix and then click **Retry**.
     
@@ -167,9 +167,11 @@ Choose your DCOS installation method:
 
 ### Next Steps
 
-Now you can [assign user roles][6].
+Now you can [assign user roles][7].
 
 # <a name="ssh"></a>Using SSH to distribute DCOS across your nodes
+
+**Prerequisite** If your SSH key has a passphrase, you must [decrypt][4] before installing DCOS.
 
 ### <a name="config-json"></a>4\.1 Configure your cluster
 
@@ -253,11 +255,11 @@ In this step you create a YAML configuration file that is customized for your en
     **agent_list**
     :   This parameter specifies a complete list of IPv4 addresses to your agent host names. This must be a YAML-formatted nested series (-).
     
-    For more configuration examples and all available options, see the [configuration file options][5].
+    For more configuration examples and all available options, see the [configuration file options][6].
 
 2.  Save as `genconf/config.yaml`.
 
-3.  Move your private RSA key to `genconf/ssh_key`. For more information, see the [ssh_key_path][7] parameter.
+3.  Move your private RSA key to `genconf/ssh_key`. For more information, see the [ssh_key_path][8] parameter.
     
         $ cp <path-to-key> genconf/ssh_key && chmod 0600 genconf/ssh_key
         
@@ -266,7 +268,7 @@ In this step you create a YAML configuration file that is customized for your en
 
 In this step you create a custom DCOS build file on your workstation and then install DCOS onto your cluster. With this installation method you create a bootstrap server that uses your SSH key and connects to every node to automate the deployment.
 
-**Tip:** If something goes wrong and you want to rerun your setup, use these cluster [cleanup instructions][8].
+**Tip:** If something goes wrong and you want to rerun your setup, use these cluster [cleanup instructions][9].
 
 **Prerequisites**
 
@@ -347,7 +349,7 @@ You are done!
 
 ### Next Steps
 
-Now you can [assign user roles][6].
+Now you can [assign user roles][7].
 
 # <a name="manual"></a>Manually distributing DCOS across your nodes
 
@@ -401,7 +403,7 @@ In this step you create a YAML configuration file that is customized for your en
         
         *Caution:* If you set the `resolvers` parameter incorrectly, you will permanently damage your configuration and have to reinstall DCOS.
     
-    For more configuration examples and all available options, see the [configuration file options][9].
+    For more configuration examples and all available options, see the [configuration file options][10].
 
 2.  Save as `genconf/config.yaml`.
 
@@ -409,12 +411,12 @@ In this step you create a YAML configuration file that is customized for your en
 
 In this step you create a custom DCOS build file on your workstation and then install DCOS onto your cluster. With this method you package the DCOS distribution yourself and connect to every server manually and run the commands.
 
-**Tip:** If something goes wrong and you want to rerun your setup, use these cluster [cleanup instructions][7].
+**Tip:** If something goes wrong and you want to rerun your setup, use these cluster [cleanup instructions][8].
 
 **Prerequisites**
 
-*   A `genconf/config.yaml` file that is optimized for [manual distribution of DCOS across your nodes][8].
-*   A `genconf/ip-detect` [script][10]. 
+*   A `genconf/config.yaml` file that is optimized for [manual distribution of DCOS across your nodes][9].
+*   A `genconf/ip-detect` [script][11]. 
 *   The Docker nginx image must be on your workstation. You can use this command to install the nginx container:
     
          docker pull nginx
@@ -446,9 +448,9 @@ In this step you create a custom DCOS build file on your workstation and then in
         $ sudo bash dcos_generate_config.sh
         
     
-    **Tip:** For the install script to work, you must have created [genconf/config.yaml][8] and [genconf/ip-detect][10].
+    **Tip:** For the install script to work, you must have created [genconf/config.yaml][9] and [genconf/ip-detect][11].
 
-4.  From the `dcos` directory, run this command to host the DCOS install package through an nginx Docker container. For `<your-port>`, specify the port value that is used in the [bootstrap_url][8].
+4.  From the `dcos` directory, run this command to host the DCOS install package through an nginx Docker container. For `<your-port>`, specify the port value that is used in the [bootstrap_url][9].
     
         $ docker run -p <your-port>:80 -v $PWD/genconf/serve:/usr/share/nginx/html:ro nginx
         
@@ -467,7 +469,7 @@ In this step you create a custom DCOS build file on your workstation and then in
         $ mkdir /tmp/dcos && cd /tmp/dcos
         
 
-8.  Download the DCOS installer from the nginx Docker container, where `<workstation-ip>` and `<your_port>` are specified in [bootstrap_url][8]:
+8.  Download the DCOS installer from the nginx Docker container, where `<workstation-ip>` and `<your_port>` are specified in [bootstrap_url][9]:
     
         $ curl -O http://<workstation-ip>:<your_port>/dcos_install.sh
         
@@ -489,7 +491,7 @@ In this step you create a custom DCOS build file on your workstation and then in
         $ mkdir /tmp/dcos && cd /tmp/dcos
         
 
-13. Download the DCOS installer from the nginx Docker container, where `<workstation-ip>` and `<your_port>` are specified in [bootstrap_url][8]:
+13. Download the DCOS installer from the nginx Docker container, where `<workstation-ip>` and `<your_port>` are specified in [bootstrap_url][9]:
     
         $ curl http://<workstation-ip>:<your_port>/dcos_install.sh
         
@@ -515,15 +517,16 @@ You are done!
 
 ### Next Steps
 
-Now you can [assign user roles][6].
+Now you can [assign user roles][7].
 
  [1]: #gui
  [2]: #ssh
  [3]: #manual
- [4]: ../installing-enterprise-edition-1-6/#scrollNav-3
- [5]: ../configuration-parameters-1-6/
- [6]: ../getting-started/installing/installing-enterprise-edition/enabling-authorization/
- [7]: http://mesos.apache.org/documentation/latest/containerizer/
- [8]: ../administration/introcli/
- [9]: ../configuration-parameters-1-5/
- [10]: ../getting-started/installing/installing-enterprise-edition/dcos-cleanup-script/
+ [4]: https://techjourney.net/how-to-decrypt-an-enrypted-ssl-rsa-private-key-pem-key/
+ [5]: ../installing-enterprise-edition-1-6/#scrollNav-3
+ [6]: ../configuration-parameters-1-6/
+ [7]: ../getting-started/installing/installing-enterprise-edition/enabling-authorization/
+ [8]: http://mesos.apache.org/documentation/latest/containerizer/
+ [9]: ../administration/introcli/
+ [10]: ../configuration-parameters-1-5/
+ [11]: ../getting-started/installing/installing-enterprise-edition/dcos-cleanup-script/
