@@ -1,12 +1,12 @@
 ---
-ID: 3144
+ID: 3095
 post_title: 'Step 4: Configure and install DCOS'
 author: Joel Hamill
-post_date: 2016-02-06 07:53:38
+post_date: 2016-02-05 15:01:26
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.mesosphere.com/installing-enterprise-edition-1-6/step-4-configure-and-install-dcos/
+  https://docs.mesosphere.com/installing-enterprise-edition-1-5/step-4-configure-and-install-dcos/
 published: true
 header:
   - "1"
@@ -17,7 +17,7 @@ page_options_require_authentication:
 hide_from_navigation:
   - "0"
 hide_from_related:
-  - "1"
+  - "0"
 header_0_background:
   - fill
 header_0_background_fill_style:
@@ -61,109 +61,8 @@ page_header_0_show_video:
 ---
 Choose your DCOS installation method:
 
-*   [Using the GUI installer to install DCOS][1]
-*   [Using SSH to distribute DCOS across your nodes][2]
-*   [Manually distributing DCOS across your nodes][3]
-
-<!-- [Step 3: Configure and install DCOS using SSH to distribute DCOS across your nodes][5] -->
-
-# <a name="gui"></a>Using the GUI installer to install DCOS
-
-1.  Download and save the DCOS setup file, `dcos_generate_config.ee.sh`, to the `dcos` directory on your workstation. This file is used to create your customized DCOS build file.
-    
-    **Important:** Contact your sales representative or <sales@mesosphere.io> to obtain the DCOS setup file.
-
-2.  From your terminal, start the DCOS installer with this command.
-    
-        $ sudo bash dcos_generate_config.ee.sh --web
-        Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
-        16:36:09 dcos_installer.action_lib.prettyprint:: ====> Starting DCOS installer in web mode
-        16:36:09 root:: Starting server ('0.0.0.0', 9000)
-        
-    
-    You can add the verbose (`-v`) flag to see the debug output:
-    
-        $ sudo bash dcos_generate_config.ee.sh --web -v
-        
-
-3.  Launch the DCOS web installer in your browser at: `http://<public-ip>:9000`.
-
-4.  Click **Begin Installation**.
-    
-    <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-begin.png" rel="attachment wp-att-3190"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-begin-800x510.png" alt="ui-installer-begin" width="800" height="510" class="alignnone size-large wp-image-3190" /></a>
-    
-    **Important:** If you exit your GUI installation before launching DCOS, you must do this before reinstalling:
-    
-    *   SSH to each node in your cluster and run `rm -rf /opt/mesosphere`.
-    *   SSH to your bootstrap master node and run `rm -rf /var/lib/zookeeper`
-
-5.  Specify your Deployment and DCOS Environment settings:
-    
-    ### Deployment Settings
-    
-    **Master IP Address List**
-    :   Specify a comma-separated list of your static master IP addresses.
-    
-    **Agent IP Address List**
-    :   Specify a comma-separated list of your static agent IP addresses.
-    
-    **Accessible Master IP Address**
-    :   Specify the IP address to a publicly accessible proxy to one of your master nodes. If you either don't have a proxy or you already have access to the network where you are deploying this cluster, you can use one of the master IP's that you specified in the master list. This proxy IP address is used to access the DCOS web interface after the deployment succeeds.
-    
-    **SSH Username**
-    :   Specify the SSH username, for example `centos`. SSH Listening Port
-    :   Specify the port to SSH to, for example `22`. SSH Key
-    :   Specify the SSH key with access to your master IPs.
-    
-    ### DCOS Environment Settings
-    
-    **Username**
-    :   Specify the administrator username. This username is required for using DCOS.
-    
-    **Password**
-    :   Specify the administrator password. This password is required for using DCOS.
-    
-    **Bootstrapping Zookeeper IP Address(es)**
-    :   Specify a comma-separated list of one or more Zookeeper node IP addresses to use for configuring the internal Exhibitor instances. Exhibitor uses this Zookeeper cluster to orchestrate it’s configuration.
-    
-    **Bootstrapping Zookeeper Port**
-    :   Specify the Zookeeper port. For example, `2181`.
-    
-    **Upstream DNS Servers**
-    :   Specify the DNS servers, which can be on your private network or the public internet. Caution: If you set this parameter incorrectly you will have to reinstall DCOS. For more information about service discovery, see this [documentation][4].
-    
-    **IP Detect Script**
-    :   Specify an IP detect script to broadcast the IP address of each node across the cluster. For more information, see the [documentation][5].
-
-6.  Click **Run Pre-Flight**. The preflight script validates that your cluster is installable. This step can take up to 15 minutes to complete. If errors any errors are found, fix and then click **Retry**.
-    
-    <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-pre-flight1.png" rel="attachment wp-att-3197"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-pre-flight1.png" alt="ui-installer-pre-flight1" width="626" height="405" class="alignnone size-full wp-image-3197" /></a>
-
-7.  Click **Deploy** to install DCOS on your cluster. If errors any errors are found, fix and then click **Retry**.
-    
-    <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-deploy1.png" rel="attachment wp-att-3195"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-deploy1.png" alt="ui-installer-deploy1" width="628" height="406" class="alignnone size-full wp-image-3195" /></a>
-
-8.  Click **Run Post-Flight**. If errors any errors are found, fix and then click **Retry**.
-    
-    <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-post-flight1.png" rel="attachment wp-att-3196"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-post-flight1.png" alt="ui-installer-post-flight1" width="623" height="366" class="alignnone size-full wp-image-3196" /></a>
-    
-    **Tip:** You can click **Download Logs** to view your logs locally.
-
-9.  Click **Log In To DCOS**.
-    
-    <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-success1.png" rel="attachment wp-att-3198"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-success1.png" alt="ui-installer-success1" width="625" height="404" class="alignnone size-full wp-image-3198" /></a>
-
-10. Enter your administrator username and password.
-    
-    <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-5.png" rel="attachment wp-att-3182"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-5.png" alt="ui-installer-5" width="368" height="388" class="alignnone size-full wp-image-3182" /></a>
-    
-    You are done!
-    
-    <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/dashboardsmall.png" rel="attachment wp-att-1120"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/dashboardsmall.png" alt="dashboardsmall" width="1338" height="828" class="alignnone size-full wp-image-1120" /></a>
-
-### Next Steps
-
-Now you can [assign user roles][6].
+*   [Using SSH to distribute DCOS across your nodes][1]
+*   [Manually distributing DCOS across your nodes][2]
 
 # <a name="ssh"></a>Using SSH to distribute DCOS across your nodes
 
@@ -173,6 +72,7 @@ In this step you create a YAML configuration file that is customized for your en
 
 1.  Customize this `config.yaml` template file for your environment. <!-- do not change bootstrap_url -->
     
+        cluster_config:
           cluster_name: '<cluster-name>'
           ##########################################
           # DO NOT CHANGE the bootstrap_url value, # 
@@ -183,7 +83,6 @@ In this step you create a YAML configuration file that is customized for your en
           exhibitor_storage_backend: zookeeper
           exhibitor_zk_hosts: <host1>:<port1>
           exhibitor_zk_path: /dcos
-          log_directory: /genconf/logs
           master_discovery: static 
           master_list:
           - <master-ip-1>
@@ -192,11 +91,12 @@ In this step you create a YAML configuration file that is customized for your en
           resolvers:
           - <dns-resolver-1>
           - <dns-resolver-2>
+        
+        ssh_config:
+          log_directory: /genconf/logs          
           ssh_port: '<port-number>'
           ssh_user: <username>
-          superuser_password: <admin-username>
-          superuser_username: <admin-password>
-          agent_list:
+          target_hosts:
           - <target-host-1>
           - <target-host-2>
           - <target-host-3>
@@ -219,9 +119,6 @@ In this step you create a YAML configuration file that is customized for your en
     **exhibitor_zk_hosts**
     :   Specify a comma-separated list of one or more Zookeeper node IP addresses to use for configuring the internal Exhibitor instances. Exhibitor uses this Zookeeper cluster to orchestrate it's configuration.
     
-    **log_directory**
-    :   This parameter specifies the path to the installer host logs from the SSH processes. By default this is set to `/genconf/logs`. This should not be changed because `/genconf` is local to the container that is running the installer, and is a mounted volume.
-    
     **master_discovery**
     :   This parameter specifies the Mesos master discovery method. By default this is set to `static` in the `config.yaml` template file. The `static` method uses the Mesos agents to discover the masters by giving each agent a static list of master IPs. The masters must not change IP addresses, and if a master is replaced, the new master must take the old master's IP address
     
@@ -234,26 +131,24 @@ In this step you create a YAML configuration file that is customized for your en
         
         *Caution:* If you set the `resolvers` parameter incorrectly, you will permanently damage your configuration and have to reinstall DCOS.
     
+    **log_directory**
+    
+    :   This parameter specifies the path to the installer host logs from the SSH processes. By default this is set to `/genconf/logs`. This should not be changed because `/genconf` is local to the container that is running the installer, and is a mounted volume.
+    
     **ssh_port**
     :   This parameter specifies the port to SSH to, for example `22`.
     
     **ssh_user**
-    :   This parameter specifies the SSH username, for example `centos`.
+    :   This parameter specifies the SSH username, for example `vagrant`.
     
-    **superuser_password**
-    :   This parameter specifies the Admin password. This password is required for using DCOS.
+    **target_hosts**
+    :   This parameter specifies a complete list of IPv4 addresses to your target DCOS hosts, including agent host names. This must be a YAML-formatted nested series (-).
     
-    **superuser_username**
-    :   This parameter specifies the Admin username. This username is required for using DCOS.
-    
-    **agent_list**
-    :   This parameter specifies a complete list of IPv4 addresses to your agent host names. This must be a YAML-formatted nested series (-).
-    
-    For more configuration examples and all available options, see the [configuration file options][5].
+    For more configuration examples and all available options, see the [configuration file options][3].
 
 2.  Save as `genconf/config.yaml`.
 
-3.  Move your private RSA key to `genconf/ssh_key`. For more information, see the [ssh_key_path][7] parameter.
+3.  Move your private RSA key to `genconf/ssh_key`. For more information, see the [ssh_key_path][4] parameter.
     
         $ cp <path-to-key> genconf/ssh_key && chmod 0600 genconf/ssh_key
         
@@ -262,12 +157,16 @@ In this step you create a YAML configuration file that is customized for your en
 
 In this step you create a custom DCOS build file on your workstation and then install DCOS onto your cluster. With this installation method you create a bootstrap server that uses your SSH key and connects to every node to automate the deployment.
 
-**Tip:** If something goes wrong and you want to rerun your setup, use these cluster [cleanup instructions][8].
+**Tip:** If something goes wrong and you want to rerun your setup, use these cluster [cleanup instructions][5].
 
 **Prerequisites**
 
-*   A `genconf/config.yaml` file that is optimized for \[automatic distribution of DCOS across your nodes with SSH\]\[4\].
-*   A `genconf/ip-detect` \[script\]\[5\].
+*   A `genconf/config.yaml` file that is optimized for automatic distribution of DCOS across your nodes with SSH.
+*   A `genconf/ip-detect` [script][6].
+
+<!-- Early access URL: https://downloads.mesosphere.com/dcos/EarlyAccess/dcos_generate_config.sh -->
+
+<!-- Stable URL: https://downloads.mesosphere.com/dcos/stable/dcos_generate_config.sh -->
 
 To install DCOS:
 
@@ -341,10 +240,6 @@ To install DCOS:
 
 You are done!
 
-### Next Steps
-
-Now you can [assign user roles][6].
-
 # <a name="manual"></a>Manually distributing DCOS across your nodes
 
 ### <a name="config-json"></a>4\.1 Configure your cluster
@@ -353,6 +248,7 @@ In this step you create a YAML configuration file that is customized for your en
 
 1.  Customize this `config.yaml` template file for your environment. <!-- bootstrap_url is changeable -->
     
+        cluster_config:
           bootstrap_url: http://<workstation_ip>:<your_port>       
           cluster_name: '<cluster-name>'
           exhibitor_storage_backend: zookeeper
@@ -397,7 +293,7 @@ In this step you create a YAML configuration file that is customized for your en
         
         *Caution:* If you set the `resolvers` parameter incorrectly, you will permanently damage your configuration and have to reinstall DCOS.
     
-    For more configuration examples and all available options, see the [configuration file options][9].
+    For more configuration examples and all available options, see the [configuration file options][3].
 
 2.  Save as `genconf/config.yaml`.
 
@@ -405,12 +301,12 @@ In this step you create a YAML configuration file that is customized for your en
 
 In this step you create a custom DCOS build file on your workstation and then install DCOS onto your cluster. With this method you package the DCOS distribution yourself and connect to every server manually and run the commands.
 
-**Tip:** If something goes wrong and you want to rerun your setup, use these cluster [cleanup instructions][7].
+**Tip:** If something goes wrong and you want to rerun your setup, use these cluster [cleanup instructions][4].
 
 **Prerequisites**
 
-*   A `genconf/config.yaml` file that is optimized for [manual distribution of DCOS across your nodes][8].
-*   A `genconf/ip-detect` [script][10]. 
+*   A `genconf/config.yaml` file that is optimized for [manual distribution of DCOS across your nodes][7].
+*   A `genconf/ip-detect` [script][5]. 
 *   The Docker nginx image must be on your workstation. You can use this command to install the nginx container:
     
          docker pull nginx
@@ -436,66 +332,64 @@ In this step you create a custom DCOS build file on your workstation and then in
         │   ├── config.yaml
         │   ├── ip-detect
         
-
-3.  Run this command to generate your customized DCOS build file:
     
-        $ sudo bash dcos_generate_config.sh
-        
+    1.  Run this command to generate your customized DCOS build file:
     
-    **Tip:** For the install script to work, you must have created [genconf/config.yaml][8] and [genconf/ip-detect][10].
+    $ sudo bash dcos_generate_config.sh
 
-4.  From the `dcos` directory, run this command to host the DCOS install package through an nginx Docker container. For `<your-port>`, specify the port value that is used in the [bootstrap_url][8].
+**Tip:** For the install script to work, you must have created [genconf/config.yaml][7] and [genconf/ip-detect][5].
+
+1.  From the `dcos` directory, run this command to host the DCOS install package through an nginx Docker container. For `<your-port>`, specify the port value that is used in the [bootstrap_url][7].
     
-        $ docker run -p <your-port>:80 -v $PWD/genconf/serve:/usr/share/nginx/html:ro nginx
-        
+    $ docker run -p <your-port>:80 -v $PWD/genconf/serve:/usr/share/nginx/html:ro nginx
 
-5.  Run these commands on each of your master nodes in succession to install DCOS using your custom build file.
+2.  Run these commands on each of your master nodes in succession to install DCOS using your custom build file.
     
     **Tip:** Although there is no actual harm to your cluster, DCOS may issue error messages until all of your master nodes are configured.
 
-6.  SSH to your node:
+3.  SSH to your node:
     
         $ ssh <master-ip>
         
 
-7.  Make a new directory and navigate to it:
+4.  Make a new directory and navigate to it:
     
         $ mkdir /tmp/dcos && cd /tmp/dcos
         
 
-8.  Download the DCOS installer from the nginx Docker container, where `<workstation-ip>` and `<your_port>` are specified in [bootstrap_url][8]:
+5.  Download the DCOS installer from the nginx Docker container, where `<workstation-ip>` and `<your_port>` are specified in [bootstrap_url][7]:
     
         $ curl -O http://<workstation-ip>:<your_port>/dcos_install.sh
         
 
-9.  Run this command to install DCOS on your master node:
+6.  Run this command to install DCOS on your master node:
     
         $ sudo bash dcos_install.sh master
         
 
-10. Run these commands on each of your agent nodes to install DCOS using your custom build file.
+7.  Run these commands on each of your agent nodes to install DCOS using your custom build file.
 
-11. SSH to your node:
+8.  SSH to your node:
     
         $ ssh <master-ip>
         
 
-12. Make a new directory and navigate to it:
+9.  Make a new directory and navigate to it:
     
         $ mkdir /tmp/dcos && cd /tmp/dcos
         
 
-13. Download the DCOS installer from the nginx Docker container, where `<workstation-ip>` and `<your_port>` are specified in [bootstrap_url][8]:
+10. Download the DCOS installer from the nginx Docker container, where `<workstation-ip>` and `<your_port>` are specified in [bootstrap_url][7]:
     
         $ curl http://<workstation-ip>:<your_port>/dcos_install.sh
         
 
-14. Run this command to install DCOS on your agent node:
+11. Run this command to install DCOS on your agent node:
     
         $ sudo bash dcos_install.sh slave
         
 
-15. Monitor Exhibitor and wait for it to converge at `http://<master-ip>:8181/exhibitor/v1/ui/index.html`.
+12. Monitor Exhibitor and wait for it to converge at `http://<master-ip>:8181/exhibitor/v1/ui/index.html`.
     
     **Tip:** This process can take about 10 minutes. During this time you will see the Master nodes become visible on the Exhibitor consoles and come online, eventually showing a green light.
     
@@ -503,23 +397,16 @@ In this step you create a custom DCOS build file on your workstation and then in
     
     When the status icons are green, you can access the DCOS web interface.
 
-16. Launch the DCOS web interface at: `http://<load-balanced-ip>/`:
+13. Launch the DCOS web interface at: `http://<load-balanced-ip>/`:
     
     <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/dashboardsmall.png" rel="attachment wp-att-1120"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/dashboardsmall.png" alt="dashboardsmall" width="1338" height="828" class="alignnone size-full wp-image-1120" /></a>
 
 You are done!
 
-### Next Steps
-
-Now you can [assign user roles][6].
-
- [1]: #gui
- [2]: #ssh
- [3]: #manual
- [4]: ../installing-enterprise-edition-1-6/#scrollNav-3
- [5]: ../configuration-parameters-1-6/
- [6]: ../getting-started/installing/installing-enterprise-edition/enabling-authorization/
- [7]: http://mesos.apache.org/documentation/latest/containerizer/
- [8]: ../administration/introcli/
- [9]: ../configuration-parameters-1-5/
- [10]: ../getting-started/installing/installing-enterprise-edition/dcos-cleanup-script/
+ [1]: #ssh
+ [2]: #manual
+ [3]: ../configuration-parameters-1-5/
+ [4]: http://mesos.apache.org/documentation/latest/containerizer/
+ [5]: ../getting-started/installing/installing-enterprise-edition/dcos-cleanup-script/
+ [6]: #scrollNav-3
+ [7]: ../administration/introcli/
