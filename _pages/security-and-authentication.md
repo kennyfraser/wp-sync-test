@@ -65,4 +65,4 @@ Users must be authorized and authenticate to access DCOS services. A DCOS servic
 
 The access control service provides an HTTP API for managing local users, groups and ACLs in a RESTful fashion. The **Bootstrap superuser** manages the ACL through the DCOS web interface.
 
-Optionally, you can validate remote user credentials against an external LDAP service.
+You can validate remote user credentials against an external LDAP service.
