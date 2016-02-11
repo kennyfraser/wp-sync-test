@@ -63,7 +63,7 @@ hide_from_navigation:
 hide_from_related:
   - "0"
 ---
-The terminology page provides a glossary definition of Mesosphere DCOS terms.
+This page contains terms and definitions for the Mesosphere DCOS.
 
 ### Admin router
 
