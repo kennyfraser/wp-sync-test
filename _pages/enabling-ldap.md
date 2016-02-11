@@ -90,9 +90,9 @@ LDAP users are uniquely identified by [distinguished names (DN)][1]. To authenti
         
         **Connection options:** By default, a plain text connection is opened and then [STARTTLS][2] attempts to upgrade this plain text connection to an encrypted SSL/TLS connection. If this upgrade to encryption fails, the plain text connection continues. You can control this by choosing one of these options:
         
-        *   **Use SSL/TLS socket** Only establish an encrypted SSL/TLS connection. <!-- in 1.7 "Use SSL/TLS socket for opening a connection" -->
+        *   **Use SSL/TLS socket** Use SSL/TLS socket for opening a connection. <!-- in 1.7 "Use SSL/TLS socket for opening a connection" -->
         
-        *   **Enforce startTLS** If the upgrade to an encrypted SSL/TLS connection fails, the authentication operation is terminated. <!-- In 1.7 "Abort connection if STARTTLS fails" -->
+        *   **Enforce startTLS** Abort connection if STARTTLS fails. If the upgrade to an encrypted SSL/TLS connection fails, the authentication operation is terminated. <!-- In 1.7 "Abort connection if STARTTLS fails" -->
 
 2.  Click **Add**.
 
