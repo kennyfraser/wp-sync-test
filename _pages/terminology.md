@@ -65,110 +65,89 @@ hide_from_related:
 ---
 This page contains terms and definitions for the Mesosphere DCOS.
 
-### Admin router
+# Admin router
 
+The admin router runs on the DCOS master servers to provide a proxy for the admin parts of the cluster.
 
-:   The admin router runs on the DCOS master servers to provide a proxy for the admin parts of the cluster.
+# <a name="agent"></a>Agent node
 
-### <a name="agent"></a>Agent node
+A Mesos agent node runs a discrete Mesos task on behalf of a framework. It is a agent instance registered with the Mesos master. The synonym of agent node is worker or slave node.
 
+# Cloud template
 
-:   A Mesos agent node runs a discrete Mesos task on behalf of a framework. It is a agent instance registered with the Mesos master. The synonym of agent node is worker or slave node.
+The [DCOS Community Edition (CE) cloud templates][1] are optimized to run Mesosphere DCOS. The templates are a JSON-formatted text files that describe the resources and properties.
 
-### Cloud template
+# Containerizer
 
+The [MesosContainerizer][2] provides lightweight containerization and resource isolation of executors using Linux-specific functionality such as control cgroups and namespaces.
 
-:   The [DCOS Community Edition (CE) cloud templates][1] are optimized to run Mesosphere DCOS. The templates are a JSON-formatted text files that describes the resources and properties.
+# Datacenter operating system
 
-### Containerizer
+A new class of operating system that spans all of the machines in a datacenter or cloud and organizes them to act as one big computer.
 
+# DCOS
 
-:   The [MesosContainerizer][2] provides lightweight containerization and resource isolation of executors using Linux-specific functionality such as control cgroups and namespaces.
+The abbreviated form of the Mesosphere Datacenter Operating System.
 
-### Datacenter operating system
+# DCOS Cluster
 
+A group of Mesos master and agent nodes.
 
-:   A new class of operating system that spans all of the machines in a datacenter or cloud and organizes them to act as one big computer.
+# DCOS service
 
-### DCOS
+DCOS services are Mesosphere-certified applications that are packaged and available from the public [GitHub package repositories][3]. Available DCOS services include Mesosphere-certified Mesos frameworks and other applications. A [Mesos framework][4] is the combination of a Mesos scheduler and an optional custom executor.
 
+# Executor
 
-:   The abbreviated form of the Mesosphere Datacenter Operating System.
+A framework running on top of Mesos consists of two components: a scheduler that registers with the master to be offered resources, and an executor process that is launched on slave nodes to run the framework’s tasks. For more information about framework schedulers and executors, see the [App/Framework development guide][5].
 
-### DCOS Cluster
+# Exhibitor for Zookeeper
 
+The DCOS uses ZooKeeper, a high-performance coordination service to manage the installed DCOS services. Exhibitor automatically configures your Zookeeper installation on the master nodes during your DCOS installation.
 
-:   A group of Mesos master and agent nodes.
+# Framework
 
-### DCOS service
+A Mesos framework is the combination of a Mesos scheduler and an optional custom executor. A framework receives resource offers describing CPU, RAM, etc., and allocates them for discrete tasks that can be launched on Mesos agent nodes. Mesosphere-certified Mesos frameworks, called DCOS services, are packaged and available from public [GitHub package repositories][3]. DCOS services include Mesosphere-certified Mesos frameworks and other applications.
 
+# Master
 
-:   DCOS services are Mesosphere-certified applications that are packaged and available from the public [GitHub package repositories][3]. Available DCOS services include Mesosphere-certified Mesos frameworks and other applications. A [Mesos framework][4] is the combination of a Mesos scheduler and an optional custom executor.
+A Mesos master aggregates resource offers from all [agent nodes][6] and provides them to registered frameworks. For more details about the Mesos master, read about <a href="http://open.mesosphere.com/reference/mesos-master/" target="_blank">Mesos Master Configuration</a>.
 
-### Executor
+# Mesos DNS
 
+[Mesos DNS][7] is an open source DCOS component that provides service discovery within the DCOS cluster. Mesos-DNS allows applications and services that are running on Mesos to find each other by using the domain name system (DNS), similar to how services discover each other throughout the Internet.
 
-:   A framework running on top of Mesos consists of two components: a scheduler that registers with the master to be offered resources, and an executor process that is launched on slave nodes to run the framework’s tasks. For more information about framework schedulers and executors, see the [App/Framework development guide][5].
+# Package repository
 
-### Exhibitor for Zookeeper
+DCOS services are Mesosphere-certified applications that are packaged and available from the public DCOS package repositories that are hosted on GitHub.
 
+# Offer
 
-:   The DCOS uses ZooKeeper, a high-performance coordination service to manage the installed DCOS services. Exhibitor automatically configures your Zookeeper installation on the master nodes during your DCOS installation.
+An offer represents available resources (e.g. cpu, disk, memory) which an agent offers to the master and the master hands to the registered frameworks in some order.
 
-### Framework
+# Private agent node
 
+The DCOS [private agent nodes][8] run the deployed apps and services.
 
-:   A Mesos framework is the combination of a Mesos scheduler and an optional custom executor. A framework receives resource offers describing CPU, RAM, etc., and allocates them for discrete tasks that can be launched on Mesos agent nodes. Mesosphere-certified Mesos frameworks, called DCOS services, are packaged and available from public [GitHub package repositories][3]. DCOS services include Mesosphere-certified Mesos frameworks and other applications.
+# Public agent node
 
-### Master
+The DCOS [public agent nodes][8] provide public access to DCOS applications that are run on a public agent node.
 
+# Slave
 
-:   A Mesos master aggregates resource offers from all [agent nodes][6] and provides them to registered frameworks. For more details about the Mesos master, read about <a href="http://open.mesosphere.com/reference/mesos-master/" target="_blank">Mesos Master Configuration</a>.
+See [agent node][6].
 
-### Mesos DNS
+# Task
 
+A unit of work scheduled by a Mesos framework and executed on a Mesos agent. In Hadoop terminology, this is a "job". In MySQL terminology, this is a "query" or "statement". A task may simply be a Bash command or a Python script.
 
-:   [Mesos DNS][7] is an open source DCOS component that provides service discovery within the DCOS cluster. Mesos-DNS allows applications and services that are running on Mesos to find each other by using the domain name system (DNS), similar to how services discover each other throughout the Internet.
+# Working directory
 
-### Package repository
+A Mesos master requires a directory on the local file system to write replica logs to.
 
+# Zookeeper<a name="zoo"></a>
 
-:   DCOS services are Mesosphere-certified applications that are packaged and available from the public DCOS package repositories that are hosted on GitHub.
-
-### Offer
-
-
-:   An offer represents available resources (e.g. cpu, disk, memory) which an agent offers to the master and the master hands to the registered frameworks in some order.
-
-### Private agent node
-
-
-:   The DCOS [private agent nodes][8] run the deployed apps and services.
-
-### Public agent node
-
-
-:   The DCOS [public agent nodes][8] provide public access to DCOS applications that are run on a public agent node.
-
-### Slave
-
-
-:   See [agent node][6].
-
-### Task
-
-
-:   A unit of work scheduled by a Mesos framework and executed on a Mesos agent. In Hadoop terminology, this is a "job". In MySQL terminology, this is a "query" or "statement". A task may simply be a Bash command or a Python script.
-
-### Working directory
-
-
-:   A Mesos master requires a directory on the local file system to write replica logs to.
-
-### Zookeeper<a name="zoo"></a>
-
-
-:   The DCOS uses ZooKeeper, a high-performance coordination service to manage the installed DCOS services. Exhibitor automatically configures your Zookeeper installation on the master nodes during your DCOS installation.
+The DCOS uses ZooKeeper, a high-performance coordination service to manage the installed DCOS services. Exhibitor automatically configures your Zookeeper installation on the master nodes during your DCOS installation.
 
  [1]: /tag/community/
  [2]: http://mesos.apache.org/documentation/latest/containerizer/
