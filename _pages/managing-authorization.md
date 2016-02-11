@@ -71,6 +71,10 @@ You can create groups and assign users to them. Groups are a collection of insta
 
 You must be an Administrator to manage users or groups.
 
+**Prerequisite:**
+
+*   DCOS Enterprise Edition
+
 1.  Launch the DCOS web interface and login with your Admin username and password. The Administrator username and password are configured during DCOS installation. The Admin username is **Bootstrap superuser** and cannot be changed.
 
 2.  Click on the **Settings** -> **Users** tab and choose your action.
@@ -98,6 +102,10 @@ You must be an Administrator to manage users or groups.
 # Groups
 
 You must be an Administrator to manage users or groups.
+
+**Prerequisite:**
+
+*   DCOS Enterprise Edition
 
 1.  Launch the DCOS web interface and login with your Admin username and password. The Administrator username and password are configured during DCOS installation. The Admin username is **Bootstrap superuser** and cannot be changed.
 
