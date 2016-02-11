@@ -59,7 +59,7 @@ hide_from_navigation:
 hide_from_related:
   - "1"
 ---
-You can enable authorization and authentication in your datacenter with DCOS Enterprise Edition. By default, DCOS provides role-based access control (RBAC) authentication managed through the DCOS web interface. Authorization is defined by access control lists (ACLs). The Admin Router enforces access control.
+You can enable authorization and authentication in your datacenter with DCOS Enterprise Edition. Authentication is managed through the DCOS web interface. Authorization is defined by access control lists (ACLs). The Admin Router enforces access control.
 
 Users must be authorized and authenticate to access DCOS services. A DCOS service is a resource protected by an ACL. The ACL defines the individual users, user groups, and their list of accessible DCOS services. There is only one level of authorization: authorized or not.
 
