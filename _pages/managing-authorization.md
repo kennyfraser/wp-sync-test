@@ -1,12 +1,14 @@
 ---
 ID: 2932
-post_title: Managing Authorization
+post_title: >
+  Managing Authorization and
+  Authentication
 author: Joel Hamill
 post_date: 2016-02-05 16:45:41
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.mesosphere.com/installing-enterprise-edition-1-6/security-and-authentication/enabling-authorization/
+  https://docs.mesosphere.com/installing-enterprise-edition-1-6/security-and-authentication/managing-authorization/
 published: true
 header:
   - "1"
@@ -59,13 +61,17 @@ page_header_0_show_actions_footnote:
 page_header_0_show_video:
   - "0"
 ---
-You can enable authorization and authentication in your datacenter with DCOS Enterprise Edition.
+Authorization and authentication is managed in the DCOS web interface.
+
+The available users roles are Administrator and User. **Administrator** has complete control of DCOS and installed services. **User** has limited access to DCOS and installed services, as defined by the Administrator.
+
+You can create groups and assign users to them. Groups are a collection of installed DCOS services and components that users are granted access to. By default, when you launch DCOS the Administrator is added to the Superuser group.
 
 # Users
 
-The available users roles are Administrator and User. The **Administrator** has complete control of the DCOS and installed services. The **User** role has limited access to DCOS and installed services, as defined by the Administrator.
+You must be an Administrator to manage users or groups.
 
-1.  Launch the DCOS web interface and login with your Admin username and password. The Admin username and password are configured during installation. By default, the Admin username is given the Full Name of **Bootstrap superuser**.
+1.  Launch the DCOS web interface and login with your Admin username and password. The Administrator username and password are configured during DCOS installation. The Admin username is **Bootstrap superuser** and cannot be changed.
 
 2.  Click on the **Settings** -> **Users** tab and choose your action.
     
@@ -89,11 +95,11 @@ The available users roles are Administrator and User. The **Administrator** has 
     1.  From the **Users** tab, select the user name and click **Actions -> Delete from Group**.
     2.  Choose the group and click **Remove**.
 
-# User Groups
+# Groups
 
-You can create Groups and assign users to it. Groups are comprised of Users and installed DCOS services and components. By default, when you launch DCOS the Administrator is added to the **Access Control Service super user group**.
+You must be an Administrator to manage users or groups.
 
-1.  Launch the DCOS web interface and login with the Admin username and password. The Admin username and password are configured during installation.
+1.  Launch the DCOS web interface and login with your Admin username and password. The Administrator username and password are configured during DCOS installation. The Admin username is **Bootstrap superuser** and cannot be changed.
 
 2.  Click on the **Settings** -> **Organization** tab and choose your action.
     
