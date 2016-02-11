@@ -61,7 +61,7 @@ page_header_0_show_video:
 ---
 You can enable authorization and authentication in your datacenter with DCOS Enterprise Edition.
 
-# Manage users
+# Users
 
 The available users roles are Administrator and User. The **Administrator** has complete control of the DCOS and installed services. The **User** role has limited access to DCOS and installed services, as defined by the Administrator.
 
@@ -89,7 +89,7 @@ The available users roles are Administrator and User. The **Administrator** has 
     1.  From the **Users** tab, select the user name and click **Actions -> Delete from Group**.
     2.  Choose the group and click **Remove**.
 
-# Manage groups
+# User Groups
 
 You can create Groups and assign users to it. Groups are comprised of Users and installed DCOS services and components. By default, when you launch DCOS the Administrator is added to the **Access Control Service super user group**.
 
@@ -113,27 +113,3 @@ You can create Groups and assign users to it. Groups are comprised of Users and 
     
     1.  From the **Groups** tab, select the group to open.
     2.  Modify and click **Close**.
-
-# Managing LDAP
-
-To provide external user access to DCOS, you can authenticate users defined in an LDAP (Lightweight Directory Access Protocol) registry. You can then provide users with a single sign-on (SSO), granting them access the authorized services in your DCOS datacenter.
-
-1.  Launch the DCOS web interface and login with the Admin username and password. The Admin username and password are configured during installation.
-    
-    ### Add LDAP directory
-    
-    1.  Click on the **Settings** -> **Organization** -> **External Directory** tab.
-    
-    2.  Click **Add Directory**.
-        
-        <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/auth-ldap.png" rel="attachment wp-att-3223"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/auth-ldap.png" alt="auth-ldap" width="513" height="515" class="alignnone size-full wp-image-3223" /></a>
-        
-        **Host**
-        
-        **Port**
-        
-        **Distinguished Name Template**
-
-<!-- *   add LDAP -->
-
-<!-- *   delete LDAP -->
