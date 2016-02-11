@@ -71,8 +71,6 @@ LDAP users are uniquely identified by [distinguished names (DN)][1]. To authenti
 
 1.  Launch the DCOS web interface and login with the Admin username and password. The Admin username and password are configured during installation.
     
-    ### Add LDAP directory
-    
     1.  Click on the **Settings** -> **Organization** -> **External Directory** tab.
     
     2.  Click **Add Directory**.
@@ -90,11 +88,13 @@ LDAP users are uniquely identified by [distinguished names (DN)][1]. To authenti
             uid=%(username)s,ou=users,dc=example,dc=com
             
         
-        By default, a plain text connection is opened and then [STARTTLS][2] attempts to upgrade this plain text connection to an encrypted SSL/TLS connection. If this upgrade to encryption fails, the plain text connection continues. You can control this by choosing one of these options:
+        **Connection options:** By default, a plain text connection is opened and then [STARTTLS][2] attempts to upgrade this plain text connection to an encrypted SSL/TLS connection. If this upgrade to encryption fails, the plain text connection continues. You can control this by choosing one of these options:
         
-        *   **Use SSL/TLS socket for opening a connection** Only establish an encrypted SSL/TLS connection.
+        *   **Use SSL/TLS socket** Only establish an encrypted SSL/TLS connection. <!-- in 1.7 "Use SSL/TLS socket for opening a connection" -->
         
-        *   **Abort connection if STARTTLS fails** If the upgrade to an encrypted SSL/TLS connection fails, the authentication operation is terminated.
+        *   **Enforce startTLS** If the upgrade to an encrypted SSL/TLS connection fails, the authentication operation is terminated. <!-- In 1.7 "Abort connection if STARTTLS fails" -->
+
+2.  Click **Add**.
 
  [1]: https://www.ldap.com/ldap-dns-and-rdns
  [2]: https://en.wikipedia.org/wiki/STARTTLS
