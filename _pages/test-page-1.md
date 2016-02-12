@@ -1,11 +1,11 @@
 ---
 ID: 36
-post_title: Test Page 1.3
+post_title: Test Page 1.2
 author: gitsync
 post_date: 2016-02-12 15:36:50
 post_excerpt: ""
 layout: page
-permalink: https://gitsync.mmdev2.ca/?page_id=36
+permalink: https://gitsync.mmdev2.ca/test-page-1/
 published: true
 ---
 In this tutorial you install and deploy a containerized Ruby on Rails app named Oinker. With the Oinker app you can post 140-character messages to the internet.
