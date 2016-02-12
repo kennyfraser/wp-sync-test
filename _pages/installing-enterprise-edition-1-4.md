@@ -59,7 +59,7 @@ page_options_require_authentication:
 hide_from_navigation:
   - "0"
 hide_from_related:
-  - "0"
+  - "1"
 ---
 <!-- 1.4 --> You can install DCOS in your environment by using a customized Bash install script.
 
