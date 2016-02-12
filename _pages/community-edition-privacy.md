@@ -8,11 +8,14 @@ post_date: 2015-12-08 08:58:22
 post_excerpt: ""
 layout: page
 permalink: >
-  http://dev-mesosphere-documentation.pantheon.io/community-edition-privacy/
+  http://local.mesodocs.com/community-edition-privacy/
 published: true
 import_src:
-  - >
-    mesosphere-docs/community-edition-privacy.md
+  - 'a:1:{i:0;s:44:"mesosphere-docs/community-edition-privacy.md";}'
+page_options_require_authentication: false
+page_options_show_link_unauthenticated: false
+hide_from_navigation: false
+hide_from_related: false
 ---
 We at Mesosphere know you care about how your personal information is used and shared, and we take your privacy seriously. Please read the following to learn more about our Privacy Policy. By using or accessing the Mesosphere DCOS Community Edition in any manner, you acknowledge that you accept the practices and policies outlined in this Privacy Policy, and you hereby consent that we will collect, use, and share your information in the following ways.
 
