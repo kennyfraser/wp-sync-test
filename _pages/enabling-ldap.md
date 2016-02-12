@@ -57,7 +57,7 @@ page_options_require_authentication:
 hide_from_navigation:
   - "0"
 hide_from_related:
-  - "0"
+  - "1"
 ---
 To provide external user access to DCOS, you can authenticate users that are defined in an LDAP (Lightweight Directory Access Protocol) registry. You can then provide users with a single sign-on (SSO), granting them access the authorized services in your DCOS datacenter.
 
