@@ -6,7 +6,7 @@ post_date: 2015-12-11 12:24:54
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.mesosphere.com/getting-started/installing/release-notes/
+  https://docs.mesosphere.com/administration/release-notes/
 published: true
 header_0_background:
   - fill
