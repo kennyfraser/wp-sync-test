@@ -1,7 +1,7 @@
 ---
 ID: 3156
 post_title: 'Step 1: Workstation prerequisites'
-author: kennyfraser
+author: Joel Hamill
 post_date: 2016-02-12 06:38:14
 post_excerpt: ""
 layout: page
@@ -9,9 +9,9 @@ permalink: >
   http://local.mesodocs.com/step-1-workstation-prerequisites-2/
 published: true
 page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
 hide_from_navigation: false
-hide_from_related: false
+hide_from_related: true
+page_options_show_link_unauthenticated: false
 ---
 Before installing DCOS you must prepare your computer or bootstrap node that is used to run the DCOS installation commands. Your computer or bootstrap node must not be a part of your cluster.
 

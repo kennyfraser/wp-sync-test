@@ -1,7 +1,7 @@
 ---
 ID: 3158
 post_title: 'Step 2: Cluster prerequisites'
-author: kennyfraser
+author: Joel Hamill
 post_date: 2016-02-12 06:38:24
 post_excerpt: ""
 layout: page
@@ -9,9 +9,9 @@ permalink: >
   http://local.mesodocs.com/step-2-cluster-prerequisites/
 published: true
 page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
 hide_from_navigation: false
-hide_from_related: false
+hide_from_related: true
+page_options_show_link_unauthenticated: false
 ---
 Before installing DCOS you must prepare your cluster environment.
 

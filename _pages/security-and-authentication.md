@@ -1,7 +1,7 @@
 ---
 ID: 3153
 post_title: Security and Authentication
-author: kennyfraser
+author: Joel Hamill
 post_date: 2016-02-12 06:37:53
 post_excerpt: ""
 layout: page
@@ -9,9 +9,9 @@ permalink: >
   http://local.mesodocs.com/security-and-authentication/
 published: true
 page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
 hide_from_navigation: false
-hide_from_related: false
+hide_from_related: true
+page_options_show_link_unauthenticated: false
 ---
 You can enable authorization and authentication in your datacenter with DCOS Enterprise Edition. Authentication is managed through the DCOS web interface. Authorization is defined by access control lists (ACLs). The Admin Router enforces access control.
 

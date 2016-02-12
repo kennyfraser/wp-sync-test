@@ -1,7 +1,7 @@
 ---
 ID: 3166
 post_title: 'Step 4: Configure and install DCOS'
-author: kennyfraser
+author: Joel Hamill
 post_date: 2016-02-12 06:39:16
 post_excerpt: ""
 layout: page
@@ -9,9 +9,9 @@ permalink: >
   http://local.mesodocs.com/step-4-configure-and-install-dcos/
 published: true
 page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
 hide_from_navigation: false
-hide_from_related: false
+hide_from_related: true
+page_options_show_link_unauthenticated: false
 ---
 Choose your DCOS installation method:
 

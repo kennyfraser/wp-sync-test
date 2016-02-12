@@ -1,16 +1,16 @@
 ---
 ID: 3143
 post_title: DCOS 1.5
-author: kennyfraser
+author: Joel Hamill
 post_date: 2016-02-12 06:35:53
 post_excerpt: ""
 layout: page
 permalink: http://local.mesodocs.com/dcos-1-5/
 published: true
 page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
+page_options_show_link_unauthenticated: false
 ---
 The release notes provide a list of useful topics and links for Mesosphere DCOS.
 

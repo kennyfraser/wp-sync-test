@@ -1,16 +1,16 @@
 ---
 ID: 3146
 post_title: Enabling LDAP
-author: kennyfraser
+author: Joel Hamill
 post_date: 2016-02-12 06:36:28
 post_excerpt: ""
 layout: page
 permalink: http://local.mesodocs.com/enabling-ldap/
 published: true
 page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
 hide_from_navigation: false
-hide_from_related: false
+hide_from_related: true
+page_options_show_link_unauthenticated: false
 ---
 To provide external user access to DCOS, you can authenticate users that are defined in an LDAP (Lightweight Directory Access Protocol) registry. You can then provide users with a single sign-on (SSO), granting them access the authorized services in your DCOS datacenter.
 

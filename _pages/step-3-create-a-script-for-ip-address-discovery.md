@@ -1,7 +1,7 @@
 ---
 ID: 3161
 post_title: 'Step 3: Create a script for IP address discovery'
-author: kennyfraser
+author: Joel Hamill
 post_date: 2016-02-12 06:38:44
 post_excerpt: ""
 layout: page
@@ -9,9 +9,9 @@ permalink: >
   http://local.mesodocs.com/step-3-create-a-script-for-ip-address-discovery/
 published: true
 page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
 hide_from_navigation: false
-hide_from_related: false
+hide_from_related: true
+page_options_show_link_unauthenticated: false
 ---
 In this step you create an IP detect script to broadcast the IP address of each node across the cluster. Each node in a DCOS cluster has a unique IP address that is used to communicate between nodes in the cluster. The IP detect script prints the unique IPv4 address of a node to STDOUT each time DCOS is started on the node.
 
