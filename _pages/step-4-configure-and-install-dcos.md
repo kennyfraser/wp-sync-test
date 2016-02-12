@@ -90,7 +90,7 @@ Choose your DCOS installation method:
 
 4.  Click **Begin Installation**.
     
-    <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-auth2.png" rel="attachment wp-att-3341"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-auth2-800x513.png" alt="ui-installer-auth2" width="800" height="513" class="alignnone size-large wp-image-3341" /></a>
+    <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-begin.png" rel="attachment wp-att-3190"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-begin-800x510.png" alt="ui-installer-begin" width="800" height="510" class="alignnone size-large wp-image-3190" /></a>
 
 5.  Specify your Deployment and DCOS Environment settings:
     
@@ -138,9 +138,8 @@ Choose your DCOS installation method:
     
     **Important:** If you exit your GUI installation before launching DCOS, you must do this before reinstalling:
     
-        *   SSH to each node in your cluster and run `rm -rf /opt/mesosphere`.
-        *   SSH to your bootstrap master node and run `rm -rf /var/lib/zookeeper`
-        
+    *   SSH to each node in your cluster and run `rm -rf /opt/mesosphere`.
+    *   SSH to your bootstrap master node and run `rm -rf /var/lib/zookeeper`
     
     <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-pre-flight1.png" rel="attachment wp-att-3197"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-pre-flight1.png" alt="ui-installer-pre-flight1" width="626" height="405" class="alignnone size-full wp-image-3197" /></a>
 
@@ -160,11 +159,11 @@ Choose your DCOS installation method:
 
 10. Enter your administrator username and password.
     
-    <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-5.png" rel="attachment wp-att-3182"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-5.png" alt="ui-installer-5" width="368" height="388" class="alignnone size-full wp-image-3182" /></a>
+    <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-auth2.png" rel="attachment wp-att-3341"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-auth2-800x513.png" alt="ui-installer-auth2" width="800" height="513" class="alignnone size-large wp-image-3341" /></a>
     
     You are done!
     
-    <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/dashboardsmall.png" rel="attachment wp-att-1120"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/dashboardsmall.png" alt="dashboardsmall" width="1338" height="828" class="alignnone size-full wp-image-1120" /></a>
+    <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-dashboard-ee.png" rel="attachment wp-att-3343"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-dashboard-ee-800x538.png" alt="ui-dashboard-ee" width="800" height="538" class="alignnone size-large wp-image-3343" /></a>
 
 ### Next Steps
 
@@ -350,11 +349,11 @@ To install DCOS:
 
 9.  Enter your administrator username and password.
     
-    <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-5.png" rel="attachment wp-att-3182"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-5.png" alt="ui-installer-5" width="368" height="388" class="alignnone size-full wp-image-3182" /></a>
+    <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-auth2.png" rel="attachment wp-att-3341"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-auth2-800x513.png" alt="ui-installer-auth2" width="800" height="513" class="alignnone size-large wp-image-3341" /></a>
     
     You are done!
     
-    <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/dashboardsmall.png" rel="attachment wp-att-1120"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/dashboardsmall.png" alt="dashboardsmall" width="1338" height="828" class="alignnone size-full wp-image-1120" /></a>
+    <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-dashboard-ee.png" rel="attachment wp-att-3343"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-dashboard-ee-800x538.png" alt="ui-dashboard-ee" width="800" height="538" class="alignnone size-large wp-image-3343" /></a>
 
 ### Next Steps
 
@@ -526,11 +525,11 @@ In this step you create a custom DCOS build file on your workstation and then in
 
 18. Enter your administrator username and password.
     
-    <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-5.png" rel="attachment wp-att-3182"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-5.png" alt="ui-installer-5" width="368" height="388" class="alignnone size-full wp-image-3182" /></a>
+    <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-auth2.png" rel="attachment wp-att-3341"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-auth2-800x513.png" alt="ui-installer-auth2" width="800" height="513" class="alignnone size-large wp-image-3341" /></a>
     
     You are done!
     
-    <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/dashboardsmall.png" rel="attachment wp-att-1120"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/dashboardsmall.png" alt="dashboardsmall" width="1338" height="828" class="alignnone size-full wp-image-1120" /></a>
+    <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-dashboard-ee.png" rel="attachment wp-att-3343"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-dashboard-ee-800x538.png" alt="ui-dashboard-ee" width="800" height="538" class="alignnone size-large wp-image-3343" /></a>
 
 ### Next Steps
 
