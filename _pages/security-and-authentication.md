@@ -1,63 +1,17 @@
 ---
-ID: 3230
+ID: 3153
 post_title: Security and Authentication
-author: Joel Hamill
-post_date: 2016-02-09 17:01:52
+author: kennyfraser
+post_date: 2016-02-12 06:37:53
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.mesosphere.com/installing-enterprise-edition-1-6/security-and-authentication/
+  http://local.mesodocs.com/security-and-authentication/
 published: true
-header_0_background:
-  - fill
-header_0_background_fill_style:
-  - dark
-header_0_logo_style:
-  - color-light
-header_0_navigation_style:
-  - light
-header:
-  - "1"
-page_header_0_show_page_header:
-  - "0"
-page_header_0_size:
-  - default
-page_header_0_fill_screen:
-  - "0"
-page_header_0_background:
-  - transparent
-page_header_0_show_background_image:
-  - "0"
-page_header_0_show_background_video:
-  - "0"
-page_header_0_headline:
-  - ""
-page_header_0_headline_size:
-  - default
-page_header_0_description:
-  - ""
-page_header_0_description_size:
-  - default
-page_header_0_show_image:
-  - "0"
-page_header_0_content_alignment:
-  - center
-page_header_0_content_style:
-  - dark
-page_header_0_actions:
-  - "0"
-page_header_0_show_actions_footnote:
-  - "0"
-page_header_0_show_video:
-  - "0"
-page_header:
-  - "1"
-page_options_require_authentication:
-  - ""
-hide_from_navigation:
-  - "0"
-hide_from_related:
-  - "1"
+page_options_require_authentication: false
+page_options_show_link_unauthenticated: false
+hide_from_navigation: false
+hide_from_related: false
 ---
 You can enable authorization and authentication in your datacenter with DCOS Enterprise Edition. Authentication is managed through the DCOS web interface. Authorization is defined by access control lists (ACLs). The Admin Router enforces access control.
 
