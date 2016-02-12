@@ -570,6 +570,6 @@ Now you can [assign user roles][6].
  [3]: ../configuration-parameters-1-6/
  [4]: http://ipset.netfilter.org/
  [5]: http://mesos.apache.org/documentation/latest/containerizer/
- [6]: ../getting-started/installing/installing-enterprise-edition/enabling-authorization/
+ [6]: ../security-and-authentication/managing-authorization/
  [7]: ../getting-started/installing/installing-enterprise-edition/dcos-cleanup-script/
  [8]: ../configuration-parameters-1-5/
