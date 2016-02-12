@@ -7,10 +7,8 @@ post_excerpt: ""
 layout: page
 permalink: http://local.mesodocs.com/test/
 published: true
-page_options_require_authentication:
-  - ""
-hide_from_navigation:
-  - "0"
-hide_from_related:
-  - "0"
+page_options_require_authentication: true
+hide_from_navigation: true
+hide_from_related: true
+page_options_show_link_unauthenticated: true
 ---
