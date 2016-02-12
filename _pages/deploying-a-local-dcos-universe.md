@@ -6,7 +6,7 @@ post_date: 2016-01-02 09:18:39
 post_excerpt: ""
 layout: page
 permalink: >
-  http://dev-mesosphere-documentation.pantheon.io/getting-started/installing/installing-enterprise-edition/deploying-a-local-dcos-universe/
+  https://docs.mesosphere.com/getting-started/installing/installing-enterprise-edition/deploying-a-local-dcos-universe/
 published: true
 header_0_background:
   - fill
@@ -56,6 +56,10 @@ page_options_topic_page:
   - ""
 page_options_require_authentication:
   - ""
+hide_from_navigation:
+  - "0"
+hide_from_related:
+  - "0"
 ---
 Follow these instructions to download and configure a local <a href="http://mesosphere.github.io/universe/" target="_blank">DCOS Universe</a>. After downloading the Universe components, you can install and run DCOS services on a datacenter without internet access.
 
