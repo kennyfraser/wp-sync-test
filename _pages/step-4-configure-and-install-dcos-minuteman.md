@@ -359,11 +359,19 @@ To install DCOS:
     
     When the status icons are green, you can access the DCOS web interface.
 
-8.  Launch the DCOS web interface at: `http://<load-balanced-ip>/`:
+8.  Launch the DCOS web interface at: `http://<load-balanced-ip>/`.
+
+9.  Click **Log In To DCOS**.
+    
+    <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-success1.png" rel="attachment wp-att-3198"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-success1.png" alt="ui-installer-success1" width="625" height="404" class="alignnone size-full wp-image-3198" /></a>
+
+10. Enter your administrator username and password.
+    
+    <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-5.png" rel="attachment wp-att-3182"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-5.png" alt="ui-installer-5" width="368" height="388" class="alignnone size-full wp-image-3182" /></a>
+    
+    You are done!
     
     <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/dashboardsmall.png" rel="attachment wp-att-1120"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/dashboardsmall.png" alt="dashboardsmall" width="1338" height="828" class="alignnone size-full wp-image-1120" /></a>
-
-You are done!
 
 ### Next Steps
 
@@ -539,11 +547,19 @@ In this step you create a custom DCOS build file on your workstation and then in
     
     When the status icons are green, you can access the DCOS web interface.
 
-16. Launch the DCOS web interface at: `http://<load-balanced-ip>/`:
+16. Launch the DCOS web interface at: `http://<load-balanced-ip>/`.
+
+17. Click **Log In To DCOS**.
+    
+    <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-success1.png" rel="attachment wp-att-3198"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-success1.png" alt="ui-installer-success1" width="625" height="404" class="alignnone size-full wp-image-3198" /></a>
+
+18. Enter your administrator username and password.
+    
+    <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-5.png" rel="attachment wp-att-3182"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-5.png" alt="ui-installer-5" width="368" height="388" class="alignnone size-full wp-image-3182" /></a>
+    
+    You are done!
     
     <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/dashboardsmall.png" rel="attachment wp-att-1120"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/dashboardsmall.png" alt="dashboardsmall" width="1338" height="828" class="alignnone size-full wp-image-1120" /></a>
-
-You are done!
 
 ### Next Steps
 
