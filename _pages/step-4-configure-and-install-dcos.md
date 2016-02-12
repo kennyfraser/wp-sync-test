@@ -359,8 +359,6 @@ To install DCOS:
 
 Now you can [assign user roles][7].
 
-<a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/dashboardsmall.png" rel="attachment wp-att-1120"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/dashboardsmall.png" alt="dashboardsmall" width="1338" height="828" class="alignnone size-full wp-image-1120" /></a>
-
 # <a name="manual"></a>Manually distributing DCOS across your nodes
 
 ### <a name="config-json"></a>4\.1 Configure your cluster
