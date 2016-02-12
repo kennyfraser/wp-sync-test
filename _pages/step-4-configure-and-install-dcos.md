@@ -544,7 +544,7 @@ Now you can [assign user roles][7].
  [4]: https://techjourney.net/how-to-decrypt-an-enrypted-ssl-rsa-private-key-pem-key/
  [5]: ../installing-enterprise-edition-1-6/#scrollNav-3
  [6]: ../configuration-parameters-1-6/
- [7]: ../getting-started/installing/installing-enterprise-edition/enabling-authorization/
+ [7]: ../security-and-authentication/managing-authorization/
  [8]: http://mesos.apache.org/documentation/latest/containerizer/
  [9]: ../administration/introcli/
  [10]: ../configuration-parameters-1-5/
