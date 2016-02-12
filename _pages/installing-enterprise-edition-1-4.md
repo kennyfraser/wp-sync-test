@@ -1,6 +1,6 @@
 ---
 ID: 939
-post_title: Installing Enterprise Edition
+post_title: Installing Enterprise Edition (1.4)
 author: Joel Hamill
 post_date: 2015-12-11 14:10:40
 post_excerpt: ""
