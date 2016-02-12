@@ -6,7 +6,7 @@ post_date: 2016-01-02 09:20:25
 post_excerpt: ""
 layout: page
 permalink: >
-  http://dev-mesosphere-documentation.pantheon.io/getting-started/installing/installing-enterprise-edition/troubleshooting/
+  https://docs.mesosphere.com/getting-started/installing/installing-enterprise-edition/troubleshooting/
 published: true
 header_0_background:
   - fill
@@ -214,9 +214,9 @@ Publicly accessible applications are run in the public agent node. Public agent 
 
 **Troubleshooting:**
 
-*   You might not be able to SSH to agent nodes, depending on your cluster network configuration. Alternatively, you can SSH from a master node to your agent nodes. For more information, see <a href="https://dev-mesosphere-documentation.pantheon.io/administration/sshcluster/" target="_blank">SSHing to a DCOS cluster</a>.
+*   You might not be able to SSH to agent nodes, depending on your cluster network configuration. Alternatively, you can SSH from a master node to your agent nodes. For more information, see <a href="https://docs.mesosphere.com/administration/sshcluster/" target="_blank">SSHing to a DCOS cluster</a>.
 
-*   You can get the IP address of registered agent nodes from the **Nodes** tab in the <a href="https://dev-mesosphere-documentation.pantheon.io/overview/webinterface/#scrollNav-3" target="_blank">DCOS web interface</a>. Nodes that have not registered are not shown.
+*   You can get the IP address of registered agent nodes from the **Nodes** tab in the <a href="https://docs.mesosphere.com/overview/webinterface/#scrollNav-3" target="_blank">DCOS web interface</a>. Nodes that have not registered are not shown.
 
 *   SSH to your master node and enter this command to view the logs from boot time:
     
