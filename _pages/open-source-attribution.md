@@ -6,11 +6,14 @@ post_date: 2015-12-08 08:58:30
 post_excerpt: ""
 layout: page
 permalink: >
-  http://dev-mesosphere-documentation.pantheon.io/open-source-attribution/
+  http://local.mesodocs.com/open-source-attribution/
 published: true
 import_src:
-  - >
-    mesosphere-docs/open-source-attribution.md
+  - 'a:1:{i:0;s:42:"mesosphere-docs/open-source-attribution.md";}'
+page_options_require_authentication: false
+page_options_show_link_unauthenticated: false
+hide_from_navigation: false
+hide_from_related: false
 ---
 Below is a list of third party open source software which is provided by Mesosphere in connection with Mesosphere DCOS:
 
