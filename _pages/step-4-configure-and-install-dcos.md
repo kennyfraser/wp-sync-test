@@ -273,7 +273,7 @@ In this step you create a custom DCOS build file on your workstation and then in
 **Prerequisites**
 
 *   A `genconf/config.yaml` file that is optimized for \[automatic distribution of DCOS across your nodes with SSH\]\[4\].
-*   A `genconf/ip-detect` \[script\]\[5\].
+*   A `genconf/ip-detect` [script][10].
 
 To install DCOS:
 
@@ -414,7 +414,7 @@ In this step you create a YAML configuration file that is customized for your en
         
         *Caution:* If you set the `resolvers` parameter incorrectly, you will permanently damage your configuration and have to reinstall DCOS.
     
-    For more configuration examples and all available options, see the [configuration file options][10].
+    For more configuration examples and all available options, see the [configuration file options][11].
 
 2.  Save as `genconf/config.yaml`.
 
@@ -427,7 +427,7 @@ In this step you create a custom DCOS build file on your workstation and then in
 **Prerequisites**
 
 *   A `genconf/config.yaml` file that is optimized for [manual distribution of DCOS across your nodes][9].
-*   A `genconf/ip-detect` [script][11]. 
+*   A `genconf/ip-detect` [script][10]. 
 *   The Docker nginx image must be on your workstation. You can use this command to install the nginx container:
     
          docker pull nginx
@@ -459,7 +459,7 @@ In this step you create a custom DCOS build file on your workstation and then in
         $ sudo bash dcos_generate_config.sh
         
     
-    **Tip:** For the install script to work, you must have created [genconf/config.yaml][9] and [genconf/ip-detect][11].
+    **Tip:** For the install script to work, you must have created [genconf/config.yaml][9] and [genconf/ip-detect][10].
 
 4.  From the `dcos` directory, run this command to host the DCOS install package through an nginx Docker container. For `<your-port>`, specify the port value that is used in the [bootstrap_url][9].
     
@@ -547,5 +547,5 @@ Now you can [assign user roles][7].
  [7]: ../security-and-authentication/managing-authorization/
  [8]: http://mesos.apache.org/documentation/latest/containerizer/
  [9]: ../administration/introcli/
- [10]: ../configuration-parameters-1-5/
- [11]: ../getting-started/installing/installing-enterprise-edition/dcos-cleanup-script/
+ [10]: ../step-3-ip-address-discovery-script/
+ [11]: ../configuration-parameters-1-5/
