@@ -272,7 +272,7 @@ In this step you create a custom DCOS build file on your workstation and then in
 
 **Prerequisites**
 
-*   A `genconf/config.yaml` file that is optimized for \[automatic distribution of DCOS across your nodes with SSH\]\[4\].
+*   A `genconf/config.yaml` file that is optimized for automatic distribution of DCOS across your nodes with SSH.
 *   A `genconf/ip-detect` [script][10].
 
 To install DCOS:
