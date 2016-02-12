@@ -461,7 +461,7 @@ In this step you create a custom DCOS build file on your workstation and then in
     
     **Tip:** For the install script to work, you must have created [genconf/config.yaml][9] and [genconf/ip-detect][10].
 
-4.  From the `dcos` directory, run this command to host the DCOS install package through an nginx Docker container. For `<your-port>`, specify the port value that is used in the [bootstrap_url][9].
+4.  From the `dcos` directory, run this command to host the DCOS install package through an nginx Docker container. For `<your-port>`, specify the port value that is used in the `bootstrap_url`.
     
         $ docker run -p <your-port>:80 -v $PWD/genconf/serve:/usr/share/nginx/html:ro nginx
         
@@ -480,7 +480,7 @@ In this step you create a custom DCOS build file on your workstation and then in
         $ mkdir /tmp/dcos && cd /tmp/dcos
         
 
-8.  Download the DCOS installer from the nginx Docker container, where `<workstation-ip>` and `<your_port>` are specified in [bootstrap_url][9]:
+8.  Download the DCOS installer from the nginx Docker container, where `<workstation-ip>` and `<your_port>` are specified in `bootstrap_url`:
     
         $ curl -O http://<workstation-ip>:<your_port>/dcos_install.sh
         
@@ -502,7 +502,7 @@ In this step you create a custom DCOS build file on your workstation and then in
         $ mkdir /tmp/dcos && cd /tmp/dcos
         
 
-13. Download the DCOS installer from the nginx Docker container, where `<workstation-ip>` and `<your_port>` are specified in [bootstrap_url][9]:
+13. Download the DCOS installer from the nginx Docker container, where `<workstation-ip>` and `<your_port>` are specified in `bootstrap_url`:
     
         $ curl http://<workstation-ip>:<your_port>/dcos_install.sh
         
