@@ -59,7 +59,7 @@ page_options_require_authentication:
 hide_from_navigation:
   - "0"
 hide_from_related:
-  - "0"
+  - "1"
 ---
 Here are the DCOS cluster configuration parameters. The DCOS build uses these parameters to create a customized install.
 
