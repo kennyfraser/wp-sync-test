@@ -1,6 +1,6 @@
 ---
 ID: 1936
-post_title: Configuration parameters
+post_title: Configuration parameters (1.4)
 author: Joel Hamill
 post_date: 2016-01-02 09:03:28
 post_excerpt: ""
