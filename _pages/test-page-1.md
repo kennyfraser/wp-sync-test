@@ -17,12 +17,9 @@ published: true
 - List 
 - List
 - List
-
-d
-
-    This is a code
-      more code doing
-         nested
+        This is a code
+          more code doing
+             nested
 
 
 **The next big thing**
