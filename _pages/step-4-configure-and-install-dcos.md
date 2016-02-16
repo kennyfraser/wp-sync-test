@@ -102,7 +102,7 @@ Choose your DCOS installation method:
     **Agent IP Address List**
     :   Specify a comma-separated list of your static agent IP addresses.
     
-    **Accessible Master IP Address**
+    **Public IP Address**
     :   Specify the IP address to a publicly accessible proxy to one of your master nodes. If you either don't have a proxy or you already have access to the network where you are deploying this cluster, you can use one of the master IP's that you specified in the master list. This proxy IP address is used to access the DCOS web interface after the deployment succeeds.
     
     **SSH Username**
