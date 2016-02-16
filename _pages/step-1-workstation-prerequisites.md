@@ -1,6 +1,6 @@
 ---
 ID: 3143
-post_title: 'Step 1: Workstation prerequisites'
+post_title: 'Step 1: Bootstrap node prerequisites'
 author: Joel Hamill
 post_date: 2016-02-06 07:38:26
 post_excerpt: ""
