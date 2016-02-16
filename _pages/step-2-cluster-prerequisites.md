@@ -6,7 +6,7 @@ post_date: 2016-02-06 07:44:15
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.mesosphere.com/installing-enterprise-edition-1-6/step-2-cluster-prerequisites/
+  https://docs.mesosphere.com/installing-enterprise-edition-1-6/manual-installation/step-2-cluster-prerequisites/
 published: true
 header_0_background:
   - fill
