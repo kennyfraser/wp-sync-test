@@ -6,7 +6,7 @@ post_date: 2016-02-01 08:49:11
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.mesosphere.com/installing-enterprise-edition-1-6/configuration-parameters-1-6/
+  https://docs.mesosphere.com/installing-enterprise-edition-1-6/manual-installation/configuration-parameters-1-6/
 published: true
 header_0_background:
   - fill
