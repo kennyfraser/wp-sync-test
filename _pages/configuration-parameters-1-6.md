@@ -311,10 +311,18 @@ These parameters specify the SSH credentials for your cluster in the `ssh_config
         
 
 superuser_password
-:   This parameter specifies the Admin password. This password is required for using DCOS.
+
+:   This parameter specifies the Admin password. This password is required for using DCOS. For example:
+    
+        superuser_password: foobar123
+        
 
 superuser_username
-:   This parameter specifies the Admin username. This username is required for using DCOS.
+
+:   This parameter specifies the Admin username. This username is required for using DCOS. For example:
+    
+        superuser_username: admin
+        
 
 <a name="target_hosts"></a>target_hosts
 
