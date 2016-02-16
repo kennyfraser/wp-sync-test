@@ -38,7 +38,9 @@ The [Cassandra][3] database is used on the back end to store the Oinker app data
 2.  From the DCOS web interface **Services** tab, you can watch Cassandra spin up to at least 4 nodes. You will see the Health status go from Idle to Unhealthy, and finally to Healthy as the nodes come online.
     
     **Important:** Do not go on to the next steps until the Cassandra installation is complete and shows as Healthy in the DCOS web interface. It can take up to 10 minutes for Cassandra to initialize with DCOS.
-    
+
+<a href="services.png" rel="attachment wp-att-1126"><img src="services.png" alt="Services page" width="1346" height="818" class="alignnone size-full wp-image-1126" /></a>
+
     <a href="https://dev-mesosphere-documentation.pantheon.io/wp-content/uploads/2015/12/services.png" rel="attachment wp-att-1126"><img src="https://dev-mesosphere-documentation.pantheon.io/wp-content/uploads/2015/12/services.png" alt="Services page" width="1346" height="818" class="alignnone size-full wp-image-1126" /></a>
 
 # Install the Marathon load balancer
