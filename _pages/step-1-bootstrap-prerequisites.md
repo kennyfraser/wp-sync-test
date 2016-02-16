@@ -6,7 +6,7 @@ post_date: 2016-02-06 07:38:26
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.mesosphere.com/installing-enterprise-edition-1-6/step-1-workstation-prerequisites/
+  https://docs.mesosphere.com/installing-enterprise-edition-1-6/step-1-bootstrap-prerequisites/
 published: true
 header_0_background:
   - fill
@@ -61,7 +61,7 @@ hide_from_related:
 ---
 Before installing DCOS, you must prepare your bootstrap node that will be used to run the DCOS installation commands. A bootstrap node is any physical, virtual, or cloud machine. It must have IP-to-IP connectivity from the bootstrap node to all nodes in your cluster environment. Your bootstrap node must not be a part of your cluster.
 
-1.  **Docker** Docker version 1.9 or greater must be installed on your workstation and cluster nodes. You must run Docker commands as the root user (`sudo`). For more information, see [Docker installation][1].
+1.  **Docker** Docker version 1.9 or greater must be installed on your bootstrap and cluster nodes. You must run Docker commands as the root user (`sudo`). For more information, see [Docker installation][1].
     
     *   You can install Docker by using this command:
         
