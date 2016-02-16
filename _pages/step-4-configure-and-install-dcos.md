@@ -6,7 +6,7 @@ post_date: 2016-02-06 07:53:38
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.mesosphere.com/installing-enterprise-edition-1-6/step-4-configure-and-install-dcos/
+  https://docs.mesosphere.com/installing-enterprise-edition-1-6/manual-installation/step-4-configure-and-install-dcos/
 published: true
 header:
   - "1"
