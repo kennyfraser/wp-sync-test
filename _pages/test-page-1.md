@@ -41,7 +41,7 @@ The [Cassandra][3] database is used on the back end to store the Oinker app data
 
 <a href="services.png" rel="attachment wp-att-1126"><img src="services.png" alt="Services page" width="1346" height="818" class="alignnone size-full wp-image-1126" /></a>
 
-    <a href="https://dev-mesosphere-documentation.pantheon.io/wp-content/uploads/2015/12/services.png" rel="attachment wp-att-1126"><img src="https://dev-mesosphere-documentation.pantheon.io/wp-content/uploads/2015/12/services.png" alt="Services page" width="1346" height="818" class="alignnone size-full wp-image-1126" /></a>
+<a href="https://dev-mesosphere-documentation.pantheon.io/wp-content/uploads/2015/12/services.png" rel="attachment wp-att-1126"><img src="https://dev-mesosphere-documentation.pantheon.io/wp-content/uploads/2015/12/services.png" alt="Services page" width="1346" height="818" class="alignnone size-full wp-image-1126" /></a>
 
 # Install the Marathon load balancer
 
