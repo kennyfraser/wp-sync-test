@@ -6,7 +6,7 @@ post_date: 2016-02-06 07:50:25
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.mesosphere.com/installing-enterprise-edition-1-6/step-3-ip-address-discovery-script/
+  https://docs.mesosphere.com/installing-enterprise-edition-1-6/manual-installation/step-3-ip-address-discovery-script/
 published: true
 header_0_background:
   - fill
