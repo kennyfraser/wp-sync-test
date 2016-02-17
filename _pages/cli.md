@@ -478,7 +478,12 @@ To install DCOS:
         │   ├── ip-detect     
         
 
-2.  Run a preflight script to validate that your cluster is installable.
+2.  Install the cluster prerequisites, including system updates, compression utilities (UnZip, GNU tar, and XZ Utils), and cluster permissions.
+    
+        $ sudo bash dcos_generate_config.ee.sh --install-prereqs
+        
+
+3.  Run a preflight script to validate that your cluster is installable.
     
         $ sudo bash dcos_generate_config.ee.sh --preflight 
         Running mesosphere/dcos-genconf docker BUILD_DIR set to /home/someuser/genconf 
@@ -488,7 +493,7 @@ To install DCOS:
     
     **Tip:** For a detailed view, you can add append log level debug (`-l debug`) to your command. For example `sudo bash dcos_generate_config.ee.sh --preflight -l debug`.
 
-3.  Install DCOS on your cluster.
+4.  Install DCOS on your cluster.
     
         $ sudo bash dcos_generate_config.ee.sh --deploy
         Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/someuser/genconf
@@ -505,14 +510,14 @@ To install DCOS:
     
     **Tip:** For a detailed view, you can add append log level debug (`-l debug`) to your command. For example `sudo bash dcos_generate_config.ee.sh --deploy -l debug`.
 
-4.  Run the DCOS diagnostic script to verify that services are up and running.
+5.  Run the DCOS diagnostic script to verify that services are up and running.
     
         $ sudo bash dcos_generate_config.ee.sh --postflight
         
     
     **Tip:** For a detailed view, you can add append log level debug (`-l debug`) to your command. For example `sudo bash dcos_generate_config.ee.sh --postflight -l debug`.
 
-5.  Monitor Exhibitor and wait for it to converge at `http://<master-ip>:8181/exhibitor/v1/ui/index.html`.
+6.  Monitor Exhibitor and wait for it to converge at `http://<master-ip>:8181/exhibitor/v1/ui/index.html`.
     
     **Tip:** This process can take about 10 minutes. During this time you will see the Master nodes become visible on the Exhibitor consoles and come online, eventually showing a green light.
     
@@ -520,13 +525,13 @@ To install DCOS:
     
     When the status icons are green, you can access the DCOS web interface.
 
-6.  Launch the DCOS web interface at: `http://<load-balanced-ip>/`.
+7.  Launch the DCOS web interface at: `http://<load-balanced-ip>/`.
 
-7.  Click **Log In To DCOS**.
+8.  Click **Log In To DCOS**.
     
     <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-success1.png" rel="attachment wp-att-3198"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-success1.png" alt="ui-installer-success1" width="625" height="404" class="alignnone size-full wp-image-3198" /></a>
 
-8.  Enter your administrator username and password.
+9.  Enter your administrator username and password.
     
     <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-auth2.png" rel="attachment wp-att-3341"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-auth2-800x513.png" alt="ui-installer-auth2" width="800" height="513" class="alignnone size-large wp-image-3341" /></a>
     
