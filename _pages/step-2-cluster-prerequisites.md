@@ -81,53 +81,7 @@ Before installing DCOS you must prepare your cluster environment.
     *   All of the nodes in your cluster must be able to send and receive traffic to each other.
     *   IPv6 must be disabled for all nodes. For more information see <a href="https://wiki.centos.org/FAQ/CentOS7#head-8984faf811faccca74c7bcdd74de7467f2fcd8ee" target="_blank">How do I disable IPv6</a>.
 
-3.  **System updates** Make sure you've updated your system to the latest version.
-    
-    *   On CentOS7 and RHEL7, you can update your systems with this command:
-        
-            $ sudo yum upgrade -y
-            
-
-4.  **Data compression** You must have the <a href="http://www.info-zip.org/UnZip.html" target="_blank">UnZip</a>, <a href="https://www.gnu.org/software/tar/" target="_blank">GNU tar</a>, and <a href="http://tukaani.org/xz/" target="_blank">XZ Utils</a> data compression utilities installed on your cluster nodes.
-    
-    To install these utilities on CentOS7 and RHEL7:
-    
-        $ sudo yum install -y tar xz unzip curl
-        
-
-5.  **Docker** Docker version 1.9 or greater must be installed on your cluster nodes. You must run Docker commands as the root user (`sudo`). For more information, see [Docker installation][3].
-    
-    *   You can install Docker by using this command:
-        
-            $ curl -sSL https://get.docker.com | sudo sh
-            
-        
-        If you are using CentOS7 and behind a firewall, you can install Docker by using this command:
-        
-            $ sudo yum install -y docker
-            
-    
-    *   You must enable the Docker service:
-        
-            $ sudo systemctl enable docker.service
-            
-    
-    *   If you are using Docker as a non-root user, you must add your user to the "docker" group:
-        
-            $ sudo usermod -aG docker <user>
-            
-    
-    *   You can test that your Docker build is properly installed with these commands:
-        
-            $ sudo service docker start 
-            $ sudo docker ps
-            
-    
-    *   If you are using Docker Containerizer, you must have network access to a public Docker repository from the agent nodes or to an internal Docker registry.
-    
-    *   If you are using RHEL7, Docker must be installed by using a subscription channel. For more information, see <a href="https://access.redhat.com/articles/881893" target="_blank">Docker Formatted Container Images on Red Hat Systems</a>.
-
-6.  **Port configuration**
+3.  **Port configuration**
     
     *   ICMP must be enabled between the master and the agent nodes.
     *   TCP and UDP enabled port 53 for DNS.
@@ -264,38 +218,10 @@ Before installing DCOS you must prepare your cluster environment.
     
     *   All DCOS cluster node hostnames (FQDN and short hostnames) must be resolvable in DNS, both forward and reverse lookups must succeed.
 
-7.  **Set cluster permissions**
-    
-    In this step you prepare your cluster for DCOS installation.
-    
-    1.  On each of your master and agent nodes, disable SELinux or set it to permissive mode. This enables DCOS services and Docker to function properly.
-        
-            $ sudo sed -i s/SELINUX=enforcing/SELINUX=permissive/g /etc/selinux/config
-            
-        
-        **Tip:** You can verify the status of SELinux with the `sestatus`command.
-    
-    2.  Add `nogroup` to each of your Mesos masters and agents.
-        
-            $ sudo groupadd nogroup
-            
-    
-    3.  Disable IPV6 by using this command:
-        
-            $ sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
-            $ sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
-            
-    
-    4.  Reboot your cluster for the changes to take affect:
-        
-            $ sudo reboot
-            
-
 ## Next step
 
-[Step 3: Create a script for IP address discovery][4]
+[Step 3: Create a script for IP address discovery][3]
 
  [1]: http://mesos.apache.org/documentation/latest/containerizer/
  [2]: ../administration/introcli/
- [3]: http://docs.docker.com/engine/installation/
- [4]: ../step-3-ip-address-discovery-script/
+ [3]: ../step-3-ip-address-discovery-script/
