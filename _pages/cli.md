@@ -1,6 +1,6 @@
 ---
 ID: 3410
-post_title: CLI
+post_title: Command Line Installer
 author: Joel Hamill
 post_date: 2016-02-17 11:23:16
 post_excerpt: ""
