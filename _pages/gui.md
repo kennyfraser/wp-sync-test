@@ -1,6 +1,6 @@
 ---
 ID: 3407
-post_title: GUI
+post_title: Web Installer
 author: Joel Hamill
 post_date: 2016-02-17 11:20:29
 post_excerpt: ""
