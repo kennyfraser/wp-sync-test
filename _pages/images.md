@@ -13,6 +13,9 @@ update # 5
 
 ## Image import testing ...
 
+
+![alt text](/assets/images/device-browser-content-screen-right.jpg "Logo Title Text 1")
+
 Inline-style: 
 ![alt text](/assets/images/services.png "Logo Title Text 1")
 
