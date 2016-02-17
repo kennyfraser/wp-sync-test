@@ -220,8 +220,8 @@ Before installing DCOS you must prepare your cluster environment.
 
 ## Next step
 
-[Step 3: Configure and Install DCOS][3]
+[Step 3: Create a script for IP address discovery][3]
 
  [1]: http://mesos.apache.org/documentation/latest/containerizer/
  [2]: ../administration/introcli/
- [3]: ../step-4-configure-and-install-dcos/
+ [3]: ../step-3-ip-address-discovery-script/
