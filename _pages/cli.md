@@ -481,14 +481,29 @@ To install DCOS:
 2.  Install the cluster prerequisites, including system updates, compression utilities (UnZip, GNU tar, and XZ Utils), and cluster permissions.
     
         $ sudo bash dcos_generate_config.ee.sh --install-prereqs
+        Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
+        20:47:49 dcos_installer.action_lib.prettyprint:: ====> EXECUTING INSTALL PREREQUISITES
+        20:47:49 dcos_installer.action_lib.prettyprint:: ====> START install_prereqs
+        20:52:32 dcos_installer.action_lib.prettyprint:: ====> STAGE install_prereqs
+        20:52:55 dcos_installer.action_lib.prettyprint:: ====> STAGE install_prereqs
+        20:52:55 dcos_installer.action_lib.prettyprint:: ====> END install_prereqs with returncode: 0
+        20:52:55 dcos_installer.action_lib.prettyprint:: ====> SUMMARY
+        20:52:55 dcos_installer.action_lib.prettyprint:: 2 out of 2 hosts successfully completed install_prereqs stage.
         
 
 3.  Run a preflight script to validate that your cluster is installable.
     
-        $ sudo bash dcos_generate_config.ee.sh --preflight 
-        Running mesosphere/dcos-genconf docker BUILD_DIR set to /home/someuser/genconf 
-        ... 
-        Running preflight checks
+        $ sudo bash dcos_generate_config.ee.sh --preflight
+        Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
+        20:54:02 dcos_installer.action_lib.prettyprint:: ====> EXECUTING PREFLIGHT
+        20:54:02 dcos_installer.action_lib.prettyprint:: ====> START run_preflight
+        20:54:03 dcos_installer.action_lib.prettyprint:: ====> STAGE preflight
+        20:54:03 dcos_installer.action_lib.prettyprint:: ====> STAGE preflight
+        20:54:03 dcos_installer.action_lib.prettyprint:: ====> STAGE preflight_cleanup
+        20:54:03 dcos_installer.action_lib.prettyprint:: ====> STAGE preflight_cleanup
+        20:54:03 dcos_installer.action_lib.prettyprint:: ====> END run_preflight with returncode: 0
+        20:54:03 dcos_installer.action_lib.prettyprint:: ====> SUMMARY
+        20:54:03 dcos_installer.action_lib.prettyprint:: 2 out of 2 hosts successfully completed run_preflight stage.
         
     
     **Tip:** For a detailed view, you can add append log level debug (`-l debug`) to your command. For example `sudo bash dcos_generate_config.ee.sh --preflight -l debug`.
