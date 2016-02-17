@@ -20,7 +20,7 @@ Inline-style:
 ![alt text](/assets/images/services.png "Logo Title Text 1")
 
 Inline-style: 
-![alt text](/assets/images/services2.png "Logo Title Text 1")
+![alt text](/assets/images/services.png "Logo Title Text 1")
 
 
 Reference-style: 
