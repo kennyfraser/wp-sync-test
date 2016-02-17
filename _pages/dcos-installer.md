@@ -6,7 +6,7 @@ post_date: 2016-02-16 15:46:35
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.mesosphere.com/installing-enterprise-edition-1-6/basic-installation/
+  https://docs.mesosphere.com/installing-enterprise-edition-1-6/dcos-installer/
 published: true
 header_0_background:
   - fill
