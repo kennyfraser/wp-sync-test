@@ -72,7 +72,18 @@ Choose your DCOS installation method:
 
 In this step you create a YAML configuration file that is customized for your environment. DCOS uses this configuration file during installation to generate your cluster installation files. In these instructions we assume that you are using ZooKeeper for shared storage.
 
-1.  Customize this `config.yaml` template file for your environment. <!-- do not change bootstrap_url -->
+1.  Run this command to create a hashed password for superuser authentication, where `<superuser_password>` is the superuser password. Use the hashed password key for the `superuser_password` parameter in your `config.yaml` file.
+    
+        $ sudo bash dcos_generate_config.ee.sh --hash-password <superuser_password>
+        Extracting image from this script and loading into docker daemon, this step can take a few minutes
+        dcos-genconf.9eda4ae45de5488c0c-c40556fa73a00235f1.tar
+        Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
+        00:42:10 dcos_installer.action_lib.prettyprint:: ====> HASHING PASSWORD TO SHA512
+        00:42:11 root:: Hashed password for 'password' key:
+        $6$rounds=656000$v55tdnlMGNoSEgYH$1JAznj58MR.Bft2wd05KviSUUfZe45nsYsjlEl84w34pp48A9U2GoKzlycm3g6MBmg4cQW9k7iY4tpZdkWy9t1   
+        
+
+2.  Customize this `config.yaml` template file for your environment. <!-- do not change bootstrap_url -->
     
           ##########################################
           # DO NOT CHANGE the bootstrap_url value, # 
@@ -94,8 +105,8 @@ In this step you create a YAML configuration file that is customized for your en
           - <dns-resolver-2>
           ssh_port: '<port-number>'
           ssh_user: <username>
-          superuser_password: <admin-username>
-          superuser_username: <admin-password>
+          superuser_username: <username>
+          superuser_password: <hashed-password>
           agent_list:
           - <target-host-1>
           - <target-host-2>
@@ -141,7 +152,11 @@ In this step you create a YAML configuration file that is customized for your en
     :   This parameter specifies the SSH username, for example `centos`.
     
     **superuser_password**
-    :   This parameter specifies the Admin password. This password is required for using DCOS.
+    
+    :   This parameter specifies the hashed Admin password. This password is required for using DCOS. For example:
+        
+            superuser_password: $6$rounds=656000$v55tdnlMGNoSEgYH$1JAznj58MR.Bft2wd05KviSUUfZe45nsYsjlEl84w34pp48A9U2GoKzlycm3g6MBmg4cQW9k7iY4tpZdkWy9t1 
+            
     
     **superuser_username**
     :   This parameter specifies the Admin username. This username is required for using DCOS.
@@ -151,9 +166,9 @@ In this step you create a YAML configuration file that is customized for your en
     
     For more configuration examples and all available options, see the [configuration file options][4].
 
-2.  Save as `genconf/config.yaml`.
+3.  Save as `genconf/config.yaml`.
 
-3.  Move your private RSA key to `genconf/ssh_key`. For more information, see the [ssh_key_path][5] parameter.
+4.  Move your private RSA key to `genconf/ssh_key`. For more information, see the [ssh_key_path][5] parameter.
     
         $ cp <path-to-key> genconf/ssh_key && chmod 0600 genconf/ssh_key
         
@@ -171,13 +186,9 @@ In this step you create a custom DCOS build file on your bootstrap node and then
 
 To install DCOS:
 
-1.  Download and save the DCOS setup file, `dcos_generate_config.sh`, to the `dcos` directory on your bootstrap node. This file is used to create your customized DCOS build file.
+1.  From the `dcos` directory, run the DCOS installer shell script on your bootstrapping master nodes to generate a customized DCOS build. The setup script extracts a Docker container that uses the generic DCOS install files to create customized DCOS build files for your cluster. The build files are output to `./genconf/serve/`.
     
-    **Important:** Contact your sales representative or <sales@mesosphere.io> to obtain the DCOS setup file.
-
-2.  From the `dcos` directory, run the DCOS installer shell script on your bootstrapping master nodes to generate a customized DCOS build. The setup script extracts a Docker container that uses the generic DCOS install files to create customized DCOS build files for your cluster. The build files are output to `./genconf/serve/`.
-    
-        $ sudo bash dcos_generate_config.sh --genconf
+        $ sudo bash dcos_generate_config.ee.sh --genconf
         Extracking docker container from this script
         dcos-genconf.4543c7745c7e-2af26a89fa52-cb932597d7b992.tar
         Loading container into Docker daemon
@@ -187,30 +198,25 @@ To install DCOS:
     At this point your directory structure should resemble:
     
         ├── dcos-genconf.c9722490f11019b692-cb6b6ea66f696912b0.tar
-        ├── dcos_generate_config.sh
+        ├── dcos_generate_config.ee.sh
         ├── genconf
         │   ├── config.yaml
-        │   ├── ip-detect
+        │   ├── ip-detect     
         
 
-3.  Install the DCOS cluster prerequisites, including system updates, data compression utilities, and cluster permissions:
+2.  Run a preflight script to validate that your cluster is installable.
     
-        $ sudo bash dcos_generate_config.ee.sh --install-prereqs
-        
-
-4.  Run a preflight script to validate that your cluster is installable.
-    
-        $ sudo bash dcos_generate_config.sh --preflight 
+        $ sudo bash dcos_generate_config.ee.sh --preflight 
         Running mesosphere/dcos-genconf docker BUILD_DIR set to /home/someuser/genconf 
         ... 
         Running preflight checks
         
     
-    **Tip:** For a detailed view, you can add append log level debug (`-l debug`) to your command. For example `sudo bash dcos_generate_config.sh --preflight -l debug`.
+    **Tip:** For a detailed view, you can add append log level debug (`-l debug`) to your command. For example `sudo bash dcos_generate_config.ee.sh --preflight -l debug`.
 
-5.  Install DCOS on your cluster.
+3.  Install DCOS on your cluster.
     
-        $ sudo bash dcos_generate_config.sh --deploy
+        $ sudo bash dcos_generate_config.ee.sh --deploy
         Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/someuser/genconf
         ...
         Starting DCOS install process
@@ -223,16 +229,16 @@ To install DCOS:
         Cleaning up temp directory /opt/dcos_install_tmp
         
     
-    **Tip:** For a detailed view, you can add append log level debug (`-l debug`) to your command. For example `sudo bash dcos_generate_config.sh --deploy -l debug`.
+    **Tip:** For a detailed view, you can add append log level debug (`-l debug`) to your command. For example `sudo bash dcos_generate_config.ee.sh --deploy -l debug`.
 
-6.  Run the DCOS diagnostic script to verify that services are up and running.
+4.  Run the DCOS diagnostic script to verify that services are up and running.
     
-        $ sudo bash dcos_generate_config.sh --postflight
+        $ sudo bash dcos_generate_config.ee.sh --postflight
         
     
-    **Tip:** For a detailed view, you can add append log level debug (`-l debug`) to your command. For example `sudo bash dcos_generate_config.sh --postflight -l debug`.
+    **Tip:** For a detailed view, you can add append log level debug (`-l debug`) to your command. For example `sudo bash dcos_generate_config.ee.sh --postflight -l debug`.
 
-7.  Monitor Exhibitor and wait for it to converge at `http://<master-ip>:8181/exhibitor/v1/ui/index.html`.
+5.  Monitor Exhibitor and wait for it to converge at `http://<master-ip>:8181/exhibitor/v1/ui/index.html`.
     
     **Tip:** This process can take about 10 minutes. During this time you will see the Master nodes become visible on the Exhibitor consoles and come online, eventually showing a green light.
     
@@ -240,13 +246,13 @@ To install DCOS:
     
     When the status icons are green, you can access the DCOS web interface.
 
-8.  Launch the DCOS web interface at: `http://<load-balanced-ip>/`.
+6.  Launch the DCOS web interface at: `http://<load-balanced-ip>/`.
 
-9.  Click **Log In To DCOS**.
+7.  Click **Log In To DCOS**.
     
     <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-success1.png" rel="attachment wp-att-3198"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-success1.png" alt="ui-installer-success1" width="625" height="404" class="alignnone size-full wp-image-3198" /></a>
 
-10. Enter your administrator username and password.
+8.  Enter your administrator username and password.
     
     <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-auth2.png" rel="attachment wp-att-3341"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-auth2-800x513.png" alt="ui-installer-auth2" width="800" height="513" class="alignnone size-large wp-image-3341" /></a>
     
@@ -264,7 +270,18 @@ Now you can [assign user roles][8].
 
 In this step you create a YAML configuration file that is customized for your environment. DCOS uses this configuration file during installation to generate your cluster installation files. In these instructions we assume that you are using ZooKeeper for shared storage.
 
-1.  Customize this `config.yaml` template file for your environment. <!-- bootstrap_url is changeable -->
+1.  Run this command to create a hashed password for superuser authentication, where `<superuser_password>` is the superuser password. Use the hashed password key for the `superuser_password` parameter in your `config.yaml` file.
+    
+        $ sudo bash dcos_generate_config.ee.sh --hash-password <superuser_password>
+        Extracting image from this script and loading into docker daemon, this step can take a few minutes
+        dcos-genconf.9eda4ae45de5488c0c-c40556fa73a00235f1.tar
+        Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
+        00:42:10 dcos_installer.action_lib.prettyprint:: ====> HASHING PASSWORD TO SHA512
+        00:42:11 root:: Hashed password for 'password' key:
+        $6$rounds=656000$v55tdnlMGNoSEgYH$1JAznj58MR.Bft2wd05KviSUUfZe45nsYsjlEl84w34pp48A9U2GoKzlycm3g6MBmg4cQW9k7iY4tpZdkWy9t1 
+        
+
+2.  Customize this `config.yaml` template file for your environment. <!-- bootstrap_url is changeable -->
     
           bootstrap_url: http://<bootstrap_ip>:<your_port>       
           cluster_name: '<cluster-name>'
@@ -276,6 +293,8 @@ In this step you create a YAML configuration file that is customized for your en
           - <master-ip-1>
           - <master-ip-2>
           - <master-ip-3>
+          superuser_username: <username>
+          superuser_password: <hashed-password>
           resolvers:
           - <dns-resolver-1>
           - <dns-resolver-2>
@@ -304,6 +323,15 @@ In this step you create a YAML configuration file that is customized for your en
     **master_list**
     :   Specify a list of your static master IP addresses as a YAML nested series (`-`).
     
+    **superuser_password**
+    :   This parameter specifies the hashed Admin password. This password is required for using DCOS. For example:
+    
+    **superuser_password**
+    :   $6$rounds=656000$v55tdnlMGNoSEgYH$1JAznj58MR.Bft2wd05KviSUUfZe45nsYsjlEl84w34pp48A9U2GoKzlycm3g6MBmg4cQW9k7iY4tpZdkWy9t1
+    
+    **superuser_username**
+    :   This parameter specifies the Admin username. This username is required for using DCOS.
+    
     **resolvers**
     
     :   Specify a JSON-formatted list of DNS servers for your DCOS host nodes. You must include the escape characters (`\`) as shown in the template. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them.
@@ -312,7 +340,7 @@ In this step you create a YAML configuration file that is customized for your en
     
     For more configuration examples and all available options, see the [configuration file options][9].
 
-2.  Save as `genconf/config.yaml`.
+3.  Save as `genconf/config.yaml`.
 
 ## <a name="install-bash"></a>4\.2 Install DCOS
 
