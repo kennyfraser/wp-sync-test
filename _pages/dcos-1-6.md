@@ -87,6 +87,17 @@ The release notes provide a list of useful topics and links for Mesosphere DCOS.
 *   Issue with graphs showing NaN is fixed.
 *   Issue with no stroke on graphs when at 0% is fixed.
 
+# DCOS Command Line Interface (CLI)
+
+Added support for authentication against DCOS access control service.
+
+# DCOS access control service
+
+*   Provides an HTTP API for managing users, groups, and access control lists.
+*   Provides an interface for authentication and authorization.
+*   Uses a highly available persistence layer.
+*   Provides a login endpoint that allows for authentication against a DCOS-internal set of users or against a remote directory service via LDAP 3 (RFC 4510).
+
 # DCOS Marathon Upgrade
 
 DCOS 1.6 now includes Marathon 0.15.1 with many UI enhancements.
