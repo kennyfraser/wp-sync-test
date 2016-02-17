@@ -6,7 +6,7 @@ post_date: 2016-02-01 08:49:11
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.mesosphere.com/installing-enterprise-edition-1-6/manual-installation/configuration-parameters-1-6/
+  https://docs.mesosphere.com/installing-enterprise-edition-1-6/configuration-parameters-1-6/
 published: true
 header_0_background:
   - fill
@@ -312,14 +312,14 @@ These parameters specify the SSH credentials for your cluster in the `ssh_config
 
 superuser_password
 
-:   This parameter specifies the Admin password. This password is required for using DCOS. For example:
+:   This parameter specifies the hashed superuser password. This password is required for using DCOS. For example:
     
-        superuser_password: foobar123
+            superuser_password: $6$rounds=656000$v55tdnlMGNoSEgYH$1JAznj58MR.Bft2wd05KviSUUfZe45nsYsjlEl84w34pp48A9U2GoKzlycm3g6MBmg4cQW9k7iY4tpZdkWy9t1 
         
 
 superuser_username
 
-:   This parameter specifies the Admin username. This username is required for using DCOS. For example:
+:   This parameter specifies the superuser username. This username is required for using DCOS. For example:
     
         superuser_username: admin
         
