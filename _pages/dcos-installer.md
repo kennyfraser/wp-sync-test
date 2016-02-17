@@ -69,7 +69,7 @@ Before installing DCOS, you must prepare your bootstrap node that will be used t
     
     *   You can install Docker by using this command:
         
-            $ curl -sSL https://get.docker.com |  sudo sh
+            $ sudo curl -sSL https://get.docker.com |  sudo sh
             
         
         If you are using CentOS7 and behind a firewall, you can install Docker by using this command:
