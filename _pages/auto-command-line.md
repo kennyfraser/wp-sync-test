@@ -1,12 +1,12 @@
 ---
 ID: 3410
-post_title: Command Line Installer
+post_title: Automated command line installation
 author: Joel Hamill
 post_date: 2016-02-17 11:23:16
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.mesosphere.com/installing-enterprise-edition-1-6/dcos-installer/cli/
+  https://docs.mesosphere.com/installing-enterprise-edition-1-6/dcos-installer/auto-command-line/
 published: true
 header_0_background:
   - fill
@@ -511,16 +511,20 @@ To install DCOS:
 4.  Install DCOS on your cluster.
     
         $ sudo bash dcos_generate_config.ee.sh --deploy
-        Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/someuser/genconf
-        ...
-        Starting DCOS install process
-        Running preflight checks
-        Creating directories under /etc/mesosphere
-        Creating role file for master
-        Configuring DCOS
-        Setting and starting DCOS
-        
-        Cleaning up temp directory /opt/dcos_install_tmp
+        Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
+        20:55:00 dcos_installer.action_lib.prettyprint:: ====> EXECUTING DCOS INSTALLATION
+        20:55:00 dcos_installer.action_lib.prettyprint:: ====> START deploy_master
+        20:57:04 dcos_installer.action_lib.prettyprint:: ====> STAGE deploy_master
+        20:57:04 dcos_installer.action_lib.prettyprint:: ====> STAGE deploy_master_cleanup
+        20:57:04 dcos_installer.action_lib.prettyprint:: ====> END deploy_master with returncode: 0
+        20:57:04 dcos_installer.action_lib.prettyprint:: ====> SUMMARY
+        20:57:04 dcos_installer.action_lib.prettyprint:: 1 out of 1 hosts successfully completed deploy_master stage.
+        20:57:04 dcos_installer.action_lib.prettyprint:: ====> START deploy_agent
+        20:59:19 dcos_installer.action_lib.prettyprint:: ====> STAGE deploy_agent
+        20:59:19 dcos_installer.action_lib.prettyprint:: ====> STAGE deploy_agent_cleanup
+        20:59:19 dcos_installer.action_lib.prettyprint:: ====> END deploy_agent with returncode: 0
+        20:59:19 dcos_installer.action_lib.prettyprint:: ====> SUMMARY
+        20:59:19 dcos_installer.action_lib.prettyprint:: 1 out of 1 hosts successfully completed deploy_agent stage.
         
     
     **Tip:** For a detailed view, you can add append log level debug (`-l debug`) to your command. For example `sudo bash dcos_generate_config.ee.sh --deploy -l debug`.
@@ -528,6 +532,16 @@ To install DCOS:
 5.  Run the DCOS diagnostic script to verify that services are up and running.
     
         $ sudo bash dcos_generate_config.ee.sh --postflight
+        Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
+        21:22:44 dcos_installer.action_lib.prettyprint:: ====> EXECUTING POSTFLIGHT
+        21:22:44 dcos_installer.action_lib.prettyprint:: ====> START run_postflight
+        21:22:45 dcos_installer.action_lib.prettyprint:: ====> STAGE postflight
+        21:22:45 dcos_installer.action_lib.prettyprint:: ====> STAGE postflight
+        21:22:45 dcos_installer.action_lib.prettyprint:: ====> STAGE postflight_cleanup
+        21:22:45 dcos_installer.action_lib.prettyprint:: ====> STAGE postflight_cleanup
+        21:22:45 dcos_installer.action_lib.prettyprint:: ====> END run_postflight with returncode: 0
+        21:22:45 dcos_installer.action_lib.prettyprint:: ====> SUMMARY
+        21:22:45 dcos_installer.action_lib.prettyprint:: 2 out of 2 hosts successfully completed run_postflight stage.
         
     
     **Tip:** For a detailed view, you can add append log level debug (`-l debug`) to your command. For example `sudo bash dcos_generate_config.ee.sh --postflight -l debug`.
