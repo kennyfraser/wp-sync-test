@@ -59,7 +59,7 @@ hide_from_navigation:
 hide_from_related:
   - "0"
 ---
-You can quickly get up and running with DCOS Enterprise Edition by using the DCOS installer. The DCOS installer provides a guided installation using the most common and recommended defaults
+You can quickly get up and running with DCOS Enterprise Edition by using the DCOS installer. The DCOS installer provides a guided installation using the most common and recommended defaults.
 
 # Step 1: Bootstrap node prerequisites
 
