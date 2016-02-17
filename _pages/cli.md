@@ -5,7 +5,8 @@ author: Joel Hamill
 post_date: 2016-02-17 11:23:16
 post_excerpt: ""
 layout: page
-permalink: https://docs.mesosphere.com/cli/
+permalink: >
+  https://docs.mesosphere.com/installing-enterprise-edition-1-6/dcos-installer/cli/
 published: true
 header_0_background:
   - fill
@@ -56,7 +57,7 @@ page_options_require_authentication:
 hide_from_navigation:
   - "0"
 hide_from_related:
-  - "0"
+  - "1"
 ---
 **Prerequisite:**
 
