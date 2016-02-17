@@ -1,6 +1,6 @@
 ---
 ID: 3144
-post_title: 'Step 4: Configure and install DCOS'
+post_title: 'Step 3: Configure and install DCOS'
 author: Joel Hamill
 post_date: 2016-02-06 07:53:38
 post_excerpt: ""
@@ -182,7 +182,6 @@ In this step you create a custom DCOS build file on your bootstrap node and then
 **Prerequisites**
 
 *   A `genconf/config.yaml` file that is optimized for automatic distribution of DCOS across your nodes with SSH.
-*   A `genconf/ip-detect` [script][7].
 
 To install DCOS:
 
@@ -262,7 +261,7 @@ To install DCOS:
 
 ### Next Steps
 
-Now you can [assign user roles][8].
+Now you can [assign user roles][7].
 
 # <a name="manual"></a>Manually distributing DCOS across your nodes
 
@@ -338,7 +337,7 @@ In this step you create a YAML configuration file that is customized for your en
         
         *Caution:* If you set the `resolvers` parameter incorrectly, you will permanently damage your configuration and have to reinstall DCOS.
     
-    For more configuration examples and all available options, see the [configuration file options][9].
+    For more configuration examples and all available options, see the [configuration file options][8].
 
 3.  Save as `genconf/config.yaml`.
 
@@ -351,7 +350,7 @@ In this step you create a custom DCOS build file on your bootstrap node and then
 **Prerequisites**
 
 *   A `genconf/config.yaml` file that is optimized for [manual distribution of DCOS across your nodes][6].
-*   A `genconf/ip-detect` [script][7]. 
+*   A `genconf/ip-detect` [script][9]. 
 *   The Docker nginx image must be on your bootstrap node. You can use this command to install the nginx container:
     
          docker pull nginx
@@ -383,7 +382,7 @@ In this step you create a custom DCOS build file on your bootstrap node and then
         $ sudo bash dcos_generate_config.sh
         
     
-    **Tip:** For the install script to work, you must have created [genconf/config.yaml][6] and [genconf/ip-detect][7].
+    **Tip:** For the install script to work, you must have created [genconf/config.yaml][6] and [genconf/ip-detect][9].
 
 4.  From the `dcos` directory, run this command to host the DCOS install package through an nginx Docker container. For `<your-port>`, specify the port value that is used in the `bootstrap_url`.
     
@@ -460,7 +459,7 @@ In this step you create a custom DCOS build file on your bootstrap node and then
 
 ### Next Steps
 
-Now you can [assign user roles][8].
+Now you can [assign user roles][7].
 
  [1]: #ssh
  [2]: #manual
@@ -468,6 +467,6 @@ Now you can [assign user roles][8].
  [4]: ../configuration-parameters-1-6/
  [5]: http://mesos.apache.org/documentation/latest/containerizer/
  [6]: ../administration/introcli/
- [7]: ../step-3-ip-address-discovery-script/
- [8]: ../security-and-authentication/managing-authorization/
- [9]: ../configuration-parameters-1-5/
+ [7]: ../security-and-authentication/managing-authorization/
+ [8]: ../configuration-parameters-1-5/
+ [9]: ../step-3-ip-address-discovery-script/
