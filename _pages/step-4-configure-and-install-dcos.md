@@ -74,7 +74,6 @@ In this step you create a YAML configuration file that is customized for your en
 
 1.  Customize this `config.yaml` template file for your environment. <!-- do not change bootstrap_url -->
     
-          cluster_name: '<cluster-name>'
           ##########################################
           # DO NOT CHANGE the bootstrap_url value, # 
           # unless you have moved installer assets.# 
