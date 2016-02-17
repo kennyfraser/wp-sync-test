@@ -1,12 +1,12 @@
 ---
 ID: 3407
-post_title: Web Installer
+post_title: Automated GUI installation
 author: Joel Hamill
 post_date: 2016-02-17 11:20:29
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.mesosphere.com/installing-enterprise-edition-1-6/dcos-installer/gui/
+  https://docs.mesosphere.com/installing-enterprise-edition-1-6/dcos-installer/automated-gui/
 published: true
 header_0_background:
   - fill
