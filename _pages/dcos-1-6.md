@@ -65,7 +65,29 @@ The release notes provide a list of useful topics and links for Mesosphere DCOS.
 
 *   
 
-# DCOS Marathon Upgrades
+# DCOS Web Interface
+
+**Integration with DCOS access control service**
+
+*   Access to the DCOS web interface now requires login.
+*   Superusers can manage users and groups from a corresponding control panel.
+*   Superusers can control user or group access to services by adding them to the corresponding access control lists.
+*   Superusers can configure a directory (LDAP) back-end for other users to authenticate against.
+
+**Mesos UI capabilities now in the DCOS web interface** You can now view cluster task information that was previously only available in the Mesos interface.
+
+*   **File browser** You can now browse and download files in Task sandboxes formerly found in the Mesos UI. Files can be downloaded via DCOS UI.
+*   **Log Viewer** You can now view live logs for stderr and stdout in the DCOS web interface.
+
+**Fixes and improvements**
+
+*   Table scrolling issue is fixed.
+*   Modal sizing, resizing, and scrolling issues are fixed.
+*   The Intercom button and DCOS Tour buttons are now optional in web interface.
+*   Issue with graphs showing NaN is fixed.
+*   Issue with no stroke on graphs when at 0% is fixed.
+
+# DCOS Marathon Upgrade
 
 DCOS 1.6 now includes Marathon 0.15.1 with many UI enhancements.
 
@@ -77,9 +99,15 @@ DCOS 1.6 now includes Marathon 0.15.1 with many UI enhancements.
 
 *   **Application Health** The health status breakdown is now shown in the application details page.
 
-# <a name="mesos"></a>DCOS Mesos upgrade
+# <a name="mesos"></a>DCOS Mesos Upgrade
 
-The Apache Mesos kernel is now at [version 0.27][1]. - [MESOS-1791][2]: Support for resource quota that provides non-revocable resource guarantees without tying reservations to particular Mesos agents. Please refer to the quota documentation for more information. - [MESOS-191][3]: Multiple disk support to allow for disk IO intensive applications to achieve reliable, high performance. - [MESOS-4085][4]: Flexible roles with the introduction of implicit roles. It deprecates the whitelist functionality that was implemented by specifying --roles during master startup to provide a static list of roles. - [MESOS-2353][5]: Performance improvement of the state endpoint for large clusters. - Furthermore, 167+ bugfixes and improvements made it into this release. For full release notes with all features and bug fixes, please refer to the [CHANGELOG][6].
+The Apache Mesos kernel is now at [version 0.27][1].
+
+*   [MESOS-1791][2]: Support for resource quota that provides non-revocable resource guarantees without tying reservations to particular Mesos agents. Please refer to the quota documentation for more information. 
+*   [MESOS-191][3]: Multiple disk support to allow for disk IO intensive applications to achieve reliable, high performance. 
+*   [MESOS-4085][4]: Flexible roles with the introduction of implicit roles. It deprecates the whitelist functionality that was implemented by specifying --roles during master startup to provide a static list of roles. 
+*   [MESOS-2353][5]: Performance improvement of the state endpoint for large clusters. 
+*   Furthermore, 167+ bugfixes and improvements made it into this release. For full release notes with all features and bug fixes, please refer to the [CHANGELOG][6].
 
 # <a name="known-issues"></a>Known Issues and Limitations
 
