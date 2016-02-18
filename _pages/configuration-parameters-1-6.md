@@ -310,11 +310,11 @@ These parameters specify the SSH credentials for your cluster in the `ssh_config
         ssh_user: vagrant
         
 
-superuser_password
+superuser_password_hash
 
 :   This parameter specifies the hashed superuser password. This password is required for using DCOS. For example:
     
-            superuser_password: $6$rounds=656000$v55tdnlMGNoSEgYH$1JAznj58MR.Bft2wd05KviSUUfZe45nsYsjlEl84w34pp48A9U2GoKzlycm3g6MBmg4cQW9k7iY4tpZdkWy9t1 
+            superuser_password_hash: $6$rounds=656000$v55tdnlMGNoSEgYH$1JAznj58MR.Bft2wd05KviSUUfZe45nsYsjlEl84w34pp48A9U2GoKzlycm3g6MBmg4cQW9k7iY4tpZdkWy9t1 
         
 
 superuser_username
