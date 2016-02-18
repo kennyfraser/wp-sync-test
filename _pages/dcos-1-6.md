@@ -99,7 +99,7 @@ New automated DCOS installer that includes a GUI or command line invocation.
 *   Superusers can configure a directory (LDAP) back-end for other users to authenticate against.
 *   For more information, see the [documentation][5].
 
-**Mesos UI capabilities now in the DCOS web interface** You can now view cluster task information that was previously only available in the Mesos interface.
+**Mesos UI capabilities now in the DCOS web interface** You can view cluster task information that was previously only available in the Mesos interface.
 
 *   **File browser** You can now browse and download files in Task sandboxes formerly found in the Mesos UI. Files can be downloaded by using the DCOS web interface.
 *   **Log Viewer** You can now view live logs for stderr and stdout in the DCOS web interface.
