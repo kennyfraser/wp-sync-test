@@ -126,7 +126,7 @@ DCOS 1.6 now includes Marathon 0.15.1 with many UI enhancements.
 
 *   **Better feedback** The feedback dialogs have been completely redesigned for clarity and usability. Color-coded severity levels are now shown: info, warning and error. The action button labels have been rephrased for improved usability. Buttons that can lead to dangerous actions, such as "force scale" are no longer preselected by default.
 
-*   **Application Health** The health status breakdown is now shown in the application details page.
+*   **Application Health** The health status details are now shown in the application details page.
 
 # Advanced AWS Templates
 
