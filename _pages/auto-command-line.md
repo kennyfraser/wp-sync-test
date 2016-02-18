@@ -468,10 +468,6 @@ In this step you create a custom DCOS build file on your bootstrap node and then
 
 **Tip:** If something goes wrong and you want to rerun your setup, use these cluster [cleanup instructions][3].
 
-**Prerequisites**
-
-*   A `genconf/config.yaml` file that is optimized for automatic distribution of DCOS across your nodes with SSH.
-
 To install DCOS:
 
 1.  From the `dcos` directory, run the DCOS installer shell script on your bootstrapping master nodes to generate a customized DCOS build. The setup script extracts a Docker container that uses the generic DCOS install files to create customized DCOS build files for your cluster. The build files are output to `./genconf/serve/`.
