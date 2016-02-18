@@ -9,15 +9,55 @@ permalink: >
   https://docs.mesosphere.com/installing-enterprise-edition-1-6/auto-command-line/
 published: true
 header:
-  - "0"
+  - "1"
 page_header:
-  - "0"
+  - "1"
 page_options_require_authentication:
   - ""
 hide_from_navigation:
   - "0"
 hide_from_related:
   - "1"
+header_0_background:
+  - fill
+header_0_background_fill_style:
+  - dark
+header_0_logo_style:
+  - color-light
+header_0_navigation_style:
+  - light
+page_header_0_show_page_header:
+  - "0"
+page_header_0_size:
+  - default
+page_header_0_fill_screen:
+  - "0"
+page_header_0_background:
+  - transparent
+page_header_0_show_background_image:
+  - "0"
+page_header_0_show_background_video:
+  - "0"
+page_header_0_headline:
+  - ""
+page_header_0_headline_size:
+  - default
+page_header_0_description:
+  - ""
+page_header_0_description_size:
+  - default
+page_header_0_show_image:
+  - "0"
+page_header_0_content_alignment:
+  - center
+page_header_0_content_style:
+  - dark
+page_header_0_actions:
+  - "0"
+page_header_0_show_actions_footnote:
+  - "0"
+page_header_0_show_video:
+  - "0"
 ---
 The automated command line installation method provides a guided installation of DCOS Enterprise Edition.
 
@@ -334,7 +374,7 @@ In this step you create a customized YAML configuration file and install DCOS ac
 
 In this step you create a YAML configuration file that is customized for your environment. DCOS uses this configuration file during installation to generate your cluster installation files. In these instructions we assume that you are using ZooKeeper for shared storage.
 
-1.  Run this command to create a hashed password for superuser authentication, where `<superuser_password>` is the superuser password. Use the hashed password key for the `superuser_password` parameter in your `config.yaml` file.
+1.  Run this command to create a hashed password for superuser authentication, where `<superuser_password>` is the superuser password. Use the hashed password key for the `superuser_password_hash` parameter in your `config.yaml` file.
     
         $ sudo bash dcos_generate_config.ee.sh --hash-password <superuser_password>
         Extracting image from this script and loading into docker daemon, this step can take a few minutes
@@ -368,7 +408,7 @@ In this step you create a YAML configuration file that is customized for your en
           ssh_port: '<port-number>'
           ssh_user: <username>
           superuser_username: <username>
-          superuser_password: <hashed-password>
+          superuser_password_hash: <hashed-password>
           agent_list:
           - <target-host-1>
           - <target-host-2>
@@ -418,11 +458,11 @@ In this step you create a YAML configuration file that is customized for your en
     **ssh_user**
     :   This parameter specifies the SSH username, for example `centos`.
     
-    **superuser_password**
+    **superuser_password_hash**
     
     :   This parameter specifies the hashed Admin password. This password is required for using DCOS. For example:
         
-            superuser_password: $6$rounds=656000$v55tdnlMGNoSEgYH$1JAznj58MR.Bft2wd05KviSUUfZe45nsYsjlEl84w34pp48A9U2GoKzlycm3g6MBmg4cQW9k7iY4tpZdkWy9t1 
+            superuser_password_hash: $6$rounds=656000$v55tdnlMGNoSEgYH$1JAznj58MR.Bft2wd05KviSUUfZe45nsYsjlEl84w34pp48A9U2GoKzlycm3g6MBmg4cQW9k7iY4tpZdkWy9t1 
             
     
     **superuser_username**
