@@ -86,11 +86,18 @@ In this step you create a YAML configuration file that is customized for your en
           - <master-ip-1>
           - <master-ip-2>
           - <master-ip-3>
+          ssh_port: '<port-number>'
+          ssh_user: <username>
           superuser_username: <username>
           superuser_password: <hashed-password>
           resolvers:
           - <dns-resolver-1>
           - <dns-resolver-2>
+        
+    
+    **Tip:** You can create a template `genconf/config.yaml` file by entering this command:
+    
+        $ sudo bash dcos_generate_config.ee.sh --validate-config
         
     
     Specify these configuration parameters. <!-- log_directory: /genconf/logs, process_timeout: 120, ssh_key_path: /genconf/ssh-key -->
@@ -115,6 +122,12 @@ In this step you create a YAML configuration file that is customized for your en
     
     **master_list**
     :   Specify a list of your static master IP addresses as a YAML nested series (`-`).
+    
+    **ssh_port**
+    :   This parameter specifies the port to SSH to, for example `22`.
+    
+    **ssh_user**
+    :   This parameter specifies the SSH username, for example `centos`.
     
     **superuser_password**
     :   This parameter specifies the hashed Admin password. This password is required for using DCOS. For example:
