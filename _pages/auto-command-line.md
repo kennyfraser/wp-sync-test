@@ -128,7 +128,7 @@ Before installing DCOS you must prepare your cluster environment.
 
 1.  **Linux distribution** A supported Linux distribution must be installed on your cluster:
     
-    *   Enterprise Linux 7 (RedHat, CentOS)
+    *   Enterprise Linux 7 (RedHat or CentOS version 3.10.0-327.4.5.el7.x86_64 or newer)
     *   CoreOS
 
 2.  **Nodes Hardware Requirements**
@@ -346,13 +346,13 @@ In this step you create an IP detect script to broadcast the IP address of each 
             echo $(/usr/sbin/ip route show to match 172.28.128.3 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | tail -1)
             
 
-# Step 4: Configure and Install DCOS
+# Step 4: Installation
 
 **Prerequisite:**
 
 *   Encrypted SSH keys are not supported.
 
-## <a name="config-json"></a>4\.1 Configure your cluster
+### <a name="config-json"></a>4\.1 Configure your cluster
 
 In this step you create a YAML configuration file that is customized for your environment. DCOS uses this configuration file during installation to generate your cluster installation files. In these instructions we assume that you are using ZooKeeper for shared storage.
 
@@ -462,11 +462,15 @@ In this step you create a YAML configuration file that is customized for your en
         $ cp <path-to-key> genconf/ssh_key && chmod 0600 genconf/ssh_key
         
 
-## <a name="install-bash"></a>4\.2 Install DCOS
+### <a name="install-bash"></a>4\.2 Install DCOS
 
 In this step you create a custom DCOS build file on your bootstrap node and then install DCOS onto your cluster. With this installation method you create a bootstrap server that uses your SSH key and connects to every node to automate the deployment.
 
 **Tip:** If something goes wrong and you want to rerun your setup, use these cluster [cleanup instructions][3].
+
+**Prerequisites**
+
+*   A `genconf/config.yaml` file that is optimized for automatic distribution of DCOS across your nodes with SSH.
 
 To install DCOS:
 
