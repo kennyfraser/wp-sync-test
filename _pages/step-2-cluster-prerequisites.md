@@ -219,6 +219,28 @@ Before installing DCOS you must prepare your cluster environment.
     
     *   All DCOS cluster node hostnames (FQDN and short hostnames) must be resolvable in DNS, both forward and reverse lookups must succeed.
 
+4.  **Docker** If you’re on CentOS you must install Docker by using Overlay FS:
+    
+        $ sudo tee /etc/yum.repos.d/docker.repo <<-'EOF'
+        [dockerrepo]
+        name=Docker Repository
+        baseurl=https://yum.dockerproject.org/repo/main/centos/$releasever/
+        enabled=1
+        gpgcheck=1
+        gpgkey=https://yum.dockerproject.org/gpg
+        EOF
+        sudo yum -y update
+        sudo mkdir -p /etc/systemd/system/docker.service.d
+        sudo tee /etc/systemd/system/docker.service.d/override.conf <<- EOF
+        [Service]
+        ExecStart=
+        ExecStart=/usr/bin/docker daemon --storage-driver=overlay -H fd://
+        EOF
+        sudo yum install -y docker-engine
+        sudo systemctl start docker
+        sudo systemctl enable docker
+        
+
 ## Next step
 
 [Step 3: Create a script for IP address discovery][3]
