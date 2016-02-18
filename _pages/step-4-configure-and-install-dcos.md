@@ -63,7 +63,7 @@ page_header_0_show_video:
 
 In this step you create a YAML configuration file that is customized for your environment. DCOS uses this configuration file during installation to generate your cluster installation files. In these instructions we assume that you are using ZooKeeper for shared storage.
 
-1.  Run this command to create a hashed password for superuser authentication, where `<superuser_password>` is the superuser password. Use the hashed password key for the `superuser_password` parameter in your `config.yaml` file.
+1.  Run this command to create a hashed password for superuser authentication, where `<superuser_password>` is the superuser password. Use the hashed password key for the `superuser_password_hash` parameter in your `config.yaml` file.
     
         $ sudo bash dcos_generate_config.ee.sh --hash-password <superuser_password>
         Extracting image from this script and loading into docker daemon, this step can take a few minutes
@@ -89,7 +89,7 @@ In this step you create a YAML configuration file that is customized for your en
           ssh_port: '<port-number>'
           ssh_user: <username>
           superuser_username: <username>
-          superuser_password: <hashed-password>
+          superuser_password_hash: <hashed-password>
           resolvers:
           - <dns-resolver-1>
           - <dns-resolver-2>
@@ -129,7 +129,7 @@ In this step you create a YAML configuration file that is customized for your en
     **ssh_user**
     :   This parameter specifies the SSH username, for example `centos`.
     
-    **superuser_password**
+    **superuser_password_hash**
     :   This parameter specifies the hashed Admin password. This password is required for using DCOS. See step 1 for more information on how to create.
     
     **superuser_username**
