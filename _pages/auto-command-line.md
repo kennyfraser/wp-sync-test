@@ -61,6 +61,8 @@ hide_from_related:
 ---
 The automated command line installation method provides a guided installation of DCOS Enterprise Edition using the recommended defaults.
 
+This installation method uses a bootstrap node to administer the DCOS installation across your cluster. The bootstrap node uses an SSH key to connect to each node in your cluster to automate the DCOS installation.
+
 To use the automated command-line installation method:
 
 *   Cluster nodes must be network accessible from the bootstrap node 
