@@ -249,10 +249,9 @@ In this step you create a custom DCOS build file on your bootstrap node and then
 
 ### Next Steps
 
-Now you can [assign user roles][5].
+Now you can [assign user roles][4].
 
  [1]: ../configuration-parameters-1-5/
  [2]: http://mesos.apache.org/documentation/latest/containerizer/
  [3]: ../administration/introcli/
  [4]: ../step-3-ip-address-discovery-script/
- [5]: ../security-and-authentication/managing-authorization/
