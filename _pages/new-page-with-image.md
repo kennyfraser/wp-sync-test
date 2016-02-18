@@ -11,6 +11,8 @@ published: true
 ---
 update # 7
 
+<img src="https://gitsync.mmdev2.ca/wp-content/uploads/2016/02/Screenshot-from-2015-08-20-113214-300x167.png" alt="Screenshot from 2015-08-20 11:32:14" width="300" height="167" class="alignnone size-medium wp-image-70" />
+
 ## Image import testing ...
 
 ![alt text][1]
