@@ -8,22 +8,18 @@ layout: page
 permalink: https://gitsync.mmdev2.ca/images/
 published: true
 ---
-
 update # 5
 
 ## Image import testing ...
 
+![alt text][1]
 
-![alt text](/assets/images/device-browser-content-screen-right.jpg "Logo Title Text 1")
+Inline-style: ![alt text][2]
 
-Inline-style: 
-![alt text](/assets/images/services.png "Logo Title Text 1")
+Inline-style: ![alt text][2]
 
-Inline-style: 
-![alt text](/assets/images/services.png "Logo Title Text 1")
+Reference-style: ![alt text][3]
 
-
-Reference-style: 
-![alt text][logo]
-
-[logo]: /assets/images/services.png "Logo Title Text 2"
+ [1]: /assets/images/device-browser-content-screen-right.jpg "Logo Title Text 1"
+ [2]: /assets/images/services.png "Logo Title Text 1"
+ [3]: /assets/images/services.png "Logo Title Text 2"
