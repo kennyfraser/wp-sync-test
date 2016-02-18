@@ -59,7 +59,13 @@ hide_from_navigation:
 hide_from_related:
   - "1"
 ---
-With the automated GUI installation method, you can use the DCOS graphical user interface to easily install DCOS Enterprise Edition. The GUI installation method provides a guided installation using the recommended defaults.
+The automated GUI installation method provides a graphical user interface to guide you through the installation of DCOS Enterprise Edition.
+
+To use the automated GUI installation method:
+
+*   Cluster nodes must be network accessible from the bootstrap node 
+*   Cluster nodes must have SSH enabled and ports open from the bootstrap node
+*   The bootstrap node must have an unencrypted SSH key that can be used to authenticate with the cluster nodes over SSH
 
 # Step 1: Bootstrap node prerequisites
 
