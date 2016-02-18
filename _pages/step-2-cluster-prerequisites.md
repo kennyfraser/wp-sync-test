@@ -63,7 +63,7 @@ Before installing DCOS you must prepare your cluster environment.
 
 1.  **Linux distribution** A supported Linux distribution must be installed on your cluster:
     
-    *   Enterprise Linux 7 (RedHat or CentOS version 3.10.0-327.4.5.el7.x86_64 or newer)
+    *   Enterprise Linux 7 (RHEL or CentOS version 3.10.0-327.4.5.el7.x86_64 or newer)
     *   CoreOS
 
 2.  **Nodes Hardware Requirements**
@@ -82,7 +82,78 @@ Before installing DCOS you must prepare your cluster environment.
     *   All of the nodes in your cluster must be able to send and receive traffic to each other.
     *   IPv6 must be disabled for all nodes. For more information see <a href="https://wiki.centos.org/FAQ/CentOS7#head-8984faf811faccca74c7bcdd74de7467f2fcd8ee" target="_blank">How do I disable IPv6</a>.
 
-3.  **Port configuration**
+3.  **System updates**
+    
+    Make sure you've updated your system to the latest version.
+    
+    *   On CentOS7 and RHEL7, you can update your systems with this command:
+        
+            $ sudo yum upgrade -y
+            
+
+4.  **Data compression**
+    
+    You must have the <a href="http://www.info-zip.org/UnZip.html" target="_blank">UnZip</a>, <a href="https://www.gnu.org/software/tar/" target="_blank">GNU tar</a>, and <a href="http://tukaani.org/xz/" target="_blank">XZ Utils</a> data compression utilities installed on your cluster nodes.
+    
+    *   To install these utilities on CentOS7 and RHEL7:
+        
+            $ sudo yum install -y tar xz unzip curl
+            
+
+5.  **Docker**
+    
+    Docker version 1.9 or greater must be installed on your bootstrap and cluster nodes. CoreOS includes Docker natively. You must run Docker commands as the root user (`sudo`). For more information, see [Docker installation][3].
+    
+    *   Install Docker by using these commands your Linux distribution:
+        
+        **RHEL**
+        
+        Docker must be installed by using a subscription channel. For more information, see <a href="https://access.redhat.com/articles/881893" target="_blank">Docker Formatted Container Images on Red Hat Systems</a>.
+        
+            <!-- $ curl -sSL https://get.docker.com | sudo sh -->
+            
+        
+        **CentOS** You must install Docker by using Overlay FS:
+        
+                $ sudo tee /etc/yum.repos.d/docker.repo <<-'EOF'
+                [dockerrepo]
+                name=Docker Repository
+                baseurl=https://yum.dockerproject.org/repo/main/centos/$releasever/
+                enabled=1
+                gpgcheck=1
+                gpgkey=https://yum.dockerproject.org/gpg
+                EOF
+                sudo yum -y update
+                sudo mkdir -p /etc/systemd/system/docker.service.d
+                sudo tee /etc/systemd/system/docker.service.d/override.conf <<- EOF
+                [Service]
+                ExecStart=
+                ExecStart=/usr/bin/docker daemon --storage-driver=overlay -H fd://
+                EOF
+                sudo yum install -y docker-engine
+                sudo systemctl start docker
+                sudo systemctl enable docker
+            
+    
+    *   Enable the Docker service:
+        
+            $ sudo systemctl enable docker.service
+            
+    
+    *   If you are using Docker as a non-root user, you must add your user to the "docker" group:
+        
+            $ sudo usermod -aG docker <user>
+            
+    
+    *   You can test that your Docker build is properly installed with these commands:
+        
+            $ sudo service docker start 
+            $ sudo docker ps
+            
+    
+    *   If you are using Docker Containerizer, you must have network access to a public Docker repository from the agent nodes or to an internal Docker registry.
+
+6.  **Port configuration**
     
     *   ICMP must be enabled between the master and the agent nodes.
     *   TCP and UDP enabled port 53 for DNS.
@@ -218,28 +289,6 @@ Before installing DCOS you must prepare your cluster environment.
         </table>
     
     *   All DCOS cluster node hostnames (FQDN and short hostnames) must be resolvable in DNS, both forward and reverse lookups must succeed.
-
-4.  **Docker** If you’re on CentOS you must install Docker by using Overlay FS:
-    
-        $ sudo tee /etc/yum.repos.d/docker.repo <<-'EOF'
-        [dockerrepo]
-        name=Docker Repository
-        baseurl=https://yum.dockerproject.org/repo/main/centos/$releasever/
-        enabled=1
-        gpgcheck=1
-        gpgkey=https://yum.dockerproject.org/gpg
-        EOF
-        sudo yum -y update
-        sudo mkdir -p /etc/systemd/system/docker.service.d
-        sudo tee /etc/systemd/system/docker.service.d/override.conf <<- EOF
-        [Service]
-        ExecStart=
-        ExecStart=/usr/bin/docker daemon --storage-driver=overlay -H fd://
-        EOF
-        sudo yum install -y docker-engine
-        sudo systemctl start docker
-        sudo systemctl enable docker
-        
 
 ## Next step
 
