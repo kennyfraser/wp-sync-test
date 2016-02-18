@@ -61,19 +61,39 @@ hide_from_related:
 ---
 Before installing DCOS, you must prepare your bootstrap node that will be used to run the DCOS installation commands. A bootstrap node is any physical, virtual, or cloud machine. It must have IP-to-IP connectivity from the bootstrap node to all nodes in your cluster environment. Your bootstrap node must not be a part of your cluster.
 
-1.  **Docker** Docker version 1.9 or greater must be installed on your bootstrap and cluster nodes. You must run Docker commands as the root user (`sudo`). For more information, see [Docker installation][1].
+1.  **Docker**
     
-    *   You can install Docker by using this command:
+    Docker version 1.9 or greater must be installed on your bootstrap and cluster nodes. You must run Docker commands as the root user (`sudo`). For more information, see <a href="http://docs.docker.com/engine/installation/" target="_blank">Docker installation</a>.
+    
+    *   Install Docker by using these commands your Linux distribution. CoreOS includes Docker natively.
         
-            $ curl -sSL https://get.docker.com |  sudo sh
-            
+        **RHEL**
         
-        If you are using CentOS7 and behind a firewall, you can install Docker by using this command:
+        Install Docker by using a subscription channel. For more information, see <a href="https://access.redhat.com/articles/881893" target="_blank">Docker Formatted Container Images on Red Hat Systems</a>. <!-- $ curl -sSL https://get.docker.com | sudo sh -->
         
-            $ sudo yum install -y docker
+        **CentOS** Install Docker by using Overlay FS:
+        
+                $ sudo tee /etc/yum.repos.d/docker.repo <<-'EOF'
+                [dockerrepo]
+                name=Docker Repository
+                baseurl=https://yum.dockerproject.org/repo/main/centos/$releasever/
+                enabled=1
+                gpgcheck=1
+                gpgkey=https://yum.dockerproject.org/gpg
+                EOF
+                sudo yum -y update
+                sudo mkdir -p /etc/systemd/system/docker.service.d
+                sudo tee /etc/systemd/system/docker.service.d/override.conf <<- EOF
+                [Service]
+                ExecStart=
+                ExecStart=/usr/bin/docker daemon --storage-driver=overlay -H fd://
+                EOF
+                sudo yum install -y docker-engine
+                sudo systemctl start docker
+                sudo systemctl enable docker
             
     
-    *   You must enable the Docker service:
+    *   Enable the Docker service:
         
             $ sudo systemctl enable docker.service
             
@@ -88,8 +108,6 @@ Before installing DCOS, you must prepare your bootstrap node that will be used t
             $ sudo service docker start 
             $ sudo docker ps
             
-    
-    *   If you are using RHEL7, Docker must be installed by using a subscription channel. For more information, see <a href="https://access.redhat.com/articles/881893" target="_blank">Docker Formatted Container Images on Red Hat Systems</a>.
     
     *   If you are using Docker Containerizer, you must have network access to a public Docker repository from the agent nodes or to an internal Docker registry.
 
@@ -112,7 +130,6 @@ Before installing DCOS, you must prepare your bootstrap node that will be used t
 
 ## Next step
 
-[Step 2: Cluster prerequisites][2]
+[Step 2: Cluster prerequisites][1]
 
- [1]: http://docs.docker.com/engine/installation/
- [2]: ../step-2-cluster-prerequisites/
+ [1]: ../step-2-cluster-prerequisites/
