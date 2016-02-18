@@ -118,6 +118,10 @@ Before installing DCOS, you must prepare your bootstrap node that will be used t
     
     **Tip:** If you've run the `usermod` command in the previous step, you may have to log out and then back in to your installer host machine before starting Zookeeper.
 
+3.  Download and save the DCOS setup file, `dcos_generate_config.sh`, to the `dcos` directory on your bootstrap node. This file is used to create your customized DCOS build file.
+    
+    **Important:** Contact your sales representative or <sales@mesosphere.io> to obtain the DCOS setup file.
+
 # Step 2: Cluster Prerequisites
 
 Before installing DCOS you must prepare your cluster environment.
