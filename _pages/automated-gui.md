@@ -59,6 +59,8 @@ hide_from_navigation:
 hide_from_related:
   - "1"
 ---
+With the automated GUI installation method, you can use the DCOS graphical user interface to easily install DCOS Enterprise Edition. The GUI installation method provides a guided installation using the recommended defaults.
+
 # Step 1: Bootstrap node prerequisites
 
 Before installing DCOS, you must prepare your bootstrap node that will be used to run the DCOS installation commands. A bootstrap node is any physical, virtual, or cloud machine. It must have IP-to-IP connectivity from the bootstrap node to all nodes in your cluster environment. Your bootstrap node must not be a part of your cluster.
