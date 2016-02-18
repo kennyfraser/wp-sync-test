@@ -8,6 +8,10 @@ layout: page
 permalink: >
   https://gitsync.mmdev2.ca/new-page-with-image/
 published: true
+test:
+  - test
+header:
+  - '{header}'
 ---
 update # 8
 
