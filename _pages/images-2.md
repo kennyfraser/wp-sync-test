@@ -5,7 +5,8 @@ author: gitsync
 post_date: 2016-02-17 16:21:24
 post_excerpt: ""
 layout: page
-permalink: https://gitsync.mmdev2.ca/images-2/
+permalink: >
+  https://gitsync.mmdev2.ca/images/images-2/
 published: true
 ---
 update # 5
