@@ -67,7 +67,7 @@ To use the automated command-line installation method:
 
 *   Cluster nodes must be network accessible from the bootstrap node 
 *   Cluster nodes must have SSH enabled and ports open from the bootstrap node
-*   The bootstrap node must have an unencrypted SSH key that can be used to authenticate with the cluster nodes over SSH
+*   The bootstrap node must have an unencrypted SSH key that can be used to authenticate with the cluster nodes over SSH 
 
 # Step 1: Bootstrap node prerequisites
 
@@ -362,7 +362,9 @@ In this step you create an IP detect script to broadcast the IP address of each 
             echo $(/usr/sbin/ip route show to match 172.28.128.3 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | tail -1)
             
 
-# Step 4: Installation
+# Step 4: Configure and Install DCOS
+
+In this step you create a customized YAML configuration file and install DCOS across your cluster using SSH.
 
 **Prerequisite:**
 
@@ -480,13 +482,44 @@ In this step you create a YAML configuration file that is customized for your en
 
 ## <a name="install-bash"></a>4\.2 Install DCOS
 
-In this step you create a custom DCOS build file on your bootstrap node and then install DCOS onto your cluster. With this installation method you create a bootstrap server that uses your SSH key and connects to every node to automate the deployment.
+In this step you create a custom DCOS build file on your bootstrap node and then install DCOS across your cluster nodes with SSH. With this installation method you create a bootstrap server that uses your SSH key and connects to every node to automate the deployment.
 
-**Tip:** If something goes wrong and you want to rerun your setup, use these cluster [cleanup instructions][3].
+You can view all of the automated command line installer options with the `--help` flag:
 
-**Prerequisites**
+    $ sudo bash dcos_generate_config.ee.sh --help
+    Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
+    usage: 
+    Install Mesosophere's Data Center Operating System
+    
+    dcos_installer [-h] [-f LOG_FILE] [--hash-password HASH_PASSWORD] [-v]
+    [--web | --genconf | --preflight | --deploy | --postflight | --uninstall | --validate-config | --test]
+    
+    Environment Settings:
+    
+      PORT                  Set the :port to run the web UI
+      CHANNEL_NAME          ADVANCED - Set build channel name
+      BOOTSTRAP_ID          ADVANCED - Set bootstrap ID for build
+    
+    optional arguments:
+      -h, --help            show this help message and exit
+      --hash-password HASH_PASSWORD
+                            Hash a password on the CLI for use in the config.yaml.
+      -v, --verbose         Verbose log output (DEBUG).
+      --offline             Do not install preflight prerequisites on CentOS7,
+                            RHEL7 in web mode
+      --web                 Run the web interface.
+      --genconf             Execute the configuration generation (genconf).
+      --preflight           Execute the preflight checks on a series of nodes.
+      --install-prereqs     Install preflight prerequisites. Works only on CentOS7
+                            and RHEL7.
+      --deploy              Execute a deploy.
+      --postflight          Execute postflight checks on a series of nodes.
+      --uninstall           Execute uninstall on target hosts.
+      --validate-config     Validate the configuration in config.yaml
+      --test                Performs tests on the dcos_installer application
+    
 
-*   A `genconf/config.yaml` file that is optimized for automatic distribution of DCOS across your nodes with SSH.
+**Tip:** If something goes wrong and you want to rerun your setup, use these cluster <a href="https://docs.mesosphere.com/getting-started/installing/installing-enterprise-edition/dcos-cleanup-script/" target="_blank">cleanup instructions</a>.
 
 To install DCOS:
 
@@ -600,9 +633,8 @@ To install DCOS:
 
 ### Next Steps
 
-Now you can [assign user roles][4].
+Now you can [assign user roles][3].
 
  [1]: ../configuration-parameters-1-6/
  [2]: http://mesos.apache.org/documentation/latest/containerizer/
- [3]: ../administration/introcli/
- [4]: ../security-and-authentication/managing-authorization/
+ [3]: ../security-and-authentication/managing-authorization/
