@@ -59,6 +59,14 @@ hide_from_navigation:
 hide_from_related:
   - "1"
 ---
+The automated command line installation method provides a guided installation of DCOS Enterprise Edition using the recommended defaults.
+
+To use the automated command-line installation method:
+
+*   Cluster nodes must be network accessible from the bootstrap node 
+*   Cluster nodes must have SSH enabled and ports open from the bootstrap node
+*   The bootstrap node must have an unencrypted SSH key that can be used to authenticate with the cluster nodes over SSH
+
 # Step 1: Bootstrap node prerequisites
 
 Before installing DCOS, you must prepare your bootstrap node that will be used to run the DCOS installation commands. A bootstrap node is any physical, virtual, or cloud machine. It must have IP-to-IP connectivity from the bootstrap node to all nodes in your cluster environment. Your bootstrap node must not be a part of your cluster.
