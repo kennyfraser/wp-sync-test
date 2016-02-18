@@ -9,7 +9,7 @@ permalink: >
   https://gitsync.mmdev2.ca/new-page-with-image/
 published: true
 ---
-update # 5
+update # 6
 
 ## Image import testing ...
 
