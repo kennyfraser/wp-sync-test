@@ -6,7 +6,7 @@ post_date: 2016-02-17 11:23:16
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.mesosphere.com/installing-enterprise-edition-1-6/dcos-installer/auto-command-line/
+  https://docs.mesosphere.com/installing-enterprise-edition-1-6/auto-command-line/
 published: true
 header_0_background:
   - fill
