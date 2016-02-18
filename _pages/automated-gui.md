@@ -59,7 +59,9 @@ hide_from_navigation:
 hide_from_related:
   - "1"
 ---
-The automated GUI installation method provides a graphical user interface to guide you through the installation of DCOS Enterprise Edition.
+The automated GUI installation method provides a graphical user interface that guides you through the installation of DCOS Enterprise Edition.
+
+This installation method uses a bootstrap node to administer the DCOS installation across your cluster. The bootstrap node uses an SSH key to connect to each node in your cluster to automate the DCOS installation.
 
 To use the automated GUI installation method:
 
