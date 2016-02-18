@@ -15,6 +15,7 @@ update # 8
 
 ## Image import testing ...
 
-![alt text][1]
+![alt text][1] ![alt text][2]
 
  [1]: /assets/images/new-image-1.jpg "New Image"
+ [2]: /wp-content/uploads/2016/02/Screenshot-from-2015-08-20-113214-300x167.png "New Image"
