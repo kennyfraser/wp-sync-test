@@ -63,7 +63,7 @@ Before installing DCOS you must prepare your cluster environment.
 
 1.  **Linux distribution** A supported Linux distribution must be installed on your cluster:
     
-    *   Enterprise Linux 7 (RHEL or CentOS version 3.10.0-327.4.5.el7.x86_64 or newer)
+    *   Enterprise Linux 7 kernel 3.10.0-327 or newer (RedHat or CentOS)
     *   CoreOS
 
 2.  **Nodes Hardware Requirements**
