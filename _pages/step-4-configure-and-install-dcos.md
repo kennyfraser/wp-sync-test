@@ -156,11 +156,7 @@ In this step you create a custom DCOS build file on your bootstrap node and then
 
 <!-- Stable URL: https://downloads.mesosphere.com/dcos/stable/dcos_generate_config.sh --> To install DCOS:
 
-1.  Download and save the DCOS setup file, `dcos_generate_config.sh`, to the `dcos` directory on your bootstrap node. This file is used to create your customized DCOS build file.
-    
-    **Important:** Contact your sales representative or <sales@mesosphere.io> to obtain the DCOS setup file.
-
-2.  From the `dcos` directory, run the DCOS installer shell script on your bootstrapping master nodes to generate a customized DCOS build. The setup script extracts a Docker container that uses the generic DCOS install files to create customized DCOS build files for your cluster. The build files are output to `./genconf/serve/`.
+1.  From the `dcos` directory, run the DCOS installer shell script on your bootstrapping master nodes to generate a customized DCOS build. The setup script extracts a Docker container that uses the generic DCOS install files to create customized DCOS build files for your cluster. The build files are output to `./genconf/serve/`.
     
     At this point your directory structure should resemble:
     
@@ -171,65 +167,65 @@ In this step you create a custom DCOS build file on your bootstrap node and then
         │   ├── ip-detect
         
 
-3.  Run this command to generate your customized DCOS build file:
+2.  Run this command to generate your customized DCOS build file:
     
         $ sudo bash dcos_generate_config.sh
         
     
     **Tip:** For the install script to work, you must have created [genconf/config.yaml][3] and [genconf/ip-detect][4].
 
-4.  From the `dcos` directory, run this command to host the DCOS install package through an nginx Docker container. For `<your-port>`, specify the port value that is used in the `bootstrap_url`.
+3.  From the `dcos` directory, run this command to host the DCOS install package through an nginx Docker container. For `<your-port>`, specify the port value that is used in the `bootstrap_url`.
     
         $ docker run -p <your-port>:80 -v $PWD/genconf/serve:/usr/share/nginx/html:ro nginx
         
 
-5.  Run these commands on each of your master nodes in succession to install DCOS using your custom build file.
+4.  Run these commands on each of your master nodes in succession to install DCOS using your custom build file.
     
     **Tip:** Although there is no actual harm to your cluster, DCOS may issue error messages until all of your master nodes are configured.
 
-6.  SSH to your node:
+5.  SSH to your node:
     
         $ ssh <master-ip>
         
 
-7.  Make a new directory and navigate to it:
+6.  Make a new directory and navigate to it:
     
         $ mkdir /tmp/dcos && cd /tmp/dcos
         
 
-8.  Download the DCOS installer from the nginx Docker container, where `<bootstrap-ip>` and `<your_port>` are specified in `bootstrap_url`:
+7.  Download the DCOS installer from the nginx Docker container, where `<bootstrap-ip>` and `<your_port>` are specified in `bootstrap_url`:
     
         $ curl -O http://<bootstrap-ip>:<your_port>/dcos_install.sh
         
 
-9.  Run this command to install DCOS on your master node:
+8.  Run this command to install DCOS on your master node:
     
         $ sudo bash dcos_install.sh master
         
 
-10. Run these commands on each of your agent nodes to install DCOS using your custom build file.
+9.  Run these commands on each of your agent nodes to install DCOS using your custom build file.
 
-11. SSH to your node:
+10. SSH to your node:
     
         $ ssh <master-ip>
         
 
-12. Make a new directory and navigate to it:
+11. Make a new directory and navigate to it:
     
         $ mkdir /tmp/dcos && cd /tmp/dcos
         
 
-13. Download the DCOS installer from the nginx Docker container, where `<bootstrap-ip>` and `<your_port>` are specified in `bootstrap_url`:
+12. Download the DCOS installer from the nginx Docker container, where `<bootstrap-ip>` and `<your_port>` are specified in `bootstrap_url`:
     
         $ curl http://<bootstrap-ip>:<your_port>/dcos_install.sh
         
 
-14. Run this command to install DCOS on your agent node:
+13. Run this command to install DCOS on your agent node:
     
         $ sudo bash dcos_install.sh slave
         
 
-15. Monitor Exhibitor and wait for it to converge at `http://<master-ip>:8181/exhibitor/v1/ui/index.html`.
+14. Monitor Exhibitor and wait for it to converge at `http://<master-ip>:8181/exhibitor/v1/ui/index.html`.
     
     **Tip:** This process can take about 10 minutes. During this time you will see the Master nodes become visible on the Exhibitor consoles and come online, eventually showing a green light.
     
@@ -237,13 +233,13 @@ In this step you create a custom DCOS build file on your bootstrap node and then
     
     When the status icons are green, you can access the DCOS web interface.
 
-16. Launch the DCOS web interface at: `http://<load-balanced-ip>/`.
+15. Launch the DCOS web interface at: `http://<load-balanced-ip>/`.
 
-17. Click **Log In To DCOS**.
+16. Click **Log In To DCOS**.
     
     <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-success1.png" rel="attachment wp-att-3198"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-success1.png" alt="ui-installer-success1" width="625" height="404" class="alignnone size-full wp-image-3198" /></a>
 
-18. Enter your administrator username and password.
+17. Enter your administrator username and password.
     
     <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-auth2.png" rel="attachment wp-att-3341"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-auth2-800x513.png" alt="ui-installer-auth2" width="800" height="513" class="alignnone size-large wp-image-3341" /></a>
     
