@@ -59,7 +59,7 @@ page_header_0_show_actions_footnote:
 page_header_0_show_video:
   - "0"
 ---
-# <a name="config-json"></a>4\.1 Configure your cluster
+### <a name="config-json"></a>Configure your cluster
 
 In this step you create a YAML configuration file that is customized for your environment. DCOS uses this configuration file during installation to generate your cluster installation files. In these instructions we assume that you are using ZooKeeper for shared storage.
 
@@ -135,7 +135,7 @@ In this step you create a YAML configuration file that is customized for your en
 
 3.  Save as `genconf/config.yaml`.
 
-# <a name="install-bash"></a>4\.2 Install DCOS
+## <a name="install-bash"></a>Install DCOS
 
 In this step you create a custom DCOS build file on your bootstrap node and then install DCOS onto your cluster. With this method you package the DCOS distribution yourself and connect to every server manually and run the commands.
 
