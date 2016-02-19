@@ -603,7 +603,7 @@ To install DCOS:
         20:59:19 dcos_installer.action_lib.prettyprint:: 1 out of 1 hosts successfully completed deploy_agent stage.
         
     
-    **Tip:** For a detailed view, you can add append log level debug (`-l debug`) to your command. For example `sudo bash dcos_generate_config.ee.sh --deploy -l debug`.
+    **Tip:** For a detailed view, you can append log level debug (`-l debug`) to your command. For example `sudo bash dcos_generate_config.ee.sh --deploy -l debug`.
 
 5.  Run the DCOS diagnostic script to verify that services are up and running.
     
@@ -620,7 +620,7 @@ To install DCOS:
         21:22:45 dcos_installer.action_lib.prettyprint:: 2 out of 2 hosts successfully completed run_postflight stage.
         
     
-    **Tip:** For a detailed view, you can add append log level debug (`-l debug`) to your command. For example `sudo bash dcos_generate_config.ee.sh --postflight -l debug`.
+    **Tip:** For a detailed view, you can append log level debug (`-l debug`) to your command. For example `sudo bash dcos_generate_config.ee.sh --postflight -l debug`.
 
 6.  Monitor Exhibitor and wait for it to converge at `http://<master-ip>:8181/exhibitor/v1/ui/index.html`.
     
