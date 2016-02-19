@@ -180,7 +180,7 @@ Before installing DCOS you must prepare your cluster environment.
             </td>
             
             <td class="tg-yw4l">
-              Zookeeper, see the <a href="http://zookeeper.apache.org/doc/r3.1.2/zookeeperAdmin.html#sc_zkCommands" target="_blank">ZK Admin Guide</a>
+              ZooKeeper, see the <a href="http://zookeeper.apache.org/doc/r3.1.2/zookeeperAdmin.html#sc_zkCommands" target="_blank">ZK Admin Guide</a>
             </td>
           </tr>
           
