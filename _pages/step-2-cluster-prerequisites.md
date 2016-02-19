@@ -287,6 +287,33 @@ Before installing DCOS you must prepare your cluster environment.
     
     *   All DCOS cluster node hostnames (FQDN and short hostnames) must be resolvable in DNS, both forward and reverse lookups must succeed.
 
+7.  **Cluster permissions**
+    
+    In this step you prepare your cluster for DCOS installation.
+    
+    1.  On each of your master and agent nodes, disable SELinux or set it to permissive mode. This enables DCOS services and Docker to function properly.
+        
+            $ sudo sed -i s/SELINUX=enforcing/SELINUX=permissive/g /etc/selinux/config
+            
+        
+        **Tip:** You can verify the status of SELinux with the `sestatus`command.
+    
+    2.  Add `nogroup` to each of your Mesos masters and agents.
+        
+            $ sudo groupadd nogroup
+            
+    
+    3.  Disable IPV6 by using this command:
+        
+            $ sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
+            $ sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
+            
+    
+    4.  Reboot your cluster for the changes to take affect:
+        
+            $ sudo reboot
+            
+
 ## Next step
 
 [Step 3: Create a script for IP address discovery][3]
