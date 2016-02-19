@@ -490,7 +490,7 @@ In this step you create a custom DCOS build file on your bootstrap node and then
 
 4.  From the `dcos` directory, run this command to host the DCOS install package through an nginx Docker container. For `<your-port>`, specify the port value that is used in the `bootstrap_url`.
     
-        $ docker run -p <your-port>:80 -v $PWD/genconf/serve:/usr/share/nginx/html:ro nginx
+        $ docker run -d -p <your-port>:80 -v $PWD/genconf/serve:/usr/share/nginx/html:ro nginx
         
 
 5.  Run these commands on each of your master nodes in succession to install DCOS using your custom build file.
