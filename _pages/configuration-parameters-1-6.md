@@ -61,10 +61,6 @@ hide_from_related:
 ---
 These configuration parameters are specified in [YAML][1] format in your config.yaml file. During DCOS installation the configuration file is used to generate a customized DCOS build. <!-- A config.yaml template file is available [here][2]. -->
 
-# <a name="config_cluster"></a>Cluster Configuration
-
-These parameters specify your cluster configuration in the `config_cluster` section of the config.yaml file.
-
 ## <a name="bootstrap-url"></a>bootstrap_url
 
 This parameter specifies the URI path for the DCOS installer to store the customized DCOS build files, which can be local (`bootstrap_url:file:///opt/dcos_install_tmp`) or hosted (`http://<your-web-server>`). By default this is set to `file:///opt/dcos_install_tmp` in the `config.yaml` template file, which is the location where the DCOS installer puts your install tarball.
@@ -236,7 +232,9 @@ If `master_discovery: vrrp`, this parameter specifies the number of Mesos master
 
 This required parameters specifies a YAML-formatted nested series (`-`) of DNS resolvers for your DCOS host nodes, or accept the default value of `8.8.8.8`. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them. If you have no internal hostnames to resolve, it is acceptable to set this to a public nameserver like Google or AWS. For example:
 
-    resolvers: - 8.8.8.8 - 8.8.4.4
+    resolvers: 
+    - 8.8.8.8 
+    - 8.8.4.4
     
 
 *Caution:* If you set the `resolvers` parameter incorrectly, you will permanently damage your configuration and have to reinstall DCOS.
@@ -271,13 +269,6 @@ This parameter specifies the Mesos roles to delegate to this node or accept the 
 <!-- optional --> This parameter specifies the priority of the role or accept the default value of
 
 `weights: slave_public=1`. For more information, see <a href="https://open.mesosphere.com/reference/mesos-master/#weights" target="_blank">Mesos weights</a>.
-
-# <a name="ssh_config"></a>SSH Configuration
-
-These parameters specify the SSH credentials for your cluster in the `ssh_config` section of the config.yaml file. This information is used during DCOS installation for `--preflight`, `--deploy`, `--postflight`, and `--clean-dcos` checks.
-
-*   It's recommended to rotate keys in the cluster after deployment.
-*   It's recommended to copy your private SSH key to the `genconf/` directory that is mounted to `/genconf` inside the installer Docker container. If you change this to a path on the host machine, the installer can't find the key because `/genconf` is mounted by default in the installer script.
 
 <a name="log_directory"></a>log_directory
 
@@ -336,7 +327,7 @@ superuser_username
         - <target-host-5>
         
 
-# <a name="examples1"></a>Example YAML configuration files
+# <a name="examples1"></a>Examples
 
 #### DCOS cluster with 3 masters, an Exhibitor/Zookeeper backed by Zookeeper, master list specified, Google DNS resolvers, and SSH configuration specified
 
