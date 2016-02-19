@@ -61,7 +61,7 @@ page_header_0_show_video:
 ---
 The automated GUI installation method provides a simple graphical interface that guides you through the installation of DCOS Enterprise Edition.
 
-**Important:** This installation method supports a minimal DCOS configuration set that includes Zookeeper for shared storage and a static master list, a known master IP addresses that is not behind a VPN.
+**Important:** This installation method supports a minimal DCOS configuration set that includes ZooKeeper for shared storage and a static master list, a known master IP addresses that is not behind a VPN.
 
 This installation method uses a bootstrap node to administer the DCOS installation across your cluster. The bootstrap node uses an SSH key to connect to each node in your cluster to automate the DCOS installation.
 
@@ -132,20 +132,20 @@ Install Docker by using these commands your Linux distribution. CoreOS includes 
 
 *   If you are using Docker Containerizer, you must have network access to a public Docker repository from the agent nodes or to an internal Docker registry.
 
-## Zookeeper for shared storage
+## ZooKeeper for shared storage
 
-Shared storage is required by DCOS during installation and runtime for bootstrapping and managing the internal DCOS Zookeeper cluster. The Zookeeper for shared storage instance should only be used for bootstrapping the DCOS Exhibitor instance. Do not use this bootstrap Zookeeper instance in production.
+Shared storage is required by DCOS during installation and runtime for bootstrapping and managing the internal DCOS ZooKeeper cluster. The ZooKeeper for shared storage instance should only be used for bootstrapping the DCOS Exhibitor instance. Do not use this bootstrap ZooKeeper instance in production. Multiple ZooKeeper instances are recommended for failover in production environments.
 
-Exhibitor automatically configures your Zookeeper installation on the master nodes during your DCOS installation. This Zookeeper instance should be separate from your cluster. Consider using a separate directory path for the DCOS cluster so that it does not interfere with other services that use the Zookeeper instance.
+Exhibitor automatically configures your ZooKeeper installation on the master nodes during your DCOS installation. This ZooKeeper instance should be separate from your cluster. Consider using a separate directory path for the DCOS cluster so that it does not interfere with other services that use the ZooKeeper instance.
 
 Temporary outages while the cluster is running are acceptable, but shared storage should generally be up and running to support replacing failed masters.
 
-To start a Zookeeper instance using Docker, run this command:
+To start a ZooKeeper instance using Docker, run this command:
 
         $ sudo docker run -d -p 2181:2181 -p 2888:2888 -p 3888:3888 --name=dcos_int_zk jplock/zookeeper
     
 
-**Tip:** If you've run the `usermod` Docker command in the previous step, you might have to log out and then back in to your boostrap node before starting Zookeeper.
+**Tip:** If you've run the `usermod` Docker command in the previous step, you might have to log out and then back in to your bootstrap node before starting ZooKeeper.
 
 ## DCOS setup file
 
@@ -210,7 +210,7 @@ A supported Linux distribution must be installed on your cluster:
         </td>
         
         <td class="tg-yw4l">
-          Zookeeper, see the <a href="http://zookeeper.apache.org/doc/r3.1.2/zookeeperAdmin.html#sc_zkCommands" target="_blank">ZK Admin Guide</a>
+          ZooKeeper, see the <a href="http://zookeeper.apache.org/doc/r3.1.2/zookeeperAdmin.html#sc_zkCommands" target="_blank">ZK Admin Guide</a>
         </td>
       </tr>
       
@@ -374,11 +374,14 @@ A supported Linux distribution must be installed on your cluster:
     **Password**
     :   Specify the administrator password. This password is required for using DCOS.
     
-    **Bootstrapping Zookeeper IP Address(es)**
-    :   Specify a comma-separated list of one or more Zookeeper node IP addresses to use for configuring the internal Exhibitor instances. Exhibitor uses this Zookeeper cluster to orchestrate it’s configuration.
+    **Bootstrapping ZooKeeper IP Address(es)**
     
-    **Bootstrapping Zookeeper Port**
-    :   Specify the Zookeeper port. For example, `2181`.
+    :   Specify a comma-separated list of one or more ZooKeeper node IP addresses to use for configuring the internal Exhibitor instances. Exhibitor uses this ZooKeeper cluster to orchestrate its configuration.
+        
+        **Important:** Multiple ZooKeeper instances are recommended for failover in production environments.
+    
+    **Bootstrapping ZooKeeper Port**
+    :   Specify the ZooKeeper port. For example, `2181`.
     
     **Upstream DNS Servers**
     :   Specify the DNS servers, which can be on your private network or the public internet. Caution: If you set this parameter incorrectly you will have to reinstall DCOS. For more information about service discovery, see this [documentation][2].
