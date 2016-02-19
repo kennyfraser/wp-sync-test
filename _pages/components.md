@@ -105,7 +105,7 @@ The Mesos Containerizer provides lightweight containerization and resource isola
 
 ### Docker container
 
-The Mesos Docker Containizer provides support for launching tasks that contain Docker images. For more information, see the [Docker Containerizer][4] documentation.
+The Mesos Docker Containerizer provides support for launching tasks that contain Docker images. For more information, see the [Docker Containerizer][4] documentation.
 
  [1]: https://open.mesosphere.com/reference/mesos-master/
  [2]: https://open.mesosphere.com/reference/mesos-slave/
