@@ -86,8 +86,6 @@ In this step you create a YAML configuration file that is customized for your en
           - <master-ip-1>
           - <master-ip-2>
           - <master-ip-3>
-          ssh_port: '<port-number>'
-          ssh_user: <username>
           superuser_username: <username>
           superuser_password_hash: <hashed-password>
           resolvers:
@@ -122,12 +120,6 @@ In this step you create a YAML configuration file that is customized for your en
     
     **master_list**
     :   Specify a list of your static master IP addresses as a YAML nested series (`-`).
-    
-    **ssh_port**
-    :   This parameter specifies the port to SSH to, for example `22`.
-    
-    **ssh_user**
-    :   This parameter specifies the SSH username, for example `centos`.
     
     **superuser_password_hash**
     :   This parameter specifies the hashed Admin password. This password is required for using DCOS. See step 1 for more information on how to create.
