@@ -321,11 +321,7 @@ A supported Linux distribution must be installed on your cluster:
 
 **Important:** Encrypted SSH keys are not supported.
 
-1.  Download and save the DCOS setup file, `dcos_generate_config.ee.sh`, to the `dcos` directory on your bootstrap node. This file is used to create your customized DCOS build file.
-    
-    **Important:** Contact your sales representative or <sales@mesosphere.io> to obtain the DCOS setup file.
-
-2.  From your terminal, start the DCOS installer with this command.
+1.  From your terminal, start the DCOS installer with this command.
     
         $ sudo bash dcos_generate_config.ee.sh --web
         Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
@@ -338,13 +334,13 @@ A supported Linux distribution must be installed on your cluster:
         $ sudo bash dcos_generate_config.ee.sh --web -v
         
 
-3.  Launch the DCOS web installer in your browser at: `http://<public-ip>:9000`.
+2.  Launch the DCOS web installer in your browser at: `http://<public-ip>:9000`.
 
-4.  Click **Begin Installation**.
+3.  Click **Begin Installation**.
     
     <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-begin.png" rel="attachment wp-att-3190"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-begin-800x510.png" alt="ui-installer-begin" width="800" height="510" class="alignnone size-large wp-image-3190" /></a>
 
-5.  Specify your Deployment and DCOS Environment settings:
+4.  Specify your Deployment and DCOS Environment settings:
     
     ### Deployment Settings
     
@@ -389,7 +385,7 @@ A supported Linux distribution must be installed on your cluster:
     **IP Detect Script**
     :   Specify an IP detect script to broadcast the IP address of each node across the cluster. For more information, see the [documentation][3].
 
-6.  Click **Run Pre-Flight**. The preflight script validates that your cluster is installable. This step can take up to 15 minutes to complete. If errors any errors are found, fix and then click **Retry**.
+5.  Click **Run Pre-Flight**. The preflight script validates that your cluster is installable. This step can take up to 15 minutes to complete. If errors any errors are found, fix and then click **Retry**.
     
     **Important:** If you exit your GUI installation before launching DCOS, you must do this before reinstalling:
     
@@ -398,21 +394,21 @@ A supported Linux distribution must be installed on your cluster:
     
     <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-pre-flight1.png" rel="attachment wp-att-3197"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-pre-flight1.png" alt="ui-installer-pre-flight1" width="626" height="405" class="alignnone size-full wp-image-3197" /></a>
 
-7.  Click **Deploy** to install DCOS on your cluster. If errors any errors are found, fix and then click **Retry**.
+6.  Click **Deploy** to install DCOS on your cluster. If errors any errors are found, fix and then click **Retry**.
     
     <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-deploy1.png" rel="attachment wp-att-3195"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-deploy1.png" alt="ui-installer-deploy1" width="628" height="406" class="alignnone size-full wp-image-3195" /></a>
 
-8.  Click **Run Post-Flight**. If errors any errors are found, fix and then click **Retry**.
+7.  Click **Run Post-Flight**. If errors any errors are found, fix and then click **Retry**.
     
     <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-post-flight1.png" rel="attachment wp-att-3196"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-post-flight1.png" alt="ui-installer-post-flight1" width="623" height="366" class="alignnone size-full wp-image-3196" /></a>
     
     **Tip:** You can click **Download Logs** to view your logs locally.
 
-9.  Click **Log In To DCOS**.
+8.  Click **Log In To DCOS**.
     
     <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-success1.png" rel="attachment wp-att-3198"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-success1.png" alt="ui-installer-success1" width="625" height="404" class="alignnone size-full wp-image-3198" /></a>
 
-10. Enter your administrator username and password.
+9.  Enter your administrator username and password.
     
     <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-auth2.png" rel="attachment wp-att-3341"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-auth2-800x513.png" alt="ui-installer-auth2" width="800" height="513" class="alignnone size-large wp-image-3341" /></a>
     
