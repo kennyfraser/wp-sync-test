@@ -1,67 +1,66 @@
 ---
-ID: 538
+ID: 113
 post_title: Terminology
-author: Joel Hamill
-post_date: 2015-12-08 08:57:04
+author: gitsync
+post_date: 2016-02-22 18:13:27
 post_excerpt: ""
 layout: page
-permalink: >
-  https://docs.mesosphere.com/administration/terminology/
+permalink: https://gitsync.mmdev2.ca/terminology/
 published: true
 import_src:
-  - mesosphere-docs/overview/terminology.md
+  - 'a:1:{i:0;s:39:"mesosphere-docs/overview/terminology.md";}'
 header_0_background:
-  - fill
+  - 'a:1:{i:0;s:4:"fill";}'
 header_0_background_fill_style:
-  - dark
+  - 'a:1:{i:0;s:4:"dark";}'
 header_0_logo_style:
-  - color-light
+  - 'a:1:{i:0;s:11:"color-light";}'
 header_0_navigation_style:
-  - light
+  - 'a:1:{i:0;s:5:"light";}'
 header:
-  - "1"
+  - 'a:1:{i:0;s:1:"1";}'
 page_header_0_show_page_header:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_size:
-  - default
+  - 'a:1:{i:0;s:7:"default";}'
 page_header_0_fill_screen:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_background:
-  - transparent
+  - 'a:1:{i:0;s:11:"transparent";}'
 page_header_0_show_background_image:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_show_background_video:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_headline:
-  - ""
+  - 'a:1:{i:0;s:0:"";}'
 page_header_0_headline_size:
-  - default
+  - 'a:1:{i:0;s:7:"default";}'
 page_header_0_description:
-  - ""
+  - 'a:1:{i:0;s:0:"";}'
 page_header_0_description_size:
-  - default
+  - 'a:1:{i:0;s:7:"default";}'
 page_header_0_show_image:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_content_alignment:
-  - center
+  - 'a:1:{i:0;s:6:"center";}'
 page_header_0_content_style:
-  - dark
+  - 'a:1:{i:0;s:4:"dark";}'
 page_header_0_actions:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_show_actions_footnote:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_show_video:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header:
-  - "1"
+  - 'a:1:{i:0;s:1:"1";}'
 page_options_topic_page:
-  - ""
+  - 'a:1:{i:0;s:0:"";}'
 page_options_require_authentication:
-  - ""
+  - 'a:1:{i:0;s:0:"";}'
 hide_from_navigation:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 hide_from_related:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 ---
 This page contains terms and definitions for the Mesosphere DCOS.
 

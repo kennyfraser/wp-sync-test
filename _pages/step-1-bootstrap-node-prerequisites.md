@@ -1,63 +1,63 @@
 ---
-ID: 3143
+ID: 101
 post_title: 'Step 1: Bootstrap node prerequisites'
-author: Joel Hamill
-post_date: 2016-02-06 07:38:26
+author: gitsync
+post_date: 2016-02-22 18:13:26
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.mesosphere.com/installing-enterprise-edition-1-6/manual-installation/step-1-bootstrap-prerequisites/
+  https://gitsync.mmdev2.ca/step-1-bootstrap-node-prerequisites/
 published: true
 header_0_background:
-  - fill
+  - 'a:1:{i:0;s:4:"fill";}'
 header_0_background_fill_style:
-  - dark
+  - 'a:1:{i:0;s:4:"dark";}'
 header_0_logo_style:
-  - color-light
+  - 'a:1:{i:0;s:11:"color-light";}'
 header_0_navigation_style:
-  - light
+  - 'a:1:{i:0;s:5:"light";}'
 header:
-  - "1"
+  - 'a:1:{i:0;s:1:"1";}'
 page_header_0_show_page_header:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_size:
-  - default
+  - 'a:1:{i:0;s:7:"default";}'
 page_header_0_fill_screen:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_background:
-  - transparent
+  - 'a:1:{i:0;s:11:"transparent";}'
 page_header_0_show_background_image:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_show_background_video:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_headline:
-  - ""
+  - 'a:1:{i:0;s:0:"";}'
 page_header_0_headline_size:
-  - default
+  - 'a:1:{i:0;s:7:"default";}'
 page_header_0_description:
-  - ""
+  - 'a:1:{i:0;s:0:"";}'
 page_header_0_description_size:
-  - default
+  - 'a:1:{i:0;s:7:"default";}'
 page_header_0_show_image:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_content_alignment:
-  - center
+  - 'a:1:{i:0;s:6:"center";}'
 page_header_0_content_style:
-  - dark
+  - 'a:1:{i:0;s:4:"dark";}'
 page_header_0_actions:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_show_actions_footnote:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_show_video:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header:
-  - "1"
+  - 'a:1:{i:0;s:1:"1";}'
 page_options_require_authentication:
-  - ""
+  - 'a:1:{i:0;s:0:"";}'
 hide_from_navigation:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 hide_from_related:
-  - "1"
+  - 'a:1:{i:0;s:1:"1";}'
 ---
 Before installing DCOS, you must prepare your bootstrap node that will be used to run the DCOS installation commands. A bootstrap node is any physical, virtual, or cloud machine. It must have IP-to-IP connectivity from the bootstrap node to all nodes in your cluster environment. Your bootstrap node must not be a part of your cluster. testee
 

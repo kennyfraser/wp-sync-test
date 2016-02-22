@@ -1,65 +1,65 @@
 ---
-ID: 2932
+ID: 93
 post_title: >
   Managing Authorization and
   Authentication
-author: Joel Hamill
-post_date: 2016-02-05 16:45:41
+author: gitsync
+post_date: 2016-02-22 18:13:26
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.mesosphere.com/installing-enterprise-edition-1-6/security-and-authentication/managing-authorization/
+  https://gitsync.mmdev2.ca/managing-authorization-and-authentication/
 published: true
 header:
-  - "1"
+  - 'a:1:{i:0;s:1:"1";}'
 page_header:
-  - "1"
+  - 'a:1:{i:0;s:1:"1";}'
 page_options_require_authentication:
-  - ""
+  - 'a:1:{i:0;s:0:"";}'
 hide_from_navigation:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 hide_from_related:
-  - "1"
+  - 'a:1:{i:0;s:1:"1";}'
 header_0_background:
-  - fill
+  - 'a:1:{i:0;s:4:"fill";}'
 header_0_background_fill_style:
-  - dark
+  - 'a:1:{i:0;s:4:"dark";}'
 header_0_logo_style:
-  - color-light
+  - 'a:1:{i:0;s:11:"color-light";}'
 header_0_navigation_style:
-  - light
+  - 'a:1:{i:0;s:5:"light";}'
 page_header_0_show_page_header:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_size:
-  - default
+  - 'a:1:{i:0;s:7:"default";}'
 page_header_0_fill_screen:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_background:
-  - transparent
+  - 'a:1:{i:0;s:11:"transparent";}'
 page_header_0_show_background_image:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_show_background_video:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_headline:
-  - ""
+  - 'a:1:{i:0;s:0:"";}'
 page_header_0_headline_size:
-  - default
+  - 'a:1:{i:0;s:7:"default";}'
 page_header_0_description:
-  - ""
+  - 'a:1:{i:0;s:0:"";}'
 page_header_0_description_size:
-  - default
+  - 'a:1:{i:0;s:7:"default";}'
 page_header_0_show_image:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_content_alignment:
-  - center
+  - 'a:1:{i:0;s:6:"center";}'
 page_header_0_content_style:
-  - dark
+  - 'a:1:{i:0;s:4:"dark";}'
 page_header_0_actions:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_show_actions_footnote:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_show_video:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 ---
 Authorization and authentication is managed in the DCOS web interface.
 

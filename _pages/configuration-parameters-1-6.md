@@ -1,63 +1,63 @@
 ---
-ID: 2959
+ID: 89
 post_title: Configuration parameters (1.6)
-author: Joel Hamill
-post_date: 2016-02-01 08:49:11
+author: gitsync
+post_date: 2016-02-22 18:13:25
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.mesosphere.com/installing-enterprise-edition-1-6/configuration-parameters-1-6/
+  https://gitsync.mmdev2.ca/configuration-parameters-1-6/
 published: true
 header_0_background:
-  - fill
+  - 'a:1:{i:0;s:4:"fill";}'
 header_0_background_fill_style:
-  - dark
+  - 'a:1:{i:0;s:4:"dark";}'
 header_0_logo_style:
-  - color-light
+  - 'a:1:{i:0;s:11:"color-light";}'
 header_0_navigation_style:
-  - light
+  - 'a:1:{i:0;s:5:"light";}'
 header:
-  - "1"
+  - 'a:1:{i:0;s:1:"1";}'
 page_header_0_show_page_header:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_size:
-  - default
+  - 'a:1:{i:0;s:7:"default";}'
 page_header_0_fill_screen:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_background:
-  - transparent
+  - 'a:1:{i:0;s:11:"transparent";}'
 page_header_0_show_background_image:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_show_background_video:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_headline:
-  - ""
+  - 'a:1:{i:0;s:0:"";}'
 page_header_0_headline_size:
-  - default
+  - 'a:1:{i:0;s:7:"default";}'
 page_header_0_description:
-  - ""
+  - 'a:1:{i:0;s:0:"";}'
 page_header_0_description_size:
-  - default
+  - 'a:1:{i:0;s:7:"default";}'
 page_header_0_show_image:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_content_alignment:
-  - center
+  - 'a:1:{i:0;s:6:"center";}'
 page_header_0_content_style:
-  - dark
+  - 'a:1:{i:0;s:4:"dark";}'
 page_header_0_actions:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_show_actions_footnote:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header_0_show_video:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 page_header:
-  - "1"
+  - 'a:1:{i:0;s:1:"1";}'
 page_options_require_authentication:
-  - ""
+  - 'a:1:{i:0;s:0:"";}'
 hide_from_navigation:
-  - "0"
+  - 'a:1:{i:0;s:1:"0";}'
 hide_from_related:
-  - "1"
+  - 'a:1:{i:0;s:1:"1";}'
 ---
 These configuration parameters are specified in [YAML][1] format in your config.yaml file. During DCOS installation the configuration file is used to generate a customized DCOS build. <!-- A config.yaml template file is available [here][2]. -->
 
