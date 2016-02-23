@@ -7,15 +7,15 @@ layout: page
 permalink: >
   https://gitsync.mmdev2.ca/automated-gui-installation/meta-filter-test/
 published: true
-post_parent: 85
+post_parent: 82
 menu_order: 2
-page_options_require_authentication: true
-page_options_show_link_unauthenticated: true
-hide_from_navigation: true
-hide_from_related: true
+page_options_require_authentication: false
+page_options_show_link_unauthenticated: false
+hide_from_navigation: false
+hide_from_related: false
 ---
 Meta Filter Test
 
-Edit # 6
+Edit # 7
 
-1 1 1 1
+0 0 0 0
