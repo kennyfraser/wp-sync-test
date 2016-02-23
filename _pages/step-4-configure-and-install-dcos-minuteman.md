@@ -573,4 +573,4 @@ Now you can [assign user roles][6].
  [6]: ../security-and-authentication/managing-authorization/
  [7]: ../getting-started/installing/installing-enterprise-edition/dcos-cleanup-script/
  [8]: https://docs.mesosphere.com/installing-enterprise-edition-1-6/step-3-ip-address-discovery-script/
- [9]: ../configuration-parameters-1-5/
+ [9]: ../configuration-parameters/
