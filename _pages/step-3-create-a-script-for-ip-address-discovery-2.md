@@ -1,63 +1,18 @@
 ---
 ID: 107
 post_title: 'Step 3: Create a script for IP address discovery'
-author: gitsync
 post_date: 2016-02-22 18:13:27
 post_excerpt: ""
 layout: page
 permalink: >
-  https://gitsync.mmdev2.ca/step-3-create-a-script-for-ip-address-discovery-2/
+  http://local.gitsync.com/step-3-create-a-script-for-ip-address-discovery-2/
 published: true
-header_0_background:
-  - 'a:1:{i:0;s:4:"fill";}'
-header_0_background_fill_style:
-  - 'a:1:{i:0;s:4:"dark";}'
-header_0_logo_style:
-  - 'a:1:{i:0;s:11:"color-light";}'
-header_0_navigation_style:
-  - 'a:1:{i:0;s:5:"light";}'
-header:
-  - 'a:1:{i:0;s:1:"1";}'
-page_header_0_show_page_header:
-  - 'a:1:{i:0;s:1:"0";}'
-page_header_0_size:
-  - 'a:1:{i:0;s:7:"default";}'
-page_header_0_fill_screen:
-  - 'a:1:{i:0;s:1:"0";}'
-page_header_0_background:
-  - 'a:1:{i:0;s:11:"transparent";}'
-page_header_0_show_background_image:
-  - 'a:1:{i:0;s:1:"0";}'
-page_header_0_show_background_video:
-  - 'a:1:{i:0;s:1:"0";}'
-page_header_0_headline:
-  - 'a:1:{i:0;s:0:"";}'
-page_header_0_headline_size:
-  - 'a:1:{i:0;s:7:"default";}'
-page_header_0_description:
-  - 'a:1:{i:0;s:0:"";}'
-page_header_0_description_size:
-  - 'a:1:{i:0;s:7:"default";}'
-page_header_0_show_image:
-  - 'a:1:{i:0;s:1:"0";}'
-page_header_0_content_alignment:
-  - 'a:1:{i:0;s:6:"center";}'
-page_header_0_content_style:
-  - 'a:1:{i:0;s:4:"dark";}'
-page_header_0_actions:
-  - 'a:1:{i:0;s:1:"0";}'
-page_header_0_show_actions_footnote:
-  - 'a:1:{i:0;s:1:"0";}'
-page_header_0_show_video:
-  - 'a:1:{i:0;s:1:"0";}'
-page_header:
-  - 'a:1:{i:0;s:1:"1";}'
-page_options_require_authentication:
-  - 'a:1:{i:0;s:0:"";}'
-hide_from_navigation:
-  - 'a:1:{i:0;s:1:"0";}'
-hide_from_related:
-  - 'a:1:{i:0;s:1:"1";}'
+post_parent: 0
+menu_order: 0
+page_options_require_authentication: true
+page_options_show_link_unauthenticated: false
+hide_from_navigation: true
+hide_from_related: true
 ---
 In this step you create an IP detect script to broadcast the IP address of each node across the cluster. Each node in a DCOS cluster has a unique IP address that is used to communicate between nodes in the cluster. The IP detect script prints the unique IPv4 address of a node to STDOUT each time DCOS is started on the node.
 

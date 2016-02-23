@@ -3,63 +3,18 @@ ID: 93
 post_title: >
   Managing Authorization and
   Authentication
-author: gitsync
 post_date: 2016-02-22 18:13:26
 post_excerpt: ""
 layout: page
 permalink: >
-  https://gitsync.mmdev2.ca/managing-authorization-and-authentication/
+  http://local.gitsync.com/managing-authorization-and-authentication/
 published: true
-header:
-  - 'a:1:{i:0;s:1:"1";}'
-page_header:
-  - 'a:1:{i:0;s:1:"1";}'
-page_options_require_authentication:
-  - 'a:1:{i:0;s:0:"";}'
-hide_from_navigation:
-  - 'a:1:{i:0;s:1:"0";}'
-hide_from_related:
-  - 'a:1:{i:0;s:1:"1";}'
-header_0_background:
-  - 'a:1:{i:0;s:4:"fill";}'
-header_0_background_fill_style:
-  - 'a:1:{i:0;s:4:"dark";}'
-header_0_logo_style:
-  - 'a:1:{i:0;s:11:"color-light";}'
-header_0_navigation_style:
-  - 'a:1:{i:0;s:5:"light";}'
-page_header_0_show_page_header:
-  - 'a:1:{i:0;s:1:"0";}'
-page_header_0_size:
-  - 'a:1:{i:0;s:7:"default";}'
-page_header_0_fill_screen:
-  - 'a:1:{i:0;s:1:"0";}'
-page_header_0_background:
-  - 'a:1:{i:0;s:11:"transparent";}'
-page_header_0_show_background_image:
-  - 'a:1:{i:0;s:1:"0";}'
-page_header_0_show_background_video:
-  - 'a:1:{i:0;s:1:"0";}'
-page_header_0_headline:
-  - 'a:1:{i:0;s:0:"";}'
-page_header_0_headline_size:
-  - 'a:1:{i:0;s:7:"default";}'
-page_header_0_description:
-  - 'a:1:{i:0;s:0:"";}'
-page_header_0_description_size:
-  - 'a:1:{i:0;s:7:"default";}'
-page_header_0_show_image:
-  - 'a:1:{i:0;s:1:"0";}'
-page_header_0_content_alignment:
-  - 'a:1:{i:0;s:6:"center";}'
-page_header_0_content_style:
-  - 'a:1:{i:0;s:4:"dark";}'
-page_header_0_actions:
-  - 'a:1:{i:0;s:1:"0";}'
-page_header_0_show_actions_footnote:
-  - 'a:1:{i:0;s:1:"0";}'
-page_header_0_show_video:
-  - 'a:1:{i:0;s:1:"0";}'
+post_parent: 0
+menu_order: 0
+page_options_require_authentication: true
+page_options_show_link_unauthenticated: false
+hide_from_navigation: true
+hide_from_related: true
 ---
 Authorization and authentication is managed in the DCOS web interface.
 

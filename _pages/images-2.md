@@ -1,15 +1,18 @@
 ---
 ID: 63
 post_title: Images 2
-author: gitsync
 post_date: 2016-02-17 16:21:24
 post_excerpt: ""
 layout: page
 permalink: >
-  https://gitsync.mmdev2.ca/images/images-2/
+  http://local.gitsync.com/images/images-2/
 published: true
-parent:
-  - "66"
+post_parent: 52
+menu_order: 3
+page_options_require_authentication: false
+page_options_show_link_unauthenticated: false
+hide_from_navigation: false
+hide_from_related: false
 ---
 update # 11
 

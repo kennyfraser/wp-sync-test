@@ -1,12 +1,17 @@
 ---
 ID: 36
 post_title: Test Page 1.3
-author: gitsync
 post_date: 2016-02-12 15:36:50
 post_excerpt: ""
 layout: page
-permalink: https://gitsync.mmdev2.ca/test-page-1/
+permalink: http://local.gitsync.com/test-page-1/
 published: true
+post_parent: 0
+menu_order: 0
+page_options_require_authentication: false
+page_options_show_link_unauthenticated: false
+hide_from_navigation: false
+hide_from_related: false
 ---
 Edit 1.0.5
 
