@@ -1,9 +1,9 @@
 ---
 ID: 132
 post_title: Meta Filter Test2
-post_date: 2016-02-23 09:07:03
+post_date: 2016-02-23 10:07:03
 post_excerpt: "AFSDASDASSDSD"
-layout: page
+layout: post
 permalink: >
   https://gitsync.mmdev2.ca/automated-gui-installation/meta-filter-test/
 published: true
@@ -16,6 +16,6 @@ hide_from_related: false
 ---
 Meta Filter Test
 
-Edit # 23
+Edit # 25
 
 0 1 1 0
