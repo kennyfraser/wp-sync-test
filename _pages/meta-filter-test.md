@@ -12,10 +12,10 @@ menu_order: 2
 page_options_require_authentication: true
 page_options_show_link_unauthenticated: true
 hide_from_navigation: true
-hide_from_related: false
+hide_from_related: true
 ---
 Meta Filter Test
 
 Edit # 11
 
-1 1 1 0
+1 1 1 1
