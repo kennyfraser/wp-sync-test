@@ -99,7 +99,7 @@ You can create groups and assign users to them. Groups are a collection of insta
     
     To log out of the DCOS web interface:
     
-    1.  Click on your username in the lower left corner and select **Sign Out**.
+    1.  Click on your username in the lower left corner and select **Sign Out**. <!-- insert graphic -->
         
         You can now log in as another user.
     
@@ -107,7 +107,8 @@ You can create groups and assign users to them. Groups are a collection of insta
     
     1.  Enter the this command:
         
-            dcos config unset core.dcos_acs_token
+            $ dcos config unset core.dcos_acs_token
+            Removed [core.dcos_acs_token]
             
         
         You can now log in as another user.
