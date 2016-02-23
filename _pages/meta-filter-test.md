@@ -11,9 +11,9 @@ post_parent: 85
 menu_order: 2
 page_options_require_authentication: false
 page_options_show_link_unauthenticated: false
-hide_from_navigation: false
-hide_from_related: false
+hide_from_navigation: true
+hide_from_related: true
 ---
 Meta Filter Test
 
-Edit # 3 <-
+Edit # 4 ->
