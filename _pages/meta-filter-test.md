@@ -1,14 +1,14 @@
 ---
 ID: 132
-post_title: Meta Filter Test
-post_date: 2016-02-23 09:06:02
-post_excerpt: ""
+post_title: Meta Filter Test2
+post_date: 2016-02-23 09:06:03
+post_excerpt: "AFSDASDASSDSD"
 layout: page
 permalink: >
   https://gitsync.mmdev2.ca/automated-gui-installation/meta-filter-test/
 published: true
 post_parent: 83
-menu_order: 2
+menu_order: 4
 page_options_require_authentication: true
 page_options_show_link_unauthenticated: true
 hide_from_navigation: true
