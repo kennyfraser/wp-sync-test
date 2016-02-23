@@ -253,7 +253,7 @@ In this step you create a custom DCOS build file on your bootstrap node and then
 
 Now you can [assign user roles][5].
 
- [1]: ../configuration-parameters-1-5/
+ [1]: ../configuration-parameters/
  [2]: https://docs.mesosphere.com/getting-started/installing/installing-enterprise-edition/dcos-cleanup-script/
  [3]: ../administration/introcli/
  [4]: ../step-3-ip-address-discovery-script/
