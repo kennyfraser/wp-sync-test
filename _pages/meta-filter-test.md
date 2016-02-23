@@ -1,6 +1,6 @@
 ---
 ID: 132
-post_title: Meta Filter Test2
+post_title: Meta Filter Test
 post_date: 2016-02-23 11:07:03
 post_excerpt: "AFSDASDASSDSD"
 layout: page
