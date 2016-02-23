@@ -63,12 +63,10 @@ page_header_0_show_video:
 ---
 Authorization and authentication is managed in the DCOS web interface.
 
-The available users roles are Administrator and User.
+You can authorize individual users and groups of users.
 
-*   The administrator has complete control of DCOS and installed services. The Administrator username and password are configured during DCOS installation. The administrator full name is `Bootstrap superuser` and cannot be changed. 
-*   The user has limited access to DCOS and installed services, as defined by the Administrator. You can create users and grant them access to individual services.
-
-You can create groups and assign users to them. Groups are a collection of installed DCOS services and components that users are granted access to. By default the Boostrap superuser is added to the `Access Control Service super user group`. Members of the Access Control Service super user group have access to all DCOS components.
+*   **Users** are granted access to DCOS and installed services by an administrator. During installation a default administrator user named `Bootstrap superuser` is created and added to the group named `Superuser group`. The Superuser group has access to all DCOS components and is where DCOS administrator access is defined. Only members of the Superuser group have access to the DCOS web interface. 
+*   **Groups** are comprised of a list of installed DCOS services that users are granted access to. 
 
 **Prerequisites:**
 
