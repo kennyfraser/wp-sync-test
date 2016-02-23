@@ -10,10 +10,12 @@ published: true
 post_parent: 85
 menu_order: 2
 page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
+page_options_show_link_unauthenticated: true
 hide_from_navigation: true
 hide_from_related: true
 ---
 Meta Filter Test
 
-Edit # 4 ->
+Edit # 5
+
+0 1 1 1 
