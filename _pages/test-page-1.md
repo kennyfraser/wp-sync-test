@@ -4,7 +4,7 @@ post_title: Test Page 1.3
 post_date: 2016-02-12 15:36:50
 post_excerpt: ""
 layout: page
-permalink: http://local.gitsync.com/test-page-1/
+permalink: https://gitsync.mmdev2.ca/test-page-1/
 published: true
 post_parent: 0
 menu_order: 0

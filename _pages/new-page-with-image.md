@@ -5,7 +5,7 @@ post_date: 2016-02-18 12:27:11
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/new-page-with-image/
+  https://gitsync.mmdev2.ca/new-page-with-image/
 published: true
 post_parent: 0
 menu_order: 0

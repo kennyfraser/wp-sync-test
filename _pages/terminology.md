@@ -4,7 +4,7 @@ post_title: Terminology
 post_date: 2016-02-22 18:13:27
 post_excerpt: ""
 layout: page
-permalink: http://local.gitsync.com/terminology/
+permalink: https://gitsync.mmdev2.ca/terminology/
 published: true
 post_parent: 0
 menu_order: 0

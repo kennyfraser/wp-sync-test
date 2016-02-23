@@ -5,7 +5,7 @@ post_date: 2016-02-22 18:13:27
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/step-3-create-a-script-for-ip-address-discovery-2/
+  https://gitsync.mmdev2.ca/step-3-create-a-script-for-ip-address-discovery-2/
 published: true
 post_parent: 0
 menu_order: 0

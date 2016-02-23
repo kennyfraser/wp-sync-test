@@ -10,7 +10,7 @@ published: true
 post_parent: 85
 menu_order: 2
 page_options_require_authentication: false
-page_options_show_link_unauthenticated: true
+page_options_show_link_unauthenticated: false
 hide_from_navigation: true
 hide_from_related: true
 ---

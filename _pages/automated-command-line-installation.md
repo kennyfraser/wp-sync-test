@@ -5,7 +5,7 @@ post_date: 2016-02-22 18:13:25
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/automated-command-line-installation/
+  https://gitsync.mmdev2.ca/automated-command-line-installation/
 published: true
 post_parent: 0
 menu_order: 0

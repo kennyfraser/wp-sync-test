@@ -5,7 +5,7 @@ post_date: 2016-02-22 18:13:26
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/step-2-cluster-prerequisites/
+  https://gitsync.mmdev2.ca/step-2-cluster-prerequisites/
 published: true
 post_parent: 0
 menu_order: 0
@@ -112,7 +112,7 @@ Before installing DCOS you must prepare your cluster environment.
     *   ICMP must be enabled between the master and the agent nodes.
     *   TCP and UDP enabled port 53 for DNS.
     *   Network Access to a public Docker repository from the agent nodes or to an internal Docker registry.
-    *   These ports must be open for communication to the master nodes. .tg {border-collapse:collapse;border-spacing:0;} .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;} .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;} .tg .tg-e3zv{font-weight:bold} .tg .tg-yw4l{vertical-align:top} 
+    *   These ports must be open for communication to the master nodes. .tg {border-collapse:collapse;border-spacing:0;} .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;} .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;} .tg .tg-e3zv{font-weight:bold} .tg .tg-yw4l{vertical-align:top}
         
         <table class="table">
           <tr>
@@ -206,7 +206,7 @@ Before installing DCOS you must prepare your cluster environment.
           </tr>
         </table>
     
-    *   These ports must be open for communication to the agent nodes from the master nodes: .tg {border-collapse:collapse;border-spacing:0;} .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;} .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;} .tg .tg-e3zv{font-weight:bold} .tg .tg-yw4l{vertical-align:top} 
+    *   These ports must be open for communication to the agent nodes from the master nodes: .tg {border-collapse:collapse;border-spacing:0;} .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;} .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;} .tg .tg-e3zv{font-weight:bold} .tg .tg-yw4l{vertical-align:top}
         
         <table class="table">
           <tr>
