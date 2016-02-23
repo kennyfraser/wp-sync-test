@@ -9,5 +9,9 @@ permalink: >
 published: true
 post_parent: 83
 menu_order: 2
+page_options_require_authentication: true
+page_options_show_link_unauthenticated: true
+hide_from_navigation: true
+hide_from_related: true
 ---
 Meta Filter Test
