@@ -93,6 +93,24 @@ You can create groups and assign users to them. Groups are a collection of insta
     
     1.  From the **Users** tab, select the user name and click **Actions -> Delete**. <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/auth-enable-delete-user.gif" rel="attachment wp-att-3498"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/auth-enable-delete-user-800x510.gif" alt="auth-enable-delete-user" width="800" height="510" class="alignnone size-large wp-image-3498" /></a>
     2.  Click **Delete** to confirm the action.
+    ### Switch users
+    
+    To switch users, you must log out of the current user and then back in as the new user.
+    
+    To log out of the DCOS web interface:
+    
+    1.  Click on your username in the lower left corner and select **Sign Out**.
+        
+        You can now log in as another user.
+    
+    To log out of the DCOS CLI:
+    
+    1.  Enter the this command:
+        
+            dcos config unset core.dcos_acs_token
+            
+        
+        You can now log in as another user.
 
 # Group management
 
