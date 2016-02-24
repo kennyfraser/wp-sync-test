@@ -97,7 +97,7 @@ To start a ZooKeeper instance using Docker, run this command:
         $ sudo docker run -d -p 2181:2181 -p 2888:2888 -p 3888:3888 --name=dcos_int_zk jplock/zookeeper
     
 
-**Tip:** If you've run the `usermod` Docker command in the previous step, you might have to log out and then back in to your boostrap node before starting Zookeeper.
+**Tip:** If you've run the `usermod` Docker command in the previous step, you might have to log out and then back in to your bootstrap node before starting Zookeeper.
 
 ## DCOS setup file
 
