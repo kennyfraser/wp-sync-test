@@ -8,56 +8,10 @@ layout: page
 permalink: >
   https://docs.mesosphere.com/step-4-configure-and-install-dcos-minuteman/
 published: true
-header:
-  - "1"
-page_header:
-  - "1"
-page_options_require_authentication:
-  - ""
-hide_from_navigation:
-  - "1"
-hide_from_related:
-  - "1"
-header_0_background:
-  - fill
-header_0_background_fill_style:
-  - dark
-header_0_logo_style:
-  - color-light
-header_0_navigation_style:
-  - light
-page_header_0_show_page_header:
-  - "0"
-page_header_0_size:
-  - default
-page_header_0_fill_screen:
-  - "0"
-page_header_0_background:
-  - transparent
-page_header_0_show_background_image:
-  - "0"
-page_header_0_show_background_video:
-  - "0"
-page_header_0_headline:
-  - ""
-page_header_0_headline_size:
-  - default
-page_header_0_description:
-  - ""
-page_header_0_description_size:
-  - default
-page_header_0_show_image:
-  - "0"
-page_header_0_content_alignment:
-  - center
-page_header_0_content_style:
-  - dark
-page_header_0_actions:
-  - "0"
-page_header_0_show_actions_footnote:
-  - "0"
-page_header_0_show_video:
-  - "0"
+page_options_require_authentication: false
+hide_from_navigation: true
+hide_from_related: true
+page_options_show_link_unauthenticated: false
 ---
 Choose your DCOS installation method:
 
@@ -389,7 +343,7 @@ In this step you create a YAML configuration file that is customized for your en
 
 1.  Customize this `config.yaml` template file for your environment. <!-- bootstrap_url is changeable -->
     
-          bootstrap_url: http://<boostrap_ip>:<your_port>       
+          bootstrap_url: http://<bootstrap_ip>:<your_port>       
           cluster_name: '<cluster-name>'
           exhibitor_storage_backend: zookeeper
           exhibitor_zk_hosts: <host1>:<port1>
