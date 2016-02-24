@@ -61,7 +61,7 @@ In this step you create a YAML configuration file that is customized for your en
     
     **bootstrap_url**
     
-    :   This parameter specifies the URI path for the DCOS installer to store the customized DCOS build files. For example, `http://<bootstrap_ip>:<your_port>`. By default this is set to `file:///opt/dcos_install_tmp` in the `config.yaml` template file, which is the location where the DCOS installer puts your install tarball.
+    :   Specify the URI path for the DCOS installer to store the customized DCOS build files. For example, `http://<bootstrap_ip>:<your_port>`. By default this is set to `file:///opt/dcos_install_tmp` in the `config.yaml` template file, but for manual installations you must change this value.
     
     **exhibitor_storage_backend**
     :   This parameter specifies the type of storage backend for Exhibitor. By default this is set to `zookeeper` in the `config.yaml` template file. During DCOS installation, a storage system is required for configuring and orchestrating ZooKeeper with Exhibitor on the master nodes. Exhibitor automatically configures your ZooKeeper installation on the master nodes during your DCOS installation. Multiple ZooKeeper instances are recommended for failover in production environments.
