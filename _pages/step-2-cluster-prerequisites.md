@@ -8,56 +8,10 @@ layout: page
 permalink: >
   https://docs.mesosphere.com/installing-enterprise-edition-1-6/manual-installation/step-2-cluster-prerequisites/
 published: true
-header_0_background:
-  - fill
-header_0_background_fill_style:
-  - dark
-header_0_logo_style:
-  - color-light
-header_0_navigation_style:
-  - light
-header:
-  - "1"
-page_header_0_show_page_header:
-  - "0"
-page_header_0_size:
-  - default
-page_header_0_fill_screen:
-  - "0"
-page_header_0_background:
-  - transparent
-page_header_0_show_background_image:
-  - "0"
-page_header_0_show_background_video:
-  - "0"
-page_header_0_headline:
-  - ""
-page_header_0_headline_size:
-  - default
-page_header_0_description:
-  - ""
-page_header_0_description_size:
-  - default
-page_header_0_show_image:
-  - "0"
-page_header_0_content_alignment:
-  - center
-page_header_0_content_style:
-  - dark
-page_header_0_actions:
-  - "0"
-page_header_0_show_actions_footnote:
-  - "0"
-page_header_0_show_video:
-  - "0"
-page_header:
-  - "1"
-page_options_require_authentication:
-  - ""
-hide_from_navigation:
-  - "0"
-hide_from_related:
-  - "1"
+page_options_require_authentication: false
+hide_from_navigation: false
+hide_from_related: true
+page_options_show_link_unauthenticated: false
 ---
 Before installing DCOS you must prepare your cluster environment.
 
@@ -110,8 +64,10 @@ Before installing DCOS you must prepare your cluster environment.
         
         Install Docker by using a subscription channel. For more information, see <a href="https://access.redhat.com/articles/881893" target="_blank">Docker Formatted Container Images on Red Hat Systems</a>. <!-- $ curl -sSL https://get.docker.com | sudo sh -->
         
-        **CentOS** Install Docker by using Overlay FS:
+        **CentOS** Install Docker by using Overlay FS.
         
+        1.  Add the Docker yum repo to your bootstrap node:
+            
                 $ sudo tee /etc/yum.repos.d/docker.repo <<-'EOF'
                 [dockerrepo]
                 name=Docker Repository
@@ -127,26 +83,33 @@ Before installing DCOS you must prepare your cluster environment.
                 ExecStart=
                 ExecStart=/usr/bin/docker daemon --storage-driver=overlay -H fd://
                 EOF
-                sudo yum install -y docker-engine
-                sudo systemctl start docker
-                sudo systemctl enable docker
-            
-    
-    *   Enable the Docker service:
+                
         
-            $ sudo systemctl enable docker.service
+        2.  Install the Docker engine:
             
-    
-    *   If you are using Docker as a non-root user, you must add your user to the "docker" group:
+                $ sudo yum install -y docker-engine
+                
         
-            $ sudo usermod -aG docker <user>
+        3.  Start the Docker daemon:
             
-    
-    *   You can test that your Docker build is properly installed with these commands:
+                $ sudo systemctl start docker
+                
         
-            $ sudo service docker start 
-            $ sudo docker ps
+        4.  Enable the Docker service:
             
+                $ sudo systemctl enable docker
+                
+        
+        *   If you are using Docker as a non-root user, you must add your user to the "docker" group:
+            
+                $ sudo usermod -aG docker <user>
+                
+        
+        *   You can test that your Docker build is properly installed with these commands:
+            
+                $ sudo service docker start 
+                $ sudo docker ps
+                
     
     *   If you are using Docker Containerizer, you must have network access to a public Docker repository from the agent nodes or to an internal Docker registry.
     
