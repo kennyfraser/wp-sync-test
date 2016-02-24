@@ -8,56 +8,10 @@ layout: page
 permalink: >
   https://docs.mesosphere.com/installing-enterprise-edition-1-6/auto-command-line/
 published: true
-header:
-  - "1"
-page_header:
-  - "1"
-page_options_require_authentication:
-  - ""
-hide_from_navigation:
-  - "0"
-hide_from_related:
-  - "1"
-header_0_background:
-  - fill
-header_0_background_fill_style:
-  - dark
-header_0_logo_style:
-  - color-light
-header_0_navigation_style:
-  - light
-page_header_0_show_page_header:
-  - "0"
-page_header_0_size:
-  - default
-page_header_0_fill_screen:
-  - "0"
-page_header_0_background:
-  - transparent
-page_header_0_show_background_image:
-  - "0"
-page_header_0_show_background_video:
-  - "0"
-page_header_0_headline:
-  - ""
-page_header_0_headline_size:
-  - default
-page_header_0_description:
-  - ""
-page_header_0_description_size:
-  - default
-page_header_0_show_image:
-  - "0"
-page_header_0_content_alignment:
-  - center
-page_header_0_content_style:
-  - dark
-page_header_0_actions:
-  - "0"
-page_header_0_show_actions_footnote:
-  - "0"
-page_header_0_show_video:
-  - "0"
+page_options_require_authentication: false
+hide_from_navigation: false
+hide_from_related: true
+page_options_show_link_unauthenticated: false
 ---
 The automated command line installation method provides a guided installation of DCOS Enterprise Edition.
 
@@ -398,7 +352,12 @@ In this step you create a YAML configuration file that is customized for your en
         $6$rounds=656000$v55tdnlMGNoSEgYH$1JAznj58MR.Bft2wd05KviSUUfZe45nsYsjlEl84w34pp48A9U2GoKzlycm3g6MBmg4cQW9k7iY4tpZdkWy9t1   
         
 
-2.  Customize this `config.yaml` template file for your environment.
+2.  Create a template `config.yaml` file by entering this command:
+    
+        $ sudo bash dcos_generate_config.ee.sh --validate-config
+        
+
+3.  Customize this `genconf/config.yaml` template file for your environment.
     
           ##########################################
           # DO NOT CHANGE the bootstrap_url value, # 
@@ -428,11 +387,6 @@ In this step you create a YAML configuration file that is customized for your en
           - <target-host-3>
           - <target-host-4>
           - <target-host-5>
-        
-    
-    **Tip:** You can create a template `genconf/config.yaml` file by entering this command:
-    
-        $ sudo bash dcos_generate_config.ee.sh --validate-config
         
     
     Specify these configuration parameters. <!-- log_directory: /genconf/logs, process_timeout: 120, ssh_key_path: /genconf/ssh-key -->
@@ -486,9 +440,9 @@ In this step you create a YAML configuration file that is customized for your en
     
     For more configuration examples and all available options, see the [configuration file options][1].
 
-3.  Save as `genconf/config.yaml`.
+4.  Save as `genconf/config.yaml`.
 
-4.  Move your private RSA key to `genconf/ssh_key`. For more information, see the [ssh_key_path][2] parameter.
+5.  Move your private RSA key to `genconf/ssh_key`. For more information, see the [ssh_key_path][2] parameter.
     
         $ cp <path-to-key> genconf/ssh_key && chmod 0600 genconf/ssh_key
         
