@@ -1,18 +1,18 @@
 ---
-ID: 99
+ID: 1231
 post_title: Running a Spark Job
-post_date: 2016-02-22 18:13:26
+post_date: 2015-12-23 11:35:00
 post_excerpt: ""
 layout: page
 permalink: >
-  https://gitsync.mmdev2.ca/running-a-spark-job/
+  https://dev-mesosphere-documentation.pantheon.io/manage-service/service-tutorials/running-a-spark-job/
 published: true
-post_parent: 0
-menu_order: 0
-page_options_require_authentication: true
+post_parent: 1467
+menu_order: 100
+page_options_require_authentication: false
 page_options_show_link_unauthenticated: false
-hide_from_navigation: true
-hide_from_related: true
+hide_from_navigation: false
+hide_from_related: false
 ---
 In this tutorial a Spark job is run by using DCOS.
 

@@ -1,15 +1,15 @@
 ---
-ID: 109
+ID: 3162
 post_title: 'Step 4: Configure and install DCOS (Minuteman)'
-post_date: 2016-02-22 18:13:27
+post_date: 2016-02-06 08:18:40
 post_excerpt: ""
 layout: page
 permalink: >
-  https://gitsync.mmdev2.ca/step-4-configure-and-install-dcos-minuteman/
+  https://dev-mesosphere-documentation.pantheon.io/step-4-configure-and-install-dcos-minuteman/
 published: true
 post_parent: 0
-menu_order: 0
-page_options_require_authentication: true
+menu_order: 100
+page_options_require_authentication: false
 page_options_show_link_unauthenticated: false
 hide_from_navigation: true
 hide_from_related: true
@@ -200,7 +200,7 @@ In this step you create a YAML configuration file that is customized for your en
     
     **resolvers**
     
-    :   Specify a JSON-formatted list of DNS servers for your DCOS host nodes. You must include the escape characters (``) as shown in the template. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them.
+    :   Specify a JSON-formatted list of DNS servers for your DCOS host nodes. You must include the escape characters (`\`) as shown in the template. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them.
         
         *Caution:* If you set the `resolvers` parameter incorrectly, you will permanently damage your configuration and have to reinstall DCOS.
     
@@ -386,7 +386,7 @@ In this step you create a YAML configuration file that is customized for your en
     
     **resolvers**
     
-    :   Specify a JSON-formatted list of DNS servers for your DCOS host nodes. You must include the escape characters (``) as shown in the template. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them.
+    :   Specify a JSON-formatted list of DNS servers for your DCOS host nodes. You must include the escape characters (`\`) as shown in the template. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them.
         
         *Caution:* If you set the `resolvers` parameter incorrectly, you will permanently damage your configuration and have to reinstall DCOS.
     
@@ -528,4 +528,4 @@ Now you can [assign user roles][6].
  [6]: ../security-and-authentication/managing-authorization/
  [7]: ../getting-started/installing/installing-enterprise-edition/dcos-cleanup-script/
  [8]: https://docs.mesosphere.com/installing-enterprise-edition-1-6/step-3-ip-address-discovery-script/
- [9]: ../configuration-parameters-1-5/
+ [9]: ../configuration-parameters/
