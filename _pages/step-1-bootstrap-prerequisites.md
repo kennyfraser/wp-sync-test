@@ -8,58 +8,12 @@ layout: page
 permalink: >
   https://docs.mesosphere.com/installing-enterprise-edition-1-6/manual-installation/step-1-bootstrap-prerequisites/
 published: true
-header_0_background:
-  - fill
-header_0_background_fill_style:
-  - dark
-header_0_logo_style:
-  - color-light
-header_0_navigation_style:
-  - light
-header:
-  - "1"
-page_header_0_show_page_header:
-  - "0"
-page_header_0_size:
-  - default
-page_header_0_fill_screen:
-  - "0"
-page_header_0_background:
-  - transparent
-page_header_0_show_background_image:
-  - "0"
-page_header_0_show_background_video:
-  - "0"
-page_header_0_headline:
-  - ""
-page_header_0_headline_size:
-  - default
-page_header_0_description:
-  - ""
-page_header_0_description_size:
-  - default
-page_header_0_show_image:
-  - "0"
-page_header_0_content_alignment:
-  - center
-page_header_0_content_style:
-  - dark
-page_header_0_actions:
-  - "0"
-page_header_0_show_actions_footnote:
-  - "0"
-page_header_0_show_video:
-  - "0"
-page_header:
-  - "1"
-page_options_require_authentication:
-  - ""
-hide_from_navigation:
-  - "0"
-hide_from_related:
-  - "1"
+page_options_require_authentication: false
+hide_from_navigation: false
+hide_from_related: true
+page_options_show_link_unauthenticated: false
 ---
-Before installing DCOS, you must prepare your bootstrap node that will be used to run the DCOS installation commands. A bootstrap node is any physical, virtual, or cloud machine. It must have IP-to-IP connectivity from the bootstrap node to all nodes in your cluster environment. Your bootstrap node must not be a part of your cluster. test
+Before installing DCOS, you must prepare your bootstrap node that will be used to run the DCOS installation commands. A bootstrap node is any physical, virtual, or cloud machine. It must have IP-to-IP connectivity from the bootstrap node to all nodes in your cluster environment. Your bootstrap node must not be a part of your cluster.
 
 ## Docker
 
@@ -131,7 +85,7 @@ To start a ZooKeeper instance using Docker, run this command:
         $ sudo docker run -d -p 2181:2181 -p 2888:2888 -p 3888:3888 --name=dcos_int_zk jplock/zookeeper
     
 
-**Tip:** If you've run the `usermod` Docker command in the previous step, you might have to log out and then back in to your boostrap node before starting Zookeeper.
+**Tip:** If you've run the `usermod` Docker command in the previous step, you might have to log out and then back in to your bootstrap node before starting Zookeeper.
 
 ## DCOS setup file
 
