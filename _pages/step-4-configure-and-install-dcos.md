@@ -8,56 +8,10 @@ layout: page
 permalink: >
   https://docs.mesosphere.com/installing-enterprise-edition-1-6/manual-installation/step-4-configure-and-install-dcos/
 published: true
-header:
-  - "1"
-page_header:
-  - "1"
-page_options_require_authentication:
-  - ""
-hide_from_navigation:
-  - "0"
-hide_from_related:
-  - "1"
-header_0_background:
-  - fill
-header_0_background_fill_style:
-  - dark
-header_0_logo_style:
-  - color-light
-header_0_navigation_style:
-  - light
-page_header_0_show_page_header:
-  - "0"
-page_header_0_size:
-  - default
-page_header_0_fill_screen:
-  - "0"
-page_header_0_background:
-  - transparent
-page_header_0_show_background_image:
-  - "0"
-page_header_0_show_background_video:
-  - "0"
-page_header_0_headline:
-  - ""
-page_header_0_headline_size:
-  - default
-page_header_0_description:
-  - ""
-page_header_0_description_size:
-  - default
-page_header_0_show_image:
-  - "0"
-page_header_0_content_alignment:
-  - center
-page_header_0_content_style:
-  - dark
-page_header_0_actions:
-  - "0"
-page_header_0_show_actions_footnote:
-  - "0"
-page_header_0_show_video:
-  - "0"
+page_options_require_authentication: false
+hide_from_navigation: false
+hide_from_related: true
+page_options_show_link_unauthenticated: false
 ---
 # <a name="config-json"></a>Configure your cluster
 
@@ -74,7 +28,14 @@ In this step you create a YAML configuration file that is customized for your en
         $6$rounds=656000$v55tdnlMGNoSEgYH$1JAznj58MR.Bft2wd05KviSUUfZe45nsYsjlEl84w34pp48A9U2GoKzlycm3g6MBmg4cQW9k7iY4tpZdkWy9t1 
         
 
-2.  Customize this `config.yaml` template file for your environment. <!-- bootstrap_url is changeable -->
+2.  Create a template `config.yaml` file by entering this command:
+    
+        $ sudo bash dcos_generate_config.ee.sh --validate-config
+        
+    
+    **Tip:** For a manual DCOS install, these parameters are not required: `agent_list`, `ssh_port`, and `ssh_user`.
+
+3.  Customize this `genconf/config.yaml` template file for your environment.
     
           bootstrap_url: http://<bootstrap_ip>:<your_port>       
           cluster_name: '<cluster-name>'
@@ -93,21 +54,14 @@ In this step you create a YAML configuration file that is customized for your en
           - <dns-resolver-2>
         
     
-    **Tip:** You can create a template `genconf/config.yaml` file by entering this command:
-    
-        $ sudo bash dcos_generate_config.ee.sh --validate-config
-        
-    
-    Specify these configuration parameters. <!-- log_directory: /genconf/logs, process_timeout: 120, ssh_key_path: /genconf/ssh-key -->
+    Specify these configuration parameters for a manual installation. For the complete list of available configuration options and parameters, see the [Configuration Parameters][1] documentation.
     
     **cluster_name**
     :   Specify the name of your cluster.
     
     **bootstrap_url**
     
-    :   This parameter specifies the URI path for the DCOS installer to store the customized DCOS build files, which can be local (`bootstrap_url:file:///opt/dcos_install_tmp`) or hosted (`http://<your-web-server>`). By default this is set to `file:///opt/dcos_install_tmp` in the `config.yaml` template file, which is the location where the DCOS installer puts your install tarball.
-        
-        **Tip:** This parameter is for advanced users. The default value should work for most installations.
+    :   This parameter specifies the URI path for the DCOS installer to store the customized DCOS build files. For example, `http://<bootstrap_ip>:<your_port>`. By default this is set to `file:///opt/dcos_install_tmp` in the `config.yaml` template file, which is the location where the DCOS installer puts your install tarball.
     
     **exhibitor_storage_backend**
     :   This parameter specifies the type of storage backend for Exhibitor. By default this is set to `zookeeper` in the `config.yaml` template file. During DCOS installation, a storage system is required for configuring and orchestrating ZooKeeper with Exhibitor on the master nodes. Exhibitor automatically configures your ZooKeeper installation on the master nodes during your DCOS installation. Multiple ZooKeeper instances are recommended for failover in production environments.
@@ -132,10 +86,8 @@ In this step you create a YAML configuration file that is customized for your en
     :   Specify a JSON-formatted list of DNS servers for your DCOS host nodes. You must include the escape characters (`\`) as shown in the template. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them.
         
         *Caution:* If you set the `resolvers` parameter incorrectly, you will permanently damage your configuration and have to reinstall DCOS.
-    
-    For more configuration examples and all available options, see the [configuration file options][1].
 
-3.  Save as `genconf/config.yaml`.
+4.  Save as `genconf/config.yaml`.
 
 # <a name="install-bash"></a>Install DCOS
 
