@@ -59,6 +59,11 @@ Install Docker by using these commands your Linux distribution. CoreOS includes 
             $ sudo systemctl enable docker
             
     
+    5.  Install the Docker nginx image:
+        
+             $ sudo docker pull nginx
+            
+    
     *   If you are using Docker as a non-root user, you must add your user to the "docker" group:
         
             $ sudo usermod -aG docker <user>
