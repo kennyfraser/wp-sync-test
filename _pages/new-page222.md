@@ -1,14 +1,14 @@
 ---
-ID: 3951
-post_title: New Page
-post_date: 2016-02-25 06:39:24
+ID: 4132
+post_title: New Page222
+post_date: 2016-02-25 06:48:13
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/administration/release-notes/enterprise-edition/new-page/
+  https://dev-mesosphere-documentation.pantheon.io/new-page222/
 published: true
-post_parent: 965
 menu_order: 3
+post_parent: 0
 page_options_require_authentication: false
 page_options_show_link_unauthenticated: false
 hide_from_navigation: false
@@ -16,7 +16,7 @@ hide_from_related: true
 ---
 The release notes provide a list of useful topics and links for Mesosphere DCOS.
 
-# <a name="dcos"></a>Simplified DCOS installation!
+# <a name="dcos"></a>Simplified DCOS installation!!!22
 
 *   You can install DCOS across a cluster of nodes by using SSH. The entire process is completed in 3 easy steps.
 *   The DCOS configuration file is migrated from JSON to a simpler YAML format. 
