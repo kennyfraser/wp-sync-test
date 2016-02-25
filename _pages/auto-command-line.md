@@ -508,7 +508,7 @@ To install DCOS:
         │   ├── ip-detect     
         
 
-2.  Install the cluster prerequisites, including system updates, compression utilities (UnZip, GNU tar, and XZ Utils), and cluster permissions.
+2.  Install the cluster prerequisites, including system updates, compression utilities (UnZip, GNU tar, and XZ Utils), and cluster permissions. For a full list of cluster prerequisites, see this [documentation][3].
     
         $ sudo bash dcos_generate_config.ee.sh --install-prereqs
         Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
@@ -600,8 +600,9 @@ To install DCOS:
 
 ### Next Steps
 
-Now you can [assign user roles][3].
+Now you can [assign user roles][4].
 
  [1]: ../configuration-parameters-1-6/
  [2]: http://mesos.apache.org/documentation/latest/containerizer/
- [3]: ../security-and-authentication/managing-authorization/
+ [3]: ../step-2-cluster-prerequisites/
+ [4]: ../security-and-authentication/managing-authorization/
