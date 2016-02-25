@@ -114,11 +114,7 @@ In this step you create a custom DCOS build file on your bootstrap node and then
 **Prerequisites**
 
 *   A `genconf/config.yaml` file that is optimized for [manual distribution of DCOS across your nodes][3].
-*   A `genconf/ip-detect` [script][4]. 
-*   The Docker nginx image must be on your bootstrap node. You can use this command to install the nginx container:
-    
-         docker pull nginx
-        
+*   A `genconf/ip-detect` [script][4].
     
     For more information, see <a href="https://hub.docker.com/_/nginx/" target="_blank">DockerHub nginx</a> documentation.
 
