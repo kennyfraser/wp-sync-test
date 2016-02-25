@@ -54,10 +54,10 @@ In this step you create a YAML configuration file that is customized for your en
     For a manual DCOS install, these parameters are not required: `agent_list`, `ssh_port`, and `ssh_user`. Your file should resemble this:
     
           ---
-          bootstrap_url: http://<bootstrap_ip>:<your_port>       
+          bootstrap_url: http://<bootstrap_public_ip>:<your_port>       
           cluster_name: '<cluster-name>'
           exhibitor_storage_backend: zookeeper
-          exhibitor_zk_hosts: <host1>:<port1>
+          exhibitor_zk_hosts: <bootstrap_private_ip>:2181
           exhibitor_zk_path: /dcos
           master_discovery: static 
           master_list:
@@ -67,8 +67,8 @@ In this step you create a YAML configuration file that is customized for your en
           superuser_username: <username>
           superuser_password_hash: <hashed-password>
           resolvers:
-          - <dns-resolver-1>
-          - <dns-resolver-2>
+          - 8.8.8.8 
+          - 8.8.4.4
         
     
     **bootstrap_url**
@@ -81,7 +81,7 @@ In this step you create a YAML configuration file that is customized for your en
     :   This parameter specifies the type of storage backend for Exhibitor. By default this is set to `zookeeper` in the `config.yaml` template file. During DCOS installation, a storage system is required for configuring and orchestrating ZooKeeper with Exhibitor on the master nodes. Exhibitor automatically configures your ZooKeeper installation on the master nodes during your DCOS installation. Multiple ZooKeeper instances are recommended for failover in production environments.
     
     **exhibitor_zk_hosts**
-    :   Specify a comma-separated list of one or more ZooKeeper node IP addresses to use for configuring the internal Exhibitor instances. Exhibitor uses this ZooKeeper cluster to orchestrate it's configuration.
+    :   Specify a comma-separated list of one or more ZooKeeper node IP addresses to use for configuring the internal Exhibitor instances. Exhibitor uses this ZooKeeper cluster to orchestrate it's configuration. Where `<host1>` is your internal bootstrap node IP and port `2181` is the default ZooKeeper port.
     
     **master_discovery**
     :   This parameter specifies the Mesos master discovery method. By default this is set to `static` in the `config.yaml` template file. The `static` method uses the Mesos agents to discover the masters by giving each agent a static list of master IPs. The masters must not change IP addresses, and if a master is replaced, the new master must take the old master's IP address
@@ -91,7 +91,7 @@ In this step you create a YAML configuration file that is customized for your en
     
     **resolvers**
     
-    :   Specify a JSON-formatted list of DNS servers for your DCOS host nodes. You must include the escape characters (`\`) as shown in the template. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them.
+    :   Specify a YAML-formatted nested series (`-`) of DNS resolvers for your DCOS host nodes, or accept the default value of `8.8.8.8` and `8.8.4.4`. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them. If you have no internal hostnames to resolve, it
         
         *Caution:* If you set the `resolvers` parameter incorrectly, you will permanently damage your configuration and have to reinstall DCOS.
     
