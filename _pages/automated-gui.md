@@ -8,56 +8,10 @@ layout: page
 permalink: >
   https://docs.mesosphere.com/installing-enterprise-edition-1-6/automated-gui/
 published: true
-header:
-  - "1"
-page_header:
-  - "1"
-page_options_require_authentication:
-  - ""
-hide_from_navigation:
-  - "0"
-hide_from_related:
-  - "1"
-header_0_background:
-  - fill
-header_0_background_fill_style:
-  - dark
-header_0_logo_style:
-  - color-light
-header_0_navigation_style:
-  - light
-page_header_0_show_page_header:
-  - "0"
-page_header_0_size:
-  - default
-page_header_0_fill_screen:
-  - "0"
-page_header_0_background:
-  - transparent
-page_header_0_show_background_image:
-  - "0"
-page_header_0_show_background_video:
-  - "0"
-page_header_0_headline:
-  - ""
-page_header_0_headline_size:
-  - default
-page_header_0_description:
-  - ""
-page_header_0_description_size:
-  - default
-page_header_0_show_image:
-  - "0"
-page_header_0_content_alignment:
-  - center
-page_header_0_content_style:
-  - dark
-page_header_0_actions:
-  - "0"
-page_header_0_show_actions_footnote:
-  - "0"
-page_header_0_show_video:
-  - "0"
+page_options_require_authentication: false
+hide_from_navigation: false
+hide_from_related: true
+page_options_show_link_unauthenticated: false
 ---
 The automated GUI installation method provides a simple graphical interface that guides you through the installation of DCOS Enterprise Edition.
 
@@ -385,7 +339,7 @@ A supported Linux distribution must be installed on your cluster:
     **IP Detect Script**
     :   Specify an IP detect script to broadcast the IP address of each node across the cluster. For more information, see the [documentation][3].
 
-5.  Click **Run Pre-Flight**. The preflight script validates that your cluster is installable. This step can take up to 15 minutes to complete. If errors any errors are found, fix and then click **Retry**.
+5.  Click **Run Pre-Flight**. The preflight script installs the cluster [prerequisites][4] and validates that your cluster is installable. This step can take up to 15 minutes to complete. If errors any errors are found, fix and then click **Retry**.
     
     **Important:** If you exit your GUI installation before launching DCOS, you must do this before reinstalling:
     
@@ -418,9 +372,10 @@ A supported Linux distribution must be installed on your cluster:
 
 ### Next Steps
 
-Now you can [assign user roles][4].
+Now you can [assign user roles][5].
 
  [1]: https://techjourney.net/how-to-decrypt-an-enrypted-ssl-rsa-private-key-pem-key/
  [2]: ../installing-enterprise-edition-1-6/#scrollNav-3
  [3]: ../configuration-parameters-1-6/
- [4]: ../security-and-authentication/managing-authorization/
+ [4]: ../step-2-cluster-prerequisites/
+ [5]: ../security-and-authentication/managing-authorization/
