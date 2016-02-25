@@ -31,12 +31,29 @@ In this step you create a YAML configuration file that is customized for your en
 2.  Create a template `config.yaml` file by entering this command:
     
         $ sudo bash dcos_generate_config.ee.sh --validate-config
+        Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
+        23:54:54 dcos_installer.action_lib.prettyprint:: ====> VALIDATING CONFIGURATION
+        23:54:54 dcos_installer.config:: Configuration file not found, /genconf/config.yaml. Writing new one with all defaults.
+        23:54:54 dcos_installer.validate.onprem:: ssh_user: Please enter a valid string
+        23:54:54 dcos_installer.validate.onprem:: ssh_key_path: File does not exist genconf/ssh_key
+        23:54:54 dcos_installer.validate.onprem:: superuser_username: Please enter a valid string
+        23:54:54 dcos_installer.validate.onprem:: agent_list: Please enter a valid IPv4 address.
+        23:54:54 dcos_installer.validate.onprem:: superuser_password_hash: Please enter a valid string
+        23:54:54 dcos_installer.validate.onprem:: exhibitor_zk_hosts: None is not a valid Exhibitor Zookeeper host
+        23:54:54 dcos_installer.validate.onprem:: master_list: Please enter a valid IPv4 address.
+        23:54:54 dcos_installer.validate.onprem:: ip_detect_script: Please provide a valid executable script. Script must start with #!/
+        23:54:54 dcos_installer.validate.onprem:: ssh_key: SSH key must be an unencrypted (no passphrase) SSH key which is not empty.
+        23:54:54 dcos_installer.validate.onprem:: ip_detect_path: File does not exist genconf/ip-detect
+        
+
+3.  Edit your template `genconf/config.yaml` file and customize for your environment.
+    
+        $ sudo vi config.yaml
         
     
-    **Tip:** For a manual DCOS install, these parameters are not required: `agent_list`, `ssh_port`, and `ssh_user`.
-
-3.  Customize this `genconf/config.yaml` template file for your environment.
+    For a manual DCOS install, these parameters are not required: `agent_list`, `ssh_port`, and `ssh_user`. Your file should resemble this:
     
+          ---
           bootstrap_url: http://<bootstrap_ip>:<your_port>       
           cluster_name: '<cluster-name>'
           exhibitor_storage_backend: zookeeper
@@ -54,14 +71,11 @@ In this step you create a YAML configuration file that is customized for your en
           - <dns-resolver-2>
         
     
-    Specify these configuration parameters for a manual installation. For the complete list of available configuration options and parameters, see the [Configuration Parameters][1] documentation.
+    **bootstrap_url**
+    :   Specify the URI path for the DCOS installer to store the customized DCOS build files. For example, `http://<bootstrap_ip>:<your_port>`. By default this is set to `file:///opt/dcos_install_tmp` in the `config.yaml` template file, but for manual installations you must change this value.
     
     **cluster_name**
     :   Specify the name of your cluster.
-    
-    **bootstrap_url**
-    
-    :   Specify the URI path for the DCOS installer to store the customized DCOS build files. For example, `http://<bootstrap_ip>:<your_port>`. By default this is set to `file:///opt/dcos_install_tmp` in the `config.yaml` template file, but for manual installations you must change this value.
     
     **exhibitor_storage_backend**
     :   This parameter specifies the type of storage backend for Exhibitor. By default this is set to `zookeeper` in the `config.yaml` template file. During DCOS installation, a storage system is required for configuring and orchestrating ZooKeeper with Exhibitor on the master nodes. Exhibitor automatically configures your ZooKeeper installation on the master nodes during your DCOS installation. Multiple ZooKeeper instances are recommended for failover in production environments.
@@ -75,17 +89,19 @@ In this step you create a YAML configuration file that is customized for your en
     **master_list**
     :   Specify a list of your static master IP addresses as a YAML nested series (`-`).
     
+    **resolvers**
+    
+    :   Specify a JSON-formatted list of DNS servers for your DCOS host nodes. You must include the escape characters (`\`) as shown in the template. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them.
+        
+        *Caution:* If you set the `resolvers` parameter incorrectly, you will permanently damage your configuration and have to reinstall DCOS.
+    
     **superuser_password_hash**
     :   This parameter specifies the hashed Admin password. This password is required for using DCOS. See step 1 for more information on how to create.
     
     **superuser_username**
     :   This parameter specifies the Admin username. This username is required for using DCOS.
     
-    **resolvers**
-    
-    :   Specify a JSON-formatted list of DNS servers for your DCOS host nodes. You must include the escape characters (`\`) as shown in the template. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them.
-        
-        *Caution:* If you set the `resolvers` parameter incorrectly, you will permanently damage your configuration and have to reinstall DCOS.
+    For the complete list of available configuration options and parameters, see the [Configuration Parameters][1] documentation.
 
 4.  Save as `genconf/config.yaml`.
 
