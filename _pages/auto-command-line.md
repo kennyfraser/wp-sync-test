@@ -354,10 +354,28 @@ In this step you create a YAML configuration file that is customized for your en
 
 2.  Create a template `config.yaml` file by entering this command:
     
-        $ sudo bash dcos_generate_config.ee.sh --validate-config
+        $ sudo bash dcos_generate_config.sh --validate-config
+        Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
+        23:54:54 dcos_installer.action_lib.prettyprint:: ====> VALIDATING CONFIGURATION
+        23:54:54 dcos_installer.config:: Configuration file not found, /genconf/config.yaml. Writing new one with all defaults.
+        23:54:54 dcos_installer.validate.onprem:: ssh_user: Please enter a valid string
+        23:54:54 dcos_installer.validate.onprem:: ssh_key_path: File does not exist genconf/ssh_key
+        23:54:54 dcos_installer.validate.onprem:: superuser_username: Please enter a valid string
+        23:54:54 dcos_installer.validate.onprem:: agent_list: Please enter a valid IPv4 address.
+        23:54:54 dcos_installer.validate.onprem:: superuser_password_hash: Please enter a valid string
+        23:54:54 dcos_installer.validate.onprem:: exhibitor_zk_hosts: None is not a valid Exhibitor Zookeeper host
+        23:54:54 dcos_installer.validate.onprem:: master_list: Please enter a valid IPv4 address.
+        23:54:54 dcos_installer.validate.onprem:: ip_detect_script: Please provide a valid executable script. Script must start with #!/
+        23:54:54 dcos_installer.validate.onprem:: ssh_key: SSH key must be an unencrypted (no passphrase) SSH key which is not empty.
+        23:54:54 dcos_installer.validate.onprem:: ip_detect_path: File does not exist genconf/ip-detect
         
 
-3.  Customize this `genconf/config.yaml` template file for your environment.
+3.  Edit your template `genconf/config.yaml` file and customize for your environment.
+    
+        $ sudo vi config.yaml
+        
+    
+    Your file should resemble this:
     
           ##########################################
           # DO NOT CHANGE the bootstrap_url value, # 
