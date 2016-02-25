@@ -19,7 +19,7 @@ In this step you create a YAML configuration file that is customized for your en
 
 1.  From the bootstrap node, run this command to create a hashed password for superuser authentication, where `<superuser_password>` is the superuser password. Use the hashed password key for the `superuser_password_hash` parameter in your `config.yaml` file.
     
-        $ sudo bash dcos_generate_config.ee.sh --hash-password <superuser_password>
+        $ sudo bash dcos_generate_config.sh --hash-password <superuser_password>
         Extracting image from this script and loading into docker daemon, this step can take a few minutes
         dcos-genconf.9eda4ae45de5488c0c-c40556fa73a00235f1.tar
         Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
@@ -30,7 +30,7 @@ In this step you create a YAML configuration file that is customized for your en
 
 2.  Create a template `config.yaml` file by entering this command:
     
-        $ sudo bash dcos_generate_config.ee.sh --validate-config
+        $ sudo bash dcos_generate_config.sh --validate-config
         Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
         23:54:54 dcos_installer.action_lib.prettyprint:: ====> VALIDATING CONFIGURATION
         23:54:54 dcos_installer.config:: Configuration file not found, /genconf/config.yaml. Writing new one with all defaults.
