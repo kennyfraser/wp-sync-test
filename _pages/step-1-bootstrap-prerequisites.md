@@ -63,6 +63,8 @@ Install Docker by using these commands your Linux distribution. CoreOS includes 
         
              $ sudo docker pull nginx
             
+        
+        For more information, see <a href="https://hub.docker.com/_/nginx/" target="_blank">DockerHub nginx</a> documentation.
     
     *   If you are using Docker as a non-root user, you must add your user to the "docker" group:
         
