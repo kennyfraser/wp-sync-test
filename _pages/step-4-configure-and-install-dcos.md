@@ -115,8 +115,6 @@ In this step you create a custom DCOS build file on your bootstrap node and then
 
 *   A `genconf/config.yaml` file that is optimized for [manual distribution of DCOS across your nodes][3].
 *   A `genconf/ip-detect` [script][4].
-    
-    For more information, see <a href="https://hub.docker.com/_/nginx/" target="_blank">DockerHub nginx</a> documentation.
 
 <!-- Early access URL: https://downloads.mesosphere.com/dcos/EarlyAccess/dcos_generate_config.sh -->
 
