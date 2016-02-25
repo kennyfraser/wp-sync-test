@@ -16,7 +16,7 @@ hide_from_related: true
 ---
 The release notes provide a list of useful topics and links for Mesosphere DCOS.
 
-# <a name="dcos"></a>Simplified DCOS installation
+# <a name="dcos"></a>Simplified DCOS installation!
 
 *   You can install DCOS across a cluster of nodes by using SSH. The entire process is completed in 3 easy steps.
 *   The DCOS configuration file is migrated from JSON to a simpler YAML format. 
