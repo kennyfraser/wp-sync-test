@@ -5,7 +5,7 @@ post_date: 2016-02-26 11:00:36
 post_excerpt: ""
 layout: page
 permalink: >
-  https://gitsync.mmdev2.ca/parent-1/child-2/
+  https://gitsync.mmdev2.ca/parent-1-2/child-2/
 published: true
 menu_order: 0
 page_options_require_authentication: false
