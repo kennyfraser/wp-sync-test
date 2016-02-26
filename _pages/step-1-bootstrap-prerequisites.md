@@ -37,9 +37,23 @@ Install Docker by using these commands your Linux distribution. CoreOS includes 
             EOF
             
     
-    2.  Update the Docker yum repo, and create Docker systemd drop-in files: $ sudo yum -y update && sudo mkdir -p /etc/systemd/system/docker.service.d && sudo tee /etc/systemd/system/docker.service.d/override.conf <<- EOF [Service] ExecStart= ExecStart=/usr/bin/docker daemon --storage-driver=overlay -H fd:// EOF
+    2.  Update the Docker yum repo, and create Docker systemd drop-in files:
         
-        This can take a few minutes. This is what the end of the process should look like: ... Complete! [Service] ExecStart= ExecStart=/usr/bin/docker daemon --storage-driver=overlay -H fd://
+            $ sudo yum -y update && sudo mkdir -p /etc/systemd/system/docker.service.d && sudo tee /etc/systemd/system/docker.service.d/override.conf <<- EOF 
+            [Service] 
+            ExecStart= 
+            ExecStart=/usr/bin/docker daemon --storage-driver=overlay -H fd:// 
+            EOF
+            
+        
+        This can take a few minutes. This is what the end of the process should look like:
+        
+            ... 
+            Complete!
+            [Service]
+            ExecStart=
+            ExecStart=/usr/bin/docker daemon --storage-driver=overlay -H fd://
+            
     
     3.  Install the Docker engine, daemon, service, and nginx image:
         
