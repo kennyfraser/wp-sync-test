@@ -1,11 +1,11 @@
 ---
-ID: 149
+ID: 3719
 post_title: Configuring the CLI to use an HTTP Proxy
-post_date: 2016-02-26 15:35:02
+post_date: 2016-02-26 12:57:57
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/configuring-the-cli-to-use-an-http-proxy-3/
+  http://local.mesodocs.com/configuring-the-cli-to-use-an-http-proxy/
 published: true
 menu_order: 15
 page_options_require_authentication: false

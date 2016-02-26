@@ -1,11 +1,11 @@
 ---
-ID: 277
+ID: 3678
 post_title: Running Your App on Public Nodes
-post_date: 2016-02-26 15:40:53
+post_date: 2016-02-26 12:56:36
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/administration/running-your-app-on-public-nodes-2/
+  http://local.mesodocs.com/administration/running-your-app-on-public-nodes/
 published: true
 menu_order: 11
 page_options_require_authentication: false

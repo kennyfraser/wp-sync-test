@@ -1,11 +1,11 @@
 ---
-ID: 197
+ID: 3654
 post_title: Managing DCOS Marathon
-post_date: 2016-02-26 15:36:55
+post_date: 2016-02-26 12:55:40
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/administration/managing-dcos-marathon-2/
+  http://local.mesodocs.com/administration/managing-dcos-marathon/
 published: true
 menu_order: 11
 page_options_require_authentication: false

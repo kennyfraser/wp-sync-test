@@ -1,11 +1,11 @@
 ---
-ID: 56
+ID: 3645
 post_title: Service Logging
-post_date: 2016-02-26 15:30:53
+post_date: 2016-02-26 12:55:19
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/administration/logging/service-logging/
+  http://local.mesodocs.com/administration/logging/service-logging/
 published: true
 menu_order: 2
 page_options_require_authentication: false

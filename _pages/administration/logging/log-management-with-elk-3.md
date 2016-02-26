@@ -1,11 +1,11 @@
 ---
-ID: 177
+ID: 3639
 post_title: Log Management with ELK
-post_date: 2016-02-26 15:36:10
+post_date: 2016-02-26 12:55:11
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/administration/logging/log-management-with-elk-3/
+  http://local.mesodocs.com/administration/logging/log-management-with-elk-3/
 published: true
 menu_order: 3
 page_options_require_authentication: false

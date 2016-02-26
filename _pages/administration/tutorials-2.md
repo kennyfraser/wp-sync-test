@@ -1,11 +1,11 @@
 ---
-ID: 35
+ID: 3688
 post_title: Tutorials
-post_date: 2016-02-26 15:29:45
+post_date: 2016-02-26 12:57:05
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/administration/tutorials-2/
+  http://local.mesodocs.com/administration/tutorials-2/
 published: true
 menu_order: 10
 page_options_require_authentication: false

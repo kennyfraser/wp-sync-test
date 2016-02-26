@@ -1,11 +1,11 @@
 ---
-ID: 42
+ID: 3700
 post_title: Autoscaling with Marathon
-post_date: 2016-02-26 15:30:12
+post_date: 2016-02-26 12:57:27
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/autoscaling-with-marathon-2/
+  http://local.mesodocs.com/autoscaling-with-marathon-2/
 published: true
 menu_order: 100
 page_options_require_authentication: false

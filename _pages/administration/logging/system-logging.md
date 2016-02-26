@@ -1,11 +1,11 @@
 ---
-ID: 66
+ID: 3647
 post_title: System Logging
-post_date: 2016-02-26 15:31:34
+post_date: 2016-02-26 12:55:26
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/administration/logging/system-logging/
+  http://local.mesodocs.com/administration/logging/system-logging/
 published: true
 menu_order: 1
 page_options_require_authentication: false

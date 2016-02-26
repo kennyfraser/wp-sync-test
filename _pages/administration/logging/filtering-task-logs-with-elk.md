@@ -1,11 +1,11 @@
 ---
-ID: 185
+ID: 3629
 post_title: Filtering Task Logs with ELK
-post_date: 2016-02-26 15:36:27
+post_date: 2016-02-26 12:54:57
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/administration/logging/filtering-task-logs-with-elk-3/
+  http://local.mesodocs.com/administration/logging/filtering-task-logs-with-elk/
 published: true
 menu_order: 4
 page_options_require_authentication: false

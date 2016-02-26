@@ -1,12 +1,12 @@
 ---
-ID: 279
+ID: 3731
 post_title: DCOS 1.3
-post_date: 2016-02-26 15:40:58
+post_date: 2016-02-26 12:58:14
 post_excerpt: ""
 layout: page
-permalink: http://local.gitsync.com/dcos-1-3-6/
+permalink: http://local.mesodocs.com/dcos-1-3/
 published: true
-menu_order: 1
+menu_order: 4
 page_options_require_authentication: false
 page_options_show_link_unauthenticated: false
 hide_from_navigation: false
@@ -48,13 +48,7 @@ The release notes provide a list of useful topics and links for Mesosphere DCOS.
 # <a name="mesos"></a>Mesos
 
 *   The Mesos kernel is now 0.24.1.
-*   See the [Mesos 0.24.0 release notes][5] and [Mesos 0.24.1 release notes][6]. 
-
-# <a name="security"></a>Security & Governance
-
-*   SSL support for all access to DCOS from the DCOS web interface, API, and CLI.
-*   Multi-user file-based authentication for the DCOS web interface, API, and CLI.
-*   Basic role-based access control.
+*   See the [Mesos 0.24.0 release notes][5] and [Mesos 0.24.1 release notes][6].
 
 <!-- ## System Requirements
 
@@ -62,9 +56,9 @@ The system requirements are documented [here](/getting-started/sys-requirements/
 
 # <a name="known-issues"></a>Known Issues and Limitations
 
-*   The Service and Agent panels of the DCOS Web Interface won't render over 5,000 tasks. If you have a service or agent that has over 5,000 your browser may experience slowness. In this case you can close said browser tab and reopen the DCOS web interface.
+*   The Service and Agent panels of the DCOS web interface won’t render over 5,000 tasks. If you have a service or agent with over 5,000 tasks, your browser may run slowly. If this happens, close the browser tab and reopen the DCOS web interface.
 *   IPv6 must be disabled for all nodes. For more information, see <a href="https://wiki.centos.org/FAQ/CentOS7#head-8984faf811faccca74c7bcdd74de7467f2fcd8ee" target="_blank">How Do I Disable IPv6</a>.
-*   All of DCOS master nodes must have resolvable hostnames, and the system resolver library must not do AAAA record lookups.
+*   All DCOS Master nodes must have resolvable hostnames, and the system resolver library must not do AAAA record lookups.
 *   See additional known issues at <a href="https://support.mesosphere.com" target="_blank">support.mesosphere.com</a>.
 
  [1]: https://github.com/mesosphere/mesos-dns/releases/tag/v0.4.0

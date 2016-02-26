@@ -1,11 +1,11 @@
 ---
-ID: 212
+ID: 3684
 post_title: Terminology
-post_date: 2016-02-26 15:37:31
+post_date: 2016-02-26 12:57:00
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/administration/terminology/
+  http://local.mesodocs.com/administration/terminology-2/
 published: true
 menu_order: 46
 page_options_require_authentication: false

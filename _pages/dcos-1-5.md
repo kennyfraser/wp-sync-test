@@ -1,23 +1,18 @@
 ---
-ID: 285
+ID: 3746
 post_title: DCOS 1.5
-post_date: 2016-02-26 15:41:33
+post_date: 2016-02-26 12:58:36
 post_excerpt: ""
 layout: page
-permalink: http://local.gitsync.com/dcos-1-5-6/
+permalink: http://local.mesodocs.com/dcos-1-5/
 published: true
-menu_order: 3
+menu_order: 100
 page_options_require_authentication: false
 page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
 The release notes provide a list of useful topics and links for Mesosphere DCOS.
-
-# <a name="dcos"></a>Simplified DCOS installation
-
-*   You can install DCOS across a cluster of nodes by using SSH. The entire process is completed in 3 easy steps.
-*   The DCOS configuration file is migrated from JSON to a simpler YAML format. 
 
 # <a name="mesos"></a>Mesos upgrade
 

@@ -1,11 +1,11 @@
 ---
-ID: 94
+ID: 3621
 post_title: Command Line Interface
-post_date: 2016-02-26 15:32:58
+post_date: 2016-02-26 12:54:27
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/administration/command-line-interface-2/
+  http://local.mesodocs.com/administration/command-line-interface-2/
 published: true
 menu_order: 4
 page_options_require_authentication: false

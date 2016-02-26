@@ -1,11 +1,11 @@
 ---
-ID: 175
+ID: 3821
 post_title: Using marathon-lb
-post_date: 2016-02-26 15:36:08
+post_date: 2016-02-26 13:01:49
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/using-marathon-lb/
+  http://local.mesodocs.com/using-marathon-lb/
 published: true
 menu_order: 100
 page_options_require_authentication: false

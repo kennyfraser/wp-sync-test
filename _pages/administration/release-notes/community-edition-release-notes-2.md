@@ -1,11 +1,11 @@
 ---
-ID: 235
+ID: 3668
 post_title: Community Edition Release Notes
-post_date: 2016-02-26 15:38:23
+post_date: 2016-02-26 12:56:04
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/administration/release-notes/community-edition-release-notes-3/
+  http://local.mesodocs.com/administration/release-notes/community-edition-release-notes-2/
 published: true
 menu_order: 103
 page_options_require_authentication: false

@@ -1,10 +1,10 @@
 ---
-ID: 3760
+ID: 3756
 post_title: DCOS 1.6
-post_date: 2016-02-26 12:58:55
+post_date: 2016-02-26 12:58:50
 post_excerpt: ""
 layout: page
-permalink: http://local.mesodocs.com/dcos-1-6-4/
+permalink: http://local.mesodocs.com/dcos-1-6-2/
 published: true
 menu_order: 110
 page_options_require_authentication: false

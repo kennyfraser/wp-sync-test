@@ -1,13 +1,13 @@
 ---
-ID: 281
-post_title: Service Discovery and Load Balancing
-post_date: 2016-02-26 15:41:10
+ID: 3612
+post_title: Administration
+post_date: 2016-02-26 12:54:01
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/administration/service-discovery-and-load-balancing-2/
+  http://local.mesodocs.com/administration-2/
 published: true
-menu_order: 6
+menu_order: 32
 page_options_require_authentication: false
 page_options_show_link_unauthenticated: false
 hide_from_navigation: false

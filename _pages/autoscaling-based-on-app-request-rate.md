@@ -1,11 +1,11 @@
 ---
-ID: 9
+ID: 3692
 post_title: Autoscaling based on app request rate
-post_date: 2016-02-26 15:27:53
+post_date: 2016-02-26 12:57:16
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/autoscaling-based-on-app-request-rate/
+  http://local.mesodocs.com/autoscaling-based-on-app-request-rate/
 published: true
 menu_order: 2
 page_options_require_authentication: false

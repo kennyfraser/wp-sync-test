@@ -1,11 +1,11 @@
 ---
-ID: 195
+ID: 3807
 post_title: Overview of Mesos-DNS
-post_date: 2016-02-26 15:36:49
+post_date: 2016-02-26 13:01:26
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/overview-of-mesos-dns/
+  http://local.mesodocs.com/overview-of-mesos-dns/
 published: true
 menu_order: 1
 page_options_require_authentication: false

@@ -1,11 +1,11 @@
 ---
-ID: 58
+ID: 3775
 post_title: Installing a DCOS service
-post_date: 2016-02-26 15:31:03
+post_date: 2016-02-26 12:59:44
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/installing-a-dcos-service-2/
+  http://local.mesodocs.com/installing-a-dcos-service-2/
 published: true
 menu_order: 53
 page_options_require_authentication: false

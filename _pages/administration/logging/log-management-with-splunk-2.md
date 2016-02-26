@@ -1,11 +1,11 @@
 ---
-ID: 203
+ID: 3643
 post_title: Log Management with Splunk
-post_date: 2016-02-26 15:37:11
+post_date: 2016-02-26 12:55:17
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/administration/logging/log-management-with-splunk-3/
+  http://local.mesodocs.com/administration/logging/log-management-with-splunk-2/
 published: true
 menu_order: 5
 page_options_require_authentication: false

@@ -1,10 +1,10 @@
 ---
-ID: 119
+ID: 3754
 post_title: DCOS 1.6
-post_date: 2016-02-26 15:33:58
+post_date: 2016-02-26 12:58:47
 post_excerpt: ""
 layout: page
-permalink: http://local.gitsync.com/dcos-1-6/
+permalink: http://local.mesodocs.com/dcos-1-6/
 published: true
 menu_order: 110
 page_options_require_authentication: false

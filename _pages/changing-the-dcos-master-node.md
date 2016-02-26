@@ -1,11 +1,11 @@
 ---
-ID: 17
+ID: 3702
 post_title: Changing the DCOS master node
-post_date: 2016-02-26 15:28:28
+post_date: 2016-02-26 12:57:30
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/changing-the-dcos-master-node/
+  http://local.mesodocs.com/changing-the-dcos-master-node/
 published: true
 menu_order: 100
 page_options_require_authentication: false

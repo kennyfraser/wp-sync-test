@@ -1,12 +1,12 @@
 ---
-ID: 135
+ID: 3740
 post_title: DCOS 1.4
-post_date: 2016-02-26 15:34:30
+post_date: 2016-02-26 12:58:27
 post_excerpt: ""
 layout: page
-permalink: http://local.gitsync.com/dcos-1-4-2/
+permalink: http://local.mesodocs.com/dcos-1-4-2/
 published: true
-menu_order: 2
+menu_order: 4
 page_options_require_authentication: false
 page_options_show_link_unauthenticated: false
 hide_from_navigation: false
@@ -53,7 +53,7 @@ The system requirements are documented [here](/getting-started/sys-requirements/
 
 *   See additional known issues at <a href="https://support.mesosphere.com" target="_blank">support.mesosphere.com</a>.
 
-*   `DCOS UI` The Service and Agent panels won't render over 5,000 tasks. If you have a service or agent that has over 5,000 your browser may experience slowness. In this case you can close said browser tab and reopen DCOS UI.
+*   The Service and Agent panels of the DCOS Web Interface won't render over 5,000 tasks. If you have a service or agent that has over 5,000 your browser may experience slowness. In this case you can close said browser tab and reopen the DCOS web interface.
 
  [1]: https://github.com/mesosphere/marathon/blob/v0.13.0-RC1/changelog.md
  [2]: https://git-wip-us.apache.org/repos/asf?p=mesos.git;a=blob_plain;f=CHANGELOG;hb=0.25.0

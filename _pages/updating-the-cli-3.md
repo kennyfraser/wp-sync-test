@@ -1,11 +1,11 @@
 ---
-ID: 169
+ID: 3819
 post_title: Updating the CLI
-post_date: 2016-02-26 15:35:53
+post_date: 2016-02-26 13:01:46
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/updating-the-cli-3/
+  http://local.mesodocs.com/updating-the-cli-3/
 published: true
 menu_order: 25
 page_options_require_authentication: false

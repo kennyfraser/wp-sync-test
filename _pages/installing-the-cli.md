@@ -1,11 +1,11 @@
 ---
-ID: 27
+ID: 3788
 post_title: Installing the CLI
-post_date: 2016-02-26 15:29:12
+post_date: 2016-02-26 13:00:25
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/installing-the-cli/
+  http://local.mesodocs.com/installing-the-cli/
 published: true
 menu_order: 1
 page_options_require_authentication: false

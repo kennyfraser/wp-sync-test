@@ -1,11 +1,11 @@
 ---
-ID: 273
+ID: 3673
 post_title: Enterprise Edition Release Notes
-post_date: 2016-02-26 15:40:38
+post_date: 2016-02-26 12:56:20
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/administration/release-notes/enterprise-edition-release-notes-3/
+  http://local.mesodocs.com/administration/release-notes/enterprise-edition-release-notes/
 published: true
 menu_order: 103
 page_options_require_authentication: false

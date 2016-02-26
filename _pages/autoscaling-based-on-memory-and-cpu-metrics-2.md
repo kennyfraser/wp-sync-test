@@ -1,13 +1,13 @@
 ---
-ID: 46
+ID: 3696
 post_title: >
   Autoscaling based on memory and CPU
   metrics
-post_date: 2016-02-26 15:30:29
+post_date: 2016-02-26 12:57:22
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/autoscaling-based-on-memory-and-cpu-metrics-2/
+  http://local.mesodocs.com/autoscaling-based-on-memory-and-cpu-metrics-2/
 published: true
 menu_order: 1
 page_options_require_authentication: false

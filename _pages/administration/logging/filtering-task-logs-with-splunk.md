@@ -1,11 +1,11 @@
 ---
-ID: 50
+ID: 3631
 post_title: Filtering Task Logs with Splunk
-post_date: 2016-02-26 15:30:40
+post_date: 2016-02-26 12:55:00
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/administration/logging/filtering-task-logs-with-splunk/
+  http://local.mesodocs.com/administration/logging/filtering-task-logs-with-splunk/
 published: true
 menu_order: 6
 page_options_require_authentication: false

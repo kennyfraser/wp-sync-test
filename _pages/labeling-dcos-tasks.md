@@ -1,11 +1,11 @@
 ---
-ID: 15
+ID: 3790
 post_title: Labeling DCOS Tasks
-post_date: 2016-02-26 15:28:19
+post_date: 2016-02-26 13:00:28
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/labeling-dcos-tasks/
+  http://local.mesodocs.com/labeling-dcos-tasks/
 published: true
 menu_order: 100
 page_options_require_authentication: false

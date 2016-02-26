@@ -1,11 +1,11 @@
 ---
-ID: 205
+ID: 3658
 post_title: Mesosphere Community
-post_date: 2016-02-26 15:37:15
+post_date: 2016-02-26 12:55:47
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/administration/mesosphere-community-2/
+  http://local.mesodocs.com/administration/mesosphere-community-2/
 published: true
 menu_order: 153
 page_options_require_authentication: false

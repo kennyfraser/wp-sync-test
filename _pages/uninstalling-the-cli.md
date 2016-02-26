@@ -1,11 +1,11 @@
 ---
-ID: 163
+ID: 3813
 post_title: Uninstalling the CLI
-post_date: 2016-02-26 15:35:34
+post_date: 2016-02-26 13:01:38
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/uninstalling-the-cli-3/
+  http://local.mesodocs.com/uninstalling-the-cli/
 published: true
 menu_order: 101
 page_options_require_authentication: false

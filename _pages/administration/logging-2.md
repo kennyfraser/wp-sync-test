@@ -1,11 +1,11 @@
 ---
-ID: 145
+ID: 3625
 post_title: Logging
-post_date: 2016-02-26 15:34:51
+post_date: 2016-02-26 12:54:48
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/administration/logging-2/
+  http://local.mesodocs.com/administration/logging-2/
 published: true
 menu_order: 16
 page_options_require_authentication: false

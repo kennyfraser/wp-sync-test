@@ -1,11 +1,11 @@
 ---
-ID: 107
+ID: 3710
 post_title: Command Reference
-post_date: 2016-02-26 15:33:30
+post_date: 2016-02-26 12:57:41
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.gitsync.com/command-reference-2/
+  http://local.mesodocs.com/command-reference-2/
 published: true
 menu_order: 2
 page_options_require_authentication: false
