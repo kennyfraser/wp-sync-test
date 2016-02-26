@@ -20,6 +20,10 @@ In this step you create a YAML configuration file that is customized for your en
 1.  From the bootstrap node, run this command to create a hashed password for superuser authentication, where `<superuser_password>` is the superuser password. Use the hashed password key for the `superuser_password_hash` parameter in your `config.yaml` file.
     
         $ sudo bash dcos_generate_config.sh --hash-password <superuser_password>
+        
+    
+    Here is an example of a hashed password output.
+    
         Extracting image from this script and loading into docker daemon, this step can take a few minutes
         dcos-genconf.9eda4ae45de5488c0c-c40556fa73a00235f1.tar
         Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
@@ -31,6 +35,10 @@ In this step you create a YAML configuration file that is customized for your en
 2.  Create a template `config.yaml` file by entering this command:
     
         $ sudo bash dcos_generate_config.sh --validate-config
+        
+    
+    Here is an example of the output. You can ignore the warnings.
+    
         Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
         23:54:54 dcos_installer.action_lib.prettyprint:: ====> VALIDATING CONFIGURATION
         23:54:54 dcos_installer.config:: Configuration file not found, /genconf/config.yaml. Writing new one with all defaults.
@@ -120,7 +128,7 @@ In this step you create a custom DCOS build file on your bootstrap node and then
 
 <!-- Stable URL: https://downloads.mesosphere.com/dcos/stable/dcos_generate_config.sh --> To install DCOS:
 
-1.  From the `dcos` directory, run the DCOS installer shell script on your bootstrap node to generate a customized DCOS build file. The setup script extracts a Docker container that uses the generic DCOS install files to create customized DCOS build files for your cluster. The build files are output to `./genconf/serve/`.
+1.  From the bootstrap node, run the DCOS installer shell script to generate a customized DCOS build file. The setup script extracts a Docker container that uses the generic DCOS install files to create customized DCOS build files for your cluster. The build files are output to `./genconf/serve/`.
     
     At this point your directory structure should resemble:
     
