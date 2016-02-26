@@ -4,8 +4,7 @@ post_title: Administration
 post_date: 2015-10-06 10:14:13
 post_excerpt: ""
 layout: page
-permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/administration/
+permalink: http://local.gitsync.com/administration/
 published: true
 menu_order: 32
 page_options_require_authentication: false
