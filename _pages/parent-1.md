@@ -6,10 +6,10 @@ post_excerpt: ""
 layout: page
 permalink: https://gitsync.mmdev2.ca/parent-1/
 published: true
-menu_order: 0
-page_options_require_authentication: false
+menu_order: 10
+page_options_require_authentication: true
 page_options_show_link_unauthenticated: false
-hide_from_navigation: false
-hide_from_related: false
+hide_from_navigation: true
+hide_from_related: true
 ---
-Post goes here.
+Parent 1!
