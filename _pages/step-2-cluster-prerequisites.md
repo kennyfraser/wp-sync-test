@@ -113,7 +113,7 @@ Before installing DCOS you must prepare your cluster environment.
     
     *   If you are using Docker Containerizer, you must have network access to a public Docker repository from the agent nodes or to an internal Docker registry.
     
-    *   Do not use use Docker `devicemapper` storage driver for loopback.
+    *   Do not use use Docker `devicemapper` storage driver for loopback. For more information, see the <a href="https://docs.docker.com/engine/userguide/storagedriver/device-mapper-driver/" target="_blank">Docker and the Device Mapper storage driver</a>.
 
 6.  **Port configuration**
     
