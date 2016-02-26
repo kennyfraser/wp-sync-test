@@ -5,7 +5,7 @@ post_date: 2015-12-08 08:56:48
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/administration/logging/system-logs/
+  http://local.gitsync.com/administration/logging/system-logs/
 published: true
 menu_order: 1
 page_options_require_authentication: false
