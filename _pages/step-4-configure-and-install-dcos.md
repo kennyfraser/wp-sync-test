@@ -107,7 +107,7 @@ In this step you create a YAML configuration file that is customized for your en
     :   This parameter specifies the hashed Admin password. This password is required for using DCOS. See step 1 for more information on how to create.
     
     **superuser_username**
-    :   This parameter specifies the Admin username. This username is required for using DCOS.
+    :   Specify a new username for the `Bootstrap superuser`. This username is required for using DCOS. For more information, see <a href="../security-and-authentication/managing-authorization/" target="_blank">Managing Authentication</a>.
     
     For the complete list of available configuration options and parameters, see the [Configuration Parameters][1] documentation.
 
