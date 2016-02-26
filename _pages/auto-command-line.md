@@ -27,62 +27,7 @@ To use the automated command-line installation method:
 
 Before installing DCOS, you must prepare your bootstrap node that will be used to run the DCOS installation commands. A bootstrap node is any physical, virtual, or cloud machine. It must have IP-to-IP connectivity from the bootstrap node to all nodes in your cluster environment. Your bootstrap node must not be a part of your cluster.
 
-## Docker
-
-Docker version 1.9 or greater must be installed on your bootstrap and cluster nodes. You must run Docker commands as the root user (`sudo`). For more information, see <a href="http://docs.docker.com/engine/installation/" target="_blank">Docker installation</a>.
-
-Install Docker by using these commands your Linux distribution. CoreOS includes Docker natively.
-
-*   **RHEL** Install Docker by using a subscription channel. For more information, see <a href="https://access.redhat.com/articles/881893" target="_blank">Docker Formatted Container Images on Red Hat Systems</a>. <!-- $ curl -sSL https://get.docker.com | sudo sh -->
-
-*   **CentOS** Install Docker by using OverlayFS.
-    
-    1.  Add the Docker yum repo to your bootstrap node:
-        
-            $ sudo tee /etc/yum.repos.d/docker.repo <<-'EOF'
-            [dockerrepo]
-            name=Docker Repository
-            baseurl=https://yum.dockerproject.org/repo/main/centos/$releasever/
-            enabled=1
-            gpgcheck=1
-            gpgkey=https://yum.dockerproject.org/gpg
-            EOF
-            sudo yum -y update
-            sudo mkdir -p /etc/systemd/system/docker.service.d
-            sudo tee /etc/systemd/system/docker.service.d/override.conf <<- EOF
-            [Service]
-            ExecStart=
-            ExecStart=/usr/bin/docker daemon --storage-driver=overlay -H fd://
-            EOF
-            
-    
-    2.  Install the Docker engine:
-        
-            $ sudo yum install -y docker-engine
-            
-    
-    3.  Start the Docker daemon:
-        
-            $ sudo systemctl start docker
-            
-    
-    4.  Enable the Docker service:
-        
-            $ sudo systemctl enable docker
-            
-    
-    *   If you are using Docker as a non-root user, you must add your user to the "docker" group:
-        
-            $ sudo usermod -aG docker <user>
-            
-    
-    *   You can test that your Docker build is properly installed with these commands:
-        
-            $ sudo service docker start 
-            $ sudo docker ps
-            
-
-*   If you are using Docker Containerizer, you must have network access to a public Docker repository from the agent nodes or to an internal Docker registry.
+[docker-prereq]
 
 ## ZooKeeper for shared storage
 
