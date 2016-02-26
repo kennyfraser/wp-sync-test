@@ -5,7 +5,7 @@ post_date: 2015-12-08 08:57:24
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/administration/open-mesosphere/
+  http://local.gitsync.com/administration/open-mesosphere/
 published: true
 menu_order: 153
 page_options_require_authentication: false
