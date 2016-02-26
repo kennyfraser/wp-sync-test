@@ -4,7 +4,7 @@ post_title: Parent 1 ( v2 )
 post_date: 2016-02-26 10:55:58
 post_excerpt: ""
 layout: page
-permalink: https://gitsync.mmdev2.ca/parent-1/
+permalink: https://gitsync.mmdev2.ca/parent-1-2/
 published: true
 menu_order: 10
 page_options_require_authentication: true
