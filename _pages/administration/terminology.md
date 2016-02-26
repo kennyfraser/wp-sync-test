@@ -1,11 +1,11 @@
 ---
-ID: 538
+ID: 212
 post_title: Terminology
-post_date: 2015-12-08 08:57:04
+post_date: 2016-02-26 15:37:31
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/administration/terminology/
+  http://local.gitsync.com/administration/terminology/
 published: true
 menu_order: 46
 page_options_require_authentication: false
