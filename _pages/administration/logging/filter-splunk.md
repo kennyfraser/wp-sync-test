@@ -5,7 +5,7 @@ post_date: 2015-12-08 08:56:41
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/administration/logging/filter-splunk/
+  http://local.gitsync.com/administration/logging/filter-splunk/
 published: true
 menu_order: 6
 page_options_require_authentication: false
