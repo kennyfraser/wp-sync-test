@@ -22,7 +22,7 @@ In this step you create a YAML configuration file that is customized for your en
         $ sudo bash dcos_generate_config.sh --hash-password <superuser_password>
         
     
-    Here is an example of a hashed password output.
+    Here is an example of a hashed password output. In this example, the hashed password is `$6$rounds=656000$v55tdnlMGNoSEgYH$1JAznj58MR.Bft2wd05KviSUUfZe45nsYsjlEl84w34pp48A9U2GoKzlycm3g6MBmg4cQW9k7iY4tpZdkWy9t1`.
     
         Extracting image from this script and loading into docker daemon, this step can take a few minutes
         dcos-genconf.9eda4ae45de5488c0c-c40556fa73a00235f1.tar
@@ -54,7 +54,7 @@ In this step you create a YAML configuration file that is customized for your en
         23:54:54 dcos_installer.validate.onprem:: ip_detect_path: File does not exist genconf/ip-detect
         
 
-3.  Edit your template `genconf/config.yaml` file and customize for your environment.
+3.  Edit your template `genconf/config.yaml` file and customize for your environment. The template `config.yaml` file is located in the `genconf` directory.
     
         $ sudo vi config.yaml
         
@@ -146,9 +146,9 @@ In this step you create a custom DCOS build file on your bootstrap node and then
     
     **Tip:** For the install script to work, you must have created [genconf/config.yaml][3] and [genconf/ip-detect][4].
 
-3.  From the `dcos` directory, run this command to host the DCOS install package through an nginx Docker container. For `<your-port>`, specify the port value that is used in the `bootstrap_url`.
+3.  From your root directory, run this command to host the DCOS install package through an nginx Docker container. For `<your-port>`, specify the port value that is used in the `bootstrap_url`.
     
-        $ docker run -d -p <your-port>:80 -v $PWD/genconf/serve:/usr/share/nginx/html:ro nginx
+        $ sudo docker run -d -p <your-port>:80 -v $PWD/genconf/serve:/usr/share/nginx/html:ro nginx
         
 
 4.  Run these commands on each of your master nodes in succession to install DCOS using your custom build file.
@@ -205,7 +205,7 @@ In this step you create a custom DCOS build file on your bootstrap node and then
     
     When the status icons are green, you can access the DCOS web interface.
 
-15. Launch the DCOS web interface at: `http://<load-balanced-ip>/`.
+15. Launch the DCOS web interface at: `http://<master-node-public-ip>/`.
 
 16. Click **Log In To DCOS**.
     
