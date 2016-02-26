@@ -189,7 +189,7 @@ In this step you create a custom DCOS build file on your bootstrap node and then
 
 12. Download the DCOS installer from the nginx Docker container, where `<bootstrap-ip>` and `<your_port>` are specified in `bootstrap_url`:
     
-        $ curl http://<bootstrap-ip>:<your_port>/dcos_install.sh
+        $ curl -O http://<bootstrap-ip>:<your_port>/dcos_install.sh
         
 
 13. Run this command to install DCOS on your agent node:
