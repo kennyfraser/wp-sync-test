@@ -11,7 +11,7 @@ menu_order: 1
 page_options_require_authentication: false
 page_options_show_link_unauthenticated: false
 hide_from_navigation: false
-hide_from_related: false
+hide_from_related: true
 ---
 Here are the DCOS cluster configuration parameters. The DCOS build uses these parameters to create a customized install.
 

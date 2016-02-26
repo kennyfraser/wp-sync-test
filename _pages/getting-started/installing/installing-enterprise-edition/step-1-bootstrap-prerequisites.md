@@ -11,7 +11,7 @@ menu_order: 1
 page_options_require_authentication: false
 page_options_show_link_unauthenticated: false
 hide_from_navigation: false
-hide_from_related: false
+hide_from_related: true
 ---
 Before installing DCOS, you must prepare your bootstrap node that is will be used to run the DCOS installation commands. A bootstrap node is any physical, virtual, or cloud machine. It must have IP-to-IP connectivity from the bootstrap node to all nodes in your cluster environment. Your bootstrap node must not be a part of your cluster.
 

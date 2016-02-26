@@ -11,7 +11,7 @@ menu_order: 100
 page_options_require_authentication: false
 page_options_show_link_unauthenticated: false
 hide_from_navigation: false
-hide_from_related: false
+hide_from_related: true
 ---
 These configuration parameters are specified in [YAML][1] format in your config.yaml file. During DCOS installation the configuration file is used to generate a customized DCOS build. <!-- A config.yaml template file is available [here][2]. -->
 

@@ -11,7 +11,7 @@ menu_order: 103
 page_options_require_authentication: false
 page_options_show_link_unauthenticated: false
 hide_from_navigation: false
-hide_from_related: false
+hide_from_related: true
 ---
 <!-- 1.4 --> You can install DCOS in your environment by using a customized Bash install script.
 

@@ -13,7 +13,7 @@ menu_order: 1
 page_options_require_authentication: false
 page_options_show_link_unauthenticated: false
 hide_from_navigation: false
-hide_from_related: false
+hide_from_related: true
 ---
 Authorization and authentication is managed in the DCOS web interface.
 
