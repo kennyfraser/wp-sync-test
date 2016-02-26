@@ -5,7 +5,7 @@ post_date: 2015-12-23 11:44:36
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/administration/admin-tutorials/autoscaling-with-marathon/marathon-app-for-rate-based-autoscaling/
+  http://local.gitsync.com/administration/admin-tutorials/autoscaling-with-marathon/marathon-app-for-rate-based-autoscaling/
 published: true
 menu_order: 2
 page_options_require_authentication: false
