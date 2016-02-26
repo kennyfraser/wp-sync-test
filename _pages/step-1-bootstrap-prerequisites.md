@@ -35,38 +35,16 @@ Install Docker by using these commands your Linux distribution. CoreOS includes 
             gpgcheck=1
             gpgkey=https://yum.dockerproject.org/gpg
             EOF
-            sudo yum -y update
-            sudo mkdir -p /etc/systemd/system/docker.service.d
-            sudo tee /etc/systemd/system/docker.service.d/override.conf <<- EOF
-            [Service]
-            ExecStart=
-            ExecStart=/usr/bin/docker daemon --storage-driver=overlay -H fd://
-            EOF
-            
-        
-        This can take a few minutes. When the process has completed successfully you will see this message:
-    
-    2.  Install the Docker engine:
-        
-            $ sudo yum install -y docker-engine
             
     
-    3.  Start the Docker daemon:
+    2.  Update the Docker yum repo, and create Docker systemd drop-in files: $ sudo yum -y update && sudo mkdir -p /etc/systemd/system/docker.service.d && sudo tee /etc/systemd/system/docker.service.d/override.conf <<- EOF [Service] ExecStart= ExecStart=/usr/bin/docker daemon --storage-driver=overlay -H fd:// EOF
         
-            $ sudo systemctl start docker
-            
+        This can take a few minutes. This is what the end of the process should look like: ... Complete! [Service] ExecStart= ExecStart=/usr/bin/docker daemon --storage-driver=overlay -H fd://
     
-    4.  Enable the Docker service:
+    3.  Install the Docker engine, daemon, service, and nginx image:
         
-            $ sudo systemctl enable docker
+            $ sudo yum install -y docker-engine && sudo systemctl start docker && sudo systemctl enable docker && sudo docker pull nginx
             
-    
-    5.  Install the Docker nginx image:
-        
-             $ sudo docker pull nginx
-            
-        
-        For more information, see <a href="https://hub.docker.com/_/nginx/" target="_blank">DockerHub nginx</a> documentation.
     
     *   If you are using Docker as a non-root user, you must add your user to the "docker" group:
         
@@ -75,8 +53,7 @@ Install Docker by using these commands your Linux distribution. CoreOS includes 
     
     *   You can test that your Docker build is properly installed with these commands:
         
-            $ sudo service docker start 
-            $ sudo docker ps
+            $ sudo service docker start && sudo docker ps
             
 
 *   If you are using Docker Containerizer, you must have network access to a public Docker repository from the agent nodes or to an internal Docker registry.
