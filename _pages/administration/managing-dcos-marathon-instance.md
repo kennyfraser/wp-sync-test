@@ -5,7 +5,7 @@ post_date: 2015-12-29 14:15:20
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/administration/managing-dcos-marathon-instance/
+  http://local.gitsync.com/administration/managing-dcos-marathon-instance/
 published: true
 menu_order: 11
 page_options_require_authentication: false
