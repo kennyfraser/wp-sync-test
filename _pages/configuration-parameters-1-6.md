@@ -8,56 +8,10 @@ layout: page
 permalink: >
   https://docs.mesosphere.com/installing-enterprise-edition-1-6/configuration-parameters-1-6/
 published: true
-header_0_background:
-  - fill
-header_0_background_fill_style:
-  - dark
-header_0_logo_style:
-  - color-light
-header_0_navigation_style:
-  - light
-header:
-  - "1"
-page_header_0_show_page_header:
-  - "0"
-page_header_0_size:
-  - default
-page_header_0_fill_screen:
-  - "0"
-page_header_0_background:
-  - transparent
-page_header_0_show_background_image:
-  - "0"
-page_header_0_show_background_video:
-  - "0"
-page_header_0_headline:
-  - ""
-page_header_0_headline_size:
-  - default
-page_header_0_description:
-  - ""
-page_header_0_description_size:
-  - default
-page_header_0_show_image:
-  - "0"
-page_header_0_content_alignment:
-  - center
-page_header_0_content_style:
-  - dark
-page_header_0_actions:
-  - "0"
-page_header_0_show_actions_footnote:
-  - "0"
-page_header_0_show_video:
-  - "0"
-page_header:
-  - "1"
-page_options_require_authentication:
-  - ""
-hide_from_navigation:
-  - "0"
-hide_from_related:
-  - "1"
+page_options_require_authentication: false
+hide_from_navigation: false
+hide_from_related: true
+page_options_show_link_unauthenticated: false
 ---
 These configuration parameters are specified in [YAML][1] format in your config.yaml file. During DCOS installation the configuration file is used to generate a customized DCOS build. <!-- A config.yaml template file is available [here][2]. -->
 
@@ -97,19 +51,19 @@ This parameter specifies the amount of time to wait before removing the Docker i
 
 This parameter specifies the type of Exhibitor storage backend. During DCOS installation, a storage system is required for configuring and orchestrating Zookeeper with Exhibitor on the master nodes. Exhibitor automatically configures your Zookeeper installation on the master nodes during your DCOS installation. The available options are `zookeeper`, `aws_s3`, and `shared_filesystem`:
 
-*   zookeeper
-    :   *   exhibitor_zk_hosts
-            :   This parameter specifes the location of a bootstrap ZooKeeper (ZK) instance. This ZK instance must be a production cluster that is separate from the DCOS internal ZK instance. This cluster is only used for configuring the internal Exhibitor instances. Specify the value as a comma-separated list of one or more ZK node IP addresses, and the port number.
-            
+*   **zookeeper**
+    
+    *   exhibitor_zk_hosts : This parameter specifes the location of a bootstrap ZooKeeper (ZK) instance. This ZK instance must be a production cluster that is separate from the DCOS internal ZK instance. This cluster is only used for configuring the internal Exhibitor instances. Specify the value as a comma-separated list of one or more ZK node IP addresses, and the port number.
+        
             **Tip:** You can set up a temporary ZK bootstrap instance by running this command on your installer machine. This temporary ZK instance is for testing purposes only and should not be used in a production environment:
             
                 docker run -d -p 2181:2181 -p 2888:2888 -p 3888:3888 jplock/zookeeper
-                
+            
             
             And then set the `exhibitor_zk_hosts` key to a value of `$INSTALLER_HOST_IP_ADDRESS:2181`.
+            
         
-        *   exhibitor_zk_path
-            :   This parameter specifies the filepath that Exhibitor uses to store data, including the zoo.cfg file.
+        *   exhibitor_zk_path : This parameter specifies the filepath that Exhibitor uses to store data, including the zoo.cfg file.
     
     Here is a ZK example, where the `$INSTALLER_HOST_IP_ADDRESS` is `10.10.10.1` and `$PORT` is `2181`:
     
@@ -118,7 +72,7 @@ This parameter specifies the type of Exhibitor storage backend. During DCOS inst
         exhibitor_zk_path: /zk-example
         
 
-*   aws_s3 :
+*   **aws_s3**
     
     *   aws_access_key_id
         :   This parameter specifies AWS key ID.
@@ -145,7 +99,7 @@ This parameter specifies the type of Exhibitor storage backend. During DCOS inst
             s3_prefix: s3-example
             
     
-    *   shared_filesystem :
+    *   **shared_filesystem**
         
         *   exhibitor_fs_config_dir : This parameter specifies the absolute path to the folder that Exhibitor uses to coordinate its configuration. This should be a directory inside of a Network File System (NFS) mount. For example, if every master has `/fserv` mounted via NFS, set as `exhibitor_fs_config_dir: /fserv/dcos-exhibitor`.
         
