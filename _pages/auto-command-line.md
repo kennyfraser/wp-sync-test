@@ -29,20 +29,7 @@ Before installing DCOS, you must prepare your bootstrap node that will be used t
 
 [docker-prereq]
 
-## ZooKeeper for shared storage
-
-Shared storage is required by DCOS during installation and runtime for bootstrapping and managing the internal DCOS ZooKeeper cluster. The ZooKeeper for shared storage instance should only be used for bootstrapping the DCOS Exhibitor instance. Do not use this bootstrap ZooKeeper instance in production. Multiple ZooKeeper instances are recommended for failover in production environments.
-
-Exhibitor automatically configures your ZooKeeper installation on the master nodes during your DCOS installation. This ZooKeeper instance should be separate from your cluster. Consider using a separate directory path for the DCOS cluster so that it does not interfere with other services that use the ZooKeeper instance.
-
-Temporary outages while the cluster is running are acceptable, but shared storage should generally be up and running to support replacing failed masters.
-
-To start a ZooKeeper instance using Docker, run this command:
-
-        $ sudo docker run -d -p 2181:2181 -p 2888:2888 -p 3888:3888 --name=dcos_int_zk jplock/zookeeper
-    
-
-**Tip:** If you've run the `usermod` Docker command in the previous step, you might have to log out and then back in to your bootstrap node before starting Zookeeper.
+[bootstrap-zk-prereq]
 
 ## DCOS setup file
 
