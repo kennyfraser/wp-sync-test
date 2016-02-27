@@ -53,15 +53,16 @@ This parameter specifies the type of Exhibitor storage backend. During DCOS inst
 
 *   **zookeeper**
     
-    *   exhibitor_zk_hosts : This parameter specifes the location of a bootstrap ZooKeeper (ZK) instance. This ZK instance must be a production cluster that is separate from the DCOS internal ZK instance. This cluster is only used for configuring the internal Exhibitor instances. Specify the value as a comma-separated list of one or more ZK node IP addresses, and the port number.
+    *   exhibitor_zk_hosts
         
+        :   This parameter specifes the location of a bootstrap ZooKeeper (ZK) instance. This ZK instance must be a production cluster that is separate from the DCOS internal ZK instance. This cluster is only used for configuring the internal Exhibitor instances. Specify the value as a comma-separated list of one or more ZK node IP addresses, and the port number.
+            
             **Tip:** You can set up a temporary ZK bootstrap instance by running this command on your installer machine. This temporary ZK instance is for testing purposes only and should not be used in a production environment:
             
                 docker run -d -p 2181:2181 -p 2888:2888 -p 3888:3888 jplock/zookeeper
-            
+                
             
             And then set the `exhibitor_zk_hosts` key to a value of `$INSTALLER_HOST_IP_ADDRESS:2181`.
-            
         
         *   exhibitor_zk_path : This parameter specifies the filepath that Exhibitor uses to store data, including the zoo.cfg file.
     
