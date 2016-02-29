@@ -1,0 +1,15 @@
+---
+ID: 3546
+post_title: Administration
+post_date: 2016-02-29 09:57:45
+post_excerpt: ""
+layout: page
+permalink: >
+  https://dev-mesosphere-documentation.pantheon.io/administration-2/
+published: false
+menu_order: 0
+page_options_require_authentication: false
+page_options_show_link_unauthenticated: false
+hide_from_navigation: false
+hide_from_related: false
+---
