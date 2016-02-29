@@ -7,7 +7,7 @@ post_date: 2015-12-23 11:44:49
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.mesodocs.com/administration/admin-tutorials/autoscaling-with-marathon/command-line-application-to-autoscale-based-on-memory-and-cpu-metrics/
+  https://dev-mesosphere-documentation.pantheon.io/administration/admin-tutorials/autoscaling-with-marathon/command-line-application-to-autoscale-based-on-memory-and-cpu-metrics/
 published: true
 menu_order: 1
 page_options_require_authentication: false

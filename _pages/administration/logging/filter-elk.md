@@ -5,7 +5,7 @@ post_date: 2015-12-08 08:56:40
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.mesodocs.com/administration/logging/filter-elk/
+  https://dev-mesosphere-documentation.pantheon.io/administration/logging/filter-elk/
 published: true
 menu_order: 4
 page_options_require_authentication: false

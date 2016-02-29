@@ -66,7 +66,7 @@ The current Kubernetes alpha <a href="https://github.com/mesosphere/kubernetes/r
                 kubernetes v0.7.2-v1.1.5-alpha /kubernetes kubernetes Kubernetes is an open source system for managing containerized applications across multiple hosts, providing basic mechanisms for deployment, maintenance, and scaling of applications.
             
     
-    *   From the DCOS web interface, go to the Services tab and confirm that Kubernetes is running at <hostname>/#/services/.
+    *   From the DCOS web interface, go to the Services tab and confirm that Kubernetes is running at /#/services/.
         
         <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/kubernetestask.png" rel="attachment wp-att-1401"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/kubernetestask.png" alt="kubernetestask" width="721" height="48" class="alignnone size-full wp-image-1401" /></a>
     

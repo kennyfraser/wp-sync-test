@@ -5,7 +5,7 @@ post_date: 2016-01-20 09:51:21
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.mesodocs.com/administration/service-discovery-with-marathon-lb/service-discovery/service-naming/
+  https://dev-mesosphere-documentation.pantheon.io/administration/service-discovery-with-marathon-lb/service-discovery/service-naming/
 published: true
 menu_order: 2
 page_options_require_authentication: false
@@ -91,7 +91,7 @@ On a DCOS cluster, ports are offered by agent nodes in the same way as other res
 
 The following table shows the rules that govern SRV generation:
 
-<table class="table" style="width: 400px !important;">
+<table class="table" style="width: 400px !important">
   <thead>
     <tr>
       <th>

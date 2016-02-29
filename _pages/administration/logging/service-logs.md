@@ -5,7 +5,7 @@ post_date: 2015-12-08 08:56:44
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.mesodocs.com/administration/logging/service-logs/
+  https://dev-mesosphere-documentation.pantheon.io/administration/logging/service-logs/
 published: true
 menu_order: 2
 page_options_require_authentication: false

@@ -5,7 +5,7 @@ post_date: 2015-12-11 14:41:52
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.mesodocs.com/administration/release-notes/enterprise-edition/
+  https://dev-mesosphere-documentation.pantheon.io/administration/release-notes/enterprise-edition/
 published: true
 menu_order: 103
 page_options_require_authentication: false

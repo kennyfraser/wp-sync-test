@@ -5,7 +5,7 @@ post_date: 2015-12-08 08:56:59
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.mesodocs.com/administration/dcosarchitecture/security/
+  https://dev-mesosphere-documentation.pantheon.io/administration/dcosarchitecture/security/
 published: true
 menu_order: 3
 page_options_require_authentication: false

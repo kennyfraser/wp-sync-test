@@ -5,7 +5,7 @@ post_date: 2016-02-05 11:40:43
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.mesodocs.com/administration/service-discovery-with-marathon-lb/
+  https://dev-mesosphere-documentation.pantheon.io/administration/service-discovery-with-marathon-lb/
 published: true
 menu_order: 6
 page_options_require_authentication: false

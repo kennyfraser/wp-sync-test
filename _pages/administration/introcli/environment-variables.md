@@ -5,7 +5,7 @@ post_date: 2016-01-22 16:15:32
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.mesodocs.com/administration/introcli/environment-variables/
+  https://dev-mesosphere-documentation.pantheon.io/administration/introcli/environment-variables/
 published: true
 menu_order: 3
 page_options_require_authentication: false

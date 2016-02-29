@@ -5,7 +5,7 @@ post_date: 2015-12-08 08:56:26
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.mesodocs.com/administration/introcli/cli/
+  https://dev-mesosphere-documentation.pantheon.io/administration/introcli/cli/
 published: true
 menu_order: 1
 page_options_require_authentication: false

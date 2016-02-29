@@ -5,7 +5,7 @@ post_date: 2015-12-17 16:20:12
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.mesodocs.com/administration/introcli/command-reference/
+  https://dev-mesosphere-documentation.pantheon.io/administration/introcli/command-reference/
 published: true
 menu_order: 2
 page_options_require_authentication: false
@@ -45,7 +45,7 @@ Display the DCOS configuration file contents.
 
 `dcos config unset [--index=<index>] <param-name>`
 
-Remove an entry from an existing configuration parameter list, where <index> is the numerical position in the list that you want to remove.
+Remove an entry from an existing configuration parameter list, where is the numerical position in the list that you want to remove.
 
 `dcos config validate`
 

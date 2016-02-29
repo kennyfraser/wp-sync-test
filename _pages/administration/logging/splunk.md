@@ -5,7 +5,7 @@ post_date: 2015-12-08 08:56:47
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.mesodocs.com/administration/logging/splunk/
+  https://dev-mesosphere-documentation.pantheon.io/administration/logging/splunk/
 published: true
 menu_order: 5
 page_options_require_authentication: false

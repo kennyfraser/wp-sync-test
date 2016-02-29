@@ -7,7 +7,7 @@ post_date: 2015-12-30 14:20:50
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.mesodocs.com/administration/admin-tutorials/deploying-a-containerized-docker-app-on-marathon/
+  https://dev-mesosphere-documentation.pantheon.io/administration/admin-tutorials/deploying-a-containerized-docker-app-on-marathon/
 published: true
 menu_order: 100
 page_options_require_authentication: false

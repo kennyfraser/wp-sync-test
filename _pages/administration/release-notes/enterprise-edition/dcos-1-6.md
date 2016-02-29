@@ -5,7 +5,7 @@ post_date: 2016-02-17 10:25:59
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.mesodocs.com/administration/release-notes/enterprise-edition/dcos-1-6/
+  https://dev-mesosphere-documentation.pantheon.io/administration/release-notes/enterprise-edition/dcos-1-6/
 published: true
 menu_order: 100
 page_options_require_authentication: false

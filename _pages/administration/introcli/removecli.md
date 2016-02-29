@@ -5,7 +5,7 @@ post_date: 2015-12-08 08:56:33
 post_excerpt: ""
 layout: page
 permalink: >
-  http://local.mesodocs.com/administration/introcli/removecli/
+  https://dev-mesosphere-documentation.pantheon.io/administration/introcli/removecli/
 published: true
 menu_order: 101
 page_options_require_authentication: false
