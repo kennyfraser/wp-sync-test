@@ -5,7 +5,11 @@ post_date: 2015-12-08 08:57:06
 post_excerpt: ""
 layout: page
 permalink: >
+<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/administration/universe/
+=======
+  https://dev-mesosphere-documentation.pantheon.io/administration/universe/
+>>>>>>> staging
 published: true
 menu_order: 3
 page_options_require_authentication: false

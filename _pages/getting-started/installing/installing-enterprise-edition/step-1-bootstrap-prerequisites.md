@@ -5,7 +5,11 @@ post_date: 2016-02-05 14:59:53
 post_excerpt: ""
 layout: page
 permalink: >
+<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/getting-started/installing/installing-enterprise-edition/step-1-bootstrap-prerequisites/
+=======
+  https://dev-mesosphere-documentation.pantheon.io/getting-started/installing/installing-enterprise-edition/step-1-bootstrap-prerequisites/
+>>>>>>> staging
 published: true
 menu_order: 1
 page_options_require_authentication: false

@@ -5,7 +5,11 @@ post_date: 2016-02-05 15:01:26
 post_excerpt: ""
 layout: page
 permalink: >
+<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/getting-started/installing/installing-enterprise-edition/step-4-configure-and-install-dcos/
+=======
+  https://dev-mesosphere-documentation.pantheon.io/getting-started/installing/installing-enterprise-edition/step-4-configure-and-install-dcos/
+>>>>>>> staging
 published: true
 menu_order: 4
 page_options_require_authentication: false

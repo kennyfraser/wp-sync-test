@@ -5,7 +5,11 @@ post_date: 2015-12-08 08:56:29
 post_excerpt: ""
 layout: page
 permalink: >
+<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/administration/admin-tutorials/installdatacenter/
+=======
+  https://dev-mesosphere-documentation.pantheon.io/administration/admin-tutorials/installdatacenter/
+>>>>>>> staging
 published: true
 menu_order: 53
 page_options_require_authentication: false

@@ -5,7 +5,11 @@ post_date: 2015-12-23 12:26:00
 post_excerpt: ""
 layout: page
 permalink: >
+<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/manage-service/service-tutorials/running-more-than-one-instance-of-cassandra/
+=======
+  https://dev-mesosphere-documentation.pantheon.io/manage-service/service-tutorials/running-more-than-one-instance-of-cassandra/
+>>>>>>> staging
 published: true
 menu_order: 100
 page_options_require_authentication: false

@@ -5,7 +5,11 @@ post_date: 2015-12-08 08:56:36
 post_excerpt: ""
 layout: page
 permalink: >
+<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/administration/introcli/updatecli/
+=======
+  https://dev-mesosphere-documentation.pantheon.io/administration/introcli/updatecli/
+>>>>>>> staging
 published: true
 menu_order: 25
 page_options_require_authentication: false

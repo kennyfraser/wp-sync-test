@@ -5,7 +5,11 @@ post_date: 2016-01-20 09:50:57
 post_excerpt: ""
 layout: page
 permalink: >
+<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/administration/service-discovery-with-marathon-lb/service-discovery/http-interface/
+=======
+  https://dev-mesosphere-documentation.pantheon.io/administration/service-discovery-with-marathon-lb/service-discovery/http-interface/
+>>>>>>> staging
 published: true
 menu_order: 3
 page_options_require_authentication: false

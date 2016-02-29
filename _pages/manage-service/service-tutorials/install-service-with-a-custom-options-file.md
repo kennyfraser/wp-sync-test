@@ -5,7 +5,11 @@ post_date: 2015-12-29 14:55:43
 post_excerpt: ""
 layout: page
 permalink: >
+<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/manage-service/service-tutorials/install-service-with-a-custom-options-file/
+=======
+  https://dev-mesosphere-documentation.pantheon.io/manage-service/service-tutorials/install-service-with-a-custom-options-file/
+>>>>>>> staging
 published: true
 menu_order: 100
 page_options_require_authentication: false

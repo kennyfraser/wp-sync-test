@@ -5,7 +5,11 @@ post_date: 2015-12-28 16:02:34
 post_excerpt: ""
 layout: page
 permalink: >
+<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/manage-service/service-tutorials/
+=======
+  https://dev-mesosphere-documentation.pantheon.io/manage-service/service-tutorials/
+>>>>>>> staging
 published: true
 menu_order: 100
 page_options_require_authentication: false

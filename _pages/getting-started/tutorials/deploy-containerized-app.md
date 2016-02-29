@@ -7,7 +7,11 @@ post_date: 2015-12-08 08:57:56
 post_excerpt: ""
 layout: page
 permalink: >
+<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/getting-started/tutorials/deploy-containerized-app/
+=======
+  https://dev-mesosphere-documentation.pantheon.io/getting-started/tutorials/deploy-containerized-app/
+>>>>>>> staging
 published: true
 menu_order: 1
 page_options_require_authentication: false

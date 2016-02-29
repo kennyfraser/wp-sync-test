@@ -5,7 +5,11 @@ post_date: 2016-01-02 09:18:39
 post_excerpt: ""
 layout: page
 permalink: >
+<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/getting-started/installing/installing-enterprise-edition/deploying-a-local-dcos-universe/
+=======
+  https://dev-mesosphere-documentation.pantheon.io/getting-started/installing/installing-enterprise-edition/deploying-a-local-dcos-universe/
+>>>>>>> staging
 published: true
 menu_order: 200
 page_options_require_authentication: false

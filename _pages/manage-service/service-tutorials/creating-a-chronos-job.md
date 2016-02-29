@@ -5,7 +5,11 @@ post_date: 2015-12-23 13:04:06
 post_excerpt: ""
 layout: page
 permalink: >
+<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/manage-service/service-tutorials/creating-a-chronos-job/
+=======
+  https://dev-mesosphere-documentation.pantheon.io/manage-service/service-tutorials/creating-a-chronos-job/
+>>>>>>> staging
 published: true
 menu_order: 100
 page_options_require_authentication: false

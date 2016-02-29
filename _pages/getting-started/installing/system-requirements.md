@@ -5,7 +5,11 @@ post_date: 2016-01-26 13:53:59
 post_excerpt: ""
 layout: page
 permalink: >
+<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/getting-started/installing/system-requirements/
+=======
+  https://dev-mesosphere-documentation.pantheon.io/getting-started/installing/system-requirements/
+>>>>>>> staging
 published: true
 menu_order: 105
 page_options_require_authentication: false

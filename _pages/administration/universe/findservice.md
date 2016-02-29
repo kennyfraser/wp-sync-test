@@ -5,7 +5,11 @@ post_date: 2015-12-08 08:57:29
 post_excerpt: ""
 layout: page
 permalink: >
+<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/administration/universe/findservice/
+=======
+  https://dev-mesosphere-documentation.pantheon.io/administration/universe/findservice/
+>>>>>>> staging
 published: true
 menu_order: 21
 page_options_require_authentication: false

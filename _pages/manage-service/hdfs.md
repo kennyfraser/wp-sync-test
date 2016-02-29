@@ -5,7 +5,11 @@ post_date: 2015-12-08 08:57:30
 post_excerpt: ""
 layout: page
 permalink: >
+<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/manage-service/hdfs/
+=======
+  https://dev-mesosphere-documentation.pantheon.io/manage-service/hdfs/
+>>>>>>> staging
 published: true
 menu_order: 5
 page_options_require_authentication: false

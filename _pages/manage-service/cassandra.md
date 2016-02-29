@@ -5,7 +5,11 @@ post_date: 2015-12-08 08:57:28
 post_excerpt: ""
 layout: page
 permalink: >
+<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/manage-service/cassandra/
+=======
+  https://dev-mesosphere-documentation.pantheon.io/manage-service/cassandra/
+>>>>>>> staging
 published: true
 menu_order: 3
 page_options_require_authentication: false

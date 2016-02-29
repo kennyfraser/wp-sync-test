@@ -5,7 +5,11 @@ post_date: 2015-12-29 14:15:20
 post_excerpt: ""
 layout: page
 permalink: >
+<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/administration/managing-dcos-marathon-instance/
+=======
+  https://dev-mesosphere-documentation.pantheon.io/administration/managing-dcos-marathon-instance/
+>>>>>>> staging
 published: true
 menu_order: 11
 page_options_require_authentication: false
