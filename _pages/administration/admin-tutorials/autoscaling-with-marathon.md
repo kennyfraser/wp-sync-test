@@ -5,7 +5,7 @@ post_date: 2015-12-23 11:42:38
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/administration/admin-tutorials/autoscaling-with-marathon/
+  http://local.mesodocs.com/administration/admin-tutorials/autoscaling-with-marathon/
 published: true
 menu_order: 100
 page_options_require_authentication: false
