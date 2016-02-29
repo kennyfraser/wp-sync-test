@@ -5,7 +5,7 @@ post_date: 2016-01-02 08:59:55
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/administration/managing-a-dcos-cluster-in-aws/
+  http://local.mesodocs.com/administration/managing-a-dcos-cluster-in-aws/
 published: true
 menu_order: 12
 page_options_require_authentication: false
