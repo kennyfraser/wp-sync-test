@@ -233,6 +233,10 @@ To install DCOS:
 2.  Install the cluster prerequisites, including system updates, compression utilities (UnZip, GNU tar, and XZ Utils), and cluster permissions. For a full list of cluster prerequisites, see this [documentation][3].
     
         $ sudo bash dcos_generate_config.ee.sh --install-prereqs
+        
+    
+    Here is an example of the output.
+    
         Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
         20:47:49 dcos_installer.action_lib.prettyprint:: ====> EXECUTING INSTALL PREREQUISITES
         20:47:49 dcos_installer.action_lib.prettyprint:: ====> START install_prereqs
@@ -246,6 +250,10 @@ To install DCOS:
 3.  Run a preflight script to validate that your cluster is installable.
     
         $ sudo bash dcos_generate_config.ee.sh --preflight
+        
+    
+    Here is an example of the output.
+    
         Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
         20:54:02 dcos_installer.action_lib.prettyprint:: ====> EXECUTING PREFLIGHT
         20:54:02 dcos_installer.action_lib.prettyprint:: ====> START run_preflight
@@ -263,6 +271,10 @@ To install DCOS:
 4.  Install DCOS on your cluster.
     
         $ sudo bash dcos_generate_config.ee.sh --deploy
+        
+    
+    Here is an example of the output.
+    
         Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
         20:55:00 dcos_installer.action_lib.prettyprint:: ====> EXECUTING DCOS INSTALLATION
         20:55:00 dcos_installer.action_lib.prettyprint:: ====> START deploy_master
@@ -284,6 +296,10 @@ To install DCOS:
 5.  Run the DCOS diagnostic script to verify that services are up and running.
     
         $ sudo bash dcos_generate_config.ee.sh --postflight
+        
+    
+    Here is an example of the output.
+    
         Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
         21:22:44 dcos_installer.action_lib.prettyprint:: ====> EXECUTING POSTFLIGHT
         21:22:44 dcos_installer.action_lib.prettyprint:: ====> START run_postflight
