@@ -5,11 +5,7 @@ post_date: 2016-01-20 09:50:44
 post_excerpt: ""
 layout: page
 permalink: >
-<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/administration/service-discovery-with-marathon-lb/service-discovery/faq-troubleshooting/
-=======
-  https://dev-mesosphere-documentation.pantheon.io/administration/service-discovery-with-marathon-lb/service-discovery/faq-troubleshooting/
->>>>>>> staging
 published: true
 menu_order: 4
 page_options_require_authentication: false

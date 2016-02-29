@@ -5,11 +5,7 @@ post_date: 2015-12-08 08:57:39
 post_excerpt: ""
 layout: page
 permalink: >
-<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/manage-service/spark/
-=======
-  https://dev-mesosphere-documentation.pantheon.io/manage-service/spark/
->>>>>>> staging
 published: true
 menu_order: 9
 page_options_require_authentication: false

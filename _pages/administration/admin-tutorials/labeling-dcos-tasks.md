@@ -5,11 +5,7 @@ post_date: 2016-01-11 14:48:52
 post_excerpt: ""
 layout: page
 permalink: >
-<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/administration/admin-tutorials/labeling-dcos-tasks/
-=======
-  https://dev-mesosphere-documentation.pantheon.io/administration/admin-tutorials/labeling-dcos-tasks/
->>>>>>> staging
 published: true
 menu_order: 100
 page_options_require_authentication: false

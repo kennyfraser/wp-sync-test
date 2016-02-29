@@ -5,11 +5,7 @@ post_date: 2015-12-08 08:56:33
 post_excerpt: ""
 layout: page
 permalink: >
-<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/administration/introcli/removecli/
-=======
-  https://dev-mesosphere-documentation.pantheon.io/administration/introcli/removecli/
->>>>>>> staging
 published: true
 menu_order: 101
 page_options_require_authentication: false

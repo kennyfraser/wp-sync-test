@@ -5,11 +5,7 @@ post_date: 2016-02-05 14:50:12
 post_excerpt: ""
 layout: page
 permalink: >
-<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/getting-started/installing/installing-enterprise-edition/step-3-create-a-script-for-ip-address-discovery/
-=======
-  https://dev-mesosphere-documentation.pantheon.io/getting-started/installing/installing-enterprise-edition/step-3-create-a-script-for-ip-address-discovery/
->>>>>>> staging
 published: true
 menu_order: 3
 page_options_require_authentication: false

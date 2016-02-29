@@ -5,11 +5,7 @@ post_date: 2015-12-08 08:57:40
 post_excerpt: ""
 layout: page
 permalink: >
-<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/administration/sshcluster/
-=======
-  https://dev-mesosphere-documentation.pantheon.io/administration/sshcluster/
->>>>>>> staging
 published: true
 menu_order: 14
 page_options_require_authentication: false

@@ -5,11 +5,7 @@ post_date: 2015-12-11 14:07:55
 post_excerpt: ""
 layout: page
 permalink: >
-<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/getting-started/installing/installing-community-edition/
-=======
-  https://dev-mesosphere-documentation.pantheon.io/getting-started/installing/installing-community-edition/
->>>>>>> staging
 published: true
 menu_order: 100
 page_options_require_authentication: false

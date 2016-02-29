@@ -5,11 +5,7 @@ post_date: 2015-12-17 16:18:35
 post_excerpt: ""
 layout: page
 permalink: >
-<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/administration/introcli/configuring-the-cli-to-use-an-http-proxy/
-=======
-  https://dev-mesosphere-documentation.pantheon.io/administration/introcli/configuring-the-cli-to-use-an-http-proxy/
->>>>>>> staging
 published: true
 menu_order: 15
 page_options_require_authentication: false

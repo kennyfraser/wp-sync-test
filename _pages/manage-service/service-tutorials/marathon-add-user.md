@@ -5,11 +5,7 @@ post_date: 2015-12-08 08:58:09
 post_excerpt: ""
 layout: page
 permalink: >
-<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/manage-service/service-tutorials/marathon-add-user/
-=======
-  https://dev-mesosphere-documentation.pantheon.io/manage-service/service-tutorials/marathon-add-user/
->>>>>>> staging
 published: true
 menu_order: 25
 page_options_require_authentication: false

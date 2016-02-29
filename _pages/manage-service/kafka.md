@@ -5,11 +5,7 @@ post_date: 2015-12-08 08:57:32
 post_excerpt: ""
 layout: page
 permalink: >
-<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/manage-service/kafka/
-=======
-  https://dev-mesosphere-documentation.pantheon.io/manage-service/kafka/
->>>>>>> staging
 published: true
 menu_order: 6
 page_options_require_authentication: false

@@ -5,11 +5,7 @@ post_date: 2015-12-08 08:57:34
 post_excerpt: ""
 layout: page
 permalink: >
-<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/manage-service/marathon/
-=======
-  https://dev-mesosphere-documentation.pantheon.io/manage-service/marathon/
->>>>>>> staging
 published: true
 menu_order: 8
 page_options_require_authentication: false

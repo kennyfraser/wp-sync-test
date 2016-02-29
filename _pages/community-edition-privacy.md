@@ -7,11 +7,7 @@ post_date: 2015-12-08 08:58:22
 post_excerpt: ""
 layout: page
 permalink: >
-<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/community-edition-privacy/
-=======
-  https://dev-mesosphere-documentation.pantheon.io/community-edition-privacy/
->>>>>>> staging
 published: true
 menu_order: 9
 page_options_require_authentication: false

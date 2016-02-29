@@ -7,11 +7,7 @@ post_date: 2016-02-05 16:45:41
 post_excerpt: ""
 layout: page
 permalink: >
-<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/installing-enterprise-edition-1-6/security-and-authentication/managing-authorization/
-=======
-  https://dev-mesosphere-documentation.pantheon.io/installing-enterprise-edition-1-6/security-and-authentication/managing-authorization/
->>>>>>> staging
 published: true
 menu_order: 1
 page_options_require_authentication: false

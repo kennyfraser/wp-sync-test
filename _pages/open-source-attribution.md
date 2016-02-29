@@ -5,11 +5,7 @@ post_date: 2015-12-08 08:58:30
 post_excerpt: ""
 layout: page
 permalink: >
-<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/open-source-attribution/
-=======
-  https://dev-mesosphere-documentation.pantheon.io/open-source-attribution/
->>>>>>> staging
 published: true
 menu_order: 15
 page_options_require_authentication: false

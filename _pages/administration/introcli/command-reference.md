@@ -5,11 +5,7 @@ post_date: 2015-12-17 16:20:12
 post_excerpt: ""
 layout: page
 permalink: >
-<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/administration/introcli/command-reference/
-=======
-  https://dev-mesosphere-documentation.pantheon.io/administration/introcli/command-reference/
->>>>>>> staging
 published: true
 menu_order: 2
 page_options_require_authentication: false

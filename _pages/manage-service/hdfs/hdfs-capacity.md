@@ -5,11 +5,7 @@ post_date: 2015-12-23 13:15:01
 post_excerpt: ""
 layout: page
 permalink: >
-<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/manage-service/hdfs/hdfs-capacity/
-=======
-  https://dev-mesosphere-documentation.pantheon.io/manage-service/hdfs/hdfs-capacity/
->>>>>>> staging
 published: true
 menu_order: 100
 page_options_require_authentication: false

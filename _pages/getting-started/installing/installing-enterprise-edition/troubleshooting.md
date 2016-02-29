@@ -5,11 +5,7 @@ post_date: 2016-01-02 09:20:25
 post_excerpt: ""
 layout: page
 permalink: >
-<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/getting-started/installing/installing-enterprise-edition/troubleshooting/
-=======
-  https://dev-mesosphere-documentation.pantheon.io/getting-started/installing/installing-enterprise-edition/troubleshooting/
->>>>>>> staging
 published: true
 menu_order: 202
 page_options_require_authentication: false

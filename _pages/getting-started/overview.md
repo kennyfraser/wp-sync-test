@@ -5,11 +5,7 @@ post_date: 2015-12-11 10:27:18
 post_excerpt: ""
 layout: page
 permalink: >
-<<<<<<< HEAD
   https://test-mesosphere-documentation.pantheon.io/getting-started/overview/
-=======
-  https://dev-mesosphere-documentation.pantheon.io/getting-started/overview/
->>>>>>> staging
 published: true
 menu_order: 1
 page_options_require_authentication: false
