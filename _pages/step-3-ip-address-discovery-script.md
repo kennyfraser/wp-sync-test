@@ -75,7 +75,7 @@ In this step you create an IP detect script to broadcast the IP address of each 
 
 ## Next step
 
-[Step 4: Configure and install DCOS][2]
+[Step 2: Configure and install DCOS][2]
 
  [1]: ../getting-started/installing/installing-enterprise-edition/dcos-cleanup-script/
  [2]: ../step-4-configure-and-install-dcos/
