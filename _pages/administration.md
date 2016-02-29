@@ -17,4 +17,8 @@ Administration Change # 6
 
 Random, multifile change # 1
 
-[alt text](/assets/images/home-dcos-overview-mesos.png "Logo Title Text 1")
+![enter image description here][1]
+
+<img src="/assets/images/home-dcos-overview-mesos.png">
+
+[1]: /assets/images/home-dcos-overview-mesos.png
