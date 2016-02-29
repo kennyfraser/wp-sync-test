@@ -13,6 +13,10 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: true
 ---
+
+Random, multifile change # 1
+
+
 This topic provides instructions for installing DCOS in your environment by using a customized Bash install script.
 
 The DCOS installation creates these folders:
