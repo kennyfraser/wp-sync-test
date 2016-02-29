@@ -13,6 +13,10 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
+
+Random, multifile change # 1
+
+
 This topic provides instructions for installing <span class="caps">DCOS</span> in your environment by using a customized Bash install script.
 
 The <span class="caps">DCOS</span> installation creates these folders:
