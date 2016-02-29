@@ -1,11 +1,11 @@
 ---
-ID: 973
+ID: 3572
 post_title: DCOS 1.4
-post_date: 2015-12-11 14:44:40
+post_date: 2016-02-29 09:44:29
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/administration/release-notes/enterprise-edition/1-4/
+  https://dev-mesosphere-documentation.pantheon.io/dcos-1-4/
 published: true
 menu_order: 2
 page_options_require_authentication: false

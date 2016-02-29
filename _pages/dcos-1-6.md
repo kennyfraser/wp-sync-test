@@ -1,11 +1,11 @@
 ---
-ID: 3386
+ID: 3574
 post_title: DCOS 1.6
-post_date: 2016-02-17 10:25:59
+post_date: 2016-02-29 09:44:30
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/administration/release-notes/enterprise-edition/dcos-1-6/
+  https://dev-mesosphere-documentation.pantheon.io/dcos-1-6/
 published: true
 menu_order: 100
 page_options_require_authentication: false

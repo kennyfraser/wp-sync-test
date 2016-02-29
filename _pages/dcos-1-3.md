@@ -1,11 +1,11 @@
 ---
-ID: 909
+ID: 3570
 post_title: DCOS 1.3
-post_date: 2015-12-11 13:14:57
+post_date: 2016-02-29 09:44:29
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/administration/release-notes/community-edition/1-3/
+  https://dev-mesosphere-documentation.pantheon.io/dcos-1-3/
 published: true
 menu_order: 4
 page_options_require_authentication: false
