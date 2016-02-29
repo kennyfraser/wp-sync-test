@@ -25,198 +25,9 @@ To use the automated GUI installation method:
 *   Cluster nodes must have SSH enabled and ports open from the bootstrap node
 *   The bootstrap node must have an unencrypted SSH key that can be used to authenticate with the cluster nodes over SSH
 
-# Step 1: Bootstrap node prerequisites
+[installing-enterprise-edition-hardware] [installing-enterprise-edition-software-ssh] [installing-enterprise-edition-ip-detect]
 
-Before installing DCOS, you must prepare your bootstrap node that will be used to run the DCOS installation commands. A bootstrap node is any physical, virtual, or cloud machine. It must have IP-to-IP connectivity from the bootstrap node to all nodes in your cluster environment. Your bootstrap node must not be a part of your cluster.
-
-[docker-prereq]
-
-## ZooKeeper for shared storage
-
-Shared storage is required by DCOS during installation and runtime for bootstrapping and managing the internal DCOS ZooKeeper cluster. The ZooKeeper for shared storage instance should only be used for bootstrapping the DCOS Exhibitor instance. Do not use this bootstrap ZooKeeper instance in production. Multiple ZooKeeper instances are recommended for failover in production environments.
-
-Exhibitor automatically configures your ZooKeeper installation on the master nodes during your DCOS installation. This ZooKeeper instance should be separate from your cluster. Consider using a separate directory path for the DCOS cluster so that it does not interfere with other services that use the ZooKeeper instance.
-
-Temporary outages while the cluster is running are acceptable, but shared storage should generally be up and running to support replacing failed masters.
-
-To start a ZooKeeper instance using Docker, run this command:
-
-    $ sudo docker run -d -p 2181:2181 -p 2888:2888 -p 3888:3888 --name=dcos_int_zk jplock/zookeeper
-    
-
-**Tip:** If you've run the `usermod` Docker command in the previous step, you might have to log out and then back in to your bootstrap node before starting ZooKeeper.
-
-## DCOS setup file
-
-Download and save the DCOS setup file, `dcos_generate_config.sh`, to the `dcos` directory on your bootstrap node. This file is used to create your customized DCOS build file.
-
-**Important:** Contact your sales representative or <sales@mesosphere.io> to obtain the DCOS setup file.
-
-# Step 2: Cluster Prerequisites
-
-Before installing DCOS you must prepare your cluster environment.
-
-## Linux distribution
-
-A supported Linux distribution must be installed on your cluster:
-
-*   Enterprise Linux 7 kernel 3.10.0-327 or newer (RedHat or CentOS)
-*   CoreOS
-
-## Nodes Hardware Requirements
-
-*   3 Mesos master nodes (2 Cores, 16 GB RAM, 60 GB HDD) <!-- A cluster of 8 or more machines with a supported Linux distribution. The recommended capacity for each node is 16 GB RAM/2 Cores and 16 GB disk space. The minimum size of a node is a machine with 10 GB of disk space and 1 GB of RAM. -->
-
-*   6 or more Mesos agent nodes (4 Cores, 32 GB RAM, 120 GB HDD)
-
-*   A /var directory with 10GB or more of free space. This is used by the sandbox for both Docker and [Mesos Containerizer][1].
-
-*   1 Workstation node (2 Cores, 16 GB RAM, 60 GB HDD)
-    
-    *   Python, pip, and virtualenv must be installed on the workstation node for the DCOS [CLI][2]. pip must be configured to pull packages from PyPI or your private PyPI, if applicable.
-    *   A High-availability (HA) load balancer, such as HAProxy to balance the following TCP ports to all master nodes: 80, 443, 8080, 8181, 2181, 5050
-*   Network Time Protocol (NTP) for clock synchronization must be configured and enabled on all nodes.
-*   All of the nodes in your cluster must be able to send and receive traffic to each other.
-*   IPv6 must be disabled for all nodes. For more information see <a href="https://wiki.centos.org/FAQ/CentOS7#head-8984faf811faccca74c7bcdd74de7467f2fcd8ee" target="_blank">How do I disable IPv6</a>.
-
-## Port configuration
-
-*   ICMP must be enabled between the master and the agent nodes.
-*   TCP and UDP enabled port 53 for DNS.
-*   Network Access to a public Docker repository from the agent nodes or to an internal Docker registry.
-*   These ports must be open for communication to the master nodes. <style type="text/css">
-      .tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg .tg-e3zv{font-weight:bold}
-.tg .tg-yw4l{vertical-align:top}
-    </style>
-    
-    <table class="table">
-      <tr>
-        <th class="tg-e3zv">
-          TCP Port
-        </th>
-        
-        <th class="tg-e3zv">
-          Description
-        </th>
-      </tr>
-      
-      <tr>
-        <td class="tg-yw4l">
-          2181
-        </td>
-        
-        <td class="tg-yw4l">
-          ZooKeeper, see the <a href="http://zookeeper.apache.org/doc/r3.1.2/zookeeperAdmin.html#sc_zkCommands" target="_blank">ZK Admin Guide</a>
-        </td>
-      </tr>
-      
-      <tr>
-        <td class="tg-yw4l">
-          2888
-        </td>
-        
-        <td class="tg-yw4l">
-          Exhibitor, see the <a href="https://github.com/Netflix/exhibitor/wiki/REST-Introduction" target="_blank">Exhibitor REST Documentation</a>
-        </td>
-      </tr>
-      
-      <tr>
-        <td class="tg-yw4l">
-          3888
-        </td>
-        
-        <td class="tg-yw4l">
-          Exhibitor, see the <a href="https://github.com/Netflix/exhibitor/wiki/REST-Introduction" target="_blank">Exhibitor REST Documentation</a>
-        </td>
-      </tr>
-      
-      <tr>
-        <td class="tg-031e">
-          5050
-        </td>
-        
-        <td class="tg-031e">
-          Mesos master nodes
-        </td>
-      </tr>
-      
-      <tr>
-        <td class="tg-031e">
-          5051
-        </td>
-        
-        <td class="tg-031e">
-          Mesos agent nodes
-        </td>
-      </tr>
-      
-      <tr>
-        <td class="tg-031e">
-          8080
-        </td>
-        
-        <td class="tg-031e">
-          Marathon
-        </td>
-      </tr>
-      
-      <tr>
-        <td class="tg-031e">
-          8123
-        </td>
-        
-        <td class="tg-031e">
-          Mesos-DNS API
-        </td>
-      </tr>
-      
-      <tr>
-        <td class="tg-yw4l">
-          8181
-        </td>
-        
-        <td class="tg-yw4l">
-          Exhibitor, see the <a href="https://github.com/Netflix/exhibitor/wiki/REST-Introduction" target="_blank">Exhibitor REST Documentation</a>
-        </td>
-      </tr>
-    </table>
-
-*   These ports must be open for communication to the agent nodes from the master nodes: <style type="text/css">
-      .tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg .tg-e3zv{font-weight:bold}
-.tg .tg-yw4l{vertical-align:top}
-    </style>
-    
-    <table class="table">
-      <tr>
-        <th class="tg-e3zv">
-          TCP Port
-        </th>
-        
-        <th class="tg-e3zv">
-          Description
-        </th>
-      </tr>
-      
-      <tr>
-        <td class="tg-yw4l">
-          5051
-        </td>
-        
-        <td class="tg-yw4l">
-          Mesos agent nodes
-        </td>
-      </tr>
-    </table>
-
-*   All DCOS cluster node hostnames (FQDN and short hostnames) must be resolvable in DNS, both forward and reverse lookups must succeed.
-
-# Step 3: Installation
+# Step 2: Install DCOS
 
 **Important:** Encrypted SSH keys are not supported.
 
@@ -279,12 +90,12 @@ A supported Linux distribution must be installed on your cluster:
     :   Specify the ZooKeeper port. For example, `2181`.
     
     **Upstream DNS Servers**
-    :   Specify the DNS servers, which can be on your private network or the public internet. Caution: If you set this parameter incorrectly you will have to reinstall DCOS. For more information about service discovery, see this [documentation][2].
+    :   Specify the DNS servers, which can be on your private network or the public internet. Caution: If you set this parameter incorrectly you will have to reinstall DCOS. For more information about service discovery, see this [documentation][1].
     
     **IP Detect Script**
-    :   Specify an IP detect script to broadcast the IP address of each node across the cluster. For more information, see the [documentation][3].
+    :   Specify an IP detect script to broadcast the IP address of each node across the cluster. For more information, see the [documentation][2].
 
-5.  Click **Run Pre-Flight**. The preflight script installs the cluster [prerequisites][4] and validates that your cluster is installable. This step can take up to 15 minutes to complete. If errors any errors are found, fix and then click **Retry**.
+5.  Click **Run Pre-Flight**. The preflight script installs the cluster [prerequisites][3] and validates that your cluster is installable. This step can take up to 15 minutes to complete. If errors any errors are found, fix and then click **Retry**.
     
     **Important:** If you exit your GUI installation before launching DCOS, you must do this before reinstalling:
     
@@ -317,10 +128,9 @@ A supported Linux distribution must be installed on your cluster:
 
 ### Next Steps
 
-Now you can [assign user roles][5].
+Now you can [assign user roles][4].
 
- [1]: https://techjourney.net/how-to-decrypt-an-enrypted-ssl-rsa-private-key-pem-key/
- [2]: ../installing-enterprise-edition-1-6/#scrollNav-3
- [3]: ../configuration-parameters-1-6/
- [4]: ../step-2-cluster-prerequisites/
- [5]: ../security-and-authentication/managing-authorization/
+ [1]: ../installing-enterprise-edition-1-6/#scrollNav-3
+ [2]: ../configuration-parameters-1-6/
+ [3]: ../step-2-cluster-prerequisites/
+ [4]: ../security-and-authentication/managing-authorization/
