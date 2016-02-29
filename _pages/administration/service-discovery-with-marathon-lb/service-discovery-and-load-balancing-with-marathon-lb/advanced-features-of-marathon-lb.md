@@ -5,7 +5,7 @@ post_date: 2016-02-05 11:39:21
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/administration/service-discovery-with-marathon-lb/service-discovery-and-load-balancing-with-marathon-lb/advanced-features-of-marathon-lb/
+  http://local.mesodocs.com/administration/service-discovery-with-marathon-lb/service-discovery-and-load-balancing-with-marathon-lb/advanced-features-of-marathon-lb/
 published: true
 menu_order: 110
 page_options_require_authentication: false
@@ -27,7 +27,7 @@ To specify a global template:
 
 1.  Create a file on your local machine called `HAPROXY_HEAD` with the following contents in a directory called `templates`. Next, create a file called `HAPROXY_HEAD` in a directory called `templates` with the contents below:
     
-        global daemon log /dev/log local0 log /dev/log local1 notice maxconn 4096 tune.ssl.default-dh-param 2048 defaults log global retries 3 maxconn 3000 timeout connect 5s timeout client 30s timeout server 30s option redispatch listen stats bind 0.0.0.0:9090 balance mode http stats enable monitor-uri /\_haproxy\_health_check
+        global daemon log /dev/log local0 log /dev/log local1 notice maxconn 4096 tune.ssl.default-dh-param 2048 defaults log global retries 3 maxconn 3000 timeout connect 5s timeout client 30s timeout server 30s option redispatch listen stats bind 0.0.0.0:9090 balance mode http stats enable monitor-uri /_haproxy_health_check
         
     
     In the code above, the following items have changed from the default: `maxconn`, `timeout client`, and `timeout server`.
@@ -79,7 +79,7 @@ To create a template for an individual app, modify the application definition. I
       }],
       "labels":{
         "HAPROXY_GROUP":"external",
-        "HAPROXY_0_BACKEND_HTTP_OPTIONS":"  option forwardfor\n  no option http-keep-alive\n      http-request set-header X-Forwarded-Port %[dst_port]\n  http-request add-header X-Forwarded-Proto https if { ssl_fc }\n"
+        "HAPROXY_0_BACKEND_HTTP_OPTIONS":"  option forwardforn  no option http-keep-aliven      http-request set-header X-Forwarded-Port %[dst_port]n  http-request add-header X-Forwarded-Proto https if { ssl_fc }n"
       }
     }
     
