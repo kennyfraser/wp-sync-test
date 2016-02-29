@@ -5,7 +5,7 @@ post_date: 2015-12-08 08:57:51
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/manage-service/service-tutorials/crate/
+  http://local.mesodocs.com/manage-service/service-tutorials/crate/
 published: true
 menu_order: 27
 page_options_require_authentication: false
@@ -65,8 +65,8 @@ After installing, only a single Crate task is running on the DCOS cluster. To la
 
 To launch instances, POST the number of desired instances to the `/resize` endpoint:
 
-    $ curl -X POST localhost:4040/cluster/resize \
-          -H "Content-Type: application/json" \
+    $ curl -X POST localhost:4040/cluster/resize 
+          -H "Content-Type: application/json" 
           -d '{"instances": 3}'
     
 

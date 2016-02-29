@@ -5,7 +5,7 @@ post_date: 2015-12-08 08:58:30
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/open-source-attribution/
+  http://local.mesodocs.com/open-source-attribution/
 published: true
 menu_order: 15
 page_options_require_authentication: false

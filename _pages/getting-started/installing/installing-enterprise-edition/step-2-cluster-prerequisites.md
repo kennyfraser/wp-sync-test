@@ -5,7 +5,7 @@ post_date: 2016-02-05 14:48:26
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/getting-started/installing/installing-enterprise-edition/step-2-cluster-prerequisites/
+  http://local.mesodocs.com/getting-started/installing/installing-enterprise-edition/step-2-cluster-prerequisites/
 published: true
 menu_order: 2
 page_options_require_authentication: false

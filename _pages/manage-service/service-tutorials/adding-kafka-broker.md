@@ -5,7 +5,7 @@ post_date: 2015-12-23 13:10:46
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/manage-service/service-tutorials/adding-kafka-broker/
+  http://local.mesodocs.com/manage-service/service-tutorials/adding-kafka-broker/
 published: true
 menu_order: 100
 page_options_require_authentication: false

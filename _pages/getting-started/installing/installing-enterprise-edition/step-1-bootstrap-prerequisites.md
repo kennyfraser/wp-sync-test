@@ -5,7 +5,7 @@ post_date: 2016-02-05 14:59:53
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/getting-started/installing/installing-enterprise-edition/step-1-bootstrap-prerequisites/
+  http://local.mesodocs.com/getting-started/installing/installing-enterprise-edition/step-1-bootstrap-prerequisites/
 published: true
 menu_order: 1
 page_options_require_authentication: false

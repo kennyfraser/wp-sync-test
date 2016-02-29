@@ -5,7 +5,7 @@ post_date: 2015-12-11 14:07:08
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/getting-started/installing/
+  http://local.mesodocs.com/getting-started/installing/
 published: true
 menu_order: 2
 page_options_require_authentication: false

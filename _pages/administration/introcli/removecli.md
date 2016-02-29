@@ -5,7 +5,7 @@ post_date: 2015-12-08 08:56:33
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/administration/introcli/removecli/
+  http://local.mesodocs.com/administration/introcli/removecli/
 published: true
 menu_order: 101
 page_options_require_authentication: false
@@ -15,4 +15,4 @@ hide_from_related: false
 ---
 1.  Delete your DCOS CLI installation directory.
 
-2.  Delete the hidden `.dcos` directory. This will delete the configuration files for your DCOS services. By default, this directory is located in your home directory. For example, `/Users/<your username>/.dcos/` on OS X or `C:\Users\<your username>\.dcos` on Windows.
+2.  Delete the hidden `.dcos` directory. This will delete the configuration files for your DCOS services. By default, this directory is located in your home directory. For example, `/Users/<your username>/.dcos/` on OS X or `C:Users<your username>.dcos` on Windows.

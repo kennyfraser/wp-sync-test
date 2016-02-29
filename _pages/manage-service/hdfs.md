@@ -5,7 +5,7 @@ post_date: 2015-12-08 08:57:30
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/manage-service/hdfs/
+  http://local.mesodocs.com/manage-service/hdfs/
 published: true
 menu_order: 5
 page_options_require_authentication: false

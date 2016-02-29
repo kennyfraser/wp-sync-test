@@ -5,7 +5,7 @@ post_date: 2016-01-07 13:17:30
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/getting-started/tutorials/dcos-service-tutorials-2/
+  http://local.mesodocs.com/getting-started/tutorials/dcos-service-tutorials-2/
 published: true
 menu_order: 100
 page_options_require_authentication: false

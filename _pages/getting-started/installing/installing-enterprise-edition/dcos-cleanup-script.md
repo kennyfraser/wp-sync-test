@@ -5,7 +5,7 @@ post_date: 2016-01-12 15:34:43
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/getting-started/installing/installing-enterprise-edition/dcos-cleanup-script/
+  http://local.mesodocs.com/getting-started/installing/installing-enterprise-edition/dcos-cleanup-script/
 published: true
 menu_order: 204
 page_options_require_authentication: false

@@ -5,7 +5,7 @@ post_date: 2016-01-04 13:30:05
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/administration/dcosarchitecture/components/
+  http://local.mesodocs.com/administration/dcosarchitecture/components/
 published: true
 menu_order: 1
 page_options_require_authentication: false

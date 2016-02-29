@@ -4,8 +4,7 @@ post_title: Mesosphere DCOS Documentation
 post_date: 2015-10-06 10:13:03
 post_excerpt: ""
 layout: page
-permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/
+permalink: http://local.mesodocs.com/
 published: true
 menu_order: 52
 page_options_require_authentication: false

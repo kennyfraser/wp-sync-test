@@ -5,7 +5,7 @@ post_date: 2016-02-11 13:17:09
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/installing-enterprise-edition-1-6/security-and-authentication/enabling-ldap/
+  http://local.mesodocs.com/installing-enterprise-edition-1-6/security-and-authentication/enabling-ldap/
 published: true
 menu_order: 2
 page_options_require_authentication: false

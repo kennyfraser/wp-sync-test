@@ -7,7 +7,7 @@ post_date: 2015-12-23 11:44:49
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/administration/admin-tutorials/autoscaling-with-marathon/command-line-application-to-autoscale-based-on-memory-and-cpu-metrics/
+  http://local.mesodocs.com/administration/admin-tutorials/autoscaling-with-marathon/command-line-application-to-autoscale-based-on-memory-and-cpu-metrics/
 published: true
 menu_order: 1
 page_options_require_authentication: false
@@ -45,14 +45,7 @@ When you run the application, you'll be prompted for the following parameters:
 *   **trigger_mode (string)** - 'or' or 'and' determines whether both CPU and memory must be triggered or just one or the other.
 *   **autoscale_multiplier (float)** - The number by which current instances will be multiplied to determine how many instances to add during scaleout.
 *   **max_instances (int)** - The ceiling for the number of instances to stop scaling out EVEN if thresholds are crossed.
-
-    $ python marathon-autoscale.py
-    Enter the DNS hostname or IP of your Marathon Instance : ip-**-*-*-***
-    Enter the Marathon Application Name to Configure Autoscale for from the Marathon UI : testing
-    Enter the Max percent of Mem Usage averaged across all Application Instances to trigger Autoscale (ie. 80) : 5
-    Enter the Max percent of CPU Usage averaged across all Application Instances to trigger Autoscale (ie. 80) : 5
-    Enter which metric(s) to trigger Autoscale ('and', 'or') : or
-    Enter Autoscale multiplier for triggered Autoscale (ie 1.5) : 2
-    Enter the Max instances that should ever exist for this application (ie. 20) : 10
+    
+    $ python marathon-autoscale.py Enter the DNS hostname or IP of your Marathon Instance : ip-**-*-*-*** Enter the Marathon Application Name to Configure Autoscale for from the Marathon UI : testing Enter the Max percent of Mem Usage averaged across all Application Instances to trigger Autoscale (ie. 80) : 5 Enter the Max percent of CPU Usage averaged across all Application Instances to trigger Autoscale (ie. 80) : 5 Enter which metric(s) to trigger Autoscale ('and', 'or') : or Enter Autoscale multiplier for triggered Autoscale (ie 1.5) : 2 Enter the Max instances that should ever exist for this application (ie. 20) : 10
 
  [1]: https://docs.mesosphere.com/install/awscluster/

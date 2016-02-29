@@ -5,7 +5,7 @@ post_date: 2016-02-16 15:44:37
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/installing-enterprise-edition-1-6/manual-installation/
+  http://local.mesodocs.com/installing-enterprise-edition-1-6/manual-installation/
 published: true
 menu_order: 2
 page_options_require_authentication: false

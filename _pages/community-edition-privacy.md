@@ -7,7 +7,7 @@ post_date: 2015-12-08 08:58:22
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/community-edition-privacy/
+  http://local.mesodocs.com/community-edition-privacy/
 published: true
 menu_order: 9
 page_options_require_authentication: false

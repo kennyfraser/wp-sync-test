@@ -5,7 +5,7 @@ post_date: 2016-02-17 11:20:29
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/installing-enterprise-edition-1-6/automated-gui/
+  http://local.mesodocs.com/installing-enterprise-edition-1-6/automated-gui/
 published: true
 menu_order: 1
 page_options_require_authentication: false

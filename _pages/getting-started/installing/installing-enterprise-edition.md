@@ -5,7 +5,7 @@ post_date: 2016-01-12 16:20:18
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/getting-started/installing/installing-enterprise-edition/
+  http://local.mesodocs.com/getting-started/installing/installing-enterprise-edition/
 published: true
 menu_order: 103
 page_options_require_authentication: false

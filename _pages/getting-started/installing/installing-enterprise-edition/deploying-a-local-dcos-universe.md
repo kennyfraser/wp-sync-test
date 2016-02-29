@@ -5,7 +5,7 @@ post_date: 2016-01-02 09:18:39
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/getting-started/installing/installing-enterprise-edition/deploying-a-local-dcos-universe/
+  http://local.mesodocs.com/getting-started/installing/installing-enterprise-edition/deploying-a-local-dcos-universe/
 published: true
 menu_order: 200
 page_options_require_authentication: false
@@ -48,7 +48,7 @@ To install the DCOS local Universe:
             $ docker run -d -p 5000:5000 --restart=always --name registry registry:2
             $ docker load < dcos-services/docker-images.tar # This will take a long time.
             $ for img in $(docker images | awk '{ print $1 ":" $2 }' | grep mesos); do
-                img_tag=$(ip addr show eth0 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1):5000/$img
+                img_tag=$(ip addr show eth0 | grep -Eo '[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}' | head -1):5000/$img
                 docker tag $img $img_tag
                 docker push $img_tag
               done

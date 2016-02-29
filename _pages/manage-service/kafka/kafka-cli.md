@@ -5,7 +5,7 @@ post_date: 2015-12-23 19:41:31
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/manage-service/kafka/kafka-cli/
+  http://local.mesodocs.com/manage-service/kafka/kafka-cli/
 published: true
 menu_order: 100
 page_options_require_authentication: false

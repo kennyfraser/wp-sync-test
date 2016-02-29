@@ -5,7 +5,7 @@ post_date: 2015-12-08 08:56:30
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/getting-started/installing/installing-community-edition/removeaws/
+  http://local.mesodocs.com/getting-started/installing/installing-community-edition/removeaws/
 published: true
 menu_order: 2
 page_options_require_authentication: false

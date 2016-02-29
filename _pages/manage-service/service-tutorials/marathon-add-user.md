@@ -5,7 +5,7 @@ post_date: 2015-12-08 08:58:09
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/manage-service/service-tutorials/marathon-add-user/
+  http://local.mesodocs.com/manage-service/service-tutorials/marathon-add-user/
 published: true
 menu_order: 25
 page_options_require_authentication: false

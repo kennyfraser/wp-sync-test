@@ -5,7 +5,7 @@ post_date: 2015-12-28 14:52:22
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/administration/admin-tutorials/
+  http://local.mesodocs.com/administration/admin-tutorials/
 published: true
 menu_order: 10
 page_options_require_authentication: false

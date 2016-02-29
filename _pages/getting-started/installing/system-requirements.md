@@ -5,7 +5,7 @@ post_date: 2016-01-26 13:53:59
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/getting-started/installing/system-requirements/
+  http://local.mesodocs.com/getting-started/installing/system-requirements/
 published: true
 menu_order: 105
 page_options_require_authentication: false

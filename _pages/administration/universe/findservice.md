@@ -5,7 +5,7 @@ post_date: 2015-12-08 08:57:29
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/administration/universe/findservice/
+  http://local.mesodocs.com/administration/universe/findservice/
 published: true
 menu_order: 21
 page_options_require_authentication: false

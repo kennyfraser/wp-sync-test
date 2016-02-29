@@ -4,8 +4,7 @@ post_title: Developing Services
 post_date: 2015-10-06 10:14:14
 post_excerpt: ""
 layout: page
-permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/dev-service/
+permalink: http://local.mesodocs.com/dev-service/
 published: true
 menu_order: 39
 page_options_require_authentication: false
@@ -100,12 +99,12 @@ Each DCOS service contains `package.json`, `config.json`, and `marathon.json` fi
     
     *   The `postInstallNotes` parameter gives the user information they'll need after the installation. Focus on providing a documentation URL, a tutorial, or both. For example:
         
-              "postInstallNotes": "Thank you for installing the Unicorn service.\n\n\tDocumentation: http://<your-url>\n\tIssues: https://github.com/",
+              "postInstallNotes": "Thank you for installing the Unicorn service.nntDocumentation: http://<your-url>ntIssues: https://github.com/",
             
     
     *   The `postUninstallNotes` parameter gives the user information they'll need after an uninstall. For example, further cleanup before reinstalling again and a link to the details. A common issue is cleaning up ZooKeeper entries. For example:
         
-              postUninstallNotes": "The Unicorn DCOS Service has been uninstalled and will no longer run.\nPlease follow the instructions at http://<your-URL> to clean up any persisted state" }
+              postUninstallNotes": "The Unicorn DCOS Service has been uninstalled and will no longer run.nPlease follow the instructions at http://<your-URL> to clean up any persisted state" }
             
 
 *   **config.json**

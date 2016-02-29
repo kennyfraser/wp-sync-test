@@ -4,8 +4,7 @@ post_title: Support and Feedback
 post_date: 2015-10-06 10:14:14
 post_excerpt: ""
 layout: page
-permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/support/
+permalink: http://local.mesodocs.com/support/
 published: true
 menu_order: 45
 page_options_require_authentication: false

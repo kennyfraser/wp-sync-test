@@ -5,7 +5,7 @@ post_date: 2015-12-11 14:07:55
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/getting-started/installing/installing-community-edition/
+  http://local.mesodocs.com/getting-started/installing/installing-community-edition/
 published: true
 menu_order: 100
 page_options_require_authentication: false

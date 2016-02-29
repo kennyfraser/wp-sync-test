@@ -5,7 +5,7 @@ post_date: 2015-12-28 16:02:34
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/manage-service/service-tutorials/
+  http://local.mesodocs.com/manage-service/service-tutorials/
 published: true
 menu_order: 100
 page_options_require_authentication: false

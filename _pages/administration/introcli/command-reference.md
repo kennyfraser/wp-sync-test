@@ -5,7 +5,7 @@ post_date: 2015-12-17 16:20:12
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/administration/introcli/command-reference/
+  http://local.mesodocs.com/administration/introcli/command-reference/
 published: true
 menu_order: 2
 page_options_require_authentication: false
@@ -17,7 +17,7 @@ hide_from_related: false
 
 This command manages your Mesosphere DCOS configuration file.
 
-A default configuration file named `dcos.toml` is created during initial DCOS CLI setup and is located in `~/.dcos/` on Unix, Linux, and OS X systems or at `C:\Users\<your username>\.dcos\` on most Windows systems.
+A default configuration file named `dcos.toml` is created during initial DCOS CLI setup and is located in `~/.dcos/` on Unix, Linux, and OS X systems or at `C:Users<your username>.dcos` on most Windows systems.
 
 `dcos config append <param-name><value>`
 

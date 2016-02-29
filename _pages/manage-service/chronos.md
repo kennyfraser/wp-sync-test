@@ -5,7 +5,7 @@ post_date: 2015-12-08 08:57:29
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/manage-service/chronos/
+  http://local.mesodocs.com/manage-service/chronos/
 published: true
 menu_order: 4
 page_options_require_authentication: false
