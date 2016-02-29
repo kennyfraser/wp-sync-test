@@ -16,3 +16,9 @@ hide_from_related: false
 Administration Change # 6
 
 Random, multifile change # 1
+
+![enter image description here][1]
+
+![][1]
+
+ [1]: assets/images/home-dcos-overview-mesos.png
