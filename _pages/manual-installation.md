@@ -20,4 +20,4 @@ The manual command line installation method requires:
 *   The bootstrap node must be network accessible from the cluster nodes 
 *   The bootstrap node must have the HTTP(S) ports open from the cluster nodes
 
-[installing-enterprise-edition-hardware] [installing-enterprise-edition-software] [installing-enterprise-edition-ip-detect]
+[installing-enterprise-edition-hardware] [installing-enterprise-edition-software]
