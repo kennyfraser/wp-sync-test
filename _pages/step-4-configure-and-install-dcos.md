@@ -1,6 +1,6 @@
 ---
 ID: 3144
-post_title: 'Step 4: Configure and install DCOS'
+post_title: 'Step 2: Configure and install DCOS'
 author: Joel Hamill
 post_date: 2016-02-06 07:53:38
 post_excerpt: ""
