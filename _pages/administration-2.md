@@ -5,7 +5,7 @@ post_date: 2016-02-29 09:57:45
 post_excerpt: ""
 layout: page
 permalink: >
-  https://dev-mesosphere-documentation.pantheon.io/administration-2/
+  http://local.mesodocs.com/administration-2/
 published: true
 menu_order: 0
 page_options_require_authentication: false
