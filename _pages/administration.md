@@ -16,3 +16,5 @@ hide_from_related: false
 Administration Change # 6
 
 Random, multifile change # 1
+
+[alt text](/assets/images/home-dcos-overview-mesos.png "Logo Title Text 1")
