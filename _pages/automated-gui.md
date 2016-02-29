@@ -34,12 +34,16 @@ To use the automated GUI installation method:
 1.  From your terminal, start the DCOS installer with this command.
     
         $ sudo bash dcos_generate_config.ee.sh --web
+        
+    
+    Here is an example of the output.
+    
         Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
         16:36:09 dcos_installer.action_lib.prettyprint:: ====> Starting DCOS installer in web mode
         16:36:09 root:: Starting server ('0.0.0.0', 9000)
         
     
-    You can add the verbose (`-v`) flag to see the debug output:
+    **Tip:** You can add the verbose (`-v`) flag to see the debug output:
     
         $ sudo bash dcos_generate_config.ee.sh --web -v
         
