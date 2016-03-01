@@ -142,7 +142,7 @@ To install DCOS:
     
     **Important:** Contact your sales representative or <sales@mesosphere.io> to obtain the DCOS setup file.
 
-2.  From your root directory, run the DCOS installer shell script on your bootstrapping master nodes to generate a customized DCOS build. The setup script extracts a Docker container that uses the generic DCOS install files to create customized DCOS build files for your cluster. The build files are output to `./genconf/serve/`.
+2.  From your root directory, run the DCOS installer shell script on your bootstrap node to generate a customized DCOS build. The setup script extracts a Docker container that uses the generic DCOS install files to create customized DCOS build files for your cluster. The build files are output to `./genconf/serve/`.
     
         $ sudo bash dcos_generate_config.sh --genconf
         Extracking docker container from this script
