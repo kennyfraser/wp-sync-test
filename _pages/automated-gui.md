@@ -25,9 +25,9 @@ To use the automated GUI installation method:
 *   Cluster nodes must have SSH enabled and ports open from the bootstrap node
 *   The bootstrap node must have an unencrypted SSH key that can be used to authenticate with the cluster nodes over SSH
 
-[installing-enterprise-edition-hardware] [installing-enterprise-edition-software-ssh] [installing-enterprise-edition-ip-detect]
+[installing-enterprise-edition-hardware] [installing-enterprise-edition-software-ssh]
 
-# Step 2: Install DCOS
+# Install DCOS
 
 **Important:** Encrypted SSH keys are not supported.
 
@@ -97,9 +97,12 @@ To use the automated GUI installation method:
     :   Specify the DNS servers, which can be on your private network or the public internet. Caution: If you set this parameter incorrectly you will have to reinstall DCOS. For more information about service discovery, see this [documentation][1].
     
     **IP Detect Script**
-    :   Specify an IP detect script to broadcast the IP address of each node across the cluster. For more information, see the [documentation][2].
+    
+    :   Choose an IP detect script from the dropdown to broadcast the IP address of each node across the cluster. Each node in a DCOS cluster has a unique IP address that is used to communicate between nodes in the cluster. The IP detect script prints the unique IPv4 address of a node to STDOUT each time DCOS is started on the node.
+        
+        **Important:** The IP address of a node must not change after DCOS is installed on the node. For example, the IP address must not change when a node is rebooted or if the DHCP lease is renewed. If the IP address of a node does change, the node must be wiped and reinstalled.
 
-5.  Click **Run Pre-Flight**. The preflight script installs the cluster [prerequisites][3] and validates that your cluster is installable. This step can take up to 15 minutes to complete. If errors any errors are found, fix and then click **Retry**.
+5.  Click **Run Pre-Flight**. The preflight script installs the cluster [prerequisites][2] and validates that your cluster is installable. This step can take up to 15 minutes to complete. If errors any errors are found, fix and then click **Retry**.
     
     **Important:** If you exit your GUI installation before launching DCOS, you must do this before reinstalling:
     
@@ -132,9 +135,8 @@ To use the automated GUI installation method:
 
 ### Next Steps
 
-Now you can [assign user roles][4].
+Now you can [assign user roles][3].
 
  [1]: ../installing-enterprise-edition-1-6/#scrollNav-3
- [2]: ../configuration-parameters-1-6/
- [3]: ../step-2-cluster-prerequisites/
- [4]: ../security-and-authentication/managing-authorization/
+ [2]: ../step-2-cluster-prerequisites/
+ [3]: ../security-and-authentication/managing-authorization/
