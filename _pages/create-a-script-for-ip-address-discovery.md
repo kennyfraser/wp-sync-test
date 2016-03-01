@@ -6,7 +6,7 @@ post_date: 2016-02-05 14:50:12
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.mesosphere.com/getting-started/installing/installing-enterprise-edition/step-3-create-a-script-for-ip-address-discovery/
+  https://docs.mesosphere.com/getting-started/installing/installing-enterprise-edition/create-a-script-for-ip-address-discovery/
 published: true
 page_options_require_authentication: false
 hide_from_navigation: false
