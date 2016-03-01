@@ -369,7 +369,7 @@ In this step you create a custom DCOS build file on your bootstrap node and then
             $ sudo bash dcos_install.sh slave
             
 
-6.  Monitor Exhibitor and wait for it to converge at `http://<master-ip>:8181/exhibitor/v1/ui/index.html`.
+6.  Monitor Exhibitor and wait for it to converge at `http://<public-master-ip>:8181/exhibitor/v1/ui/index.html`.
     
     **Tip:** This process can take about 10 minutes. During this time you will see the Master nodes become visible on the Exhibitor consoles and come online, eventually showing a green light.
     
