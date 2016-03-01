@@ -1,17 +1,17 @@
 ---
 ID: 3162
 post_title: 'Step 4: Configure and install DCOS (Minuteman)'
+author: Joel Hamill
 post_date: 2016-02-06 08:18:40
 post_excerpt: ""
 layout: page
 permalink: >
-  https://test-mesosphere-documentation.pantheon.io/step-4-configure-and-install-dcos-minuteman/
+  https://docs.mesosphere.com/step-4-configure-and-install-dcos-minuteman/
 published: true
-menu_order: 100
 page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
 hide_from_navigation: true
 hide_from_related: true
+page_options_show_link_unauthenticated: false
 ---
 Choose your DCOS installation method:
 
@@ -313,7 +313,7 @@ To install DCOS:
     
     When the status icons are green, you can access the DCOS web interface.
 
-8.  Launch the DCOS web interface at: `http://<load-balanced-ip>/`.
+8.  Launch the DCOS web interface at: `http://<public-master-ip>/`.
 
 9.  Click **Log In To DCOS**.
     
@@ -343,7 +343,7 @@ In this step you create a YAML configuration file that is customized for your en
 
 1.  Customize this `config.yaml` template file for your environment. <!-- bootstrap_url is changeable -->
     
-          bootstrap_url: http://<boostrap_ip>:<your_port>       
+          bootstrap_url: http://<bootstrap_ip>:<your_port>       
           cluster_name: '<cluster-name>'
           exhibitor_storage_backend: zookeeper
           exhibitor_zk_hosts: <host1>:<port1>
