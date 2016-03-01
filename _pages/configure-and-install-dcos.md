@@ -138,7 +138,7 @@ In this step you create a custom DCOS build file on your bootstrap node and then
 
 To install DCOS:
 
-1.  Download and save the DCOS setup file, `dcos_generate_config.sh`, to the root directory on your bootstrap node. This file is used to create your customized DCOS build file.
+1.  Download and save the DCOS setup file, `dcos_generate_config.sh`, to the home directory on your bootstrap node. This file is used to create your customized DCOS build file.
     
     **Important:** Contact your sales representative or <sales@mesosphere.io> to obtain the DCOS setup file.
 
