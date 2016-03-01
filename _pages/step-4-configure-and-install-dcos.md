@@ -157,7 +157,7 @@ In this step you create a custom DCOS build file on your bootstrap node and then
     
     **Tip:** For the install script to work, you must have created [genconf/config.yaml][3] and [genconf/ip-detect][4].
 
-3.  From your root directory, run this command to host the DCOS install package through an nginx Docker container. For `<your-port>`, specify the port value that is used in the `bootstrap_url`.
+3.  From your home directory, run this command to host the DCOS install package through an nginx Docker container. For `<your-port>`, specify the port value that is used in the `bootstrap_url`.
     
         $ sudo docker run -d -p <your-port>:80 -v $PWD/genconf/serve:/usr/share/nginx/html:ro nginx
         
