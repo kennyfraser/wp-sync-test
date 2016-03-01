@@ -145,6 +145,10 @@ To install DCOS:
 2.  From your root directory on the bootstrap node, run the DCOS installer shell script on your bootstrap node to generate a customized DCOS build. The setup script extracts a Docker container that uses the generic DCOS install files to create customized DCOS build files for your cluster. The build files are output to `./genconf/serve/`.
     
         $ sudo bash dcos_generate_config.sh --genconf
+        
+    
+    Here is an example of the output.
+    
         Extracking docker container from this script
         dcos-genconf.4543c7745c7e-2af26a89fa52-cb932597d7b992.tar
         Loading container into Docker daemon
@@ -163,6 +167,10 @@ To install DCOS:
 3.  Run a preflight script to validate that your cluster is installable.
     
         $ sudo bash dcos_generate_config.sh --preflight 
+        
+    
+    Here is an example of the output.
+    
         Running mesosphere/dcos-genconf docker BUILD_DIR set to /home/someuser/genconf 
         ... 
         Running preflight checks
@@ -173,6 +181,10 @@ To install DCOS:
 4.  Install DCOS on your cluster.
     
         $ sudo bash dcos_generate_config.sh --deploy
+        
+    
+    Here is an example of the output.
+    
         Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/someuser/genconf
         ...
         Starting DCOS install process
