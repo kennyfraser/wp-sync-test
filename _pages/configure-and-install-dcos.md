@@ -214,7 +214,7 @@ To install DCOS:
     
     When the status icons are green, you can access the DCOS web interface.
 
-7.  Launch the DCOS web interface at: `http://<load-balanced-ip>/`:
+7.  Launch the DCOS web interface at: `http://<public-master-ip>/`:
     
     <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/dashboardsmall.png" rel="attachment wp-att-1120"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/dashboardsmall.png" alt="dashboardsmall" width="1338" height="828" class="alignnone size-full wp-image-1120" /></a>
 
