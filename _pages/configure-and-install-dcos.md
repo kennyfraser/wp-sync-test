@@ -1,18 +1,31 @@
 ---
 ID: 3095
-post_title: 'Step 4: Configure and install DCOS'
+post_title: 'Step 2: Configure and install DCOS'
 author: Joel Hamill
 post_date: 2016-02-05 15:01:26
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.mesosphere.com/getting-started/installing/installing-enterprise-edition/step-4-configure-and-install-dcos/
+  https://docs.mesosphere.com/getting-started/installing/installing-enterprise-edition/configure-and-install-dcos/
 published: true
 page_options_require_authentication: false
 hide_from_navigation: false
 hide_from_related: false
 page_options_show_link_unauthenticated: false
 ---
+This topic provides instructions for installing DCOS in your environment by using a customized Bash install script.
+
+The DCOS installation creates these folders:
+
+*   `/opt/mesosphere`
+    :   Contains all the DCOS binaries, libraries, cluster configuration. Do not modify.
+
+*   `/etc/systemd/system/dcos.target.wants`
+    :   Contains the systemd services which start the things that make up systemd. They must live outside of `/opt/mesosphere` because of systemd constraints.
+
+*   Various units prefixed with `dcos` in `/etc/systemd/system`
+    :   Copies of the units in `/etc/systemd/system/dcos.target.wants`. They must be at the top folder as well as inside `dcos.target.wants`.
+
 Choose your DCOS installation method:
 
 *   [Using SSH to distribute DCOS across your nodes][1]
