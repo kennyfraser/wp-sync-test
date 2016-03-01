@@ -33,7 +33,7 @@ In this step you create a customized YAML configuration file and install DCOS ac
 
 *   Encrypted SSH keys are not supported.
 
-## <a name="config-json"></a>4\.1 Configure your cluster
+## <a name="config-json"></a>Configure your cluster
 
 In this step you create a YAML configuration file that is customized for your environment. DCOS uses this configuration file during installation to generate your cluster installation files. In these instructions we assume that you are using ZooKeeper for shared storage.
 
@@ -169,7 +169,7 @@ In this step you create a YAML configuration file that is customized for your en
         $ cp <path-to-key> genconf/ssh_key && chmod 0600 genconf/ssh_key
         
 
-## <a name="install-bash"></a>4\.2 Install DCOS
+## <a name="install-bash"></a>Install DCOS
 
 In this step you create a custom DCOS build file on your bootstrap node and then install DCOS across your cluster nodes with SSH. With this installation method you create a bootstrap server that uses your SSH key and connects to every node to automate the deployment.
 
