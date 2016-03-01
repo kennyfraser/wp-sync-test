@@ -54,7 +54,7 @@ In this step you create a YAML configuration file that is customized for your en
 
 2.  Create a template `config.yaml` file by entering this command:
     
-        $ sudo bash dcos_generate_config.sh --validate-config
+        $ sudo bash dcos_generate_config.ee.sh --validate-config
         
     
     Here is an example of the output. You can ignore the warnings.
@@ -215,6 +215,10 @@ To install DCOS:
 1.  From the `dcos` directory, run the DCOS installer shell script on your bootstrapping master nodes to generate a customized DCOS build. The setup script extracts a Docker container that uses the generic DCOS install files to create customized DCOS build files for your cluster. The build files are output to `./genconf/serve/`.
     
         $ sudo bash dcos_generate_config.ee.sh --genconf
+        
+    
+    Here is an example of the output.
+    
         Extracking docker container from this script
         dcos-genconf.4543c7745c7e-2af26a89fa52-cb932597d7b992.tar
         Loading container into Docker daemon
@@ -238,6 +242,10 @@ To install DCOS:
     Here is an example of the output.
     
         Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
+        
+    
+    Here is an example of the output.
+    
         20:47:49 dcos_installer.action_lib.prettyprint:: ====> EXECUTING INSTALL PREREQUISITES
         20:47:49 dcos_installer.action_lib.prettyprint:: ====> START install_prereqs
         20:52:32 dcos_installer.action_lib.prettyprint:: ====> STAGE install_prereqs
