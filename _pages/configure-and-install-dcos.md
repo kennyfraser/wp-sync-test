@@ -43,51 +43,24 @@ In this step you create a YAML configuration file that is customized for your en
         $6$rounds=656000$v55tdnlMGNoSEgYH$1JAznj58MR.Bft2wd05KviSUUfZe45nsYsjlEl84w34pp48A9U2GoKzlycm3g6MBmg4cQW9k7iY4tpZdkWy9t1 
         
 
-2.  Create a template `config.yaml` file by entering this command:
-    
-        $ sudo bash dcos_generate_config.sh --validate-config
-        
-    
-    Here is an example of the output. You can ignore the warnings.
-    
-        Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
-        23:54:54 dcos_installer.action_lib.prettyprint:: ====> VALIDATING CONFIGURATION
-        23:54:54 dcos_installer.config:: Configuration file not found, /genconf/config.yaml. Writing new one with all defaults.
-        23:54:54 dcos_installer.validate.onprem:: ssh_user: Please enter a valid string
-        23:54:54 dcos_installer.validate.onprem:: ssh_key_path: File does not exist genconf/ssh_key
-        23:54:54 dcos_installer.validate.onprem:: superuser_username: Please enter a valid string
-        23:54:54 dcos_installer.validate.onprem:: agent_list: Please enter a valid IPv4 address.
-        23:54:54 dcos_installer.validate.onprem:: superuser_password_hash: Please enter a valid string
-        23:54:54 dcos_installer.validate.onprem:: exhibitor_zk_hosts: None is not a valid Exhibitor Zookeeper host
-        23:54:54 dcos_installer.validate.onprem:: master_list: Please enter a valid IPv4 address.
-        23:54:54 dcos_installer.validate.onprem:: ip_detect_script: Please provide a valid executable script. Script must start with #!/
-        23:54:54 dcos_installer.validate.onprem:: ssh_key: SSH key must be an unencrypted (no passphrase) SSH key which is not empty.
-        23:54:54 dcos_installer.validate.onprem:: ip_detect_path: File does not exist genconf/ip-detect
-        
-
-3.  Edit your template `genconf/config.yaml` file and customize for your environment. The template `config.yaml` file is located in the `genconf` directory.
-    
-        $ sudo vi config.yaml
-        
-    
-    For a manual DCOS install, these parameters are not required: `agent_list`, `ssh_port`, and `ssh_user`. Your file should resemble this:
+2.  Create a configuration file and save as `genconf/config.yaml`. You can use this example as a template.
     
           ---
           bootstrap_url: http://<bootstrap_public_ip>:<your_port>       
           cluster_name: '<cluster-name>'
           exhibitor_storage_backend: zookeeper
-          exhibitor_zk_hosts: <bootstrap_private_ip>:2181
+          exhibitor_zk_hosts: <host1>:2181,<host2>:2181,<host3>:2181
           exhibitor_zk_path: /dcos
           master_discovery: static 
           master_list:
-          - <master-ip-1>
-          - <master-ip-2>
-          - <master-ip-3>
+          - <master-private-ip-1>
+          - <master-private-ip-2>
+          - <master-private-ip-3>
           superuser_username: <username>
           superuser_password_hash: <hashed-password>
           resolvers:
-          - 8.8.8.8 
-          - 8.8.4.4
+          - <dns-resolver-1>
+          - <dns-resolver-2>
         
     
     **bootstrap_url**
@@ -97,7 +70,7 @@ In this step you create a YAML configuration file that is customized for your en
     :   Specify the name of your cluster.
     
     **exhibitor_storage_backend**
-    :   This parameter specifies the type of storage backend for Exhibitor. By default this is set to `zookeeper` in the `config.yaml` template file. During DCOS installation, a storage system is required for configuring and orchestrating ZooKeeper with Exhibitor on the master nodes. Exhibitor automatically configures your ZooKeeper installation on the master nodes during your DCOS installation. Multiple ZooKeeper instances are recommended for failover in production environments.
+    :   This parameter specifies the type of storage backend for Exhibitor. In the example file above, a ZooKeeper instance is used for external storage. During DCOS installation, a storage system is required for configuring and orchestrating ZooKeeper with Exhibitor on the master nodes. Exhibitor automatically configures your ZooKeeper installation on the master nodes during your DCOS installation. Multiple ZooKeeper instances are recommended for failover in production environments.
     
     **exhibitor_zk_hosts**
     :   Specify a comma-separated list of one or more ZooKeeper node IP addresses to use for configuring the internal Exhibitor instances. Exhibitor uses this ZooKeeper cluster to orchestrate it's configuration. Where `<host1>` is your internal bootstrap node IP and port `2181` is the default ZooKeeper port.
@@ -121,8 +94,6 @@ In this step you create a YAML configuration file that is customized for your en
     :   Specify a new username for the `Bootstrap superuser`. This username is required for using DCOS. For more information, see <a href="../security-and-authentication/managing-authorization/" target="_blank">Managing Authentication</a>.
     
     For the complete list of available configuration options and parameters, see the [Configuration Parameters][1] documentation.
-
-4.  Save as `genconf/config.yaml`.
 
 # <a name="install-bash"></a>Install DCOS
 
