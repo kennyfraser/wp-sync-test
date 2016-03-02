@@ -33,14 +33,14 @@ In this step you create a YAML configuration file that is customized for your en
         $ sudo bash dcos_generate_config.sh --hash-password <superuser_password>
         
     
-    Here is an example of a hashed password output. In this example, the hashed password is `$6$rounds=656000$v55tdnlMGNoSEgYH$1JAznj58MR.Bft2wd05KviSUUfZe45nsYsjlEl84w34pp48A9U2GoKzlycm3g6MBmg4cQW9k7iY4tpZdkWy9t1`.
+    Here is an example of a hashed password output.
     
         Extracting image from this script and loading into docker daemon, this step can take a few minutes
         dcos-genconf.9eda4ae45de5488c0c-c40556fa73a00235f1.tar
         Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
         00:42:10 dcos_installer.action_lib.prettyprint:: ====> HASHING PASSWORD TO SHA512
         00:42:11 root:: Hashed password for 'password' key:
-        $6$rounds=656000$v55tdnlMGNoSEgYH$1JAznj58MR.Bft2wd05KviSUUfZe45nsYsjlEl84w34pp48A9U2GoKzlycm3g6MBmg4cQW9k7iY4tpZdkWy9t1 
+        $6$rounds=656000$v55tdnlMGNoSEgYH$1JAznj58MR.Bft2wd05KviSUUfZe45nsYsjlEl84w34pp48A9U2GoKzlycm3g6MBmg4cQW9k7iY4tpZdkWy9t1
         
 
 2.  Create a configuration file and save as `genconf/config.yaml`. You can use this example as a template.
