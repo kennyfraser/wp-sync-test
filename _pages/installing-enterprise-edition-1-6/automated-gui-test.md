@@ -1,6 +1,6 @@
 ---
 ID: 3407
-post_title: Automated GUI installation
+post_title: Automated GUI installation test
 post_date: 2016-02-17 11:20:29
 post_excerpt: ""
 layout: page
