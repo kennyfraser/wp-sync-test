@@ -42,7 +42,7 @@ In this step you create a YAML configuration file that is customized for your en
         $ sudo bash dcos_generate_config.ee.sh --hash-password <superuser_password>
         
     
-    Here is an example of a hashed password output where the hashed password is: `$6$rounds=656000$v55tdnlMGNoSEgYH$1JAznj58MR.Bft2wd05KviSUUfZe45nsYsjlEl84w34pp48A9U2GoKzlycm3g6MBmg4cQW9k7iY4tpZdkWy9t1`.
+    Here is an example of a hashed password output.
     
         Extracting image from this script and loading into docker daemon, this step can take a few minutes
         dcos-genconf.9eda4ae45de5488c0c-c40556fa73a00235f1.tar
