@@ -43,8 +43,8 @@ In this step you create a YAML configuration file that is customized for your en
     
         cluster_config:
           ##########################################
-          # DO NOT CHANGE the bootstrap_url value, # 
-          # unless you have moved installer assets.# 
+          # DO NOT CHANGE the bootstrap_url value, #
+          # unless you have moved installer assets.#
           ##########################################
           bootstrap_url: file:///opt/dcos_install_tmp
           cluster_name: <cluster-name>
@@ -52,6 +52,10 @@ In this step you create a YAML configuration file that is customized for your en
           exhibitor_zk_hosts: <host1>:<port1>
           exhibitor_zk_path: /dcos
           master_discovery: static 
+          ###########################################
+          # Master nodes must be listed in both the #  
+          # master_list andtarget_hosts parameters. #
+          ###########################################
           master_list:
           - <master-ip-1>
           - <master-ip-2>
@@ -64,6 +68,11 @@ In this step you create a YAML configuration file that is customized for your en
           log_directory: /genconf/logs          
           ssh_port: '<port-number>'
           ssh_user: <username>
+          ###########################################################
+          # Specify your agent AND master nodes in the target_hosts #
+          # parameter. Master nodes must be listed in both the      #
+          # master_list and target_hosts parameters.                #
+          ###########################################################
           target_hosts:
           - <target-host-1>
           - <target-host-2>
@@ -91,7 +100,10 @@ In this step you create a YAML configuration file that is customized for your en
     :   This parameter specifies the Mesos master discovery method. By default this is set to `static` in the `config.yaml` template file. The `static` method uses the Mesos agents to discover the masters by giving each agent a static list of master IPs. The masters must not change IP addresses, and if a master is replaced, the new master must take the old master's IP address
     
     **master_list**
+    
     :   Specify a list of your static master IP addresses as a YAML nested series (`-`).
+        
+        **Important:** Master nodes must be listed in both the `master_list` and `target_hosts` parameters.
     
     **resolvers**
     
@@ -107,10 +119,13 @@ In this step you create a YAML configuration file that is customized for your en
     :   This parameter specifies the port to SSH to, for example `22`.
     
     **ssh_user**
-    :   This parameter specifies the SSH username, for example `vagrant`.
+    :   This parameter specifies the SSH username, for example `centos`.
     
     **target_hosts**
-    :   This parameter specifies a complete list of IPv4 addresses to your target DCOS hosts, including agent host names. This must be a YAML-formatted nested series (-).
+    
+    :   This parameter specifies a complete list of IPv4 addresses to your master and agent nodes. This must be a YAML-formatted nested series (-).
+        
+        **Important:** Master nodes must be listed in both the `master_list` and `target_hosts` parameters.
     
     For more configuration examples and all available options, see the [configuration file options][4].
 
