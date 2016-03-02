@@ -52,66 +52,39 @@ In this step you create a YAML configuration file that is customized for your en
         $6$rounds=656000$v55tdnlMGNoSEgYH$1JAznj58MR.Bft2wd05KviSUUfZe45nsYsjlEl84w34pp48A9U2GoKzlycm3g6MBmg4cQW9k7iY4tpZdkWy9t1   
         
 
-2.  Create a template `config.yaml` file by entering this command:
+2.  Create a configuration file and save as `genconf/config.yaml`. You can use this example as a template.
     
-        $ sudo bash dcos_generate_config.ee.sh --validate-config
-        
-    
-    Here is an example of the output. You can ignore the warnings.
-    
-        Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
-        23:54:54 dcos_installer.action_lib.prettyprint:: ====> VALIDATING CONFIGURATION
-        23:54:54 dcos_installer.config:: Configuration file not found, /genconf/config.yaml. Writing new one with all defaults.
-        23:54:54 dcos_installer.validate.onprem:: ssh_user: Please enter a valid string
-        23:54:54 dcos_installer.validate.onprem:: ssh_key_path: File does not exist genconf/ssh_key
-        23:54:54 dcos_installer.validate.onprem:: superuser_username: Please enter a valid string
-        23:54:54 dcos_installer.validate.onprem:: agent_list: Please enter a valid IPv4 address.
-        23:54:54 dcos_installer.validate.onprem:: superuser_password_hash: Please enter a valid string
-        23:54:54 dcos_installer.validate.onprem:: exhibitor_zk_hosts: None is not a valid Exhibitor Zookeeper host
-        23:54:54 dcos_installer.validate.onprem:: master_list: Please enter a valid IPv4 address.
-        23:54:54 dcos_installer.validate.onprem:: ip_detect_script: Please provide a valid executable script. Script must start with #!/
-        23:54:54 dcos_installer.validate.onprem:: ssh_key: SSH key must be an unencrypted (no passphrase) SSH key which is not empty.
-        23:54:54 dcos_installer.validate.onprem:: ip_detect_path: File does not exist genconf/ip-detect
-        
-
-3.  Edit your template `genconf/config.yaml` file and customize for your environment.
-    
-        $ sudo vi config.yaml
-        
-    
-    Your file should resemble this:
-    
-          ##########################################
-          # DO NOT CHANGE the bootstrap_url value, # 
-          # unless you have moved installer assets.# 
-          ##########################################
+          ###########################################
+          # Use this bootstrap_url value unless you # 
+          # have moved the DCOS installer assets.   # 
+          ###########################################
           bootstrap_url: file:///opt/dcos_install_tmp
           cluster_name: <cluster-name>
           exhibitor_storage_backend: zookeeper
-          exhibitor_zk_hosts: <host1>:<port1>
+          exhibitor_zk_hosts: <host1>:2181,<host2>:2181,<host2>:2181,
           exhibitor_zk_path: /dcos
           log_directory: /genconf/logs
           master_discovery: static 
           master_list:
-          - <master-ip-1>
-          - <master-ip-2>
-          - <master-ip-3>
+          - <master-private-ip-1>
+          - <master-private-ip-2>
+          - <master-private-ip-3>
           resolvers:
           - <dns-resolver-1>
           - <dns-resolver-2>
-          ssh_port: '<port-number>'
+          ssh_port: '22'
           ssh_user: <username>
           superuser_username: <username>
           superuser_password_hash: <hashed-password>
           agent_list:
-          - <target-host-1>
-          - <target-host-2>
-          - <target-host-3>
-          - <target-host-4>
-          - <target-host-5>
+          - <agent-private-ip-1>
+          - <agent-private-ip-2>
+          - <agent-private-ip-3>
+          - <agent-private-ip-4>
+          - <agent-private-ip-5>
         
     
-    Specify these configuration parameters. <!-- log_directory: /genconf/logs, process_timeout: 120, ssh_key_path: /genconf/ssh-key -->
+    Specify these configuration parameters.
     
     **bootstrap_url**
     
@@ -121,7 +94,7 @@ In this step you create a YAML configuration file that is customized for your en
     :   Specify the name of your cluster.
     
     **exhibitor_storage_backend**
-    :   This parameter specifies the type of storage backend for Exhibitor. By default this is set to `zookeeper` in the `config.yaml` template file. During DCOS installation, a storage system is required for configuring and orchestrating Zookeeper with Exhibitor on the master nodes. Exhibitor automatically configures your Zookeeper installation on the master nodes during your DCOS installation.
+    :   This parameter specifies the type of storage backend for Exhibitor. In the example file above, a ZooKeeper instance is used for external storage. During DCOS installation, a storage system is required for configuring and orchestrating Zookeeper with Exhibitor on the master nodes. Exhibitor automatically configures your Zookeeper installation on the master nodes during your DCOS installation.
     
     **exhibitor_zk_hosts**
     :   Specify a comma-separated list of one or more ZooKeeper node IP addresses to use for configuring the internal Exhibitor instances. Exhibitor uses this ZooKeeper cluster to orchestrate it's configuration. Multiple ZooKeeper instances are recommended for failover in production environments.
@@ -149,7 +122,7 @@ In this step you create a YAML configuration file that is customized for your en
     
     **superuser_password_hash**
     
-    :   This parameter specifies the hashed Admin password. This password is required for using DCOS. For example:
+    :   This parameter specifies the hashed superuser password. This password is required for using DCOS. The `superuser_password_hash` is generated by using the installer `--hash-password` flag. Here is an example of a hashed password value:
         
             superuser_password_hash: $6$rounds=656000$v55tdnlMGNoSEgYH$1JAznj58MR.Bft2wd05KviSUUfZe45nsYsjlEl84w34pp48A9U2GoKzlycm3g6MBmg4cQW9k7iY4tpZdkWy9t1 
             
@@ -162,9 +135,7 @@ In this step you create a YAML configuration file that is customized for your en
     
     For more configuration examples and all available options, see the [configuration file options][1].
 
-4.  Save as `genconf/config.yaml`.
-
-5.  Move your private RSA key to `genconf/ssh_key`. For more information, see the [ssh_key_path][2] parameter.
+3.  Copy your private RSA key to `genconf/ssh_key`. For more information, see the [ssh_key_path][2] parameter.
     
         $ cp <path-to-key> genconf/ssh_key && chmod 0600 genconf/ssh_key
         
