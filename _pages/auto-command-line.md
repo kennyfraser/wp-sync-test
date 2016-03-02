@@ -63,15 +63,14 @@ In this step you create a YAML configuration file that is customized for your en
           exhibitor_storage_backend: zookeeper
           exhibitor_zk_hosts: <host1>:2181,<host2>:2181,<host2>:2181,
           exhibitor_zk_path: /dcos
-          log_directory: /genconf/logs
           master_discovery: static 
           master_list:
           - <master-private-ip-1>
           - <master-private-ip-2>
           - <master-private-ip-3>
           resolvers:
-          - <dns-resolver-1>
-          - <dns-resolver-2>
+          - 8.8.8.8 
+          - 8.8.4.4
           ssh_port: '22'
           ssh_user: <username>
           superuser_username: <username>
@@ -99,9 +98,6 @@ In this step you create a YAML configuration file that is customized for your en
     **exhibitor_zk_hosts**
     :   Specify a comma-separated list of one or more ZooKeeper node IP addresses to use for configuring the internal Exhibitor instances. Exhibitor uses this ZooKeeper cluster to orchestrate it's configuration. Multiple ZooKeeper instances are recommended for failover in production environments.
     
-    **log_directory**
-    :   This parameter specifies the path to the installer host logs from the SSH processes. By default this is set to `/genconf/logs`. This should not be changed because `/genconf` is local to the container that is running the installer, and is a mounted volume.
-    
     **master_discovery**
     :   This parameter specifies the Mesos master discovery method. By default this is set to `static` in the `config.yaml` template file. The `static` method uses the Mesos agents to discover the masters by giving each agent a static list of master IPs. The masters must not change IP addresses, and if a master is replaced, the new master must take the old master's IP address
     
@@ -110,7 +106,7 @@ In this step you create a YAML configuration file that is customized for your en
     
     **resolvers**
     
-    :   Specify a JSON-formatted list of DNS servers for your DCOS host nodes. You must include the escape characters (`\`) as shown in the template. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them.
+    :   Specify a YAML-formatted list of DNS resolvers for your DCOS cluster nodes. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them. If you have no internal hostnames to resolve, you can set this to a public nameserver like Google or AWS. In the example file above, the Google DNS servers are specified (`8.8.8.8` and `8.8.4.4`).
         
         *Caution:* If you set the `resolvers` parameter incorrectly, you will permanently damage your configuration and have to reinstall DCOS.
     
