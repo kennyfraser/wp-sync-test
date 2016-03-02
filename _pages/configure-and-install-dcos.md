@@ -59,8 +59,8 @@ In this step you create a YAML configuration file that is customized for your en
           superuser_username: <username>
           superuser_password_hash: <hashed-password>
           resolvers:
-          - <dns-resolver-1>
-          - <dns-resolver-2>
+          - 8.8.8.8
+          - 8.8.4.4
         
     
     **bootstrap_url**
