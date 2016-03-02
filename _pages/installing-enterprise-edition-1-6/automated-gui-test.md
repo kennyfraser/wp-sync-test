@@ -5,7 +5,7 @@ post_date: 2016-02-17 11:20:29
 post_excerpt: ""
 layout: page
 permalink: >
-  https://test-mesosphere-documentation.pantheon.io/installing-enterprise-edition-1-6/automated-gui/
+  https://test-mesosphere-documentation.pantheon.io/installing-enterprise-edition-1-6/automated-gui-test/
 published: true
 menu_order: 1
 page_options_require_authentication: false
