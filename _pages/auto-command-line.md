@@ -266,7 +266,7 @@ To install DCOS:
         20:59:19 dcos_installer.action_lib.prettyprint:: 1 out of 1 hosts successfully completed deploy_agent stage.
         
     
-    **Tip:** For a detailed view, you can append log level debug (`-l debug`) to your command. For example `sudo bash dcos_generate_config.ee.sh --deploy -l debug`.
+    **Tip:** For a detailed view, you can append log level debug (`-v`) to your command. For example `sudo bash dcos_generate_config.ee.sh --deploy -v`.
 
 5.  Run the DCOS diagnostic script to verify that services are up and running.
     
