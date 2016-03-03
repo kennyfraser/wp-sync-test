@@ -131,7 +131,7 @@ In this step you create a YAML configuration file that is customized for your en
     
     For more configuration examples and all available options, see the [configuration file options][1].
 
-3.  Copy your private RSA key to `genconf/ssh_key`. For more information, see the [ssh_key_path][2] parameter.
+3.  Copy your private SSH key to `genconf/ssh_key`. For more information, see the [ssh_key_path][2] parameter.
     
         $ cp <path-to-key> genconf/ssh_key && chmod 0600 genconf/ssh_key
         
