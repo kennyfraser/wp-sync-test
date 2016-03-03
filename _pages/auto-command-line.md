@@ -61,7 +61,7 @@ In this step you create a YAML configuration file that is customized for your en
         bootstrap_url: file:///opt/dcos_install_tmp
         cluster_name: <cluster-name>
         exhibitor_storage_backend: zookeeper
-        exhibitor_zk_hosts: <host1>:2181,<host2>:2181,<host2>:2181,
+        exhibitor_zk_hosts: <host1>:2181,<host2>:2181,<host2>:2181
         exhibitor_zk_path: /dcos
         master_discovery: static 
         master_list:
