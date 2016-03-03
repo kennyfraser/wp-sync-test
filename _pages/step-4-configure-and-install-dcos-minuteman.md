@@ -278,8 +278,6 @@ To install DCOS:
         ... 
         Running preflight checks
         
-    
-    **Tip:** For a detailed view, you can add log level debug (`-l debug`) to your command. For example `sudo bash dcos_generate_config.sh --preflight -l debug`.
 
 5.  Install DCOS on your cluster.
     
@@ -296,14 +294,12 @@ To install DCOS:
         Cleaning up temp directory /opt/dcos_install_tmp
         
     
-    **Tip:** For a detailed view, you can add log level debug (`-l debug`) to your command. For example `sudo bash dcos_generate_config.sh --deploy -l debug`.
+    **Tip:** For a detailed view, you can add log level debug (`-v`) to your command. For example `sudo bash dcos_generate_config.sh --deploy -v`.
 
 6.  Run the DCOS diagnostic script to verify that services are up and running.
     
         $ sudo bash dcos_generate_config.sh --postflight
         
-    
-    **Tip:** For a detailed view, you can add log level debug (`-l debug`) to your command. For example `sudo bash dcos_generate_config.sh --postflight -l debug`.
 
 7.  Monitor Exhibitor and wait for it to converge at `http://<master-ip>:8181/exhibitor/v1/ui/index.html`.
     
