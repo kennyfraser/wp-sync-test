@@ -241,7 +241,7 @@ To install DCOS:
         20:54:03 dcos_installer.action_lib.prettyprint:: 2 out of 2 hosts successfully completed run_preflight stage.
         
     
-    **Tip:** For a detailed view, you can append log level debug (`-l debug`) to your command. For example `sudo bash dcos_generate_config.ee.sh --preflight -l debug`.
+    **Tip:** For a detailed view, you can append log level debug (`-v`) to your command. For example `sudo bash dcos_generate_config.ee.sh --preflight -v`.
 
 4.  Install DCOS on your cluster.
     
