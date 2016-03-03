@@ -59,10 +59,10 @@ To use the automated GUI installation method:
     ### Deployment Settings
     
     **Master IP Address List**
-    :   Specify a comma-separated list of your static internal master IP addresses.
+    :   Specify a comma-separated list of your internal static master IP addresses.
     
     **Agent IP Address List**
-    :   Specify a comma-separated list of your static internal agent IP addresses.
+    :   Specify a comma-separated list of your internal static agent IP addresses.
     
     **Public IP Address**
     :   Specify a publicly accessible proxy IP address to one of your master nodes. If you don't have a proxy or already have access to the network where you are deploying this cluster, you can use one of the master IP's that you specified in the master list. This proxy IP address is used to access the DCOS web interface on the master node after DCOS is installed.
@@ -86,7 +86,7 @@ To use the automated GUI installation method:
     
     **Bootstrapping ZooKeeper IP Address(es)**
     
-    :   Specify a comma-separated list of one or more ZooKeeper node IP addresses to use for configuring the internal Exhibitor instances. Exhibitor uses this ZooKeeper cluster to orchestrate its configuration.
+    :   Specify a comma-separated list of one or more ZooKeeper host IP addresses to use for configuring the internal Exhibitor instances. Exhibitor uses this ZooKeeper cluster to orchestrate its configuration.
         
         **Important:** Multiple ZooKeeper instances are recommended for failover in production environments.
     
