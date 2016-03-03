@@ -54,33 +54,33 @@ In this step you create a YAML configuration file that is customized for your en
 
 2.  Create a configuration file and save as `genconf/config.yaml`. You can use this example as a template.
     
-          ###########################################
-          # Use this bootstrap_url value unless you # 
-          # have moved the DCOS installer assets.   # 
-          ###########################################
-          bootstrap_url: file:///opt/dcos_install_tmp
-          cluster_name: <cluster-name>
-          exhibitor_storage_backend: zookeeper
-          exhibitor_zk_hosts: <host1>:2181,<host2>:2181,<host2>:2181,
-          exhibitor_zk_path: /dcos
-          master_discovery: static 
-          master_list:
-          - <master-private-ip-1>
-          - <master-private-ip-2>
-          - <master-private-ip-3>
-          resolvers:
-          - 8.8.8.8 
-          - 8.8.4.4
-          ssh_port: '22'
-          ssh_user: <username>
-          superuser_username: <username>
-          superuser_password_hash: <hashed-password>
-          agent_list:
-          - <agent-private-ip-1>
-          - <agent-private-ip-2>
-          - <agent-private-ip-3>
-          - <agent-private-ip-4>
-          - <agent-private-ip-5>
+        ###########################################
+        # Use this bootstrap_url value unless you # 
+        # have moved the DCOS installer assets.   # 
+        ###########################################
+        bootstrap_url: file:///opt/dcos_install_tmp
+        cluster_name: <cluster-name>
+        exhibitor_storage_backend: zookeeper
+        exhibitor_zk_hosts: <host1>:2181,<host2>:2181,<host2>:2181,
+        exhibitor_zk_path: /dcos
+        master_discovery: static 
+        master_list:
+        - <master-private-ip-1>
+        - <master-private-ip-2>
+        - <master-private-ip-3>
+        resolvers:
+        - 8.8.8.8 
+        - 8.8.4.4
+        ssh_port: '22'
+        ssh_user: <username>
+        superuser_username: <username>
+        superuser_password_hash: <hashed-password>
+        agent_list:
+        - <agent-private-ip-1>
+        - <agent-private-ip-2>
+        - <agent-private-ip-3>
+        - <agent-private-ip-4>
+        - <agent-private-ip-5>
         
     
     Specify these configuration parameters.
