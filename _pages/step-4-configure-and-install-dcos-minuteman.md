@@ -222,7 +222,7 @@ In this step you create a YAML configuration file that is customized for your en
 
 2.  Save as `genconf/config.yaml`.
 
-3.  Move your private RSA key to `genconf/ssh_key`. For more information, see the [ssh_key_path][5] parameter.
+3.  Move your private SSH key to `genconf/ssh_key`. For more information, see the [ssh_key_path][5] parameter.
     
         $ cp <path-to-key> genconf/ssh_key && chmod 0600 genconf/ssh_key
         
