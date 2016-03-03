@@ -191,7 +191,7 @@ To install DCOS:
         Running preflight checks
         
     
-    **Tip:** For a detailed view, you can add log level debug (`-l debug`) to your command. For example `sudo bash dcos_generate_config.sh --preflight -l debug`.
+    **Tip:** For a detailed view, you can add log level debug (`-v`) to your command. For example `sudo bash dcos_generate_config.sh --preflight -v`.
 
 4.  Install DCOS on your cluster.
     
