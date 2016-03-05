@@ -94,7 +94,10 @@ To use the automated GUI installation method:
     :   Specify the ZooKeeper port. For example, `2181`.
     
     **Upstream DNS Servers**
-    :   Specify the DNS servers, which can be on your private network or the public internet. Caution: If you set this parameter incorrectly you will have to reinstall DCOS. For more information about service discovery, see this [documentation][1].
+    
+    :   Specify the DNS servers, which can be on your private network or the public internet.
+        
+        *Caution:* If you set this parameter incorrectly you will have to reinstall DCOS. For more information about service discovery, see this [documentation][1].
     
     **IP Detect Script**
     
