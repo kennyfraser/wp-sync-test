@@ -31,7 +31,7 @@ LDAP users are uniquely identified by [distinguished names (DN)][1]. To authenti
     
     2.  Click **Add Directory**.
         
-        <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/auth-ldap.png" rel="attachment wp-att-3223"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/auth-ldap.png" alt="auth-ldap" width="513" height="515" class="alignnone size-full wp-image-3223" /></a>
+        <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/auth-ldap.gif" rel="attachment wp-att-3790"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/auth-ldap-800x484.gif" alt="auth-ldap" width="800" height="484" class="alignnone size-large wp-image-3790" /></a>
         
         **Host** Specify the hostname or IP address.
         
