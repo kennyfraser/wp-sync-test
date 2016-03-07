@@ -17,9 +17,9 @@ In this step you create an IP detect script on your bootstrap node to broadcast 
 
 **Important:** The IP address of a node must not change after DCOS is installed on the node. For example, the IP address must not change when a node is rebooted or if the DHCP lease is renewed. If the IP address of a node does change, the node must be [wiped and reinstalled][1].
 
-1.  Create a directory named `genconf` on your bootstrap node and navigate to it.
+1.  From your home directory, create a directory named `genconf` on your bootstrap node and navigate to it.
     
-        $ mkdir -p genconf && cd genconf
+        $ mkdir -p genconf
         
 
 2.  Create an IP detection script for your environment and save as `ip-detect`. You can use the examples below.
