@@ -162,14 +162,6 @@ To install DCOS:
         $ sudo bash dcos_generate_config.sh --genconf
         
     
-    Here is an example of the output.
-    
-        Extracking docker container from this script
-        dcos-genconf.4543c7745c7e-2af26a89fa52-cb932597d7b992.tar
-        Loading container into Docker daemon
-        ...
-        
-    
     At this point your directory structure should resemble:
     
         ├── dcos-genconf.c9722490f11019b692-cb6b6ea66f696912b0.tar
@@ -177,9 +169,15 @@ To install DCOS:
         ├── genconf
         │   ├── config.yaml
         │   ├── ip-detect
+        │   ├── ssh_key
         
 
-3.  Run a preflight script to validate that your cluster is installable.
+3.  Run this command on your DCOS setup file to fix a known issue. This command inserts an argument into the `docker run` command for the container which sets an environment variable for `$TERM`.
+    
+        sed -i.bak "s/docker run -i/docker run -i -e \"TERM=linux\"/g" dcos_generate_config.sh
+        
+
+4.  Run a preflight script to validate that your cluster is installable.
     
         $ sudo bash dcos_generate_config.sh --preflight 
         
@@ -193,7 +191,7 @@ To install DCOS:
     
     **Tip:** For a detailed view, you can add log level debug (`-v`) to your command. For example `sudo bash dcos_generate_config.sh --preflight -v`.
 
-4.  Install DCOS on your cluster.
+5.  Install DCOS on your cluster.
     
         $ sudo bash dcos_generate_config.sh --deploy
         
@@ -212,12 +210,12 @@ To install DCOS:
         Cleaning up temp directory /opt/dcos_install_tmp
         
 
-5.  Run the DCOS diagnostic script to verify that services are up and running.
+6.  Run the DCOS diagnostic script to verify that services are up and running.
     
         $ sudo bash dcos_generate_config.sh --postflight
         
 
-6.  Monitor Exhibitor and wait for it to converge at `http://<public-master-ip>:8181/exhibitor/v1/ui/index.html`.
+7.  Monitor Exhibitor and wait for it to converge at `http://<public-master-ip>:8181/exhibitor/v1/ui/index.html`.
     
     **Tip:** This process can take about 10 minutes. During this time you will see the Master nodes become visible on the Exhibitor consoles and come online, eventually showing a green light.
     
@@ -225,7 +223,7 @@ To install DCOS:
     
     When the status icons are green, you can access the DCOS web interface.
 
-7.  Launch the DCOS web interface at: `http://<public-master-ip>/`:
+8.  Launch the DCOS web interface at: `http://<public-master-ip>/`:
     
     <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/dashboardsmall.png" rel="attachment wp-att-1120"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/dashboardsmall.png" alt="dashboardsmall" width="1338" height="828" class="alignnone size-full wp-image-1120" /></a>
 
@@ -322,19 +320,24 @@ In this step you create a custom DCOS build file on your bootstrap node and then
         │   ├── ip-detect
         
 
-2.  From your root directory, run the DCOS installer shell script on your bootstrapping master nodes to generate a customized DCOS build. The setup script extracts a Docker container that uses the generic DCOS install files to create customized DCOS build files for your cluster. The build files are output to `./genconf/serve/`.
+2.  Run this command on your DCOS setup file to fix a known issue. This command inserts an argument into the `docker run` command for the container which sets an environment variable for `$TERM`.
+    
+        sed -i.bak "s/docker run -i/docker run -i -e \"TERM=linux\"/g" dcos_generate_config.sh
+        
+
+3.  From your root directory, run the DCOS installer shell script on your bootstrapping master nodes to generate a customized DCOS build. The setup script extracts a Docker container that uses the generic DCOS install files to create customized DCOS build files for your cluster. The build files are output to `./genconf/serve/`.
     
             $ sudo bash dcos_generate_config.sh
         
     
     **Tip:** For the install script to work, you must have created `genconf/config.yaml` and `genconf/ip-detect`.
 
-3.  From your root directory, run this command to host the DCOS install package through an nginx Docker container. For `<your-port>`, specify the port value that is used in the `bootstrap_url`.
+4.  From your root directory, run this command to host the DCOS install package through an nginx Docker container. For `<your-port>`, specify the port value that is used in the `bootstrap_url`.
     
         $ docker run -d -p <your-port>:80 -v $PWD/genconf/serve:/usr/share/nginx/html:ro nginx
         
 
-4.  Run these commands on each of your master nodes in succession to install DCOS using your custom build file.
+5.  Run these commands on each of your master nodes in succession to install DCOS using your custom build file.
     
     **Tip:** Although there is no actual harm to your cluster, DCOS may issue error messages until all of your master nodes are configured.
     
@@ -358,7 +361,7 @@ In this step you create a custom DCOS build file on your bootstrap node and then
             $ sudo bash dcos_install.sh master
             
 
-5.  Run these commands on each of your agent nodes to install DCOS using your custom build file.
+6.  Run these commands on each of your agent nodes to install DCOS using your custom build file.
     
     1.  SSH to your node:
         
@@ -380,7 +383,7 @@ In this step you create a custom DCOS build file on your bootstrap node and then
             $ sudo bash dcos_install.sh slave
             
 
-6.  Monitor Exhibitor and wait for it to converge at `http://<public-master-ip>:8181/exhibitor/v1/ui/index.html`.
+7.  Monitor Exhibitor and wait for it to converge at `http://<public-master-ip>:8181/exhibitor/v1/ui/index.html`.
     
     **Tip:** This process can take about 10 minutes. During this time you will see the Master nodes become visible on the Exhibitor consoles and come online, eventually showing a green light.
     
@@ -388,7 +391,7 @@ In this step you create a custom DCOS build file on your bootstrap node and then
     
     When the status icons are green, you can access the DCOS web interface.
 
-7.  Launch the DCOS web interface at: `http://<public-master-ip>/`:
+8.  Launch the DCOS web interface at: `http://<public-master-ip>/`:
     
     <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/dashboardsmall.png" rel="attachment wp-att-1120"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/dashboardsmall.png" alt="dashboardsmall" width="1338" height="828" class="alignnone size-full wp-image-1120" /></a>
 
