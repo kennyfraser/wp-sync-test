@@ -48,7 +48,7 @@ To use the automated GUI installation method:
         $ sudo bash dcos_generate_config.ee.sh --web -v
         
 
-2.  Launch the DCOS web installer in your browser at: `http://<public-ip>:9000`.
+2.  Launch the DCOS web installer in your browser at: `http://<bootstrap-node-public-ip>:9000`.
 
 3.  Click **Begin Installation**.
     
