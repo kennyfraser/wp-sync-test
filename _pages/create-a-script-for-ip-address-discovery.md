@@ -22,7 +22,7 @@ In this step you create an IP detect script on your bootstrap node to broadcast 
         $ mkdir -p genconf && cd genconf
         
 
-2.  Create an IP detection script for your environment and save as `genconf/ip-detect`. You can use the examples below.
+2.  Create an IP detection script for your environment and save as `ip-detect`. You can use the examples below.
     
     *   #### Use the AWS Metadata Server
         
