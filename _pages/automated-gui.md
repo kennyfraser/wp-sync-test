@@ -84,13 +84,13 @@ To use the automated GUI installation method:
     **Password**
     :   Specify the administrator password. This password is required for using DCOS.
     
-    **Bootstrapping ZooKeeper IP Address(es)**
+    **ZooKeeper for Exhibitor Private IP**
     
     :   Specify a comma-separated list of one or more ZooKeeper host IP addresses to use for configuring the internal Exhibitor instances. Exhibitor uses this ZooKeeper cluster to orchestrate its configuration.
         
         **Important:** Multiple ZooKeeper instances are recommended for failover in production environments.
     
-    **Bootstrapping ZooKeeper Port**
+    **ZooKeeper for Exhibitor Port**
     :   Specify the ZooKeeper port. For example, `2181`.
     
     **Upstream DNS Servers**
