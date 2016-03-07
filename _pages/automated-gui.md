@@ -58,13 +58,13 @@ To use the automated GUI installation method:
     
     ### Deployment Settings
     
-    **Master IP Address List**
+    **Master Private IP List**
     :   Specify a comma-separated list of your internal static master IP addresses.
     
-    **Agent IP Address List**
+    **Agent Private IP List**
     :   Specify a comma-separated list of your internal static agent IP addresses.
     
-    **Public IP Address**
+    **Master Public IP**
     :   Specify a publicly accessible proxy IP address to one of your master nodes. If you don't have a proxy or already have access to the network where you are deploying this cluster, you can use one of the master IP's that you specified in the master list. This proxy IP address is used to access the DCOS web interface on the master node after DCOS is installed.
     
     **SSH Username**
