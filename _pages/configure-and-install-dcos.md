@@ -57,9 +57,9 @@ In this step you create a YAML configuration file that is customized for your en
           # master_list andtarget_hosts parameters. #
           ###########################################
           master_list:
-          - <master-ip-1>
-          - <master-ip-2>
-          - <master-ip-3>
+          - <private-master-ip-1>
+          - <private-master-ip-2>
+          - <private-master-ip-3>
           resolvers:
           - 8.8.8.8 
           - 8.8.4.4
@@ -74,11 +74,11 @@ In this step you create a YAML configuration file that is customized for your en
           # master_list and target_hosts parameters.                #
           ###########################################################
           target_hosts:
-          - <target-host-1>
-          - <target-host-2>
-          - <target-host-3>
-          - <target-host-4>
-          - <target-host-5>
+          - <target-host-privateIP-1>
+          - <target-host-privateIP-2>
+          - <target-host-privateIP-3>
+          - <target-host-privateIP-4>
+          - <target-host-privateIP-5>
         
     
     Specify these configuration parameters. <!-- log_directory: /genconf/logs, process_timeout: 120, ssh_key_path: /genconf/ssh-key -->
@@ -217,7 +217,7 @@ To install DCOS:
         $ sudo bash dcos_generate_config.sh --postflight
         
 
-6.  Monitor Exhibitor and wait for it to converge at `http://<master-ip>:8181/exhibitor/v1/ui/index.html`.
+6.  Monitor Exhibitor and wait for it to converge at `http://<public-master-ip>:8181/exhibitor/v1/ui/index.html`.
     
     **Tip:** This process can take about 10 minutes. During this time you will see the Master nodes become visible on the Exhibitor consoles and come online, eventually showing a green light.
     
@@ -243,13 +243,13 @@ In this step you create a YAML configuration file that is customized for your en
           bootstrap_url: http://<bootstrap_ip>:<your_port>       
           cluster_name: '<cluster-name>'
           exhibitor_storage_backend: zookeeper
-          exhibitor_zk_hosts: <host1>:<port1>
+          exhibitor_zk_hosts: <host1>:2181
           exhibitor_zk_path: /dcos
           master_discovery: static 
           master_list:
-          - <master-ip-1>
-          - <master-ip-2>
-          - <master-ip-3>
+          - <private-master-ip-1>
+          - <private-master-ip-2>
+          - <private-master-ip-3>
           resolvers:
           - <dns-resolver-1>
           - <dns-resolver-2>
