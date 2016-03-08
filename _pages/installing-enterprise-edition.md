@@ -10,7 +10,7 @@ permalink: >
 published: true
 page_options_require_authentication: false
 hide_from_navigation: false
-hide_from_related: true
+hide_from_related: false
 page_options_show_link_unauthenticated: false
 ---
 [installing-enterprise-edition-overview]
