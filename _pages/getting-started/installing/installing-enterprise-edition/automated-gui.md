@@ -1,5 +1,5 @@
 ---
-UID: 56df37464c10f
+UID: 56df3b1613cca
 post_title: Automated GUI installation
 post_excerpt: ""
 layout: page

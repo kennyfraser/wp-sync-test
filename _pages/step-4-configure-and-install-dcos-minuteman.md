@@ -1,5 +1,5 @@
 ---
-UID: 56df374692b57
+UID: 56df3b166d2a0
 post_title: 'Step 4: Configure and install DCOS (Minuteman)'
 post_excerpt: ""
 layout: page

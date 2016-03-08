@@ -1,5 +1,5 @@
 ---
-UID: 56df374c3a9f3
+UID: 56df3b1c3e6fe
 post_title: Uninstalling on Amazon Web Services
 post_excerpt: ""
 layout: page

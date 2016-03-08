@@ -1,5 +1,5 @@
 ---
-UID: 56df37463c1f8
+UID: 56df3b15f3f84
 post_title: Automated command line installation
 post_excerpt: ""
 layout: page

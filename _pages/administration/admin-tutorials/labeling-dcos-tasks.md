@@ -1,5 +1,5 @@
 ---
-UID: 56df37489edc6
+UID: 56df3b1880b63
 post_title: Labeling DCOS Tasks
 post_excerpt: ""
 layout: page

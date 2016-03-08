@@ -1,5 +1,5 @@
 ---
-UID: 56df3749b3f10
+UID: 56df3b19b0b2b
 post_title: Autoscaling with Marathon
 post_excerpt: ""
 layout: page

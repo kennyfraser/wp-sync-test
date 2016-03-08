@@ -1,5 +1,5 @@
 ---
-UID: 56df374bc4236
+UID: 56df3b1bd485d
 post_title: Log Management with Splunk
 post_excerpt: ""
 layout: page

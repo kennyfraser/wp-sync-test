@@ -1,5 +1,5 @@
 ---
-UID: 56df37472c675
+UID: 56df3b16e6a72
 post_title: >
   Service Discovery and Load Balancing
   with marathon-lb

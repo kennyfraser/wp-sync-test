@@ -1,5 +1,5 @@
 ---
-UID: 56df374ac47a8
+UID: 56df3b1aead41
 post_title: Deploying Crate as a DCOS Service
 post_excerpt: ""
 layout: page

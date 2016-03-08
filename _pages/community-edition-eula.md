@@ -1,5 +1,5 @@
 ---
-UID: 56df374a9b8cd
+UID: 56df3b1ab92f8
 post_title: >
   Mesosphere DCOS Community Edition End
   User License Agreement

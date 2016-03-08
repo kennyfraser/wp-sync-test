@@ -1,5 +1,5 @@
 ---
-UID: 56df374a8650a
+UID: 56df3b1a95796
 post_title: Mesosphere Open Source Attribution
 post_excerpt: ""
 layout: page

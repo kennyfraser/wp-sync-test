@@ -1,5 +1,5 @@
 ---
-UID: 56df37497ccfb
+UID: 56df3b197e1fd
 post_title: Adding a Kafka broker
 post_excerpt: ""
 layout: page

@@ -1,5 +1,5 @@
 ---
-UID: 56df374c4cf3d
+UID: 56df3b1c587e6
 post_title: Installing the CLI
 post_excerpt: ""
 layout: page

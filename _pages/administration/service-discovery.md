@@ -1,5 +1,5 @@
 ---
-UID: 56df374755623
+UID: 56df3b1712474
 post_title: Service Discovery and Load Balancing
 post_excerpt: ""
 layout: page

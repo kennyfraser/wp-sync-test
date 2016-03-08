@@ -1,5 +1,5 @@
 ---
-UID: 56df374c43db5
+UID: 56df3b1c46f78
 post_title: Installing a DCOS service
 post_excerpt: ""
 layout: page

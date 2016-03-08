@@ -1,5 +1,5 @@
 ---
-UID: 56df37491250c
+UID: 56df3b1902c8f
 post_title: Customizing a DCOS Service
 post_excerpt: ""
 layout: page

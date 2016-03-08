@@ -1,5 +1,5 @@
 ---
-UID: 56df374c2af90
+UID: 56df3b1c2de3f
 post_title: Updating the CLI
 post_excerpt: ""
 layout: page

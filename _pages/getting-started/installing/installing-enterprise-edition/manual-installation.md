@@ -1,5 +1,5 @@
 ---
-UID: 56df374671f73
+UID: 56df3b1635aca
 post_title: Manual command line installation
 post_excerpt: ""
 layout: page

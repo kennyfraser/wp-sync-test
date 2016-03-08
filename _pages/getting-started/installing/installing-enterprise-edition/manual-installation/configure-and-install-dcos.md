@@ -1,5 +1,5 @@
 ---
-UID: 56df3746b0e80
+UID: 56df3b169330a
 post_title: 'Step 2: Configure and install DCOS'
 post_excerpt: ""
 layout: page

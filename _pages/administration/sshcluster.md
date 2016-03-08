@@ -1,5 +1,5 @@
 ---
-UID: 56df374ad57e1
+UID: 56df3b1b0da0c
 post_title: SSHing to a DCOS Cluster
 post_excerpt: ""
 layout: page

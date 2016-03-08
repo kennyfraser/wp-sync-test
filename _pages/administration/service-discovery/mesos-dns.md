@@ -1,5 +1,5 @@
 ---
-UID: 56df3747df347
+UID: 56df3b178eb3d
 post_title: Service Discovery with Mesos-DNS
 post_excerpt: ""
 layout: page
