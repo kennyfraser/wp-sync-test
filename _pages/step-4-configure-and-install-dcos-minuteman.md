@@ -199,7 +199,7 @@ In this step you create a YAML configuration file that is customized for your en
     
     **resolvers**
     
-    :   Specify a JSON-formatted list of DNS servers for your DCOS host nodes. You must include the escape characters (``) as shown in the template. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them.
+    :   Specify a JSON-formatted list of DNS servers for your DCOS host nodes. You must include the escape characters (`\`) as shown in the template. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them.
         
         *Caution:* If you set the `resolvers` parameter incorrectly, you will permanently damage your configuration and have to reinstall DCOS.
     
@@ -222,7 +222,7 @@ In this step you create a YAML configuration file that is customized for your en
 
 2.  Save as `genconf/config.yaml`.
 
-3.  Move your private RSA key to `genconf/ssh_key`. For more information, see the [ssh_key_path][5] parameter.
+3.  Move your private SSH key to `genconf/ssh_key`. For more information, see the [ssh_key_path][5] parameter.
     
         $ cp <path-to-key> genconf/ssh_key && chmod 0600 genconf/ssh_key
         
@@ -278,8 +278,6 @@ To install DCOS:
         ... 
         Running preflight checks
         
-    
-    **Tip:** For a detailed view, you can add log level debug (`-l debug`) to your command. For example `sudo bash dcos_generate_config.sh --preflight -l debug`.
 
 5.  Install DCOS on your cluster.
     
@@ -296,14 +294,12 @@ To install DCOS:
         Cleaning up temp directory /opt/dcos_install_tmp
         
     
-    **Tip:** For a detailed view, you can add log level debug (`-l debug`) to your command. For example `sudo bash dcos_generate_config.sh --deploy -l debug`.
+    **Tip:** For a detailed view, you can add log level debug (`-v`) to your command. For example `sudo bash dcos_generate_config.sh --deploy -v`.
 
 6.  Run the DCOS diagnostic script to verify that services are up and running.
     
         $ sudo bash dcos_generate_config.sh --postflight
         
-    
-    **Tip:** For a detailed view, you can add log level debug (`-l debug`) to your command. For example `sudo bash dcos_generate_config.sh --postflight -l debug`.
 
 7.  Monitor Exhibitor and wait for it to converge at `http://<master-ip>:8181/exhibitor/v1/ui/index.html`.
     
@@ -313,7 +309,7 @@ To install DCOS:
     
     When the status icons are green, you can access the DCOS web interface.
 
-8.  Launch the DCOS web interface at: `http://<load-balanced-ip>/`.
+8.  Launch the DCOS web interface at: `http://<public-master-ip>/`.
 
 9.  Click **Log In To DCOS**.
     
@@ -343,7 +339,7 @@ In this step you create a YAML configuration file that is customized for your en
 
 1.  Customize this `config.yaml` template file for your environment. <!-- bootstrap_url is changeable -->
     
-          bootstrap_url: http://<boostrap_ip>:<your_port>       
+          bootstrap_url: http://<bootstrap_ip>:<your_port>       
           cluster_name: '<cluster-name>'
           exhibitor_storage_backend: zookeeper
           exhibitor_zk_hosts: <host1>:<port1>
@@ -385,7 +381,7 @@ In this step you create a YAML configuration file that is customized for your en
     
     **resolvers**
     
-    :   Specify a JSON-formatted list of DNS servers for your DCOS host nodes. You must include the escape characters (``) as shown in the template. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them.
+    :   Specify a JSON-formatted list of DNS servers for your DCOS host nodes. You must include the escape characters (`\`) as shown in the template. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them.
         
         *Caution:* If you set the `resolvers` parameter incorrectly, you will permanently damage your configuration and have to reinstall DCOS.
     

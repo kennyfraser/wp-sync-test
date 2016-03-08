@@ -53,6 +53,8 @@ You can authorize individual users and groups of users.
     
     1.  Click on your username in the lower left corner and select **Sign Out**. <!-- insert graphic -->
         
+        <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/auth-enable-logout-user.gif" rel="attachment wp-att-3533"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/auth-enable-logout-user-800x430.gif" alt="auth-enable-logout-user" width="800" height="430" class="alignnone size-large wp-image-3533" /></a>
+        
         You can now log in as another user.
     
     To log out of the DCOS CLI:

@@ -54,7 +54,7 @@ In this step you install the Marathon load balancer. The Marathon load balancer 
 
 1.  Add the [multiverse][6] package repository:
     
-        $ dcos config prepend package.sources https://github.com/mesosphere/multiverse/archive/version-1.x.zip
+        $ dcos config prepend package.sources https://github.com/mesosphere/multiverse/archive/version-2.x.zip
         
 
 2.  Update your package repository list:

@@ -111,7 +111,7 @@ Here are the <span class="caps">DCOS</span> cluster configuration parameters. Th
 - cloud_dynamic
   : For cloud environment only: Use an external proxy for the masters that lives at a static IP, for example, haproxy or nginx. For example, `"master_discovery":"cloud_dynamic"`. -->
 
-*   static : Use the Mesos agents to discover the masters by giving each agent a static list of master IPs. The masters must not change <span class="caps">IP</span> addresses, and if a master is replaced, the new master must take the old master’s <span class="caps">IP</span> address. For example, `"master_discovery":"static"`. * master_list : *For <span class="caps">DCOS</span> <span class="caps">1.3</span> and later:* Specify a <span class="caps">JSON</span>-formatted list of your static master <span class="caps">IP</span> addresses. This must be specified in <span class="caps">JSON</span> list format. For example, `"master_list": "["172.17.10.101", "172.17.10.102", "172.17.10.103"]"`.
+*   static : Use the Mesos agents to discover the masters by giving each agent a static list of master IPs. The masters must not change <span class="caps">IP</span> addresses, and if a master is replaced, the new master must take the old master’s <span class="caps">IP</span> address. For example, `"master_discovery":"static"`. * master_list : *For <span class="caps">DCOS</span> <span class="caps">1.3</span> and later:* Specify a <span class="caps">JSON</span>-formatted list of your static master <span class="caps">IP</span> addresses. This must be specified in <span class="caps">JSON</span> list format. For example, `"master_list": "[\"172.17.10.101\", \"172.17.10.102\", \"172.17.10.103\"]"`.
 
 <!-- REmoved CM3. 
 - vrrp
@@ -127,9 +127,11 @@ Here are the <span class="caps">DCOS</span> cluster configuration parameters. Th
     : If you've set your auth to PASS, specify the same password that you set in your configuration file. For example, `"keepalived_pass":"$MY_STRONG_PASSWORD"`.
     
   - keepalived_virtual_ipaddress
-    : Specify the VIP in use by your keepalived cluster. For example, `"keepalived_virtual_ipaddress":"67.34.242.55"`. --> <!-- 
+    : Specify the VIP in use by your keepalived cluster. For example, `"keepalived_virtual_ipaddress":"67.34.242.55"`. -->
 
-<a name="master-lb"></a>master_lb <!-- master_lb "it depends" on what you set "master_discovery" to. this is deprecated in CM.3 
+<!-- 
+<a name="master-lb"></a>master_lb
+<!-- master_lb "it depends" on what you set "master_discovery" to. this is deprecated in CM.3 
 
 : *For DCOS 1.2 and earlier:* This parameter specifies the IP address of the load balancer in front of the Mesos masters that distributes workloads. This address is used to access the DCOS web interface. For example, `"master_lb": "10.10.20.1"`. -->
 
@@ -147,7 +149,7 @@ Here are the <span class="caps">DCOS</span> cluster configuration parameters. Th
 
 <a name="resolvers"></a>resolvers
 
-:   This required parameters specifies a <span class="caps">JSON</span>-formatted list of <span class="caps">DNS</span> resolvers for your <span class="caps">DCOS</span> host nodes or accept the default value of `["8.8.8.8"]`. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them. If you have no internal hostnames to resolve, it is acceptable to set this to a public nameserver like Google or <span class="caps">AWS.</span> For example, `"resolvers": "["8.8.8.8", "8.8.4.4"]"`.
+:   This required parameters specifies a <span class="caps">JSON</span>-formatted list of <span class="caps">DNS</span> resolvers for your <span class="caps">DCOS</span> host nodes or accept the default value of `[\"8.8.8.8\"]`. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them. If you have no internal hostnames to resolve, it is acceptable to set this to a public nameserver like Google or <span class="caps">AWS.</span> For example, `"resolvers": "[\"8.8.8.8\", \"8.8.4.4\"]"`.
     
     *Caution:* If you set the `resolvers` parameter incorrectly, you will permanently damage your configuration and have to reinstall <span class="caps">DCOS.</span>
 
@@ -182,8 +184,8 @@ For more information, see <a href="https://open.mesosphere.com/reference/mesos-m
         "exhibitor_fs_config_dir":"<path-to-exhibitor-config>",
         "exhibitor_storage_backend":"shared_filesystem",
         "master_discovery":"static",
-        "master_list":"["<master-ip-1>","<master-ip-2>","<master-ip-3>"]",
-        "resolvers": "["<dns-resolver-1>"]"
+        "master_list":"[\"<master-ip-1>\",\"<master-ip-2>\",\"<master-ip-3>\"]",
+        "resolvers": "[\"<dns-resolver-1>\"]"
         }
         
 
@@ -202,16 +204,16 @@ For more information, see <a href="https://open.mesosphere.com/reference/mesos-m
         :   Specify a comma-separated list of one or more Zookeeper node <span class="caps">IP</span> addresses to use for configuring the internal Exhibitor instances. Exhibitor uses this Zookeeper cluster to orchestrate it’s configuration.
     
     *   master_list
-        :   Specify a <span class="caps">JSON</span>-formatted list of your static master <span class="caps">IP</span> addresses. This must be specified in <span class="caps">JSON</span> list format. You must include the escape characters (``) as shown in the template.
+        :   Specify a <span class="caps">JSON</span>-formatted list of your static master <span class="caps">IP</span> addresses. This must be specified in <span class="caps">JSON</span> list format. You must include the escape characters (`\`) as shown in the template.
     
     *   <a name="resolvers"></a>resolvers
-        :   Specify a <span class="caps">JSON</span>-formatted list of <span class="caps">DNS</span> servers for your <span class="caps">DCOS</span> host nodes. You must include the escape characters (``) as shown in the template. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them.
+        :   Specify a <span class="caps">JSON</span>-formatted list of <span class="caps">DNS</span> servers for your <span class="caps">DCOS</span> host nodes. You must include the escape characters (`\`) as shown in the template. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them.
         
         *Caution:* If you set the `resolvers` parameter incorrectly, you will permanently damage your configuration and have to reinstall <span class="caps">DCOS.</span>
 
 3.  Save as `genconf/config.json`.
 
-#### <a name="zk"></a><span class="caps">DCOS</span> cluster with 3 masters, Exhibitor/Zookeeper backed by another Zookeeper instance, Google <span class="caps">DNS</span>, boostrap host running nginx to distribute binaries {#a-namezkadcos-cluster-with-3-masters-exhibitorzookeeper-backed-by-another-zookeeper-instance-google-dns-boostrap-host-running-nginx-to-distribute-binaries}
+#### <a name="zk"></a><span class="caps">DCOS</span> cluster with 3 masters, Exhibitor/Zookeeper backed by another Zookeeper instance, Google <span class="caps">DNS</span>, bootstrap host running nginx to distribute binaries {#a-namezkadcos-cluster-with-3-masters-exhibitorzookeeper-backed-by-another-zookeeper-instance-google-dns-boostrap-host-running-nginx-to-distribute-binaries}
 
     {
         "cluster_name": "zk-example",
@@ -220,8 +222,8 @@ For more information, see <a href="https://open.mesosphere.com/reference/mesos-m
         "exhibitor_zk_path": "/zk-example",
         "bootstrap_url":"http://10.10.10.1/serve",
         "master_discovery":"static",
-        "master_list": "["10.0.0.2","10.0.0.3","10.0.0.4"]",
-        "resolvers": "["8.8.8.8", "8.8.4.4"]",
+        "master_list": "[\"10.0.0.2\",\"10.0.0.3\",\"10.0.0.4\"]",
+        "resolvers": "[\"8.8.8.8\", \"8.8.4.4\"]",
         "roles": "slave_public",
         "weights": "slave_public=1"
     }
@@ -242,7 +244,7 @@ For more information, see <a href="https://open.mesosphere.com/reference/mesos-m
         "keepalived_interface":"eth1",
         "keepalived_pass":"$MY_STRONG_PASSWORD",
         "keepalived_virtual_ipaddress":"67.34.242.55",
-        "resolvers": "["8.8.8.8", "8.8.4.4"]",
+        "resolvers": "[\"8.8.8.8\", \"8.8.4.4\"]",
         "master_lb": "10.10.20.1",
         "roles": "slave_public",
         "weights": "slave_public=1"
@@ -258,7 +260,7 @@ For more information, see <a href="https://open.mesosphere.com/reference/mesos-m
         "exhibitor_fs_config_dir": "/shared-mount",
         "repository_url":"file:///tmp/dcos",
         "bootstrap_url":"file:///tmp/dcos",
-        "resolvers": "["10.10.5.1", "10.10.6.1"]",
+        "resolvers": "[\"10.10.5.1\", \"10.10.6.1\"]",
         "master_lb": "10.10.20.1",
         "roles": "slave_public",
         "weights": "slave_public=1"
@@ -278,7 +280,7 @@ For more information, see <a href="https://open.mesosphere.com/reference/mesos-m
         "s3_prefix": "s3-example",
         "repository_url":"file:///tmp/dcos",
         "bootstrap_url":"file:///tmp/dcos",
-        "resolvers": "["169.254.169.253"]",
+        "resolvers": "[\"169.254.169.253\"]",
         "master_lb": "10.10.20.1",
         "roles": "slave_public",
         "weights": "slave_public=1"

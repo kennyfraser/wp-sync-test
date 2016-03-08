@@ -15,9 +15,9 @@ hide_from_related: true
 ---
 The automated GUI installation method provides a simple graphical interface that guides you through the installation of DCOS Enterprise Edition.
 
-**Important:** This installation method supports a minimal DCOS configuration set that includes ZooKeeper for shared storage and a static master list, a known master IP addresses that is not behind a VPN.
-
 This installation method uses a bootstrap node to administer the DCOS installation across your cluster. The bootstrap node uses an SSH key to connect to each node in your cluster to automate the DCOS installation.
+
+**Important:** This installation method supports a minimal DCOS configuration set that includes ZooKeeper for shared storage and a static master list, a known master IP addresses that is not behind a VPN.
 
 To use the automated GUI installation method:
 
@@ -25,26 +25,30 @@ To use the automated GUI installation method:
 *   Cluster nodes must have SSH enabled and ports open from the bootstrap node
 *   The bootstrap node must have an unencrypted SSH key that can be used to authenticate with the cluster nodes over SSH
 
-[installing-enterprise-edition-hardware] [installing-enterprise-edition-software]
+[installing-enterprise-edition-hardware] [installing-enterprise-edition-software-ssh]
 
-# Step 3: Installation
+# Install DCOS
 
 **Important:** Encrypted SSH keys are not supported.
 
 1.  From your terminal, start the DCOS installer with this command.
     
         $ sudo bash dcos_generate_config.ee.sh --web
+        
+    
+    Here is an example of the output.
+    
         Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
         16:36:09 dcos_installer.action_lib.prettyprint:: ====> Starting DCOS installer in web mode
         16:36:09 root:: Starting server ('0.0.0.0', 9000)
         
     
-    You can add the verbose (`-v`) flag to see the debug output:
+    **Tip:** You can add the verbose (`-v`) flag to see the debug output:
     
         $ sudo bash dcos_generate_config.ee.sh --web -v
         
 
-2.  Launch the DCOS web installer in your browser at: `http://<public-ip>:9000`.
+2.  Launch the DCOS web installer in your browser at: `http://<bootstrap-node-public-ip>:9000`.
 
 3.  Click **Begin Installation**.
     
@@ -54,13 +58,13 @@ To use the automated GUI installation method:
     
     ### Deployment Settings
     
-    **Master IP Address List**
-    :   Specify a comma-separated list of your static internal master IP addresses.
+    **Master Private IP List**
+    :   Specify a comma-separated list of your internal static master IP addresses.
     
-    **Agent IP Address List**
-    :   Specify a comma-separated list of your static internal agent IP addresses.
+    **Agent Private IP List**
+    :   Specify a comma-separated list of your internal static agent IP addresses.
     
-    **Public IP Address**
+    **Master Public IP**
     :   Specify a publicly accessible proxy IP address to one of your master nodes. If you don't have a proxy or already have access to the network where you are deploying this cluster, you can use one of the master IP's that you specified in the master list. This proxy IP address is used to access the DCOS web interface on the master node after DCOS is installed.
     
     **SSH Username**
@@ -70,7 +74,7 @@ To use the automated GUI installation method:
     :   Specify the port to SSH to, for example `22`. SSH Key
     
     **SSH Key**
-    :   Specify the SSH key with access to your master IPs.
+    :   Specify the private SSH key with access to your master IPs.
     
     ### DCOS Environment Settings
     
@@ -80,22 +84,28 @@ To use the automated GUI installation method:
     **Password**
     :   Specify the administrator password. This password is required for using DCOS.
     
-    **Bootstrapping ZooKeeper IP Address(es)**
+    **ZooKeeper for Exhibitor Private IP**
     
-    :   Specify a comma-separated list of one or more ZooKeeper node IP addresses to use for configuring the internal Exhibitor instances. Exhibitor uses this ZooKeeper cluster to orchestrate its configuration.
+    :   Specify a comma-separated list of one or more ZooKeeper host IP addresses to use for configuring the internal Exhibitor instances. Exhibitor uses this ZooKeeper cluster to orchestrate its configuration.
         
         **Important:** Multiple ZooKeeper instances are recommended for failover in production environments.
     
-    **Bootstrapping ZooKeeper Port**
+    **ZooKeeper for Exhibitor Port**
     :   Specify the ZooKeeper port. For example, `2181`.
     
     **Upstream DNS Servers**
-    :   Specify the DNS servers, which can be on your private network or the public internet. Caution: If you set this parameter incorrectly you will have to reinstall DCOS. For more information about service discovery, see this [documentation][1].
+    
+    :   Specify a comma-separated list of DNS resolvers for your DCOS cluster nodes. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them. If you have no internal hostnames to resolve, you can set this to a public nameserver like Google or AWS. In the example file above, the <a href="https://developers.google.com/speed/public-dns/docs/using" target="_blank">Google Public DNS IP addresses (IPv4)</a> are specified (`8.8.8.8` and `8.8.4.4`).
+        
+        *Caution:* If you set this parameter incorrectly you will have to reinstall DCOS. For more information about service discovery, see this [documentation][1].
     
     **IP Detect Script**
-    :   Specify an IP detect script to broadcast the IP address of each node across the cluster. For more information, see the [documentation][2].
+    
+    :   Choose an IP detect script from the dropdown to broadcast the IP address of each node across the cluster. Each node in a DCOS cluster has a unique IP address that is used to communicate between nodes in the cluster. The IP detect script prints the unique IPv4 address of a node to STDOUT each time DCOS is started on the node.
+        
+        **Important:** The IP address of a node must not change after DCOS is installed on the node. For example, the IP address must not change when a node is rebooted or if the DHCP lease is renewed. If the IP address of a node does change, the node must be wiped and reinstalled.
 
-5.  Click **Run Pre-Flight**. The preflight script validates that your cluster is installable. This step can take up to 15 minutes to complete. If errors any errors are found, fix and then click **Retry**.
+5.  Click **Run Pre-Flight**. The preflight script installs the cluster [prerequisites][2] and validates that your cluster is installable. This step can take up to 15 minutes to complete. If errors any errors are found, fix and then click **Retry**.
     
     **Important:** If you exit your GUI installation before launching DCOS, you must do this before reinstalling:
     
@@ -107,6 +117,8 @@ To use the automated GUI installation method:
 6.  Click **Deploy** to install DCOS on your cluster. If errors any errors are found, fix and then click **Retry**.
     
     <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-deploy1.png" rel="attachment wp-att-3195"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/ui-installer-deploy1.png" alt="ui-installer-deploy1" width="628" height="406" class="alignnone size-full wp-image-3195" /></a>
+    
+    **Tip:** This step might take a few minutes, depending on the size of your cluster.
 
 7.  Click **Run Post-Flight**. If errors any errors are found, fix and then click **Retry**.
     
@@ -131,5 +143,5 @@ To use the automated GUI installation method:
 Now you can [assign user roles][3].
 
  [1]: ../installing-enterprise-edition-1-6/#scrollNav-3
- [2]: ../configuration-parameters-1-6/
+ [2]: ../step-2-cluster-prerequisites/
  [3]: ../security-and-authentication/managing-authorization/

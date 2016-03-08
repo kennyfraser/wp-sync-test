@@ -13,8 +13,6 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-**Disclaimer:** This service is available at the alpha level and not recommended for Mesosphere DCOS production systems.
-
 Spark is a fast, general-purpose cluster computing system that makes parallel jobs easy to write.
 
 # <a name="sparkinstall"></a>Installing Spark on DCOS

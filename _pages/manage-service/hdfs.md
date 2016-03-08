@@ -13,8 +13,6 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-**Disclaimer:** HDFS is available at the beta level and not recommended for Mesosphere DCOS production systems.
-
 HDFS can be used to store and distribute data across your entire Mesosphere DCOS cluster.
 
 # <a name="hdfsinstall"></a>Installing HDFS on DCOS

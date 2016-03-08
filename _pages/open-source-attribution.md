@@ -13,8 +13,6 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-Random, multifile change # 1
-
 Below is a list of third party open source software which is provided by Mesosphere in connection with Mesosphere DCOS:
 
 *   [analytics-python][1]

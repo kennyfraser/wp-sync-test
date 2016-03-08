@@ -13,6 +13,8 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: true
 ---
+**Disclaimer:** This is an alpha feature and is meant for testing purposes only.
+
 To provide external user access to DCOS, you can authenticate users that are defined in an LDAP (Lightweight Directory Access Protocol) registry. You can then provide users with a single sign-on (SSO), granting them access the authorized services in your DCOS datacenter.
 
 When a user logs in and provides an LDAP user name and password, that information is used to connect to an LDAP server and authenticate a user. If successful, the DCOS authentication issues a session credential with the user's distinguished name.
@@ -29,7 +31,7 @@ LDAP users are uniquely identified by [distinguished names (DN)][1]. To authenti
     
     2.  Click **Add Directory**.
         
-        <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/auth-ldap.png" rel="attachment wp-att-3223"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/auth-ldap.png" alt="auth-ldap" width="513" height="515" class="alignnone size-full wp-image-3223" /></a>
+        <a href="https://docs.mesosphere.com/wp-content/uploads/2016/02/auth-ldap.gif" rel="attachment wp-att-3790"><img src="https://docs.mesosphere.com/wp-content/uploads/2016/02/auth-ldap-800x484.gif" alt="auth-ldap" width="800" height="484" class="alignnone size-large wp-image-3790" /></a>
         
         **Host** Specify the hostname or IP address.
         
@@ -44,9 +46,9 @@ LDAP users are uniquely identified by [distinguished names (DN)][1]. To authenti
         
         **Connection options:** By default, a plain text connection is opened and then [STARTTLS][2] attempts to upgrade this plain text connection to an encrypted SSL/TLS connection. If this upgrade to encryption fails, the plain text connection continues. You can control this by choosing one of these options:
         
-        *   **Use SSL/TLS socket** Use SSL/TLS socket for opening a connection. <!-- in 1.7 "Use SSL/TLS socket for opening a connection" -->
+        *   **Use SSL/TLS socket for all connections** Use SSL/TLS socket for opening a connection.
         
-        *   **Enforce startTLS** Abort connection if STARTTLS fails. If the upgrade to an encrypted SSL/TLS connection fails, the authentication operation is terminated. <!-- In 1.7 "Abort connection if STARTTLS fails" -->
+        *   **Use startTLS for all connections** Abort connection if STARTTLS fails. If the upgrade to an encrypted SSL/TLS connection fails, the authentication operation is terminated.
 
 2.  Click **Add**.
 

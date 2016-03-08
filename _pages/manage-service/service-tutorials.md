@@ -7,7 +7,7 @@ layout: page
 permalink: >
   https://dev-mesosphere-documentation.pantheonsite.io/manage-service/service-tutorials/
 published: true
-menu_order: 100
+menu_order: 102
 page_options_require_authentication: false
 page_options_show_link_unauthenticated: false
 hide_from_navigation: false

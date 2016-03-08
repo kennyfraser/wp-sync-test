@@ -7,7 +7,7 @@ layout: page
 permalink: >
   https://dev-mesosphere-documentation.pantheonsite.io/manage-service/marathon/
 published: true
-menu_order: 8
+menu_order: 10
 page_options_require_authentication: false
 page_options_show_link_unauthenticated: false
 hide_from_navigation: false
@@ -29,7 +29,8 @@ You can create additional Marathon instances for specific users by using the ins
     
     *   To install a single Marathon instance, enter this command from the DCOS CLI:
         
-        $ dcos package install marathon
+            $ dcos package install marathon
+            
         
         By default the DCOS Service name is `marathon-user`. <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/marathontask.png" rel="attachment wp-att-1410"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/marathontask.png" alt="marathontask" width="709" height="44" class="alignnone size-full wp-image-1410" /></a>
     

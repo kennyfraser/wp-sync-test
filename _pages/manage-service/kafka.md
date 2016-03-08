@@ -13,8 +13,6 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-**Disclaimer:** This service is available at the alpha level and not recommended for Mesosphere DCOS production systems.
-
 Kafka is a distributed, partitioned, replicated commit log service. It provides the functionality of a messaging system, but with a unique design. The Kafka DCOS service also has its own CLI as well.
 
 # <a name="kafkainstall"></a>Installing Kafka on DCOS

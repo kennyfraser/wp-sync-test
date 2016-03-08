@@ -13,8 +13,6 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-**Disclaimer:** This service is available at the alpha level and not recommended for Mesosphere DCOS production systems.
-
 Cassandra is an open source distributed database management system designed to handle large amounts of data across many commodity servers, providing high availability with no single point of failure. Cassandra is well suited to run on Mesos due to its peer-to-peer architecture. Cassandra has great features that back today’s web applications with its horizontal scalability, no single point of failure, and a simple query language (CQL).
 
 For information about how Mesos DNS is implemented for the Cassandra DCOS service, see the <a href="http://mesosphere.github.io/cassandra-mesos/docs/mesos-dns.html" target="_blank">Cassandra-Mesos documentation</a>.
