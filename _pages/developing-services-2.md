@@ -12,11 +12,9 @@ hide_from_related: false
 ---
 This section describes the developer-specific DCOS components, explaining what is necessary to package and provide your own service on DCOS.
 
-The Mesosphere Datacenter Operating System (DCOS) provides the optimal user experience possible for orchestrating and managing a datacenter. If you are an Apache Mesos developer, you are already familiar with developing a framework. DCOS extends Apache Mesos by including a web interface for health checks and monitoring, a command-line, a service packaging description, and a [repository][1] that catalogs those packages.
+The Mesosphere Datacenter Operating System (DCOS) provides the optimal user experience possible for orchestrating and managing a datacenter. If you are an Apache Mesos developer, you are already familiar with developing a framework. DCOS extends Apache Mesos by including a web interface for health checks and monitoring, a command-line, a service packaging description, and a [repository][1] that catalogs those packages. <!-- ### 
 
-<!-- ### <a name="integration"></a>DCOS Integration Points -->
-
-<!-- 
+<a name="integration"></a>DCOS Integration Points --> <!-- 
 There are a number of ways to extend the capabilities of the DCOS all of which center around datacenter services.  DCOS defines 2 types of services:
 
 * **Native** - An Apache Mesos framework which requires registration with the `mesos-master`.
@@ -97,12 +95,12 @@ Each DCOS service contains `package.json`, `config.json`, and `marathon.json` fi
     
     *   The `postInstallNotes` parameter gives the user information they'll need after the installation. Focus on providing a documentation URL, a tutorial, or both. For example:
         
-              "postInstallNotes": "Thank you for installing the Unicorn service.\n\n\tDocumentation: http://<your-url>\n\tIssues: https://github.com/",
+              "postInstallNotes": "Thank you for installing the Unicorn service.nntDocumentation: http://<your-url>ntIssues: https://github.com/",
             
     
     *   The `postUninstallNotes` parameter gives the user information they'll need after an uninstall. For example, further cleanup before reinstalling again and a link to the details. A common issue is cleaning up ZooKeeper entries. For example:
         
-              postUninstallNotes": "The Unicorn DCOS Service has been uninstalled and will no longer run.\nPlease follow the instructions at http://<your-URL> to clean up any persisted state" }
+              postUninstallNotes": "The Unicorn DCOS Service has been uninstalled and will no longer run.nPlease follow the instructions at http://<your-URL> to clean up any persisted state" }
             
 
 *   **config.json**
@@ -176,21 +174,9 @@ Run the package repository scripts in numerical order. If a script passes you ca
 
 4.  Run the `3-validate-index.sh` script to validate the `index.json` file.
 
-For more information about the JSON files, see the [Universe Readme][2] page.
+For more information about the JSON files, see the [Universe Readme][2] page. <!-- ### 
 
-<!-- 
-### <a name="dcoscli"></a>DCOS CLI
-
- The 
-
-command.json
-schema
-access the service endpoint
-
-Developer notes:   There currently is no support for service dependencies
-
-over riding the framework-name (service endpoint)?
--->
+<a name="dcoscli"></a>DCOS CLI The command.json schema access the service endpoint Developer notes: There currently is no support for service dependencies over riding the framework-name (service endpoint)? -->
 
  [1]: https://docs.mesosphere.com/overview/universe/
  [2]: https://github.com/mesosphere/universe
