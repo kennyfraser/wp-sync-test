@@ -6,7 +6,7 @@ post_date: 2016-01-12 16:20:18
 post_excerpt: ""
 layout: page
 permalink: >
-  https://docs.mesosphere.com/getting-started/installing/installing-enterprise-edition-1-5/
+  https://docs.mesosphere.com/installing-enterprise-edition-1-5/
 published: true
 page_options_topic_page:
   - ""
