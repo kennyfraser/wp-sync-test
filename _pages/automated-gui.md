@@ -17,7 +17,7 @@ The automated GUI installation method provides a simple graphical interface that
 
 This installation method uses a bootstrap node to administer the DCOS installation across your cluster. The bootstrap node uses an SSH key to connect to each node in your cluster to automate the DCOS installation.
 
-**Important:** This installation method supports a minimal DCOS configuration set that includes ZooKeeper for shared storage and a static master list, a known master IP addresses that is not behind a VPN.
+**Important:** This installation method supports a minimal DCOS configuration set that includes ZooKeeper for shared storage and a static master list, and publicly accessible master IP addresses.
 
 To use the automated GUI installation method:
 
