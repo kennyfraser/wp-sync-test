@@ -1,4 +1,5 @@
 ---
+UID: 56df35279ffb0
 post_title: Managing DCOS Clusters in AWS
 post_excerpt: ""
 layout: page

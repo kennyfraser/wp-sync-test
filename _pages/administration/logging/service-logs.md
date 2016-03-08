@@ -1,4 +1,5 @@
 ---
+UID: 56df352a7a1c9
 post_title: Service Logging
 post_excerpt: ""
 layout: page

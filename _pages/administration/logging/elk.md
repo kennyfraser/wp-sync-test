@@ -1,4 +1,5 @@
 ---
+UID: 56df352aaf66d
 post_title: Log Management with ELK
 post_excerpt: ""
 layout: page

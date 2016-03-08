@@ -1,4 +1,5 @@
 ---
+UID: 56df3527db9b5
 post_title: Changing the DCOS master node
 post_excerpt: ""
 layout: page

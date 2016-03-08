@@ -1,4 +1,5 @@
 ---
+UID: 56df3528121a4
 post_title: HDFS Capacity
 post_excerpt: ""
 layout: page

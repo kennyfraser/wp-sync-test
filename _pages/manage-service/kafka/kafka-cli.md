@@ -1,4 +1,5 @@
 ---
+UID: 56df3527ed3a7
 post_title: Kafka CLI
 post_excerpt: ""
 layout: page

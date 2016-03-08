@@ -1,4 +1,5 @@
 ---
+UID: 56df3527c4ec1
 post_title: Monitoring DCOS Services
 post_excerpt: ""
 layout: page

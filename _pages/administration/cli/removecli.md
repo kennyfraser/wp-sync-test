@@ -1,4 +1,5 @@
 ---
+UID: 56df352ac6905
 post_title: Uninstalling the CLI
 post_excerpt: ""
 layout: page

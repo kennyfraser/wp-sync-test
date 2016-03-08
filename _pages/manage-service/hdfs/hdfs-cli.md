@@ -1,4 +1,5 @@
 ---
+UID: 56df3528020a5
 post_title: HDFS CLI
 post_excerpt: ""
 layout: page

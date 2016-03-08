@@ -1,4 +1,5 @@
 ---
+UID: 56df35277e3c9
 post_title: Deploying a local package repository
 post_excerpt: ""
 layout: page

@@ -1,4 +1,5 @@
 ---
+UID: 56df35282e92f
 post_title: Running multiple Cassandra instances
 post_excerpt: ""
 layout: page

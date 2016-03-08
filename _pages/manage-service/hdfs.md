@@ -1,4 +1,5 @@
 ---
+UID: 56df3529f34d6
 post_title: HDFS
 post_excerpt: ""
 layout: page

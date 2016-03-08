@@ -1,4 +1,5 @@
 ---
+UID: 56df352a848b3
 post_title: Logging
 post_excerpt: ""
 layout: page

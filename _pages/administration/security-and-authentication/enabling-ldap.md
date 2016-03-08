@@ -1,4 +1,5 @@
 ---
+UID: 56df35254d7c2
 post_title: Enabling LDAP
 post_excerpt: ""
 layout: page

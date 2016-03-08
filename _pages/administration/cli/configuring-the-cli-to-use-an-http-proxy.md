@@ -1,4 +1,5 @@
 ---
+UID: 56df35288350f
 post_title: Configuring the CLI to use an HTTP Proxy
 post_excerpt: ""
 layout: page

@@ -1,4 +1,5 @@
 ---
+UID: 56df35264b452
 post_title: Installing Enterprise Edition
 post_excerpt: ""
 layout: page

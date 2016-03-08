@@ -1,4 +1,5 @@
 ---
+UID: 56df3529d940c
 post_title: Kubernetes
 post_excerpt: ""
 layout: page

@@ -1,4 +1,5 @@
 ---
+UID: 56df3524f1c59
 post_title: DCOS 1.6
 post_excerpt: ""
 layout: page

@@ -1,4 +1,5 @@
 ---
+UID: 56df3525ebc13
 post_title: 'Step 1: Create a script for IP address discovery'
 post_excerpt: ""
 layout: page
