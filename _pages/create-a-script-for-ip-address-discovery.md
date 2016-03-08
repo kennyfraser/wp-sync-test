@@ -9,7 +9,7 @@ permalink: >
   https://docs.mesosphere.com/installing-enterprise-edition-1-5/create-a-script-for-ip-address-discovery/
 published: true
 page_options_require_authentication: false
-hide_from_navigation: true
+hide_from_navigation: false
 hide_from_related: true
 page_options_show_link_unauthenticated: false
 ---
@@ -78,4 +78,4 @@ In this step you create an IP detect script on your bootstrap node to broadcast 
 [Configure and install DCOS][2]
 
  [1]: ../getting-started/installing/installing-enterprise-edition/dcos-cleanup-script/
- [2]: ../step-4-configure-and-install-dcos/
+ [2]: ../configure-and-install-dcos/
