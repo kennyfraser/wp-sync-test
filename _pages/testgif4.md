@@ -10,6 +10,9 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
+
+edit 1
+
 ![Alt text][1] ![Alt text][2]
 
  [1]: /assets/images/test1.gif
