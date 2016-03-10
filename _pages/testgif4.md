@@ -15,5 +15,5 @@ edit 4
 
 ![Alt text][1] ![Alt text][2]
 
- [1]: /assets/images/test4.gif
- [2]: /assets/images/test4.gif "Optional title attribute"
+ [1]: /assets/images/lb2.jpg
+ [2]: /assets/images/services.png "Optional title attribute"
