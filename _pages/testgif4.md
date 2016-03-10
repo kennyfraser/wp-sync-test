@@ -11,9 +11,9 @@ hide_from_navigation: false
 hide_from_related: false
 ---
 
-edit 1
+edit 4
 
 ![Alt text][1] ![Alt text][2]
 
- [1]: /assets/images/test1.gif
- [2]: /assets/images/test1.gif "Optional title attribute"
+ [1]: /assets/images/test4.gif
+ [2]: /assets/images/test4.gif "Optional title attribute"
