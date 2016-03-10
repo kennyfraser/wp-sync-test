@@ -19,4 +19,4 @@ This is image test number 1
 ![Alt text][2]
 
  [1]: /assets/images/test1.gif
- [2]: /assets/images/test1.gif "Optional title attribute"
+ [2]: http://local.mesodocs.com/assets/images/test1.gif "Optional title attribute"
