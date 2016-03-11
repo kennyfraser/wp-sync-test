@@ -58,4 +58,6 @@ hide_from_navigation:
   - "0"
 hide_from_related:
   - "0"
+UID:
+  - 56e32fb25932f
 ---
