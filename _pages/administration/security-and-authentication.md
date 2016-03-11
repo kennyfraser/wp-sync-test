@@ -1,14 +1,29 @@
 ---
-UID: 56df3debbe7cd
+ID: 3230
 post_title: Security and Authentication
+author: Joel Hamill
+post_date: 2016-03-08 14:03:47
 post_excerpt: ""
 layout: page
+permalink: >
+  https://dev-mesosphere-documentation.pantheonsite.io/administration/security-and-authentication/
 published: true
-menu_order: 4
-page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
-hide_from_navigation: false
-hide_from_related: true
+header:
+  - "0"
+page_header:
+  - "0"
+page_options_require_authentication:
+  - ""
+hide_from_navigation:
+  - ""
+hide_from_related:
+  - "1"
+UID:
+  - 56df3debbe7cd
+page_options_show_link_unauthenticated:
+  - ""
+menu_order:
+  - "4"
 ---
 You can enable authorization and authentication in your datacenter with DCOS Enterprise Edition. Authentication is managed through the DCOS web interface. Authorization is defined by access control lists (ACLs). The Admin Router enforces access control.
 

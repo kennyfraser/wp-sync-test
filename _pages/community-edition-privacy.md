@@ -1,16 +1,30 @@
 ---
-UID: 56df3dee9d7b9
+ID: 589
 post_title: >
   Mesosphere DCOS Community Edition
   Privacy Policy
+author: Joel Hamill
+post_date: 2016-03-08 14:03:52
 post_excerpt: ""
 layout: page
+permalink: >
+  https://dev-mesosphere-documentation.pantheonsite.io/mesosphere-dcos-community-edition-privacy-policy/
 published: true
-menu_order: 9
-page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
-hide_from_navigation: false
-hide_from_related: false
+import_src:
+  - >
+    mesosphere-docs/community-edition-privacy.md
+UID:
+  - 56df3dee9d7b9
+page_options_require_authentication:
+  - ""
+page_options_show_link_unauthenticated:
+  - ""
+hide_from_navigation:
+  - ""
+hide_from_related:
+  - ""
+menu_order:
+  - "9"
 ---
 We at Mesosphere know you care about how your personal information is used and shared, and we take your privacy seriously. Please read the following to learn more about our Privacy Policy. By using or accessing the Mesosphere DCOS Community Edition in any manner, you acknowledge that you accept the practices and policies outlined in this Privacy Policy, and you hereby consent that we will collect, use, and share your information in the following ways.
 

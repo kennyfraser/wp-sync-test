@@ -1,14 +1,37 @@
 ---
-UID: 56df3deb71a93
+ID: 3407
 post_title: Automated GUI installation
+author: Joel Hamill
+post_date: 2016-03-08 14:04:04
 post_excerpt: ""
 layout: page
+permalink: >
+  https://dev-mesosphere-documentation.pantheonsite.io/getting-started/installing/installing-enterprise-edition/automated-gui-installation/
 published: true
-menu_order: 1
-page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
-hide_from_navigation: false
-hide_from_related: false
+header:
+  - "1"
+page_header:
+  - "0"
+page_options_require_authentication:
+  - ""
+hide_from_navigation:
+  - ""
+hide_from_related:
+  - ""
+header_0_background:
+  - fill
+header_0_background_fill_style:
+  - dark
+header_0_logo_style:
+  - color-light
+header_0_navigation_style:
+  - light
+UID:
+  - 56df3deb71a93
+page_options_show_link_unauthenticated:
+  - ""
+menu_order:
+  - "1"
 ---
 The automated GUI installation method provides a simple graphical interface that guides you through the installation of DCOS Enterprise Edition.
 

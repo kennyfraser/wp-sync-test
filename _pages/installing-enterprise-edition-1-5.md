@@ -1,13 +1,70 @@
 ---
-UID: 56df3ded113ea
+ID: 2343
 post_title: Installing Enterprise Edition (1.5)
+author: Joel Hamill
+post_date: 2016-03-08 14:04:11
 post_excerpt: ""
 layout: page
+permalink: >
+  https://dev-mesosphere-documentation.pantheonsite.io/installing-enterprise-edition-1-5/
 published: true
-menu_order: 103
-page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
-hide_from_navigation: false
-hide_from_related: true
+header_0_background:
+  - fill
+header_0_background_fill_style:
+  - dark
+header_0_logo_style:
+  - color-light
+header_0_navigation_style:
+  - light
+header:
+  - "1"
+page_header_0_show_page_header:
+  - "0"
+page_header_0_size:
+  - default
+page_header_0_fill_screen:
+  - "0"
+page_header_0_background:
+  - transparent
+page_header_0_show_background_image:
+  - "0"
+page_header_0_show_background_video:
+  - "0"
+page_header_0_headline:
+  - ""
+page_header_0_headline_size:
+  - default
+page_header_0_description:
+  - ""
+page_header_0_description_size:
+  - default
+page_header_0_show_image:
+  - "0"
+page_header_0_content_alignment:
+  - center
+page_header_0_content_style:
+  - dark
+page_header_0_actions:
+  - "0"
+page_header_0_show_actions_footnote:
+  - "0"
+page_header_0_show_video:
+  - "0"
+page_header:
+  - "1"
+page_options_topic_page:
+  - ""
+page_options_require_authentication:
+  - ""
+page_options_show_link_unauthenticated:
+  - ""
+hide_from_navigation:
+  - ""
+hide_from_related:
+  - "1"
+UID:
+  - 56df3ded113ea
+menu_order:
+  - "103"
 ---
 [installing-enterprise-edition-overview] [installing-enterprise-edition-hardware] [installing-enterprise-edition-software]

@@ -1,14 +1,28 @@
 ---
-UID: 56df3dee92836
+ID: 592
 post_title: Mesosphere Open Source Attribution
+author: Joel Hamill
+post_date: 2016-03-08 14:04:17
 post_excerpt: ""
 layout: page
+permalink: >
+  https://dev-mesosphere-documentation.pantheonsite.io/mesosphere-open-source-attribution/
 published: true
-menu_order: 15
-page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
-hide_from_navigation: false
-hide_from_related: false
+import_src:
+  - >
+    mesosphere-docs/open-source-attribution.md
+UID:
+  - 56df3dee92836
+page_options_require_authentication:
+  - ""
+page_options_show_link_unauthenticated:
+  - ""
+hide_from_navigation:
+  - ""
+hide_from_related:
+  - ""
+menu_order:
+  - "15"
 ---
 Below is a list of third party open source software which is provided by Mesosphere in connection with Mesosphere DCOS:
 

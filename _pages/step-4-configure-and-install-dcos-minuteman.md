@@ -1,14 +1,69 @@
 ---
-UID: 56df3debc4269
+ID: 3162
 post_title: 'Step 4: Configure and install DCOS (Minuteman)'
+author: Joel Hamill
+post_date: 2016-03-08 14:04:17
 post_excerpt: ""
 layout: page
+permalink: >
+  https://dev-mesosphere-documentation.pantheonsite.io/step-4-configure-and-install-dcos-minuteman/
 published: true
-menu_order: 100
-page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
-hide_from_navigation: true
-hide_from_related: true
+header:
+  - "1"
+page_header:
+  - "1"
+page_options_require_authentication:
+  - ""
+hide_from_navigation:
+  - "1"
+hide_from_related:
+  - "1"
+header_0_background:
+  - fill
+header_0_background_fill_style:
+  - dark
+header_0_logo_style:
+  - color-light
+header_0_navigation_style:
+  - light
+page_header_0_show_page_header:
+  - "0"
+page_header_0_size:
+  - default
+page_header_0_fill_screen:
+  - "0"
+page_header_0_background:
+  - transparent
+page_header_0_show_background_image:
+  - "0"
+page_header_0_show_background_video:
+  - "0"
+page_header_0_headline:
+  - ""
+page_header_0_headline_size:
+  - default
+page_header_0_description:
+  - ""
+page_header_0_description_size:
+  - default
+page_header_0_show_image:
+  - "0"
+page_header_0_content_alignment:
+  - center
+page_header_0_content_style:
+  - dark
+page_header_0_actions:
+  - "0"
+page_header_0_show_actions_footnote:
+  - "0"
+page_header_0_show_video:
+  - "0"
+UID:
+  - 56df3debc4269
+page_options_show_link_unauthenticated:
+  - ""
+menu_order:
+  - "100"
 ---
 Choose your DCOS installation method:
 
@@ -196,7 +251,7 @@ In this step you create a YAML configuration file that is customized for your en
     
     **resolvers**
     
-    :   Specify a JSON-formatted list of DNS servers for your DCOS host nodes. You must include the escape characters (`\`) as shown in the template. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them.
+    :   Specify a JSON-formatted list of DNS servers for your DCOS host nodes. You must include the escape characters (``) as shown in the template. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them.
         
         *Caution:* If you set the `resolvers` parameter incorrectly, you will permanently damage your configuration and have to reinstall DCOS.
     
@@ -378,7 +433,7 @@ In this step you create a YAML configuration file that is customized for your en
     
     **resolvers**
     
-    :   Specify a JSON-formatted list of DNS servers for your DCOS host nodes. You must include the escape characters (`\`) as shown in the template. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them.
+    :   Specify a JSON-formatted list of DNS servers for your DCOS host nodes. You must include the escape characters (``) as shown in the template. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them.
         
         *Caution:* If you set the `resolvers` parameter incorrectly, you will permanently damage your configuration and have to reinstall DCOS.
     

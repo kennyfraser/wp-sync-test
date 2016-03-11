@@ -1,14 +1,71 @@
 ---
-UID: 56df3ded7ab1f
+ID: 1936
 post_title: Configuration parameters (1.4)
+author: Joel Hamill
+post_date: 2016-03-08 14:04:10
 post_excerpt: ""
 layout: page
+permalink: >
+  https://dev-mesosphere-documentation.pantheonsite.io/installing-enterprise-edition-1-4/configuration-parameters-1-4/
 published: true
-menu_order: 1
-page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
-hide_from_navigation: false
-hide_from_related: true
+header_0_background:
+  - fill
+header_0_background_fill_style:
+  - dark
+header_0_logo_style:
+  - color-light
+header_0_navigation_style:
+  - light
+header:
+  - "1"
+page_header_0_show_page_header:
+  - "0"
+page_header_0_size:
+  - default
+page_header_0_fill_screen:
+  - "0"
+page_header_0_background:
+  - transparent
+page_header_0_show_background_image:
+  - "0"
+page_header_0_show_background_video:
+  - "0"
+page_header_0_headline:
+  - ""
+page_header_0_headline_size:
+  - default
+page_header_0_description:
+  - ""
+page_header_0_description_size:
+  - default
+page_header_0_show_image:
+  - "0"
+page_header_0_content_alignment:
+  - center
+page_header_0_content_style:
+  - dark
+page_header_0_actions:
+  - "0"
+page_header_0_show_actions_footnote:
+  - "0"
+page_header_0_show_video:
+  - "0"
+page_header:
+  - "1"
+page_options_topic_page:
+  - ""
+page_options_require_authentication:
+  - ""
+hide_from_navigation:
+  - ""
+hide_from_related:
+  - "1"
+UID:
+  - 56df3ded7ab1f
+page_options_show_link_unauthenticated:
+  - ""
+menu_order:
+  - "1"
 ---
 Here are the DCOS cluster configuration parameters. The DCOS build uses these parameters to create a customized install.
 
@@ -93,7 +150,7 @@ This parameter specifies the Mesos master discovery method:
 
 *   **static** Use the Mesos agents to discover the masters by giving each agent a static list of master IPs. The masters must not change IP addresses, and if a master is replaced, the new master must take the old master's IP address. For example, `"master_discovery":"static"`.
     
-    *   **master_list** Specify a JSON-formatted list of your static master IP addresses. This must be specified in JSON list format. For example, `"master_list": "[\"172.17.10.101\", \"172.17.10.102\", \"172.17.10.103\"]"`.
+    *   **master_list** Specify a JSON-formatted list of your static master IP addresses. This must be specified in JSON list format. For example, `"master_list": "["172.17.10.101", "172.17.10.102", "172.17.10.103"]"`.
 
 *   **vrrp** Use keepalived with a VIP. You are required to maintain this VIP infrastructure. For example, `"master_discovery":"vrrp"`.
     
@@ -111,7 +168,7 @@ This parameter specifies the number of Mesos masters in your DCOS cluster. For e
 
 # <a name="resolvers"></a>resolvers
 
-This required parameters specifies a JSON-formatted list of DNS resolvers for your DCOS host nodes or accept the default value of `[\"8.8.8.8\"]`. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them. If you have no internal hostnames to resolve, it is acceptable to set this to a public nameserver like Google or AWS. For example, `"resolvers": "[\"8.8.8.8\", \"8.8.4.4\"]"`.
+This required parameters specifies a JSON-formatted list of DNS resolvers for your DCOS host nodes or accept the default value of `["8.8.8.8"]`. Set this parameter to the most authoritative nameservers that you have. If you want to resolve internal hostnames, set it to a nameserver that can resolve them. If you have no internal hostnames to resolve, it is acceptable to set this to a public nameserver like Google or AWS. For example, `"resolvers": "["8.8.8.8", "8.8.4.4"]"`.
 
     *Caution:* If you set the `resolvers` parameter incorrectly, you will permanently damage your configuration and have to reinstall DCOS.
     
@@ -146,7 +203,7 @@ This parameter specifies the priority of the role or accept the default value of
         "keepalived_interface":"eth1",
         "keepalived_pass":"$MY_STRONG_PASSWORD",
         "keepalived_virtual_ipaddress":"67.34.242.55",
-        "resolvers": "[\"8.8.8.8\", \"8.8.4.4\"]",
+        "resolvers": "["8.8.8.8", "8.8.4.4"]",
         "roles": "slave_public",
         "weights": "slave_public=1"
     }
@@ -160,7 +217,7 @@ This parameter specifies the priority of the role or accept the default value of
         "exhibitor_storage_backend": "shared_filesystem",
         "exhibitor_fs_config_dir": "/shared-mount",
         "bootstrap_url":"file:///tmp/dcos",
-        "resolvers": "[\"10.10.5.1\", \"10.10.6.1\"]",
+        "resolvers": "["10.10.5.1", "10.10.6.1"]",
         "roles": "slave_public",
         "weights": "slave_public=1"
     }
@@ -178,7 +235,7 @@ This parameter specifies the priority of the role or accept the default value of
         "s3_bucket": "mybucket",
         "s3_prefix": "s3-example",
         "bootstrap_url":"file:///tmp/dcos",
-        "resolvers": "[\"169.254.169.253\"]",
+        "resolvers": "["169.254.169.253"]",
         "roles": "slave_public",
         "weights": "slave_public=1"
     }

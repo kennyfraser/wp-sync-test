@@ -1,14 +1,69 @@
 ---
-UID: 56df3dec39594
+ID: 3088
 post_title: 'Step 1: Create a script for IP address discovery'
+author: Joel Hamill
+post_date: 2016-03-08 14:04:11
 post_excerpt: ""
 layout: page
+permalink: >
+  https://dev-mesosphere-documentation.pantheonsite.io/installing-enterprise-edition-1-5/step-1-create-a-script-for-ip-address-discovery/
 published: true
-menu_order: 3
-page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
-hide_from_navigation: false
-hide_from_related: true
+header_0_background:
+  - fill
+header_0_background_fill_style:
+  - dark
+header_0_logo_style:
+  - color-light
+header_0_navigation_style:
+  - light
+header:
+  - "1"
+page_header_0_show_page_header:
+  - "0"
+page_header_0_size:
+  - default
+page_header_0_fill_screen:
+  - "0"
+page_header_0_background:
+  - transparent
+page_header_0_show_background_image:
+  - "0"
+page_header_0_show_background_video:
+  - "0"
+page_header_0_headline:
+  - ""
+page_header_0_headline_size:
+  - default
+page_header_0_description:
+  - ""
+page_header_0_description_size:
+  - default
+page_header_0_show_image:
+  - "0"
+page_header_0_content_alignment:
+  - center
+page_header_0_content_style:
+  - dark
+page_header_0_actions:
+  - "0"
+page_header_0_show_actions_footnote:
+  - "0"
+page_header_0_show_video:
+  - "0"
+page_header:
+  - "1"
+page_options_require_authentication:
+  - ""
+hide_from_navigation:
+  - ""
+hide_from_related:
+  - "1"
+UID:
+  - 56df3dec39594
+page_options_show_link_unauthenticated:
+  - ""
+menu_order:
+  - "3"
 ---
 In this step you create an IP detect script on your bootstrap node to broadcast the IP address of each node across the cluster. Each node in a DCOS cluster has a unique IP address that is used to communicate between nodes in the cluster. The IP detect script prints the unique IPv4 address of a node to STDOUT each time DCOS is started on the node.
 
@@ -53,7 +108,7 @@ In this step you create an IP detect script on your bootstrap node to broadcast 
             #!/usr/bin/env bash
             set -o nounset -o errexit
             export PATH=/usr/sbin:/usr/bin:$PATH
-            echo $(ip addr show eth0 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
+            echo $(ip addr show eth0 | grep -Eo '[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}' | head -1)
             
     
     *   #### Use the network route to the Mesos master
@@ -67,7 +122,7 @@ In this step you create an IP detect script on your bootstrap node to broadcast 
             
             MASTER_IP=172.28.128.3
             
-            echo $(/usr/sbin/ip route show to match 172.28.128.3 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | tail -1)
+            echo $(/usr/sbin/ip route show to match 172.28.128.3 | grep -Eo '[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}' | tail -1)
             
 
 ## Next step

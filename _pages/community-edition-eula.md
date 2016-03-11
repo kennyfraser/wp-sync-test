@@ -1,16 +1,74 @@
 ---
-UID: 56df3deeacfb5
+ID: 588
 post_title: >
   Mesosphere DCOS Community Edition End
   User License Agreement
+author: Joel Hamill
+post_date: 2016-03-08 14:03:52
 post_excerpt: ""
 layout: page
+permalink: >
+  https://dev-mesosphere-documentation.pantheonsite.io/mesosphere-dcos-community-edition-end-user-license-agreement/
 published: true
-menu_order: 8
-page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
-hide_from_navigation: false
-hide_from_related: false
+import_src:
+  - >
+    mesosphere-docs/community-edition-eula.md
+header_0_background:
+  - fill
+header_0_background_fill_style:
+  - dark
+header_0_logo_style:
+  - color-light
+header_0_navigation_style:
+  - light
+header:
+  - "1"
+page_header_0_show_page_header:
+  - "0"
+page_header_0_size:
+  - default
+page_header_0_fill_screen:
+  - "0"
+page_header_0_background:
+  - transparent
+page_header_0_show_background_image:
+  - "0"
+page_header_0_show_background_video:
+  - "0"
+page_header_0_headline:
+  - ""
+page_header_0_headline_size:
+  - default
+page_header_0_description:
+  - ""
+page_header_0_description_size:
+  - default
+page_header_0_show_image:
+  - "0"
+page_header_0_content_alignment:
+  - center
+page_header_0_content_style:
+  - dark
+page_header_0_actions:
+  - "0"
+page_header_0_show_actions_footnote:
+  - "0"
+page_header_0_show_video:
+  - "0"
+page_header:
+  - "1"
+page_options_require_authentication:
+  - ""
+hide_from_navigation:
+  - ""
+hide_from_related:
+  - ""
+UID:
+  - 56df3deeacfb5
+page_options_show_link_unauthenticated:
+  - ""
+menu_order:
+  - "8"
 ---
 **WARNING** BY CLICKING ON THE "ACCEPT" BUTTON, YOU OR THE ENTITY THAT YOU REPRESENT ("LICENSEE") ARE UNCONDITIONALLY CONSENTING TO BE BOUND BY AND ARE BECOMING A PARTY TO THE DCOS COMMUNITY EDITION LICENSE AGREEMENT CONSISTING OF THIS PARAGRAPH AND THE FOLLOWING TERMS (THE "AGREEMENT") WITH RESPECT TO THIS PRODUCT. IF A SEPARATE WRITTEN LICENSE AGREEMENT WITH RESPECT TO THIS PRODUCT EXISTS BETWEEN LICENSEE AND MESOSPHERE, INC. (“MESOSPHERE”), THE TERMS OF THAT WRITTEN LICENSE AGREEMENT (EXCLUDING THE PRE-PRINTED TERMS OF ANY PURCHASE ORDER, CONFIRMATION OR SIMILAR DOCUMENT, WHICH WILL HAVE NO EFFECT AND WILL NOT BE CONSIDERED AGREED TO BY MESOSPHERE) SHALL TAKE PRECEDENCE OVER THIS AGREEMENT, AND YOU ACKNOWLEDGE THAT LICENSEE IS BOUND BY THE TERMS OF THAT WRITTEN LICENSE AGREEMENT. PROVISION OF THE PRODUCT IS CONDITIONED ON, AND LICENSEE'S INSTALLATION OR USE OF THIS PRODUCT SHALL CONSTITUTE, LICENSEE’S ASSENT TO THE TERMS OF THIS AGREEMENT OR OF SUCH EXISTING SEPARATE WRITTEN LICENSE AGREEMENT TO THE EXCLUSION OF ALL OTHER TERMS. IF THESE TERMS ARE CONSIDERED AN OFFER, ACCEPTANCE IS EXPRESSLY LIMITED TO SUCH TERMS. IF LICENSEE DOES NOT UNCONDITIONALLY AGREE TO THE FOREGOING, CLICK THE "CANCEL" BUTTON AND THE INSTALLATION PROCESS WILL NOT CONTINUE. IF YOU CONTINUE WITH INSTALLATION, YOU ARE REPRESENTING AND WARRANTING THAT YOU ARE AUTHORIZED TO BIND LICENSEE.
 

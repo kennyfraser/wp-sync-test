@@ -1,14 +1,73 @@
 ---
-UID: 56df3def870b0
+ID: 526
 post_title: Filtering Task Logs with Splunk
+author: Joel Hamill
+post_date: 2016-03-08 14:03:42
 post_excerpt: ""
 layout: page
+permalink: >
+  https://dev-mesosphere-documentation.pantheonsite.io/administration/logging/filtering-task-logs-with-splunk/
 published: true
-menu_order: 6
-page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
-hide_from_navigation: false
-hide_from_related: false
+import_src:
+  - mesosphere-docs/logging/filter-splunk.md
+header_0_background:
+  - fill
+header_0_background_fill_style:
+  - dark
+header_0_logo_style:
+  - color-light
+header_0_navigation_style:
+  - light
+header:
+  - "1"
+page_header_0_show_page_header:
+  - "0"
+page_header_0_size:
+  - default
+page_header_0_fill_screen:
+  - "0"
+page_header_0_background:
+  - transparent
+page_header_0_show_background_image:
+  - "0"
+page_header_0_show_background_video:
+  - "0"
+page_header_0_headline:
+  - ""
+page_header_0_headline_size:
+  - default
+page_header_0_description:
+  - ""
+page_header_0_description_size:
+  - default
+page_header_0_show_image:
+  - "0"
+page_header_0_content_alignment:
+  - center
+page_header_0_content_style:
+  - dark
+page_header_0_actions:
+  - "0"
+page_header_0_show_actions_footnote:
+  - "0"
+page_header_0_show_video:
+  - "0"
+page_header:
+  - "1"
+page_options_topic_page:
+  - ""
+page_options_require_authentication:
+  - ""
+UID:
+  - 56df3def870b0
+page_options_show_link_unauthenticated:
+  - ""
+hide_from_navigation:
+  - ""
+hide_from_related:
+  - ""
+menu_order:
+  - "6"
 ---
 The file system paths of DCOS task logs contain information such as the agent ID, framework ID, and executor ID. You can use this information to filter the log output for specific tasks, applications, or agents.
 

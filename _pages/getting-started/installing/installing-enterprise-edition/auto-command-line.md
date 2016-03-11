@@ -1,14 +1,29 @@
 ---
-UID: 56df3deb60d0c
+ID: 3410
 post_title: Automated command line installation
+author: Joel Hamill
+post_date: 2016-03-08 14:04:03
 post_excerpt: ""
 layout: page
+permalink: >
+  https://dev-mesosphere-documentation.pantheonsite.io/getting-started/installing/installing-enterprise-edition/automated-command-line-installation/
 published: true
-menu_order: 2
-page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
-hide_from_navigation: false
-hide_from_related: false
+header:
+  - "0"
+page_header:
+  - "0"
+page_options_require_authentication:
+  - ""
+hide_from_navigation:
+  - ""
+hide_from_related:
+  - ""
+UID:
+  - 56df3deb60d0c
+page_options_show_link_unauthenticated:
+  - ""
+menu_order:
+  - "2"
 ---
 The automated command line installation method provides a guided installation of DCOS Enterprise Edition.
 

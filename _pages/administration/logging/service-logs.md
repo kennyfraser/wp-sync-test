@@ -1,14 +1,73 @@
 ---
-UID: 56df3def7af97
+ID: 528
 post_title: Service Logging
+author: Joel Hamill
+post_date: 2016-03-08 14:03:43
 post_excerpt: ""
 layout: page
+permalink: >
+  https://dev-mesosphere-documentation.pantheonsite.io/administration/logging/service-logging/
 published: true
-menu_order: 2
-page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
-hide_from_navigation: false
-hide_from_related: false
+import_src:
+  - mesosphere-docs/logging/service-logs.md
+header_0_background:
+  - fill
+header_0_background_fill_style:
+  - dark
+header_0_logo_style:
+  - color-light
+header_0_navigation_style:
+  - light
+header:
+  - "1"
+page_header_0_show_page_header:
+  - "0"
+page_header_0_size:
+  - default
+page_header_0_fill_screen:
+  - "0"
+page_header_0_background:
+  - transparent
+page_header_0_show_background_image:
+  - "0"
+page_header_0_show_background_video:
+  - "0"
+page_header_0_headline:
+  - ""
+page_header_0_headline_size:
+  - default
+page_header_0_description:
+  - ""
+page_header_0_description_size:
+  - default
+page_header_0_show_image:
+  - "0"
+page_header_0_content_alignment:
+  - center
+page_header_0_content_style:
+  - dark
+page_header_0_actions:
+  - "0"
+page_header_0_show_actions_footnote:
+  - "0"
+page_header_0_show_video:
+  - "0"
+page_header:
+  - "1"
+page_options_topic_page:
+  - ""
+page_options_require_authentication:
+  - ""
+hide_from_navigation:
+  - ""
+hide_from_related:
+  - ""
+UID:
+  - 56df3def7af97
+page_options_show_link_unauthenticated:
+  - ""
+menu_order:
+  - "2"
 ---
 The DCOS services run as Mesos tasks and print their logs to `stdout` and `stderr`. The log content varies from service to service, but usually includes task launches, resource accepts, and resource rejects.
 

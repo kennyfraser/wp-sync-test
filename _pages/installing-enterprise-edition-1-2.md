@@ -1,14 +1,71 @@
 ---
-UID: 56df3ded317a3
+ID: 2303
 post_title: Installing Enterprise Edition (1.2)
+author: Joel Hamill
+post_date: 2016-03-08 14:04:07
 post_excerpt: ""
 layout: page
+permalink: >
+  https://dev-mesosphere-documentation.pantheonsite.io/installing-enterprise-edition-1-2/
 published: true
-menu_order: 100
-page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
-hide_from_navigation: false
-hide_from_related: false
+header_0_background:
+  - fill
+header_0_background_fill_style:
+  - dark
+header_0_logo_style:
+  - color-light
+header_0_navigation_style:
+  - light
+header:
+  - "1"
+page_header_0_show_page_header:
+  - "0"
+page_header_0_size:
+  - default
+page_header_0_fill_screen:
+  - "0"
+page_header_0_background:
+  - transparent
+page_header_0_show_background_image:
+  - "0"
+page_header_0_show_background_video:
+  - "0"
+page_header_0_headline:
+  - ""
+page_header_0_headline_size:
+  - default
+page_header_0_description:
+  - ""
+page_header_0_description_size:
+  - default
+page_header_0_show_image:
+  - "0"
+page_header_0_content_alignment:
+  - center
+page_header_0_content_style:
+  - dark
+page_header_0_actions:
+  - "0"
+page_header_0_show_actions_footnote:
+  - "0"
+page_header_0_show_video:
+  - "0"
+page_header:
+  - "1"
+page_options_topic_page:
+  - ""
+page_options_require_authentication:
+  - ""
+page_options_show_link_unauthenticated:
+  - ""
+hide_from_navigation:
+  - ""
+hide_from_related:
+  - ""
+UID:
+  - 56df3ded317a3
+menu_order:
+  - "100"
 ---
 This topic provides instructions for installing <span class="caps">DCOS</span> in your environment by using a customized Bash install script.
 
@@ -134,7 +191,7 @@ In this step you create an <span class="caps">IP</span> detect script to broadca
         #!/usr/bin/env bash
         set -o nounset -o errexit
         export PATH=/usr/sbin:/usr/bin:$PATH
-        echo $(ip addr show eth0 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
+        echo $(ip addr show eth0 | grep -Eo '[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}' | head -1)
         
 
 *   #### Use the network route to the Mesos master {#use-the-network-route-to-the-mesos-master}
@@ -148,7 +205,7 @@ In this step you create an <span class="caps">IP</span> detect script to broadca
         
         MASTER_IP=172.28.128.3
         
-        echo $(/usr/sbin/ip route show to match 172.28.128.3 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | tail -1)
+        echo $(/usr/sbin/ip route show to match 172.28.128.3 | grep -Eo '[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}' | tail -1)
         
 
 * * *
@@ -170,7 +227,7 @@ Here is an example configuration, where the cluster name is `fs-example`, the nu
         "exhibitor_fs_config_dir": "/shared-mount",
         "repository_url":"file:///tmp/dcos",
         "bootstrap_url":"file:///tmp/dcos",
-        "resolvers": "[\"10.10.5.1\", \"10.10.6.1\"]",
+        "resolvers": "["10.10.5.1", "10.10.6.1"]",
         "master_lb": "10.10.20.1",
         "roles": "slave_public",
         "weights": "slave_public=1"

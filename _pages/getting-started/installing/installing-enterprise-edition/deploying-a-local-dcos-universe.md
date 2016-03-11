@@ -1,14 +1,71 @@
 ---
-UID: 56df3ded6e06b
+ID: 1947
 post_title: Deploying a local package repository
+author: Joel Hamill
+post_date: 2016-03-08 14:04:04
 post_excerpt: ""
 layout: page
+permalink: >
+  https://dev-mesosphere-documentation.pantheonsite.io/getting-started/installing/installing-enterprise-edition/deploying-a-local-package-repository/
 published: true
-menu_order: 200
-page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
-hide_from_navigation: false
-hide_from_related: false
+header_0_background:
+  - fill
+header_0_background_fill_style:
+  - dark
+header_0_logo_style:
+  - color-light
+header_0_navigation_style:
+  - light
+header:
+  - "1"
+page_header_0_show_page_header:
+  - "0"
+page_header_0_size:
+  - default
+page_header_0_fill_screen:
+  - "0"
+page_header_0_background:
+  - transparent
+page_header_0_show_background_image:
+  - "0"
+page_header_0_show_background_video:
+  - "0"
+page_header_0_headline:
+  - ""
+page_header_0_headline_size:
+  - default
+page_header_0_description:
+  - ""
+page_header_0_description_size:
+  - default
+page_header_0_show_image:
+  - "0"
+page_header_0_content_alignment:
+  - center
+page_header_0_content_style:
+  - dark
+page_header_0_actions:
+  - "0"
+page_header_0_show_actions_footnote:
+  - "0"
+page_header_0_show_video:
+  - "0"
+page_header:
+  - "1"
+page_options_topic_page:
+  - ""
+page_options_require_authentication:
+  - ""
+hide_from_navigation:
+  - ""
+hide_from_related:
+  - ""
+UID:
+  - 56df3ded6e06b
+page_options_show_link_unauthenticated:
+  - ""
+menu_order:
+  - "200"
 ---
 Follow these instructions to download and configure a local <a href="http://mesosphere.github.io/universe/" target="_blank">DCOS Universe</a>. After downloading the Universe components, you can install and run DCOS services on a datacenter without internet access.
 
@@ -45,7 +102,7 @@ To install the DCOS local Universe:
             $ docker run -d -p 5000:5000 --restart=always --name registry registry:2
             $ docker load < dcos-services/docker-images.tar # This will take a long time.
             $ for img in $(docker images | awk '{ print $1 ":" $2 }' | grep mesos); do
-                img_tag=$(ip addr show eth0 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1):5000/$img
+                img_tag=$(ip addr show eth0 | grep -Eo '[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}' | head -1):5000/$img
                 docker tag $img $img_tag
                 docker push $img_tag
               done

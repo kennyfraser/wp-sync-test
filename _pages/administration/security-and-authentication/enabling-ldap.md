@@ -1,14 +1,29 @@
 ---
-UID: 56df3debb5c64
+ID: 3283
 post_title: Enabling LDAP
+author: Joel Hamill
+post_date: 2016-03-08 14:03:47
 post_excerpt: ""
 layout: page
+permalink: >
+  https://dev-mesosphere-documentation.pantheonsite.io/administration/security-and-authentication/enabling-ldap/
 published: true
-menu_order: 2
-page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
-hide_from_navigation: false
-hide_from_related: true
+header:
+  - "0"
+page_header:
+  - "0"
+page_options_require_authentication:
+  - ""
+hide_from_navigation:
+  - ""
+hide_from_related:
+  - "1"
+UID:
+  - 56df3debb5c64
+page_options_show_link_unauthenticated:
+  - ""
+menu_order:
+  - "2"
 ---
 **Disclaimer:** This is an alpha feature and is meant for testing purposes only.
 

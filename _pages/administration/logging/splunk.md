@@ -1,14 +1,73 @@
 ---
-UID: 56df3def73d6c
+ID: 529
 post_title: Log Management with Splunk
+author: Joel Hamill
+post_date: 2016-03-08 14:03:43
 post_excerpt: ""
 layout: page
+permalink: >
+  https://dev-mesosphere-documentation.pantheonsite.io/administration/logging/log-management-with-splunk/
 published: true
-menu_order: 5
-page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
-hide_from_navigation: false
-hide_from_related: false
+import_src:
+  - mesosphere-docs/logging/splunk.md
+header_0_background:
+  - fill
+header_0_background_fill_style:
+  - dark
+header_0_logo_style:
+  - color-light
+header_0_navigation_style:
+  - light
+header:
+  - "1"
+page_header_0_show_page_header:
+  - "0"
+page_header_0_size:
+  - default
+page_header_0_fill_screen:
+  - "0"
+page_header_0_background:
+  - transparent
+page_header_0_show_background_image:
+  - "0"
+page_header_0_show_background_video:
+  - "0"
+page_header_0_headline:
+  - ""
+page_header_0_headline_size:
+  - default
+page_header_0_description:
+  - ""
+page_header_0_description_size:
+  - default
+page_header_0_show_image:
+  - "0"
+page_header_0_content_alignment:
+  - center
+page_header_0_content_style:
+  - dark
+page_header_0_actions:
+  - "0"
+page_header_0_show_actions_footnote:
+  - "0"
+page_header_0_show_video:
+  - "0"
+page_header:
+  - "1"
+page_options_topic_page:
+  - ""
+page_options_require_authentication:
+  - ""
+UID:
+  - 56df3def73d6c
+page_options_show_link_unauthenticated:
+  - ""
+hide_from_navigation:
+  - ""
+hide_from_related:
+  - ""
+menu_order:
+  - "5"
 ---
 You can pipe system and application logs from a Mesosphere DCOS cluster to your existing Splunk server.
 
@@ -36,11 +95,11 @@ For each Master node in your DCOS cluster:
     
         #!/bin/sh
         
-        exec journalctl --since=now -f \
-            -u dcos-exhibitor.service \
-            -u dcos-marathon.service \
-            -u dcos-mesos-dns.service \
-            -u dcos-mesos-master.service \
+        exec journalctl --since=now -f 
+            -u dcos-exhibitor.service 
+            -u dcos-marathon.service 
+            -u dcos-mesos-dns.service 
+            -u dcos-mesos-master.service 
             -u dcos-nginx.service
         
 
@@ -51,8 +110,8 @@ For each Master node in your DCOS cluster:
 
 3.  Add the script as an input to the forwarder:
     
-        "$SPLUNK_HOME/bin/splunk" add exec \
-            -source "$SPLUNK_HOME/bin/scripts/journald-master.sh" \
+        "$SPLUNK_HOME/bin/splunk" add exec 
+            -source "$SPLUNK_HOME/bin/scripts/journald-master.sh" 
             -interval 0
         
 
@@ -64,8 +123,8 @@ For each agent node in your DCOS cluster:
     
         #!/bin/sh
         
-        exec journalctl --since=now -f \
-            -u dcos-mesos-slave.service \
+        exec journalctl --since=now -f 
+            -u dcos-mesos-slave.service 
             -u dcos-mesos-slave-public.service
         
 
@@ -76,14 +135,14 @@ For each agent node in your DCOS cluster:
 
 3.  Add the script as an input to the forwarder:
     
-        "$SPLUNK_HOME/bin/splunk" add exec \
-            -source "$SPLUNK_HOME/bin/scripts/journald-agent.sh" \
+        "$SPLUNK_HOME/bin/splunk" add exec 
+            -source "$SPLUNK_HOME/bin/scripts/journald-agent.sh" 
             -interval 0
         
 
 4.  Add the task logs as inputs to the forwarder:
     
-        "$SPLUNK_HOME/bin/splunk" add monitor '/var/lib/mesos/slave' \
+        "$SPLUNK_HOME/bin/splunk" add monitor '/var/lib/mesos/slave' 
             -whitelist '/stdout$|/stderr$'
         
 

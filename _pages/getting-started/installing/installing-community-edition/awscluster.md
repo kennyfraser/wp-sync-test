@@ -1,14 +1,73 @@
 ---
-UID: 56df3defcb7cd
+ID: 511
 post_title: Installing on Amazon Web Services
+author: Joel Hamill
+post_date: 2016-03-08 14:04:02
 post_excerpt: ""
 layout: page
+permalink: >
+  https://dev-mesosphere-documentation.pantheonsite.io/getting-started/installing/installing-community-edition/installing-on-amazon-web-services/
 published: true
-menu_order: 1
-page_options_require_authentication: false
-page_options_show_link_unauthenticated: false
-hide_from_navigation: false
-hide_from_related: false
+import_src:
+  - mesosphere-docs/install/awscluster.md
+header_0_background:
+  - fill
+header_0_background_fill_style:
+  - dark
+header_0_logo_style:
+  - color-light
+header_0_navigation_style:
+  - light
+header:
+  - "1"
+page_header_0_show_page_header:
+  - "0"
+page_header_0_size:
+  - default
+page_header_0_fill_screen:
+  - "0"
+page_header_0_background:
+  - transparent
+page_header_0_show_background_image:
+  - "0"
+page_header_0_show_background_video:
+  - "0"
+page_header_0_headline:
+  - ""
+page_header_0_headline_size:
+  - default
+page_header_0_description:
+  - ""
+page_header_0_description_size:
+  - default
+page_header_0_show_image:
+  - "0"
+page_header_0_content_alignment:
+  - center
+page_header_0_content_style:
+  - dark
+page_header_0_actions:
+  - "0"
+page_header_0_show_actions_footnote:
+  - "0"
+page_header_0_show_video:
+  - "0"
+page_header:
+  - "1"
+page_options_topic_page:
+  - ""
+page_options_require_authentication:
+  - ""
+hide_from_navigation:
+  - ""
+hide_from_related:
+  - ""
+UID:
+  - 56df3defcb7cd
+page_options_show_link_unauthenticated:
+  - ""
+menu_order:
+  - "1"
 ---
 You can create a DCOS cluster for Amazon Web Services (AWS) by using the Mesosphere DCOS template on AWS CloudFormation.
 
@@ -31,10 +90,9 @@ The DCOS cloud templates are optimized to run Mesosphere DCOS. Depending on the 
 
 1.  Launch the <a href="http://mesosphere.com/amazon/setup" target="_blank">DCOS template</a> on CloudFormation and select the region and number of masters. You must have a key pair for your selected region.
     
-    <!-- a href="http://mesosphere.com/amazon/setup" target="_blank">DCOS template</a>: The current stable release. -->
+    <!-- a href="http://mesosphere.com/amazon/setup" target="_blank">DCOS template</a>: The current stable release. --> <!-- - 
     
-    <!-- - <a href="https://downloads.mesosphere.com/dcos/EarlyAccess/aws.html">DCOS 1.3 early access template</a> -->
-    
+    [DCOS 1.3 early access template][5] --> 
     **Important:** The Mesosphere template is configured for running DCOS. If you modify the template you might be unable to run certain packages on your DCOS cluster. For more information, see the <a href="https://support.mesosphere.com/hc/en-us/articles/205674655-How-can-I-modify-the-DCOS-template-on-AWS-CloudFormation-" target="_blank">Knowledge Base</a>.
 
 2.  On the **Select Template** page, accept the template specified for you and click **Next**.
@@ -73,7 +131,7 @@ Launch the DCOS web interface by entering the Mesos Master hostname:
     
     <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/awsscreenshot2.png" rel="attachment wp-att-1167"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/awsscreenshot2.png" alt="awsscreenshot2" width="621" height="146" class="alignnone size-full wp-image-1167" /></a>
 
-3.  [Install the DCOS Command-Line Interface (CLI)][5]. You must install the CLI to administer your DCOS cluster.
+3.  [Install the DCOS Command-Line Interface (CLI)][6]. You must install the CLI to administer your DCOS cluster.
     
     You also have the option to take a brief tutorial that walks you through the basics of using the Mesosphere DCOS. You can restart this tutorial anytime by clicking the signpost icon in the lower left corner.
     
@@ -81,11 +139,12 @@ Launch the DCOS web interface by entering the Mesos Master hostname:
 
 # Next steps
 
-*   Try out the [Deploying a Containerized App on a Public Node][6] tutorial.
+*   Try out the [Deploying a Containerized App on a Public Node][7] tutorial.
 
  [1]: ../administration/managing-a-dcos-cluster-in-aws/#scrollNav-1
  [2]: ../administration/dcosarchitecture/security/#scrollNav-1
  [3]: ../administration/dcosarchitecture/security/#scrollNav-2
  [4]: https://docs.mesosphere.com/administration/dcosarchitecture/security/#scrollNav-3
- [5]: https://docs.mesosphere.com/administration/introcli/cli/
- [6]: ../getting-started/tutorials/deploy-containerized-app/
+ [5]: https://downloads.mesosphere.com/dcos/EarlyAccess/aws.html
+ [6]: https://docs.mesosphere.com/administration/introcli/cli/
+ [7]: ../getting-started/tutorials/deploy-containerized-app/
