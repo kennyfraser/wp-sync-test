@@ -1,9 +1,9 @@
 ---
-post_title: Image Test 6
+post_title: Image Test 7
 layout: page
 published: true
 ---
 
 ![Alt text][1]
 
- [1]: /assets/images/large-image.jpg
+ [1]: /assets/images/chronos.jpg
