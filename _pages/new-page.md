@@ -58,5 +58,7 @@ hide_from_navigation:
   - "0"
 hide_from_related:
   - "0"
+UID:
+  - 56e6bd87317ec
 ---
-New Page
+New Page 1
