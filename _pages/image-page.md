@@ -18,4 +18,4 @@ hide_from_related: false
  [4]: /assets/images/learn-interface-ui.jpg
  [5]: /assets/images/learn-interface-ui-2.jpg
  [6]: /assets/images/services.png
- [7]: /assets/images/test1.jpg
+ [7]: /assets/images/test1.gif
