@@ -18,6 +18,8 @@ Added images
 
 <a href="https://dev-mesosphere-documentation.pantheon.io/wp-content/uploads/2016/03/mara-relnotes-1-6.png" rel="attachment wp-att-3925"><img src="https://dev-mesosphere-documentation.pantheon.io/wp-content/uploads/2016/03/mara-relnotes-1-6-150x150.png" alt="mara-relnotes-1-6" width="150" height="150" class="alignnone size-thumbnail wp-image-3925" /></a>
 
+![alt](/assets/images/ui-installer-success.png)
+
  [1]: /assets/images/tutorial-cust-domain.png
  [2]: /assets/images/auth-enable-delete-user.gif
  [3]: /assets/images/auth-enable-add-user2.gif
