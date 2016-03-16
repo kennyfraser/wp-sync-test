@@ -1,6 +1,6 @@
 ---
-UID: 56e6c8ce17b07
-post_title: New Page
+UID: 56e872b814064
+post_title: Parent x1 1
 post_excerpt: ""
 layout: page
 published: true
@@ -10,4 +10,3 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-Some text on this new page. git edit #1
