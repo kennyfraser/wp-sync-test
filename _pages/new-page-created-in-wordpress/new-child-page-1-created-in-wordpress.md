@@ -19,3 +19,5 @@ wp edit #2
 wp edit #3
 
 wp edit #4
+
+git edit #1
