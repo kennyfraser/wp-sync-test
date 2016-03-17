@@ -1,4 +1,5 @@
 ---
+UID: 56eb3bd40de64
 post_title: Command lines are graphics
 post_excerpt: ""
 layout: page
@@ -9,10 +10,8 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-
 Here is my content:
 
-
-![Alt text][1] 
+![Alt text][1]
 
  [1]: /assets/images/aws-template-board.jpg
