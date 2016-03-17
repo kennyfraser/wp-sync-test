@@ -13,3 +13,5 @@ hide_from_related: false
 New Child Page (1) Created in Wordpress
 
 wp edit #1
+
+wp edit #2
