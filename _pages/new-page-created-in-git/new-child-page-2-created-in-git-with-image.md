@@ -22,6 +22,8 @@ wp edit #3
 
 wp edit #4
 
+git edit #2
+
 ![alt text][1]
 
  [1]: /assets/images/chronos.jpg
