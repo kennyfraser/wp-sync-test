@@ -20,4 +20,6 @@ edit #3 from wordpress
 
 edit #4 from wordpress
 
-edit # 5 from git
+edit #5 from git
+
+edit #6 from git
