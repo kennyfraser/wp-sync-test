@@ -25,3 +25,5 @@ edit #5 from git
 edit #6 from wordpress
 
 edit #7 from wordpress
+
+edit #8 from wordpress
