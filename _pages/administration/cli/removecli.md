@@ -10,6 +10,7 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-1.  Delete your DCOS CLI installation directory.
-
-2.  Delete the hidden `.dcos` directory. This will delete the configuration files for your DCOS services. By default, this directory is located in your home directory. For example, `/Users/<your username>/.dcos/` on OS X or `C:Users<your username>.dcos` on Windows.
+<ol>
+<li><p>Delete your DCOS CLI installation directory.</p></li>
+<li><p>Delete the hidden <code>.dcos</code> directory. This will delete the configuration files for your DCOS services. By default, this directory is located in your home directory. For example, <code>/Users/&lt;your username&gt;/.dcos/</code> on OS X or <code>C:Users&lt;your username&gt;.dcos</code> on Windows.</p></li>
+</ol>

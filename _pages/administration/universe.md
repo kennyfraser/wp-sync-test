@@ -10,35 +10,22 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-DCOS services are Mesosphere-certified applications that are packaged and available from the public DCOS package repositories that are hosted on GitHub. Available DCOS services include Mesosphere-certified [Mesos frameworks][1] and other applications. A Mesos framework is the combination of a Mesos scheduler and an optional custom executor.
+<p>DCOS services are Mesosphere-certified applications that are packaged and available from the public DCOS package repositories that are hosted on GitHub. Available DCOS services include Mesosphere-certified <a href="https://github.com/mesosphere/universe">Mesos frameworks</a> and other applications. A Mesos framework is the combination of a Mesos scheduler and an optional custom executor.</p>
 
-DCOS services can be created by the community and by Mesosphere. The Mesosphere-certified services are [Cassandra][2], [Chronos][3], [HDFS][4], [Kafka][5], [Kubernetes][6], [Marathon][7], and [Spark][8].
+<p>DCOS services can be created by the community and by Mesosphere. The Mesosphere-certified services are <a href="../manage-service/cassandra/">Cassandra</a>, <a href="../manage-service/chronos/">Chronos</a>, <a href="../manage-service/hdfs/">HDFS</a>, <a href="../manage-service/kafka/">Kafka</a>, <a href="../manage-service/kubernetes/">Kubernetes</a>, <a href="../manage-service/marathon/">Marathon</a>, and <a href="../manage-service/spark/">Spark</a>.</p>
 
-You can install DCOS services on your cluster with a single command `dcos package install` after [installing the DCOS Command-Line Interface][9]. DCOS offers the Universe and Multiverse package repositories.
+<p>You can install DCOS services on your cluster with a single command <code>dcos package install</code> after <a href="https://docs.mesosphere.com/administration/introcli/cli/">installing the DCOS Command-Line Interface</a>. DCOS offers the Universe and Multiverse package repositories.</p>
 
-# Universe
+<h1>Universe</h1>
 
-DCOS Universe contains all services that have been certified by Mesosphere. For more information on DCOS Universe, see the [GitHub Universe repository][1].
+<p>DCOS Universe contains all services that have been certified by Mesosphere. For more information on DCOS Universe, see the <a href="https://github.com/mesosphere/universe">GitHub Universe repository</a>.</p>
 
-# Multiverse
+<h1>Multiverse</h1>
 
-DCOS Multiverse contains experimental services that are still being tested and are not guaranteed to work properly with DCOS. Multiverse services are not recommended for production clusters. For more information on DCOS Multiverse, see the [GitHub Multiverse repository][10].
+<p>DCOS Multiverse contains experimental services that are still being tested and are not guaranteed to work properly with DCOS. Multiverse services are not recommended for production clusters. For more information on DCOS Multiverse, see the <a href="https://github.com/mesosphere/multiverse">GitHub Multiverse repository</a>.</p>
 
-For more information on installing services, see [Managing DCOS services][11].
+<p>For more information on installing services, see <a href="../manage-service/">Managing DCOS services</a>.</p>
 
-# Next steps
+<h1>Next steps</h1>
 
-See the [installing a DCOS service][12] tutorial.
-
- [1]: https://github.com/mesosphere/universe
- [2]: ../manage-service/cassandra/
- [3]: ../manage-service/chronos/
- [4]: ../manage-service/hdfs/
- [5]: ../manage-service/kafka/
- [6]: ../manage-service/kubernetes/
- [7]: ../manage-service/marathon/
- [8]: ../manage-service/spark/
- [9]: https://docs.mesosphere.com/administration/introcli/cli/
- [10]: https://github.com/mesosphere/multiverse
- [11]: ../manage-service/
- [12]: ../overview/tutorials/installdatacenter/
+<p>See the <a href="../overview/tutorials/installdatacenter/">installing a DCOS service</a> tutorial.</p>

@@ -10,34 +10,33 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-# How can I check the Mesos-DNS version?
+<h1>How can I check the Mesos-DNS version?</h1>
 
-You can check the Mesos-DNS version with `mesos-dns -version`.
+<p>You can check the Mesos-DNS version with <code>mesos-dns -version</code>.</p>
 
-**Note:** We do not recommend upgrading Mesos-DNS independently of DCOS. Use the version of Mesos-DNS that shipped with your version of DCOS.
+<p><strong>Note:</strong> We do not recommend upgrading Mesos-DNS independently of DCOS. Use the version of Mesos-DNS that shipped with your version of DCOS.</p>
 
-# What if Mesos-DNS fails to launch?
+<h1>What if Mesos-DNS fails to launch?</h1>
 
-Check that port 53 and port 8123 are available and not in use by other processes.
+<p>Check that port 53 and port 8123 are available and not in use by other processes.</p>
 
-# What if my Agent nodes cannot connect to Mesos-DNS?
+<h1>What if my Agent nodes cannot connect to Mesos-DNS?</h1>
 
-*   Make sure that port 53 is not blocked by a firewall rule on your cluster.
+<ul>
+<li><p>Make sure that port 53 is not blocked by a firewall rule on your cluster.</p></li>
+<li><p>It is possible that the Master nodes are not running. Run <code>sudo systemctl status dcos-mesos-dns</code> and <code>sudo journalctl -u dcos-gen-resolvconf.service -n 200 -f</code> for more information about Mesos-DNS errors.</p></li>
+</ul>
 
-*   It is possible that the Master nodes are not running. Run `sudo systemctl status dcos-mesos-dns` and `sudo journalctl -u dcos-gen-resolvconf.service -n 200 -f` for more information about Mesos-DNS errors.
+<h1>How do I configure my DCOS cluster to communicate with external hosts and services?</h1>
 
-# How do I configure my DCOS cluster to communicate with external hosts and services?
+<p>For DNS requests for hostnames or services outside the DCOS cluster, Mesos-DNS will query an external nameserver. By default, Google's nameserver with IP address 8.8.8.8 will be used. If you need to configure a custom external name server, use the <a href="https://docs.mesosphere.com/getting-started/installing/installing-enterprise-edition/#config-json"><code>resolvers</code> parameter</a> when you first install DCOS.</p>
 
-For DNS requests for hostnames or services outside the DCOS cluster, Mesos-DNS will query an external nameserver. By default, Google's nameserver with IP address 8.8.8.8 will be used. If you need to configure a custom external name server, use the [`resolvers` parameter][1] when you first install DCOS.
+<p><strong>Important:</strong> External nameservers can only be set when you install DCOS. They cannot be changed after installation.</p>
 
-**Important:** External nameservers can only be set when you install DCOS. They cannot be changed after installation.
+<h1><a name="leader"></a>What is the difference between leader.mesos and master.mesos?</h1>
 
-# <a name="leader"></a>What is the difference between leader.mesos and master.mesos?
+<p>To query the leading master node, always query <code>leader.mesos</code>.</p>
 
-To query the leading master node, always query `leader.mesos`.
+<p>If you try to connect to <code>master.mesos</code> using HTTP, you will be automatically redirected to the leading master node.</p>
 
-If you try to connect to `master.mesos` using HTTP, you will be automatically redirected to the leading master node.
-
-However, if you try to query or connect to `master.mesos` using any method other than HTTP, the results will be unpredictable because the name will resolve to a random master node. For example, a service that attempts to register with `master.mesos` may communicate with a non-leading master node and will be unable to register as a service on the cluster.
-
- [1]: https://docs.mesosphere.com/getting-started/installing/installing-enterprise-edition/#config-json
+<p>However, if you try to query or connect to <code>master.mesos</code> using any method other than HTTP, the results will be unpredictable because the name will resolve to a random master node. For example, a service that attempts to register with <code>master.mesos</code> may communicate with a non-leading master node and will be unable to register as a service on the cluster.</p>

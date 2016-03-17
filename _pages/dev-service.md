@@ -10,11 +10,11 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-This section describes the developer-specific DCOS components, explaining what is necessary to package and provide your own service on DCOS.
+<p>This section describes the developer-specific DCOS components, explaining what is necessary to package and provide your own service on DCOS.</p>
 
-The Mesosphere Datacenter Operating System (DCOS) provides the optimal user experience possible for orchestrating and managing a datacenter. If you are an Apache Mesos developer, you are already familiar with developing a framework. DCOS extends Apache Mesos by including a web interface for health checks and monitoring, a command-line, a service packaging description, and a [repository][1] that catalogs those packages. <!-- ### 
+<p>The Mesosphere Datacenter Operating System (DCOS) provides the optimal user experience possible for orchestrating and managing a datacenter. If you are an Apache Mesos developer, you are already familiar with developing a framework. DCOS extends Apache Mesos by including a web interface for health checks and monitoring, a command-line, a service packaging description, and a <a href="https://docs.mesosphere.com/overview/universe/">repository</a> that catalogs those packages. &lt;!-- ### 
 
-<a name="integration"></a>DCOS Integration Points --> <!-- 
+<a name="integration"></a>DCOS Integration Points --&gt; <!-- 
 There are a number of ways to extend the capabilities of the DCOS all of which center around datacenter services.  DCOS defines 2 types of services:
 
 * **Native** - An Apache Mesos framework which requires registration with the `mesos-master`.
@@ -22,164 +22,173 @@ There are a number of ways to extend the capabilities of the DCOS all of which c
 
 All of these services are deployed by Marathon and must be packaged and added to the DCOS package repository for deployment.  For Native applications, it is also possible to extend the CLI and web interface.  Non-Native service integration support is coming soon.  For the rest of this topic a native service is assumed.  All of these services require packaging and a service catalog.
 
- -->
+ --></p>
 
-# <a name="universe"></a>Package Repositories
+<h1><a name="universe"></a>Package Repositories</h1>
 
-DCOS offers the Universe and Multiverse package repositories.
+<p>DCOS offers the Universe and Multiverse package repositories.</p>
 
-**Universe** DCOS Universe contains all services that have been certified by Mesosphere to be GA. For more information on DCOS Universe, see the [GitHub Universe repository][2].
+<p><strong>Universe</strong> DCOS Universe contains all services that have been certified by Mesosphere to be GA. For more information on DCOS Universe, see the <a href="https://github.com/mesosphere/universe">GitHub Universe repository</a>.</p>
 
-**Multiverse** DCOS Multiverse contains experimental services that are still being tested and are not guaranteed to work properly with DCOS. Multiverse services are not recommended for production clusters. For more information on DCOS Multiverse, see the [GitHub Multiverse repository][3].
+<p><strong>Multiverse</strong> DCOS Multiverse contains experimental services that are still being tested and are not guaranteed to work properly with DCOS. Multiverse services are not recommended for production clusters. For more information on DCOS Multiverse, see the <a href="https://github.com/mesosphere/multiverse">GitHub Multiverse repository</a>.</p>
 
-All services in the package repositories are required to meet a certain standard as defined by Mesosphere. For details on submitting a DCOS service, see [Contributing a package][4].
+<p>All services in the package repositories are required to meet a certain standard as defined by Mesosphere. For details on submitting a DCOS service, see <a href="https://github.com/mesosphere/universe#contributing-a-package">Contributing a package</a>.</p>
 
-# <a name="adminrouter"></a>Admin Router and web interface integration
+<h1><a name="adminrouter"></a>Admin Router and web interface integration</h1>
 
-By default, a DCOS service is deployed on a [private agent node][5]. To allow configuration control or monitoring of a service by a user, the admin router proxies calls on the master node to the service in a private node on the cluster. The HTTP service endpoint requires relative paths for artifacts and resources. The service endpoint can provide a web interface, a RESTful endpoint, or both. When creating a DCOS CLI subcommand it is common to have a RESTful endpoint to communicate with the scheduler service.
+<p>By default, a DCOS service is deployed on a <a href="/administration/dcosarchitecture/#scrollNav-2">private agent node</a>. To allow configuration control or monitoring of a service by a user, the admin router proxies calls on the master node to the service in a private node on the cluster. The HTTP service endpoint requires relative paths for artifacts and resources. The service endpoint can provide a web interface, a RESTful endpoint, or both. When creating a DCOS CLI subcommand it is common to have a RESTful endpoint to communicate with the scheduler service.</p>
 
-The integration to the admin router is automatic when a framework scheduler registers a `webui_url` during the registration process with the Mesos master. There are a couple of limitations:
+<p>The integration to the admin router is automatic when a framework scheduler registers a <code>webui_url</code> during the registration process with the Mesos master. There are a couple of limitations:</p>
 
-*   The URL must NOT end with a backslash (/). For example, this is good `internal.dcos.host.name:10000`, and this is bad `internal.dcos.host.name:10000/`.
-*   DCOS supports 1 URL and port.
+<ul>
+<li>The URL must NOT end with a backslash (/). For example, this is good <code>internal.dcos.host.name:10000</code>, and this is bad <code>internal.dcos.host.name:10000/</code>.</li>
+<li>DCOS supports 1 URL and port.</li>
+</ul>
 
-When the `webui_url` is provided, the service is listed on the DCOS web interface as a service with a link. That link is the admin router proxy URL name that is based on a naming convention of: `/service/<service_name>`. For example, `<dcos_host>/service/unicorn` is the proxy to the `webui_url`. If you provide a web interface, it will be integrated with the DCOS web interface and users can click the link for quick access to your service.
+<p>When the <code>webui_url</code> is provided, the service is listed on the DCOS web interface as a service with a link. That link is the admin router proxy URL name that is based on a naming convention of: <code>/service/&lt;service_name&gt;</code>. For example, <code>&lt;dcos_host&gt;/service/unicorn</code> is the proxy to the <code>webui_url</code>. If you provide a web interface, it will be integrated with the DCOS web interface and users can click the link for quick access to your service.</p>
 
-Service health check information is provided from the DCOS service tab when:
+<p>Service health check information is provided from the DCOS service tab when:</p>
 
-*   There are service health checks defined in the `marathon.json` file. For example:
+<ul>
+<li>There are service health checks defined in the <code>marathon.json</code> file. For example:</li>
+</ul>
 
->      "healthChecks": [
->      {
->        "path": "/",
->        "portIndex": 1,
->        "protocol": "HTTP",
->        "gracePeriodSeconds": 5,
->        "intervalSeconds": 60,
->        "timeoutSeconds": 10,
->        "maxConsecutiveFailures": 3
->      
->     
+<blockquote>
+<pre><code> "healthChecks": [
+ {
+   "path": "/",
+   "portIndex": 1,
+   "protocol": "HTTP",
+   "gracePeriodSeconds": 5,
+   "intervalSeconds": 60,
+   "timeoutSeconds": 10,
+   "maxConsecutiveFailures": 3
+ 
+</code></pre>
+</blockquote>
 
-*   The `framework-name` property in the `marathon.json` file is valid. For example:
-    
-          "id": "{{kafka.framework-name}}"
-        
+<ul>
+<li><p>The <code>framework-name</code> property in the <code>marathon.json</code> file is valid. For example:</p>
 
-*   The framework property in the `package.json` file is set to true. For example:
-    
-          "framework": true
-        
+<pre><code>  "id": "{{kafka.framework-name}}"
+</code></pre></li>
+<li><p>The framework property in the <code>package.json</code> file is set to true. For example:</p>
 
-You can provide public access to your service through the admin router or by deploying your own proxy or router to the public agent node. It is recommend to use the admin router for scheduler configuration and control allowing integration with the DCOS web interface. It is also recommended to provide a CLI subcommand for command-line control of a RESTful service endpoint for the scheduler.
+<pre><code>  "framework": true
+</code></pre></li>
+</ul>
 
-# DCOS Service structure
+<p>You can provide public access to your service through the admin router or by deploying your own proxy or router to the public agent node. It is recommend to use the admin router for scheduler configuration and control allowing integration with the DCOS web interface. It is also recommended to provide a CLI subcommand for command-line control of a RESTful service endpoint for the scheduler.</p>
 
-Each DCOS service contains `package.json`, `config.json`, and `marathon.json` files. The contents of these files are described in the DCOS Service specification.
+<h1>DCOS Service structure</h1>
+
+<p>Each DCOS service contains <code>package.json</code>, <code>config.json</code>, and <code>marathon.json</code> files. The contents of these files are described in the DCOS Service specification.</p>
 
 <!-- This information should be replaced with link to service spec. JSH 11/23/15 -->
 
-*   **package.json**
-    
-    *   The `"name": "cassandra",` parameter specified here defines the DCOS service name in the package repository. The must be the first parameter in the file. 
-    *   Focus the description on your service. Assume that all users are familiar with DCOS and Mesos.
-    *   The `tags` parameter is used for user searches (`dcos package search <criteria>`). Add tags that distinguish your service in some way. Avoid the following terms: Mesos, Mesosphere, DCOS, and datacenter. For example, the unicorns service could have:
-        
-              "tags": ["rainbows", "mythical"]
-            
-    
-    *   The `preInstallNotes` parameter gives the user information they'll need before starting the installation process. For example, you could explain what the resource requirements are for your service.
-        
-              "preInstallNotes":"Unicorns take 7 nodes with 1 core each and 1TB of ram."
-            
-    
-    *   The `postInstallNotes` parameter gives the user information they'll need after the installation. Focus on providing a documentation URL, a tutorial, or both. For example:
-        
-              "postInstallNotes": "Thank you for installing the Unicorn service.nntDocumentation: http://<your-url>ntIssues: https://github.com/",
-            
-    
-    *   The `postUninstallNotes` parameter gives the user information they'll need after an uninstall. For example, further cleanup before reinstalling again and a link to the details. A common issue is cleaning up ZooKeeper entries. For example:
-        
-              postUninstallNotes": "The Unicorn DCOS Service has been uninstalled and will no longer run.nPlease follow the instructions at http://<your-URL> to clean up any persisted state" }
-            
+<ul>
+<li><p><strong>package.json</strong></p>
 
-*   **config.json**
-    
-    *   The requirement block is for all properties that are required by the marathon.json file without a condition block (it is NOT properties that are not provided and thus must be supplied by the user)
+<ul>
+<li>The <code>"name": "cassandra",</code> parameter specified here defines the DCOS service name in the package repository. The must be the first parameter in the file. </li>
+<li>Focus the description on your service. Assume that all users are familiar with DCOS and Mesos.</li>
+<li><p>The <code>tags</code> parameter is used for user searches (<code>dcos package search &lt;criteria&gt;</code>). Add tags that distinguish your service in some way. Avoid the following terms: Mesos, Mesosphere, DCOS, and datacenter. For example, the unicorns service could have:</p>
 
-*   **marathon.json**
-    
-    *   A second-level (nested) property must be the framework-name with a value of the service name. For example:
-        
-              "framework-name" : "{{unicorn.framework-name}}"
-            
-    
-    *   Use the same value for the id parameter. For example:
-        
-              "id" : "{{unicorn.framework-name}}"
-            
-    
-    *   All URLs used by the service must be passed to the service by using command line or environment variable
+<pre><code>  "tags": ["rainbows", "mythical"]
+</code></pre></li>
+<li><p>The <code>preInstallNotes</code> parameter gives the user information they'll need before starting the installation process. For example, you could explain what the resource requirements are for your service.</p>
 
-**NOTE**: All services submitted to the DCOS package repositories are required to use versioned artifacts that do not change.
+<pre><code>  "preInstallNotes":"Unicorns take 7 nodes with 1 core each and 1TB of ram."
+</code></pre></li>
+<li><p>The <code>postInstallNotes</code> parameter gives the user information they'll need after the installation. Focus on providing a documentation URL, a tutorial, or both. For example:</p>
 
-# Creating a DCOS Service
+<pre><code>  "postInstallNotes": "Thank you for installing the Unicorn service.nntDocumentation: http://&lt;your-url&gt;ntIssues: https://github.com/",
+</code></pre></li>
+<li><p>The <code>postUninstallNotes</code> parameter gives the user information they'll need after an uninstall. For example, further cleanup before reinstalling again and a link to the details. A common issue is cleaning up ZooKeeper entries. For example:</p>
 
-Here is a detailed developer workflow for creating a DCOS service:
+<pre><code>  postUninstallNotes": "The Unicorn DCOS Service has been uninstalled and will no longer run.nPlease follow the instructions at http://&lt;your-URL&gt; to clean up any persisted state" }
+</code></pre></li>
+</ul></li>
+<li><p><strong>config.json</strong></p>
 
-1.  Fork the Universe repository.
+<ul>
+<li>The requirement block is for all properties that are required by the marathon.json file without a condition block (it is NOT properties that are not provided and thus must be supplied by the user)</li>
+</ul></li>
+<li><p><strong>marathon.json</strong></p>
 
-2.  Create a DCOS service in your local repository.
-    
-    1.  Name your service. For example, `unicorn`.
-        
-        The DCOS package repository directory structure is:
-        
-              repo/packages/<initial-letter>/<service-name>/<version>
-            
-        
-        Where:
-    
-    *   `<initial-letter>` is the uppercase first letter of your service name. 
-    *   `<service-name>` is the lowercase service name. Do not use keywords such as Apache, Mesos or DCOS in your service name.
-    *   `<version>` is the service version number. 
-    1.  Create a directory under `repo/packages` for your service. For example, `repo/packages/U/unicorn`.
-    2.  Create a version index directory. For example, `repo/packages/U/unicorn/0`.
-    3.  Add `package.json`, `config.json`, and `marathon.json` to your index directory.
-    4.  If you have a CLI subcommand, create a `command.json` file and add to your index directory.
+<ul>
+<li><p>A second-level (nested) property must be the framework-name with a value of the service name. For example:</p>
 
-3.  Test your service on DCOS:
-    
-    1.  Configure DCOS to point to your local repository. For example, if your forked repository at `https://github.com/mesosphere/altuniverse` and using the `version-1.x` branch, add it to your DCOS configuration with this command:
-        
-            $ dcos config prepend package.sources https://github.com/mesosphere/altuniverse/archive/version-1.x.zip
-            
-    
-    2.  Update your DCOS package repository with this command:
-        
-            $ dcos package update
-            
+<pre><code>  "framework-name" : "{{unicorn.framework-name}}"
+</code></pre></li>
+<li><p>Use the same value for the id parameter. For example:</p>
 
-# Naming and directory structure
+<pre><code>  "id" : "{{unicorn.framework-name}}"
+</code></pre></li>
+<li><p>All URLs used by the service must be passed to the service by using command line or environment variable</p></li>
+</ul></li>
+</ul>
 
-After you add the JSON files to the index folder, there are scripts under the `<universe>/scripts` directory.
+<p><strong>NOTE</strong>: All services submitted to the DCOS package repositories are required to use versioned artifacts that do not change.</p>
 
-Run the package repository scripts in numerical order. If a script passes you can move on to the next script.
+<h1>Creating a DCOS Service</h1>
 
-1.  Run the `0-validate-version.sh` script to validate the versioning.
+<p>Here is a detailed developer workflow for creating a DCOS service:</p>
 
-2.  Run the `1-validate-packages.sh` script to validate the `command.json`, `config.json`, and `package.json` files against the schema.
+<ol>
+<li><p>Fork the Universe repository.</p></li>
+<li><p>Create a DCOS service in your local repository.</p>
 
-3.  Run the `2-build-index.sh` script to add your DCOS service to the `index.json` file.
+<ol>
+<li><p>Name your service. For example, <code>unicorn</code>.</p>
 
-4.  Run the `3-validate-index.sh` script to validate the `index.json` file.
+<p>The DCOS package repository directory structure is:</p>
 
-For more information about the JSON files, see the [Universe Readme][2] page. <!-- ### 
+<pre><code>  repo/packages/&lt;initial-letter&gt;/&lt;service-name&gt;/&lt;version&gt;
+</code></pre>
 
-<a name="dcoscli"></a>DCOS CLI The command.json schema access the service endpoint Developer notes: There currently is no support for service dependencies over riding the framework-name (service endpoint)? -->
+<p>Where:</p></li>
+</ol>
 
- [1]: https://docs.mesosphere.com/overview/universe/
- [2]: https://github.com/mesosphere/universe
- [3]: https://github.com/mesosphere/multiverse
- [4]: https://github.com/mesosphere/universe#contributing-a-package
- [5]: /administration/dcosarchitecture/#scrollNav-2
+<ul>
+<li><code>&lt;initial-letter&gt;</code> is the uppercase first letter of your service name. </li>
+<li><code>&lt;service-name&gt;</code> is the lowercase service name. Do not use keywords such as Apache, Mesos or DCOS in your service name.</li>
+<li><code>&lt;version&gt;</code> is the service version number. </li>
+</ul>
+
+<ol>
+<li>Create a directory under <code>repo/packages</code> for your service. For example, <code>repo/packages/U/unicorn</code>.</li>
+<li>Create a version index directory. For example, <code>repo/packages/U/unicorn/0</code>.</li>
+<li>Add <code>package.json</code>, <code>config.json</code>, and <code>marathon.json</code> to your index directory.</li>
+<li>If you have a CLI subcommand, create a <code>command.json</code> file and add to your index directory.</li>
+</ol></li>
+<li><p>Test your service on DCOS:</p>
+
+<ol>
+<li><p>Configure DCOS to point to your local repository. For example, if your forked repository at <code>https://github.com/mesosphere/altuniverse</code> and using the <code>version-1.x</code> branch, add it to your DCOS configuration with this command:</p>
+
+<pre><code>$ dcos config prepend package.sources https://github.com/mesosphere/altuniverse/archive/version-1.x.zip
+</code></pre></li>
+<li><p>Update your DCOS package repository with this command:</p>
+
+<pre><code>$ dcos package update
+</code></pre></li>
+</ol></li>
+</ol>
+
+<h1>Naming and directory structure</h1>
+
+<p>After you add the JSON files to the index folder, there are scripts under the <code>&lt;universe&gt;/scripts</code> directory.</p>
+
+<p>Run the package repository scripts in numerical order. If a script passes you can move on to the next script.</p>
+
+<ol>
+<li><p>Run the <code>0-validate-version.sh</code> script to validate the versioning.</p></li>
+<li><p>Run the <code>1-validate-packages.sh</code> script to validate the <code>command.json</code>, <code>config.json</code>, and <code>package.json</code> files against the schema.</p></li>
+<li><p>Run the <code>2-build-index.sh</code> script to add your DCOS service to the <code>index.json</code> file.</p></li>
+<li><p>Run the <code>3-validate-index.sh</code> script to validate the <code>index.json</code> file.</p></li>
+</ol>
+
+<p>For more information about the JSON files, see the <a href="https://github.com/mesosphere/universe">Universe Readme</a> page. &lt;!-- ### 
+
+<a name="dcoscli"></a>DCOS CLI The command.json schema access the service endpoint Developer notes: There currently is no support for service dependencies over riding the framework-name (service endpoint)? --&gt;</p>

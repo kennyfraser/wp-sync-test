@@ -10,7 +10,7 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: true
 ---
-Learn how to use the many DCOS services with these tutorials.
+<p>Learn how to use the many DCOS services with these tutorials.</p>
 
 <div class="container-pod container-pod-short-top flush-bottom">
   <div class="row flex-box flex-box-fit-height flex-box-wrap row-grid">
@@ -67,7 +67,7 @@ Learn how to use the many DCOS services with these tutorials.
     </h4>
     
     <p class="flush-bottom">
-      In this example, the active DCOS services are shown: $ dcos service NAME HOST ACTIVE TASKS CPU MEM DISK ID chronos True 0 0 0 0 chronos &lt...
+      In this example, the active DCOS services are shown: $ dcos service NAME HOST ACTIVE TASKS CPU MEM DISK ID chronos  True 0 0 0 0  chronos &amp;lt...
     </p></article> <article id="post-1702" class="cf column-small-6 post-topic" role="article"> 
     
     <h4 class="flush-top">

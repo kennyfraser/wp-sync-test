@@ -10,33 +10,34 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-In this example, a Kafka broker is added by using the Kafka CLI.
+<p>In this example, a Kafka broker is added by using the Kafka CLI.</p>
 
-**Prerequisites:**
+<p><strong>Prerequisites:</strong></p>
 
-*   The DCOS Kafka service is [installed][1]
+<ul>
+<li>The DCOS Kafka service is <a href="../reference/kafka/#kafkainstall">installed</a></li>
+</ul>
 
-1.  From the Kafka CLI add a new broker:
-    
-        $ dcos kafka broker add 1
-        
-        broker added:
-          id: 1
-          active: false
-          state: stopped
-          resources: cpus:1.00, mem:2048, heap:1024, port:auto
-          failover: delay:1m, max-delay:10m
-          stickiness: period:10m
-        
+<ol>
+<li><p>From the Kafka CLI add a new broker:</p>
 
-2.  Start a new broker:
-    
-        $ dcos kafka broker start 1
-        Broker 1 started
-        
+<pre><code>$ dcos kafka broker add 1
 
-3.  Verify that the broker is added and started:
-    
-        $ dcos kafka broker list
+broker added:
+  id: 1
+  active: false
+  state: stopped
+  resources: cpus:1.00, mem:2048, heap:1024, port:auto
+  failover: delay:1m, max-delay:10m
+  stickiness: period:10m
+</code></pre></li>
+<li><p>Start a new broker:</p>
 
- [1]: ../reference/kafka/#kafkainstall
+<pre><code>$ dcos kafka broker start 1
+Broker 1 started
+</code></pre></li>
+<li><p>Verify that the broker is added and started:</p>
+
+<pre><code>$ dcos kafka broker list
+</code></pre></li>
+</ol>

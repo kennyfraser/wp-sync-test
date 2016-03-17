@@ -10,6 +10,6 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-Did this work?
+<p>Did this work?</p>
 
-test
+<p>test</p>

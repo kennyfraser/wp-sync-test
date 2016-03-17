@@ -10,17 +10,14 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-The [DCOS Command Line Interface (CLI)][1] runs on most versions of UNIX, Linux, Mac OS X, or Windows.
+<p>The <a href="../administration/introcli/">DCOS Command Line Interface (CLI)</a> runs on most versions of UNIX, Linux, Mac OS X, or Windows.</p>
 
-The [DCOS web interface][2] requires Internet access and a supported web browser. It is tested and supported on the following browser versions:
+<p>The <a href="../administration/webinterface/">DCOS web interface</a> requires Internet access and a supported web browser. It is tested and supported on the following browser versions:</p>
 
-*   Mozilla Firefox, version 39 or later
-
-*   Internet Explorer, version 11 or later
-
-*   Google Chrome, version 44 or later
+<ul>
+<li><p>Mozilla Firefox, version 39 or later</p></li>
+<li><p>Internet Explorer, version 11 or later</p></li>
+<li><p>Google Chrome, version 44 or later</p></li>
+</ul>
 
 <!-- *   Apple Safari, version 8 or later -->
-
- [1]: ../administration/introcli/
- [2]: ../administration/webinterface/

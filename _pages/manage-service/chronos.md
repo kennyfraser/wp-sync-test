@@ -10,54 +10,58 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-Chronos is the "cron" for your Mesosphere DCOS. It is a highly-available distributed job scheduler, providing the most robust way to run batch jobs in your datacenter. Chronos schedules jobs across the Mesos cluster and manages dependencies between jobs in an intelligent way.
+<p>Chronos is the "cron" for your Mesosphere DCOS. It is a highly-available distributed job scheduler, providing the most robust way to run batch jobs in your datacenter. Chronos schedules jobs across the Mesos cluster and manages dependencies between jobs in an intelligent way.</p>
 
-*   [Installing Chronos on DCOS][1]
-*   [Uninstalling Chronos][2]
+<ul>
+<li><a href="#chronosinstall">Installing Chronos on DCOS</a></li>
+<li><a href="#uninstall">Uninstalling Chronos</a></li>
+</ul>
 
-### <a name="chronosinstall"></a>Installing Chronos on DCOS
+<h3><a name="chronosinstall"></a>Installing Chronos on DCOS</h3>
 
-**Prerequisite**
+<p><strong>Prerequisite</strong></p>
 
-*   The DCOS CLI must be [installed][3].
+<ul>
+<li>The DCOS CLI must be <a href="/install/cli/">installed</a>.</li>
+</ul>
 
-1.  From the DCOS CLI, enter this command:
-    
-        $ dcos package install chronos
-        
-    
-    **Tip:** You can specify a JSON configuration file along with the Chronos installation command: `dcos package install chronos --option <config_file>`. For more information, see the [dcos package section of the CLI command reference][4].
+<ol>
+<li><p>From the DCOS CLI, enter this command:</p>
 
-2.  Verify that Chronos is installed:
-    
-    *   From the DCOS CLI: `dcos package list`
-    *   From the DCOS web interface, go to the Services tab and confirm that Chronos is running. You can click on the Chronos service to go the web interface. <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/chronostask.png" rel="attachment wp-att-1512"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/chronostask.png" alt="chronostask" width="710" height="41" class="alignnone size-full wp-image-1512" /></a>
+<pre><code>$ dcos package install chronos
+</code></pre>
 
-### <a name="uninstall"></a>Uninstalling Chronos
+<p><strong>Tip:</strong> You can specify a JSON configuration file along with the Chronos installation command: <code>dcos package install chronos --option &lt;config_file&gt;</code>. For more information, see the <a href="../administration/introcli/command-reference/">dcos package section of the CLI command reference</a>.</p></li>
+<li><p>Verify that Chronos is installed:</p>
 
-1.  From the DCOS CLI, enter this command:
-    
-        $ dcos package uninstall chronos
-        
+<ul>
+<li>From the DCOS CLI: <code>dcos package list</code></li>
+<li>From the DCOS web interface, go to the Services tab and confirm that Chronos is running. You can click on the Chronos service to go the web interface. <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/chronostask.png" rel="attachment wp-att-1512"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/chronostask.png" alt="chronostask" width="710" height="41" class="alignnone size-full wp-image-1512" /></a></li>
+</ul></li>
+</ol>
 
-2.  Open the Zookeeper Exhibitor web interface at `<hostname>/exhibitor`, where `<hostname>` is the [Mesos Master hostname][5].
-    
-    1.  Click on the **Explorer** tab and navigate to the `chronos` folder.
-        
-        <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/chef-zk-status.png" rel="attachment wp-att-2112"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/chef-zk-status.png" alt="chef-zk-status" width="551" height="467" class="alignnone size-full wp-image-2112" /></a>
-    
-    2.  Choose Type **Delete**, enter the required **Username**, **Ticket/Code**, and **Reason** fields, and click **Next**.
-        
-        <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/zkchronosdelete.png" rel="attachment wp-att-1617"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/zkchronosdelete.png" alt="zkchronosdelete" width="613" height="339" class="alignnone size-full wp-image-1617" /></a>
-    
-    3.  Click **OK** to confirm your deletion.
+<h3><a name="uninstall"></a>Uninstalling Chronos</h3>
 
-For more information:
+<ol>
+<li><p>From the DCOS CLI, enter this command:</p>
 
-*   <a href="http://mesos.github.io/chronos/docs/" target="_blank">Chronos documentation</a>
+<pre><code>$ dcos package uninstall chronos
+</code></pre></li>
+<li><p>Open the Zookeeper Exhibitor web interface at <code>&lt;hostname&gt;/exhibitor</code>, where <code>&lt;hostname&gt;</code> is the <a href="/install/awscluster#launchdcos">Mesos Master hostname</a>.</p>
 
- [1]: #chronosinstall
- [2]: #uninstall
- [3]: /install/cli/
- [4]: ../administration/introcli/command-reference/
- [5]: /install/awscluster#launchdcos
+<ol>
+<li><p>Click on the <strong>Explorer</strong> tab and navigate to the <code>chronos</code> folder.</p>
+
+<p><a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/chef-zk-status.png" rel="attachment wp-att-2112"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/chef-zk-status.png" alt="chef-zk-status" width="551" height="467" class="alignnone size-full wp-image-2112" /></a></p></li>
+<li><p>Choose Type <strong>Delete</strong>, enter the required <strong>Username</strong>, <strong>Ticket/Code</strong>, and <strong>Reason</strong> fields, and click <strong>Next</strong>.</p>
+
+<p><a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/zkchronosdelete.png" rel="attachment wp-att-1617"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/zkchronosdelete.png" alt="zkchronosdelete" width="613" height="339" class="alignnone size-full wp-image-1617" /></a></p></li>
+<li><p>Click <strong>OK</strong> to confirm your deletion.</p></li>
+</ol></li>
+</ol>
+
+<p>For more information:</p>
+
+<ul>
+<li><a href="http://mesos.github.io/chronos/docs/" target="_blank">Chronos documentation</a></li>
+</ul>

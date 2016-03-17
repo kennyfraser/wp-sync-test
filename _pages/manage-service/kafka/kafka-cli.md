@@ -10,60 +10,73 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-You can run and manage Kafka jobs by using the Kafka CLI.
+<p>You can run and manage Kafka jobs by using the Kafka CLI.</p>
 
-`--help`, `-h`
+<dl>
+<dt><code>--help</code>, <code>-h</code></dt>
+<dd>
+<p>Show a description of all command options and positional arguments for the command.</p>
+</dd>
 
-:   Show a description of all command options and positional arguments for the command.
+<dt><code>--info</code></dt>
+<dd>
+<p>Show a brief description of the command.</p>
+</dd>
 
-`--info`
+<dt><code>--version</code></dt>
+<dd>
+<p>Show the version of the installed Kafka CLI.</p>
+</dd>
 
-:   Show a brief description of the command.
+<dt><code>broker add</code></dt>
+<dd>
+<p>Add a new broker.</p>
+</dd>
 
-`--version`
+<dt><code>broker list</code></dt>
+<dd>
+<p>Show the active brokers.</p>
+</dd>
 
-:   Show the version of the installed Kafka CLI.
+<dt><code>broker remove</code></dt>
+<dd>
+<p>Remove a broker.</p>
+</dd>
 
-`broker add`
+<dt><code>broker update &lt;id-expr&gt; [options]</code></dt>
+<dd>
+<p>Update an existing broker. For command syntax and options, type <code>dcos kafka update --help</code> on the command line.</p>
+</dd>
 
-:   Add a new broker.
+<dt><code>broker start</code></dt>
+<dd>
+<p>Start a broker.</p>
+</dd>
 
-`broker list`
+<dt><code>broker stop</code></dt>
+<dd>
+<p>Stop a broker.</p>
+</dd>
 
-:   Show the active brokers.
+<dt><code>topic add</code></dt>
+<dd>
+<p>Add a topic.</p>
+</dd>
 
-`broker remove`
+<dt><code>topic list</code></dt>
+<dd>
+<p>List the topics.</p>
+</dd>
 
-:   Remove a broker.
+<dt><code>topic rebalance</code></dt>
+<dd>
+<p>Rebalance the topics.</p>
+</dd>
 
-`broker update <id-expr> [options]`
+<dt><code>topic update</code></dt>
+<dd>
+<p>Update a topic.</p>
+</dd>
+</dl>
 
-:   Update an existing broker. For command syntax and options, type `dcos kafka update --help` on the command line.
-
-`broker start`
-
-:   Start a broker.
-
-`broker stop`
-
-:   Stop a broker.
-
-`topic add`
-
-:   Add a topic.
-
-`topic list`
-
-:   List the topics.
-
-`topic rebalance`
-
-:   Rebalance the topics.
-
-`topic update`
-
-:   Update a topic.
-
-For more information, see the [Kafka CLI][1] documentation.
-
- [1]: https://github.com/mesosphere/dcos-kafka
+<p>For more information, see the <a href="https://github.com/mesosphere/dcos-kafka">Kafka CLI</a> documentation.</p>

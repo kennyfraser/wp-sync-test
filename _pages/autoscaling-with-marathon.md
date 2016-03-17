@@ -10,4 +10,4 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-You can use autoscaling to automatically increase or decrease computing resources based on usage so that you're using only the resources you need. We've created two programs to implement simple autoscaling in Marathon.
+<p>You can use autoscaling to automatically increase or decrease computing resources based on usage so that you're using only the resources you need. We've created two programs to implement simple autoscaling in Marathon.</p>

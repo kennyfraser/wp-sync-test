@@ -10,83 +10,85 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-Mesos-DNS defines the DNS top-level domain `.mesos` for Mesos tasks that are running on DCOS. Tasks and services are discovered by looking up A and, optionally, SRV records within this Mesos domain.
+<p>Mesos-DNS defines the DNS top-level domain <code>.mesos</code> for Mesos tasks that are running on DCOS. Tasks and services are discovered by looking up A and, optionally, SRV records within this Mesos domain.</p>
 
-# <a name="a-records"></a>A Records
+<h1><a name="a-records"></a>A Records</h1>
 
-An A record associates a hostname to an IP address.
+<p>An A record associates a hostname to an IP address.</p>
 
-When a task is launched by a DCOS service, Mesos-DNS generates an A record for a hostname in the format `<task>.<service>.mesos` that provides one of the following:
+<p>When a task is launched by a DCOS service, Mesos-DNS generates an A record for a hostname in the format <code>&lt;task&gt;.&lt;service&gt;.mesos</code> that provides one of the following:</p>
 
-*   The IP address of the [agent node][1] that is running the task
-*   The IP address of the task's network container (provided by a Mesos containerizer)
+<ul>
+<li>The IP address of the <a href="../../terminology/">agent node</a> that is running the task</li>
+<li>The IP address of the task's network container (provided by a Mesos containerizer)</li>
+</ul>
 
-For example, other DCOS tasks can discover the IP address for a task named `search` launched by the `marathon` service with a lookup for `search.marathon.mesos`:
+<p>For example, other DCOS tasks can discover the IP address for a task named <code>search</code> launched by the <code>marathon</code> service with a lookup for <code>search.marathon.mesos</code>:</p>
 
-    $ dig search.marathon.mesos
-    
-    ; <<>> DiG 9.8.4-rpz2+rl005.12-P1 <<>> search.marathon.mesos
-    ;; global options: +cmd
-    ;; Got answer:
-    ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 24471
-    ;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 1, ADDITIONAL: 0
-    
-    ;; QUESTION SECTION:
-    ;search.marathon.mesos.         IN  A
-    
-    ;; ANSWER SECTION:
-    search.marathon.mesos.      60  IN  A   10.9.87.94
-    
+<pre><code>$ dig search.marathon.mesos
 
-If the Mesos containerizer that launches the task provides a container IP `10.0.4.1` for the task `search.marathon.mesos`, then the lookup result is:
+; &lt;&lt;&gt;&gt; DiG 9.8.4-rpz2+rl005.12-P1 &lt;&lt;&gt;&gt; search.marathon.mesos
+;; global options: +cmd
+;; Got answer:
+;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 24471
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 1, ADDITIONAL: 0
 
-    $ dig search.marathon.mesos
-    
-    ; <<>> DiG 9.8.4-rpz2+rl005.12-P1 <<>> search.marathon.mesos
-    ;; global options: +cmd
-    ;; Got answer:
-    ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 24471
-    ;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 1, ADDITIONAL: 0
-    
-    ;; QUESTION SECTION:
-    ;search.marathon.mesos.         IN  A
-    
-    ;; ANSWER SECTION:
-    search.marathon.mesos.      60  IN  A   10.0.4.1
-    
+;; QUESTION SECTION:
+;search.marathon.mesos.         IN  A
 
-In addition to the `<task>.<service>.mesos` syntax shown above, Mesos-DNS also generates A records that contain the IP addresses of the agent nodes that are running the task: `<task>.<service>.slave.mesos`.
+;; ANSWER SECTION:
+search.marathon.mesos.      60  IN  A   10.9.87.94
+</code></pre>
 
-For example, a query of the A records for `search.marathon.slave.mesos` shows the IP address of each agent node running one or more instances of the `search` application on the `marathon` service.
+<p>If the Mesos containerizer that launches the task provides a container IP <code>10.0.4.1</code> for the task <code>search.marathon.mesos</code>, then the lookup result is:</p>
 
-# <a name="srv-records"></a>SRV Records
+<pre><code>$ dig search.marathon.mesos
 
-An SRV record specifies the hostname and port of a service.
+; &lt;&lt;&gt;&gt; DiG 9.8.4-rpz2+rl005.12-P1 &lt;&lt;&gt;&gt; search.marathon.mesos
+;; global options: +cmd
+;; Got answer:
+;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 24471
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 1, ADDITIONAL: 0
 
-For a task named `mytask` launched by a service named `myservice`, Mesos-DNS generates an SRV record `_mytask._protocol.myservice.mesos`, where `protocol` is `udp` or `tcp`.
+;; QUESTION SECTION:
+;search.marathon.mesos.         IN  A
 
-For example, other Mesos tasks can discover a task named `search` launched by the `marathon` service with a query for `_search._tcp.marathon.mesos`:
+;; ANSWER SECTION:
+search.marathon.mesos.      60  IN  A   10.0.4.1
+</code></pre>
 
-    $ dig _search._tcp.marathon.mesos SRV
-    
-    ;  DiG 9.8.4-rpz2+rl005.12-P1 &lt;&lt;&gt;&gt; _search._tcp.marathon.mesos SRV
-    ;; global options: +cmd
-    ;; Got answer:
-    ;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 33793
-    ;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
-    
-    ;; QUESTION SECTION:
-    ;_search._tcp.marathon.mesos.   IN SRV
-    
-    ;; ANSWER SECTION:
-    _search._tcp.marathon.mesos.    60 IN SRV 0 0 31302 10.254.132.41.
-    
+<p>In addition to the <code>&lt;task&gt;.&lt;service&gt;.mesos</code> syntax shown above, Mesos-DNS also generates A records that contain the IP addresses of the agent nodes that are running the task: <code>&lt;task&gt;.&lt;service&gt;.slave.mesos</code>.</p>
 
-Mesos-DNS supports the use of a task's DiscoveryInfo for SRV record generation.
+<p>For example, a query of the A records for <code>search.marathon.slave.mesos</code> shows the IP address of each agent node running one or more instances of the <code>search</code> application on the <code>marathon</code> service.</p>
 
-On a DCOS cluster, ports are offered by agent nodes in the same way as other resources such as CPU and memory. If DiscoveryInfo is not available, Mesos-DNS uses the ports that were allocated for the task.
+<h1><a name="srv-records"></a>SRV Records</h1>
 
-The following table shows the rules that govern SRV generation:
+<p>An SRV record specifies the hostname and port of a service.</p>
+
+<p>For a task named <code>mytask</code> launched by a service named <code>myservice</code>, Mesos-DNS generates an SRV record <code>_mytask._protocol.myservice.mesos</code>, where <code>protocol</code> is <code>udp</code> or <code>tcp</code>.</p>
+
+<p>For example, other Mesos tasks can discover a task named <code>search</code> launched by the <code>marathon</code> service with a query for <code>_search._tcp.marathon.mesos</code>:</p>
+
+<pre><code>$ dig _search._tcp.marathon.mesos SRV
+
+;  DiG 9.8.4-rpz2+rl005.12-P1 &amp;lt;&amp;lt;&amp;gt;&amp;gt; _search._tcp.marathon.mesos SRV
+;; global options: +cmd
+;; Got answer:
+;; -&amp;gt;&amp;gt;HEADER&amp;lt;&amp;lt;- opcode: QUERY, status: NOERROR, id: 33793
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;_search._tcp.marathon.mesos.   IN SRV
+
+;; ANSWER SECTION:
+_search._tcp.marathon.mesos.    60 IN SRV 0 0 31302 10.254.132.41.
+</code></pre>
+
+<p>Mesos-DNS supports the use of a task's DiscoveryInfo for SRV record generation.</p>
+
+<p>On a DCOS cluster, ports are offered by agent nodes in the same way as other resources such as CPU and memory. If DiscoveryInfo is not available, Mesos-DNS uses the ports that were allocated for the task.</p>
+
+<p>The following table shows the rules that govern SRV generation:</p>
 
 <table class="table" style="width: 400px !important">
   <thead>
@@ -250,37 +252,35 @@ The following table shows the rules that govern SRV generation:
   </tbody>
 </table>
 
-# <a name="other-records"></a>Other Records
+<h1><a name="other-records"></a>Other Records</h1>
 
-Mesos-DNS generates a few special records:
+<p>Mesos-DNS generates a few special records:</p>
 
-*   For the leading master: A record (`leader.mesos`) and SRV records (`_leader._tcp.mesos` and `_leader._udp.mesos`)
-*   For all service schedulers: A records (`myservice.mesos`) and SRV records (`_myservice._tcp.myservice.mesos`)
-*   For every known DCOS master: A records (`master.mesos`) and SRV records (`_master._tcp.mesos` and `_master._udp.mesos`)
-*   For every known DCOS agent: A records (`slave.mesos`) and SRV records (`_slave._tcp.mesos`)
+<ul>
+<li>For the leading master: A record (<code>leader.mesos</code>) and SRV records (<code>_leader._tcp.mesos</code> and <code>_leader._udp.mesos</code>)</li>
+<li>For all service schedulers: A records (<code>myservice.mesos</code>) and SRV records (<code>_myservice._tcp.myservice.mesos</code>)</li>
+<li>For every known DCOS master: A records (<code>master.mesos</code>) and SRV records (<code>_master._tcp.mesos</code> and <code>_master._udp.mesos</code>)</li>
+<li>For every known DCOS agent: A records (<code>slave.mesos</code>) and SRV records (<code>_slave._tcp.mesos</code>)</li>
+</ul>
 
-**Important:** To query the leading master node, always query `leader.mesos`, not `master.mesos`. See [this FAQ entry][2] for more information.
+<p><strong>Important:</strong> To query the leading master node, always query <code>leader.mesos</code>, not <code>master.mesos</code>. See <a href="https://docs.mesosphere.com/administration/service-discovery/faq-troubleshooting/#leader">this FAQ entry</a> for more information.</p>
 
-There is a delay between the election of a new master and the update of leader/master records in Mesos-DNS.
+<p>There is a delay between the election of a new master and the update of leader/master records in Mesos-DNS.</p>
 
-Mesos-DNS also supports requests for SOA and NS records for the Mesos domain. DNS requests for records of other types in the Mesos domain will return `NXDOMAIN`. Mesos-DNS does not support PTR records needed for reverse lookups.
+<p>Mesos-DNS also supports requests for SOA and NS records for the Mesos domain. DNS requests for records of other types in the Mesos domain will return <code>NXDOMAIN</code>. Mesos-DNS does not support PTR records needed for reverse lookups.</p>
 
-Mesos-DNS also generates A records for itself that list all the IP addresses that Mesos-DNS will answer lookup requests on. The hostname for these A records is `ns1.mesos`.
+<p>Mesos-DNS also generates A records for itself that list all the IP addresses that Mesos-DNS will answer lookup requests on. The hostname for these A records is <code>ns1.mesos</code>.</p>
 
-# <a name="naming-conventions"></a>Task and Service Naming Conventions
+<h1><a name="naming-conventions"></a>Task and Service Naming Conventions</h1>
 
-Mesos-DNS follows [RFC 952][3] for name formatting. All fields used to construct hostnames for A records and service names for SRV records must be 24 characters or shorter and can include letters of the alphabet (A-Z), numbers (0-9), and a dash (-). Names are not case sensitive. If the task name does not comply with these constraints, Mesos-DNS will shorten the name to 24 characters, remove all invalid characters, and replace periods (.) with a dash (-).
+<p>Mesos-DNS follows <a href="https://tools.ietf.org/html/rfc952">RFC 952</a> for name formatting. All fields used to construct hostnames for A records and service names for SRV records must be 24 characters or shorter and can include letters of the alphabet (A-Z), numbers (0-9), and a dash (-). Names are not case sensitive. If the task name does not comply with these constraints, Mesos-DNS will shorten the name to 24 characters, remove all invalid characters, and replace periods (.) with a dash (-).</p>
 
-Note that there is a difference in the rules for service names and task names. For service names, periods (.) are allowed, but all other rules apply. For example, a task named `apiserver.myservice` launched by service `marathon.prod` will have A records associated with the name `apiserver-myservice.marathon.prod.mesos` and SRV records associated with the name `_apiserver-myservice._tcp.marathon.prod.mesos`.
+<p>Note that there is a difference in the rules for service names and task names. For service names, periods (.) are allowed, but all other rules apply. For example, a task named <code>apiserver.myservice</code> launched by service <code>marathon.prod</code> will have A records associated with the name <code>apiserver-myservice.marathon.prod.mesos</code> and SRV records associated with the name <code>_apiserver-myservice._tcp.marathon.prod.mesos</code>.</p>
 
-Some services register with default names that are difficult to understand. For example, older versions of Marathon may register with names such as `marathon-0.7.5`, which will lead to a Mesos-DNS hostname such as `search.marathon-0.7.5.mesos`. You can avoid this problem by launching services with customized names. For example, launch Marathon with `--framework_name marathon` to register the service as `marathon`.
+<p>Some services register with default names that are difficult to understand. For example, older versions of Marathon may register with names such as <code>marathon-0.7.5</code>, which will lead to a Mesos-DNS hostname such as <code>search.marathon-0.7.5.mesos</code>. You can avoid this problem by launching services with customized names. For example, launch Marathon with <code>--framework_name marathon</code> to register the service as <code>marathon</code>.</p>
 
-If you are using Marathon groups, the Mesos-DNS hostname is created from the app ID. For example, if you have an app named `nginx-router` and it is within the `mesosphere-tutorial` group with an app ID of `/mesosphere-tutorial/nginx-router`, then the DNS name will be `nginx-router-mesosphere-.marathon.mesos`. Note that Mesos-DNS truncated the hostname to 24 characters and substituted a dash for the slash between `mesosphere-tutorial` and `nginx-router`.
+<p>If you are using Marathon groups, the Mesos-DNS hostname is created from the app ID. For example, if you have an app named <code>nginx-router</code> and it is within the <code>mesosphere-tutorial</code> group with an app ID of <code>/mesosphere-tutorial/nginx-router</code>, then the DNS name will be <code>nginx-router-mesosphere-.marathon.mesos</code>. Note that Mesos-DNS truncated the hostname to 24 characters and substituted a dash for the slash between <code>mesosphere-tutorial</code> and <code>nginx-router</code>.</p>
 
-If a service launches multiple tasks with the same name, the DNS lookup will return multiple records, one per task. Mesos-DNS randomly shuffles the order of records to provide rudimentary load balancing between these tasks.
+<p>If a service launches multiple tasks with the same name, the DNS lookup will return multiple records, one per task. Mesos-DNS randomly shuffles the order of records to provide rudimentary load balancing between these tasks.</p>
 
-**Caution:** It is possible to have a name collision if *different* services launch tasks that have the same hostname. If different services launch tasks with identical Mesos-DNS hostnames, or if Mesos-DNS truncates app IDs to create identical Mesos-DNS hostnames, applications will communicate with the wrong agent nodes and fail unpredictably.
-
- [1]: ../../terminology/
- [2]: https://docs.mesosphere.com/administration/service-discovery/faq-troubleshooting/#leader
- [3]: https://tools.ietf.org/html/rfc952
+<p><strong>Caution:</strong> It is possible to have a name collision if <em>different</em> services launch tasks that have the same hostname. If different services launch tasks with identical Mesos-DNS hostnames, or if Mesos-DNS truncates app IDs to create identical Mesos-DNS hostnames, applications will communicate with the wrong agent nodes and fail unpredictably.</p>

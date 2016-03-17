@@ -10,24 +10,28 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-You can run and manage HDFS jobs by using the [HDFS CLI][1].
+<p>You can run and manage HDFS jobs by using the <a href="https://github.com/mesosphere/dcos-hdfs">HDFS CLI</a>.</p>
 
-`--help`, `-h`
+<dl>
+<dt><code>--help</code>, <code>-h</code></dt>
+<dd>
+<p>Show a description of all command options and positional arguments for the command.</p>
+</dd>
 
-:   Show a description of all command options and positional arguments for the command.
+<dt><code>--info</code></dt>
+<dd>
+<p>Show a brief description of the command.</p>
+</dd>
 
-`--info`
+<dt><code>--version</code></dt>
+<dd>
+<p>Show the version of the installed HDFS CLI.</p>
+</dd>
 
-:   Show a brief description of the command.
+<dt><code>--config-gen &lt;filename&gt;</code></dt>
+<dd>
+<p>Add a custom <code>options.json</code> configuration file to the HDFS CLI.</p>
+</dd>
+</dl>
 
-`--version`
-
-:   Show the version of the installed HDFS CLI.
-
-`--config-gen <filename>`
-
-:   Add a custom `options.json` configuration file to the HDFS CLI.
-
-For more information, see the [HDFS CLI][1] documentation.
-
- [1]: https://github.com/mesosphere/dcos-hdfs
+<p>For more information, see the <a href="https://github.com/mesosphere/dcos-hdfs">HDFS CLI</a> documentation.</p>

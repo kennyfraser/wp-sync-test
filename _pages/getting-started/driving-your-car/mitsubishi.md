@@ -10,4 +10,4 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-It's what the cool kids drive!
+<p>It's what the cool kids drive!</p>

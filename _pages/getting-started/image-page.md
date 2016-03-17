@@ -10,17 +10,6 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
+<p>Some more random edits. 7</p>
 
-
-Some more random edits. 7
-
-
-![Alt text][1] ![Alt text][2] ![Alt text][3] ![Alt text][4] ![Alt text][5] ![Alt text][6] ![Alt text][7]
-
- [1]: /assets/images/chronos.jpg
- [2]: /assets/images/docker.jpg
- [3]: /assets/images/learn-deploy.jpg
- [4]: /assets/images/learn-interface-ui.jpg
- [5]: /assets/images/learn-interface-ui-2.jpg
- [6]: /assets/images/services.png
- [7]: /assets/images/test1.gif
+<p><img src="/assets/images/chronos.jpg" alt="Alt text" /> <img src="/assets/images/docker.jpg" alt="Alt text" /> <img src="/assets/images/learn-deploy.jpg" alt="Alt text" /> <img src="/assets/images/learn-interface-ui.jpg" alt="Alt text" /> <img src="/assets/images/learn-interface-ui-2.jpg" alt="Alt text" /> <img src="/assets/images/services.png" alt="Alt text" /> <img src="/assets/images/test1.gif" alt="Alt text" /></p>

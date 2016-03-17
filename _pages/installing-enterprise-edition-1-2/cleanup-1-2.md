@@ -10,8 +10,9 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-Sometimes, you can get your hosts into a bad spot and want to start over. Instead of creating brand new instances, you can run this cleanup script and get rid of all the <span class="caps">DCOS</span> specific things.
+<p>Sometimes, you can get your hosts into a bad spot and want to start over. Instead of creating brand new instances, you can run this cleanup script and get rid of all the <span class="caps">DCOS</span> specific things.</p>
 
-To run the <span class="caps">DCOS</span> cleanup script:
+<p>To run the <span class="caps">DCOS</span> cleanup script:</p>
 
-    $ rm -rf /opt/mesosphere /etc/systemd/system/dcos.target.wants
+<pre><code>$ rm -rf /opt/mesosphere /etc/systemd/system/dcos.target.wants
+</code></pre>

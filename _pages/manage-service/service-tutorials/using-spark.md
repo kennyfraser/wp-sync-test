@@ -10,18 +10,19 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-# Installing the Spark app only, not CLI
+<h1>Installing the Spark app only, not CLI</h1>
 
-In this example, the Spark app is installed without the Spark CLI:
+<p>In this example, the Spark app is installed without the Spark CLI:</p>
 
-    $ dcos package install —app spark
-    
+<pre><code>$ dcos package install —app spark
+</code></pre>
 
-# Installing Spark with A Custom Name
+<h1>Installing Spark with A Custom Name</h1>
 
-In this example, Spark is installed with the explicit application ID `alice-spark` specified:
+<p>In this example, Spark is installed with the explicit application ID <code>alice-spark</code> specified:</p>
 
-    $ dcos package install --app-id=alices-spark spark
-    Installing package [spark] version [1.4.0-SNAPSHOT] with app id [alices-spark]
-    Installing CLI subcommand for package [spark]
-    Spark cluster mode on Mesos is ready!
+<pre><code>$ dcos package install --app-id=alices-spark spark
+Installing package [spark] version [1.4.0-SNAPSHOT] with app id [alices-spark]
+Installing CLI subcommand for package [spark]
+Spark cluster mode on Mesos is ready!
+</code></pre>

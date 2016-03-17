@@ -10,4 +10,4 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-Learn how to administer the many features and functions of DCOS with these tutorials.
+<p>Learn how to administer the many features and functions of DCOS with these tutorials.</p>

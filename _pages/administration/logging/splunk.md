@@ -10,91 +10,92 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-You can pipe system and application logs from a Mesosphere DCOS cluster to your existing Splunk server.
+<p>You can pipe system and application logs from a Mesosphere DCOS cluster to your existing Splunk server.</p>
 
-These instructions are based on Mesosphere [DCOS 1.3][1] on CoreOS 766.4.0 and might differ substantially from other Linux distributions. This document does not explain how to setup and configure a Splunk server.
+<p>These instructions are based on Mesosphere <a href="../release-notes/community-edition/1-3/">DCOS 1.3</a> on CoreOS 766.4.0 and might differ substantially from other Linux distributions. This document does not explain how to setup and configure a Splunk server.</p>
 
-**Prerequisites**
+<p><strong>Prerequisites</strong></p>
 
-*   An existing Splunk installation that can ingest data for indexing.
-*   All DCOS nodes must be able to connect to your Splunk indexer via HTTP or HTTPS. (See Splunk's documentation for instructions on enabling HTTPS.) 
-*   The `ulimit` of open files must be set to `unlimited` for your user with root access.
+<ul>
+<li>An existing Splunk installation that can ingest data for indexing.</li>
+<li>All DCOS nodes must be able to connect to your Splunk indexer via HTTP or HTTPS. (See Splunk's documentation for instructions on enabling HTTPS.) </li>
+<li>The <code>ulimit</code> of open files must be set to <code>unlimited</code> for your user with root access.</li>
+</ul>
 
-# Step 1: All Nodes
+<h1>Step 1: All Nodes</h1>
 
-For all nodes in your DCOS cluster:
+<p>For all nodes in your DCOS cluster:</p>
 
-1.  Install Splunk's [universal forwarder][2]. Splunk provides packages and installation instructions for most platforms.
-2.  Make sure the forwarder has the credentials it needs to send data to the indexer. See Splunk's documentation for details.
-3.  Start the forwarder.
+<ol>
+<li>Install Splunk's <a href="http://www.splunk.com/en_us/download/universal-forwarder.html">universal forwarder</a>. Splunk provides packages and installation instructions for most platforms.</li>
+<li>Make sure the forwarder has the credentials it needs to send data to the indexer. See Splunk's documentation for details.</li>
+<li>Start the forwarder.</li>
+</ol>
 
-# Step 2: Master Nodes
+<h1>Step 2: Master Nodes</h1>
 
-For each Master node in your DCOS cluster:
+<p>For each Master node in your DCOS cluster:</p>
 
-1.  Create a script `$SPLUNK_HOME/bin/scripts/journald-master.sh` that will obtain the Mesos master logs from `journald`:
-    
-        #!/bin/sh
-        
-        exec journalctl --since=now -f 
-            -u dcos-exhibitor.service 
-            -u dcos-marathon.service 
-            -u dcos-mesos-dns.service 
-            -u dcos-mesos-master.service 
-            -u dcos-nginx.service
-        
+<ol>
+<li><p>Create a script <code>$SPLUNK_HOME/bin/scripts/journald-master.sh</code> that will obtain the Mesos master logs from <code>journald</code>:</p>
 
-2.  Make the script executable:
-    
-        chmod +x "$SPLUNK_HOME/bin/scripts/journald-master.sh"
-        
+<pre><code>#!/bin/sh
 
-3.  Add the script as an input to the forwarder:
-    
-        "$SPLUNK_HOME/bin/splunk" add exec 
-            -source "$SPLUNK_HOME/bin/scripts/journald-master.sh" 
-            -interval 0
-        
+exec journalctl --since=now -f 
+    -u dcos-exhibitor.service 
+    -u dcos-marathon.service 
+    -u dcos-mesos-dns.service 
+    -u dcos-mesos-master.service 
+    -u dcos-nginx.service
+</code></pre></li>
+<li><p>Make the script executable:</p>
 
-# Step 3: Agent Nodes
+<pre><code>chmod +x "$SPLUNK_HOME/bin/scripts/journald-master.sh"
+</code></pre></li>
+<li><p>Add the script as an input to the forwarder:</p>
 
-For each agent node in your DCOS cluster:
+<pre><code>"$SPLUNK_HOME/bin/splunk" add exec 
+    -source "$SPLUNK_HOME/bin/scripts/journald-master.sh" 
+    -interval 0
+</code></pre></li>
+</ol>
 
-1.  Create a script `$SPLUNK_HOME/bin/scripts/journald-agent.sh` that will obtain the Mesos agent logs from `journald`:
-    
-        #!/bin/sh
-        
-        exec journalctl --since=now -f 
-            -u dcos-mesos-slave.service 
-            -u dcos-mesos-slave-public.service
-        
+<h1>Step 3: Agent Nodes</h1>
 
-2.  Make the script executable:
-    
-        chmod +x "$SPLUNK_HOME/bin/scripts/journald-agent.sh"
-        
+<p>For each agent node in your DCOS cluster:</p>
 
-3.  Add the script as an input to the forwarder:
-    
-        "$SPLUNK_HOME/bin/splunk" add exec 
-            -source "$SPLUNK_HOME/bin/scripts/journald-agent.sh" 
-            -interval 0
-        
+<ol>
+<li><p>Create a script <code>$SPLUNK_HOME/bin/scripts/journald-agent.sh</code> that will obtain the Mesos agent logs from <code>journald</code>:</p>
 
-4.  Add the task logs as inputs to the forwarder:
-    
-        "$SPLUNK_HOME/bin/splunk" add monitor '/var/lib/mesos/slave' 
-            -whitelist '/stdout$|/stderr$'
-        
+<pre><code>#!/bin/sh
 
-# Known Issue
+exec journalctl --since=now -f 
+    -u dcos-mesos-slave.service 
+    -u dcos-mesos-slave-public.service
+</code></pre></li>
+<li><p>Make the script executable:</p>
 
-*   The agent node Splunk forwarder configuration expects tasks to write logs to `stdout` and `stderr`. Some DCOS services, including Cassandra and Kafka, do not write logs to `stdout` and `stderr`. If you want to log these services, you must customize your agent node Splunk forwarder configuration.
+<pre><code>chmod +x "$SPLUNK_HOME/bin/scripts/journald-agent.sh"
+</code></pre></li>
+<li><p>Add the script as an input to the forwarder:</p>
 
-# What's Next
+<pre><code>"$SPLUNK_HOME/bin/splunk" add exec 
+    -source "$SPLUNK_HOME/bin/scripts/journald-agent.sh" 
+    -interval 0
+</code></pre></li>
+<li><p>Add the task logs as inputs to the forwarder:</p>
 
-For details on how to filter your logs with Splunk, see [Filtering DCOS logs with Splunk][3].
+<pre><code>"$SPLUNK_HOME/bin/splunk" add monitor '/var/lib/mesos/slave' 
+    -whitelist '/stdout$|/stderr$'
+</code></pre></li>
+</ol>
 
- [1]: ../release-notes/community-edition/1-3/
- [2]: http://www.splunk.com/en_us/download/universal-forwarder.html
- [3]: ../../logging/filter-splunk/
+<h1>Known Issue</h1>
+
+<ul>
+<li>The agent node Splunk forwarder configuration expects tasks to write logs to <code>stdout</code> and <code>stderr</code>. Some DCOS services, including Cassandra and Kafka, do not write logs to <code>stdout</code> and <code>stderr</code>. If you want to log these services, you must customize your agent node Splunk forwarder configuration.</li>
+</ul>
+
+<h1>What's Next</h1>
+
+<p>For details on how to filter your logs with Splunk, see <a href="../../logging/filter-splunk/">Filtering DCOS logs with Splunk</a>.</p>

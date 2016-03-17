@@ -12,105 +12,98 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-In this tutorial, a custom Docker app is created and added to Marathon.
+<p>In this tutorial, a custom Docker app is created and added to Marathon.</p>
 
-### Prerequisites
+<h3>Prerequisites</h3>
 
-*   [Docker][1] installed on your workstation
-*   [Docker Hub][2] account
-*   [DCOS and DCOS CLI][3] are installed
+<ul>
+<li><a href="https://www.docker.com">Docker</a> installed on your workstation</li>
+<li><a href="https://hub.docker.com">Docker Hub</a> account</li>
+<li><a href="../overview/installing/">DCOS and DCOS CLI</a> are installed</li>
+</ul>
 
-# Create a custom Docker container
+<h1>Create a custom Docker container</h1>
 
-1.  In the `dcos` directory created by the DCOS CLI installation script, create a new directory named `simple-docker-tutorial` and navigate to it:
-    
-        $ mkdir simple-docker-tutorial
-        $ cd simple-docker-tutorial
-        
+<ol>
+<li><p>In the <code>dcos</code> directory created by the DCOS CLI installation script, create a new directory named <code>simple-docker-tutorial</code> and navigate to it:</p>
 
-2.  Create a file named `index.html` by using nano, or another text editor of your choice:
-    
-        $ nano index.html
-        
+<pre><code>$ mkdir simple-docker-tutorial
+$ cd simple-docker-tutorial
+</code></pre></li>
+<li><p>Create a file named <code>index.html</code> by using nano, or another text editor of your choice:</p>
 
-3.  Paste the following markup into `index.html` and save:
-    
-        <html>
-            <body>
-            <h1> Hello brave new world! </h1>
-            </body>
-        </html>
-        
+<pre><code>$ nano index.html
+</code></pre></li>
+<li><p>Paste the following markup into <code>index.html</code> and save:</p>
 
-4.  Create and edit a Dockerfile by using nano, or another text editor of your choice:
-    
-        $ nano Dockerfile
-        
+<pre><code>&lt;html&gt;
+    &lt;body&gt;
+    &lt;h1&gt; Hello brave new world! &lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></li>
+<li><p>Create and edit a Dockerfile by using nano, or another text editor of your choice:</p>
 
-5.  Paste the following commands into it and save:
-    
-        FROM nginx:1.9
-        COPY index.html /usr/share/nginx/html/index.html
-        
+<pre><code>$ nano Dockerfile
+</code></pre></li>
+<li><p>Paste the following commands into it and save:</p>
 
-6.  Build the container, where `<username>` is your Docker Hub username:
-    
-        $ docker build -t <username>/simple-docker .
-        
+<pre><code>FROM nginx:1.9
+COPY index.html /usr/share/nginx/html/index.html
+</code></pre></li>
+<li><p>Build the container, where <code>&lt;username&gt;</code> is your Docker Hub username:</p>
 
-7.  Log in to Docker Hub:
-    
-        $ docker login
-        
+<pre><code>$ docker build -t &lt;username&gt;/simple-docker .
+</code></pre></li>
+<li><p>Log in to Docker Hub:</p>
 
-8.  Push your container to Docker Hub, where `<username>` is your Docker Hub username:
-    
-        $ docker push <username>/simple-docker
-        
+<pre><code>$ docker login
+</code></pre></li>
+<li><p>Push your container to Docker Hub, where <code>&lt;username&gt;</code> is your Docker Hub username:</p>
 
-# Add your Docker app to Marathon
+<pre><code>$ docker push &lt;username&gt;/simple-docker
+</code></pre></li>
+</ol>
 
-1.  Create a file named `nginx.json` by using nano, or another text editor of your choice:
-    
-        $ nano nginx.json
-        
+<h1>Add your Docker app to Marathon</h1>
 
-2.  Paste the following into the `nginx.json` file. If you’ve created your own Docker container, replace the image name mesosphere with your Docker Hub username:
-    
-        {
-            "id": "nginx",
-            "container": {
-            "type": "DOCKER",
-            "docker": {
-                  "image": "mesosphere/simple-docker",
-                  "network": "BRIDGE",
-                  "portMappings": [
-                    { "hostPort": 80, "containerPort": 80, "protocol": "tcp"}
-                  ]
-                }
-            },
-            "acceptedResourceRoles": ["slave_public"],
-            "instances": 1,
-            "cpus": 0.1,
-            "mem": 64
+<ol>
+<li><p>Create a file named <code>nginx.json</code> by using nano, or another text editor of your choice:</p>
+
+<pre><code>$ nano nginx.json
+</code></pre></li>
+<li><p>Paste the following into the <code>nginx.json</code> file. If you’ve created your own Docker container, replace the image name mesosphere with your Docker Hub username:</p>
+
+<pre><code>{
+    "id": "nginx",
+    "container": {
+    "type": "DOCKER",
+    "docker": {
+          "image": "mesosphere/simple-docker",
+          "network": "BRIDGE",
+          "portMappings": [
+            { "hostPort": 80, "containerPort": 80, "protocol": "tcp"}
+          ]
         }
-        
-    
-    This file specifies a simple Marathon application called “nginx” that runs one instance of itself on a public node.
+    },
+    "acceptedResourceRoles": ["slave_public"],
+    "instances": 1,
+    "cpus": 0.1,
+    "mem": 64
+}
+</code></pre>
 
-3.  Add the nginx Docker container to Marathon by using the DCOS command:
-    
-        $ dcos marathon app add nginx.json
-        
-    
-    If this is added successfully, there is no output.
+<p>This file specifies a simple Marathon application called “nginx” that runs one instance of itself on a public node.</p></li>
+<li><p>Add the nginx Docker container to Marathon by using the DCOS command:</p>
 
-4.  Verify that the app is added:
-    
-        $ dcos marathon app list
-        ID      MEM  CPUS  TASKS  HEALTH  DEPLOYMENT  CONTAINER  CMD                        
-        /nginx   64  0.1    0/1    ---      scale       DOCKER   None
+<pre><code>$ dcos marathon app add nginx.json
+</code></pre>
 
- [1]: https://www.docker.com
- [2]: https://hub.docker.com
- [3]: ../overview/installing/
+<p>If this is added successfully, there is no output.</p></li>
+<li><p>Verify that the app is added:</p>
+
+<pre><code>$ dcos marathon app list
+ID      MEM  CPUS  TASKS  HEALTH  DEPLOYMENT  CONTAINER  CMD                        
+/nginx   64  0.1    0/1    ---      scale       DOCKER   None
+</code></pre></li>
+</ol>

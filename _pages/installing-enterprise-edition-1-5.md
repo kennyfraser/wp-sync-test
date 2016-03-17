@@ -10,4 +10,4 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: true
 ---
-[installing-enterprise-edition-overview] [installing-enterprise-edition-hardware] [installing-enterprise-edition-software]
+<p>[installing-enterprise-edition-overview] [installing-enterprise-edition-hardware] [installing-enterprise-edition-software]</p>

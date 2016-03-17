@@ -10,6 +10,6 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-People in Canada Love Ford Trucks
+<p>People in Canada Love Ford Trucks</p>
 
-sdfgdfg
+<p>sdfgdfg</p>

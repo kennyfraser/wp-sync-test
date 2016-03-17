@@ -10,42 +10,51 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-You can run and manage Spark jobs by using the [Spark CLI][1].
+<p>You can run and manage Spark jobs by using the <a href="https://github.com/mesosphere/dcos-spark">Spark CLI</a>.</p>
 
-`--help`, `-h`
+<dl>
+<dt><code>--help</code>, <code>-h</code></dt>
+<dd>
+<p>Show a description of all command options and positional arguments for the command.</p>
+</dd>
 
-:   Show a description of all command options and positional arguments for the command.
+<dt><code>--info</code></dt>
+<dd>
+<p>Show a brief description of the command.</p>
+</dd>
 
-`--info`
+<dt><code>--version</code></dt>
+<dd>
+<p>Show the version of the installed Spark CLI.</p>
+</dd>
 
-:   Show a brief description of the command.
+<dt><code>--config-schema</code></dt>
+<dd>
+<p>Show the Spark CLI configuration schema.</p>
+</dd>
 
-`--version`
+<dt><code>run --help</code></dt>
+<dd>
+<p>Show a description of all <code>dcos spark run</code> command options and positional arguments.</p>
+</dd>
 
-:   Show the version of the installed Spark CLI.
+<dt><code>run --submit-args=&lt;spark-args&gt;</code></dt>
+<dd>
+<p>Run a Spark job with the required <code>&lt;spark-args&gt;</code> specified.</p>
+</dd>
 
-`--config-schema`
+<dt><code>status &lt;submissionId&gt;</code></dt>
+<dd>
+<p>Show the status of a Spark job with the required <code>&lt;spark-args&gt;</code> specified.</p>
+</dd>
 
-:   Show the Spark CLI configuration schema.
+<dt><code>kill &lt;submissionId&gt;</code></dt>
+<dd>
+<p>Kill the Spark job with the required <code>&lt;spark-args&gt;</code> specified.</p>
+</dd>
 
-`run --help`
-
-:   Show a description of all `dcos spark run` command options and positional arguments.
-
-`run --submit-args=<spark-args>`
-
-:   Run a Spark job with the required `<spark-args>` specified.
-
-`status <submissionId>`
-
-:   Show the status of a Spark job with the required `<spark-args>` specified.
-
-`kill <submissionId>`
-
-:   Kill the Spark job with the required `<spark-args>` specified.
-
-`webui`
-
-:   Show the URL of the Spark web interface.
-
- [1]: https://github.com/mesosphere/dcos-spark
+<dt><code>webui</code></dt>
+<dd>
+<p>Show the URL of the Spark web interface.</p>
+</dd>
+</dl>
