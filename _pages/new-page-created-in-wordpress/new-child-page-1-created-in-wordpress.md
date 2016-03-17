@@ -10,4 +10,4 @@ page_options_show_link_unauthenticated: false
 hide_from_navigation: false
 hide_from_related: false
 ---
-New Child Page (1) Created in Wordpress!
+New Child Page (1) Created in Wordpress!!
