@@ -11,3 +11,5 @@ hide_from_navigation: false
 hide_from_related: false
 ---
 New Page Created in Wordpress
+
+edit #1 from git
