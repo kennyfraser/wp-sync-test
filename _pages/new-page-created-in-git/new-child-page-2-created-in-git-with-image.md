@@ -16,6 +16,8 @@ New Child Page (2) Created in Git with image
 
 git edit #1
 
+wp edit #2
+
 ![alt text][1]
 
  [1]: /assets/images/chronos.jpg
