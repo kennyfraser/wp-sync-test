@@ -1,6 +1,6 @@
 ---
 UID: 56f04c98378e3
-post_title: 'New Page &#8211; Created in Git &amp;#821: Child'
+post_title: 'New Page – Created in Git &amp;#821: Child'
 post_excerpt: ""
 layout: page
 published: true
