@@ -13,3 +13,5 @@ hide_from_related: false
 New Page - Created in Git Child
 
 Git Edit #1
+
+Wordpress Edit #2
