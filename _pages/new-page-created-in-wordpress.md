@@ -15,3 +15,5 @@ New Page - Created in Wordpress
 Wordpress edit #1
 
 Git Edit #2
+
+Git Edit #3
