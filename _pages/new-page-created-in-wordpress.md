@@ -13,3 +13,5 @@ hide_from_related: false
 New Page - Created in Wordpress
 
 Wordpress edit #1
+
+Git Edit #2
