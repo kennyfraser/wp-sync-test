@@ -1,6 +1,6 @@
 ---
 UID: 56f049ad3c410
-post_title: Getting Started
+post_title: Concepts
 post_excerpt: ""
 layout: page
 published: true
