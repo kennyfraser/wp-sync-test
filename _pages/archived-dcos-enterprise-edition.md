@@ -1,10 +1,10 @@
 ---
-UID: 56f049a7cdba2
+UID: 56f9844593827
 post_title: Archived DCOS Enterprise Edition
 post_excerpt: ""
 layout: page
 published: true
-menu_order: 100
+menu_order: 107
 page_options_require_authentication: false
 page_options_show_link_unauthenticated: false
 hide_from_navigation: false

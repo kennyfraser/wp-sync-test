@@ -1,10 +1,10 @@
 ---
-UID: 56f049abec878
+UID: 56f98449546cf
 post_title: SSHing to a DCOS Cluster
 post_excerpt: ""
 layout: page
 published: true
-menu_order: 14
+menu_order: 15
 page_options_require_authentication: false
 page_options_show_link_unauthenticated: false
 hide_from_navigation: false
@@ -41,14 +41,19 @@ These instructions explain how to set up an SSH connection to your DCOS cluster 
         
         1.  From the DCOS CLI, enter the following command:
             
-                $ dcos node ssh --master-proxy --master
+                $ dcos node ssh --master-proxy --leader
+                
+            
+            **Tip:** The default user is `core`. If you are using CentOS, enter:
+            
+                $ dcos node ssh --master-proxy --leader --user=centos
                 
     
     *   **To SSH to an agent node:**
         
         1.  From the Mesos web interface, copy the agent node ID. You can find the IDs on the **Frameworks** (`<master-node-IPaddress>/mesos/#/frameworks`) or **Slaves** page (`<master-node-IPaddress>/mesos/#/slaves`).
             
-            <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/mesos-sandbox-slave-copy.png" rel="attachment wp-att-1560"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/mesos-sandbox-slave-copy-600x119.png" alt="mesos-sandbox-slave-copy" width="500" height="260" class="alignnone size-medium wp-image-1560" /></a>
+            <a href="/wp-content/uploads/2015/12/mesos-sandbox-slave-copy.png" rel="attachment wp-att-1560"><img src="/wp-content/uploads/2015/12/mesos-sandbox-slave-copy-600x119.png" alt="mesos-sandbox-slave-copy" width="500" height="260" class="alignnone size-medium wp-image-1560" /></a>
         
         2.  From the DCOS CLI, enter the following command, where `<slave-id>` is your agent ID:
             
@@ -71,7 +76,7 @@ To install these programs, download the Windows installer <a href="http://www.ch
     
     2.  Select **SSH-2 RSA** as the key type, click **Save private key**, then choose the name and location to save your new .ppk key.
         
-        <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/windowsputtykey.png" rel="attachment wp-att-1611"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/windowsputtykey-600x596.png" alt="windowsputtykey" width="500" height="498" class="alignnone size-medium wp-image-1611" /></a>
+        <a href="/wp-content/uploads/2015/12/windowsputtykey.png" rel="attachment wp-att-1611"><img src="/wp-content/uploads/2015/12/windowsputtykey-600x596.png" alt="windowsputtykey" width="500" height="498" class="alignnone size-medium wp-image-1611" /></a>
     
     3.  Close PuTTYgen.
 
@@ -81,19 +86,19 @@ To install these programs, download the Windows installer <a href="http://www.ch
         
         1.  From the DCOS web interface, copy the IP address of the master node. The IP address is displayed beneath your cluster name.
             
-            <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/nodehostname.png" rel="attachment wp-att-1567"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/nodehostname-600x231.png" alt="nodehostname" width="300" height="116" class="alignnone size-medium wp-image-1567" /></a>
+            <a href="/wp-content/uploads/2015/12/nodehostname.png" rel="attachment wp-att-1567"><img src="/wp-content/uploads/2015/12/nodehostname-600x231.png" alt="nodehostname" width="300" height="116" class="alignnone size-medium wp-image-1567" /></a>
         
         2.  Open PuTTY and enter the master node IP address in the **Host Name (or IP address)** field.
             
-            <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/windowsputtybasic.png" rel="attachment wp-att-1610"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/windowsputtybasic-600x592.png" alt="windowsputtybasic" width="500" height="496" class="alignnone size-medium wp-image-1610" /></a>
+            <a href="/wp-content/uploads/2015/12/windowsputtybasic.png" rel="attachment wp-att-1610"><img src="/wp-content/uploads/2015/12/windowsputtybasic-600x592.png" alt="windowsputtybasic" width="500" height="496" class="alignnone size-medium wp-image-1610" /></a>
         
         3.  In the **Category** pane on the left side of the PuTTY window, choose **Connection > SSH > Auth**, click **Browse**, locate and select your `.ppk` file, then click **Open**.
             
-            <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/windowsputtysshopt.png" rel="attachment wp-att-1612"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/windowsputtysshopt-600x592.png" alt="windowsputtysshopt" width="500" height="496" class="alignnone size-medium wp-image-1612" /></a>
+            <a href="/wp-content/uploads/2015/12/windowsputtysshopt.png" rel="attachment wp-att-1612"><img src="/wp-content/uploads/2015/12/windowsputtysshopt-600x592.png" alt="windowsputtysshopt" width="500" height="496" class="alignnone size-medium wp-image-1612" /></a>
         
         4.  Login as user “core”.
             
-            <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/windowscore.png" rel="attachment wp-att-1607"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/windowscore-600x349.png" alt="windowscore" width="500" height="375" class="alignnone size-medium wp-image-1607" /></a>
+            <a href="/wp-content/uploads/2015/12/windowscore.png" rel="attachment wp-att-1607"><img src="/wp-content/uploads/2015/12/windowscore-600x349.png" alt="windowscore" width="500" height="375" class="alignnone size-medium wp-image-1607" /></a>
     
     *   **To SSH to an agent node**
         
@@ -107,7 +112,7 @@ To install these programs, download the Windows installer <a href="http://www.ch
             
             2.  Click the **Browse** button and locate the `.ppk` file that you created previously using PuTTYgen.
                 
-                <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/windowsforwarding.png" rel="attachment wp-att-1608"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/windowsforwarding-600x592.png" alt="windowsforwarding" width="500" height="496" class="alignnone size-medium wp-image-1608" /></a>
+                <a href="/wp-content/uploads/2015/12/windowsforwarding.png" rel="attachment wp-att-1608"><img src="/wp-content/uploads/2015/12/windowsforwarding-600x592.png" alt="windowsforwarding" width="500" height="496" class="alignnone size-medium wp-image-1608" /></a>
         
         2.  Add the `.ppk` file to Pageant.
             
@@ -117,7 +122,7 @@ To install these programs, download the Windows installer <a href="http://www.ch
             
             3.  Locate the `.ppk` file that you created using PuTTYgen and click **Open** to add your key to Pageant.
                 
-                <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/windowspageant.png" rel="attachment wp-att-1609"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/windowspageant-600x433.png" alt="windowspageant" width="500" height="417" class="alignnone size-medium wp-image-1609" /></a>
+                <a href="/wp-content/uploads/2015/12/windowspageant.png" rel="attachment wp-att-1609"><img src="/wp-content/uploads/2015/12/windowspageant-600x433.png" alt="windowspageant" width="500" height="417" class="alignnone size-medium wp-image-1609" /></a>
             
             4.  Click the **Close** button to close the Pageant window.
         
@@ -129,7 +134,7 @@ To install these programs, download the Windows installer <a href="http://www.ch
             
             3.  Login as user “core”.
                 
-                <a href="https://docs.mesosphere.com/wp-content/uploads/2015/12/windowscore.png" rel="attachment wp-att-1607"><img src="https://docs.mesosphere.com/wp-content/uploads/2015/12/windowscore-600x349.png" alt="windowscore" width="500" height="375" class="alignnone size-medium wp-image-1607" /></a>
+                <a href="/wp-content/uploads/2015/12/windowscore.png" rel="attachment wp-att-1607"><img src="/wp-content/uploads/2015/12/windowscore-600x349.png" alt="windowscore" width="500" height="375" class="alignnone size-medium wp-image-1607" /></a>
         
         4.  From the master node, SSH into the agent node.
             
@@ -139,7 +144,7 @@ To install these programs, download the Windows installer <a href="http://www.ch
                 
                     ssh core@<agent-node-hostname>
 
- [1]: ../introcli/command-reference/
+ [1]: /usage/cli/command-reference/
  [2]: #unix
  [3]: #windows
- [4]: /install/awscluster/#create
+ [4]: /administration/installing/installing-community-edition/awscluster/#create

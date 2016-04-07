@@ -1,5 +1,5 @@
 ---
-UID: 56f049a920a44
+UID: 56f98446c351e
 post_title: Service Naming
 post_excerpt: ""
 layout: page
@@ -88,7 +88,7 @@ On a DCOS cluster, ports are offered by agent nodes in the same way as other res
 
 The following table shows the rules that govern SRV generation:
 
-<table class="table" style="width: 400px !important;">
+<table class="table" style="width: 400px !important">
   <thead>
     <tr>
       <th>
@@ -281,6 +281,6 @@ If a service launches multiple tasks with the same name, the DNS lookup will ret
 
 **Caution:** It is possible to have a name collision if *different* services launch tasks that have the same hostname. If different services launch tasks with identical Mesos-DNS hostnames, or if Mesos-DNS truncates app IDs to create identical Mesos-DNS hostnames, applications will communicate with the wrong agent nodes and fail unpredictably.
 
- [1]: ../../terminology/
- [2]: https://docs.mesosphere.com/administration/service-discovery/faq-troubleshooting/#leader
+ [1]: /overview/concepts/
+ [2]: /administration/service-discovery/faq-troubleshooting/#leader
  [3]: https://tools.ietf.org/html/rfc952

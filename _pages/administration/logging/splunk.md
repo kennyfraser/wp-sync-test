@@ -1,5 +1,5 @@
 ---
-UID: 56f049acaaa67
+UID: 56f9844a100f4
 post_title: Log Management with Splunk
 post_excerpt: ""
 layout: page
@@ -36,11 +36,11 @@ For each Master node in your DCOS cluster:
     
         #!/bin/sh
         
-        exec journalctl --since=now -f \
-            -u dcos-exhibitor.service \
-            -u dcos-marathon.service \
-            -u dcos-mesos-dns.service \
-            -u dcos-mesos-master.service \
+        exec journalctl --since=now -f 
+            -u dcos-exhibitor.service 
+            -u dcos-marathon.service 
+            -u dcos-mesos-dns.service 
+            -u dcos-mesos-master.service 
             -u dcos-nginx.service
         
 
@@ -51,8 +51,8 @@ For each Master node in your DCOS cluster:
 
 3.  Add the script as an input to the forwarder:
     
-        "$SPLUNK_HOME/bin/splunk" add exec \
-            -source "$SPLUNK_HOME/bin/scripts/journald-master.sh" \
+        "$SPLUNK_HOME/bin/splunk" add exec 
+            -source "$SPLUNK_HOME/bin/scripts/journald-master.sh" 
             -interval 0
         
 
@@ -64,8 +64,8 @@ For each agent node in your DCOS cluster:
     
         #!/bin/sh
         
-        exec journalctl --since=now -f \
-            -u dcos-mesos-slave.service \
+        exec journalctl --since=now -f 
+            -u dcos-mesos-slave.service 
             -u dcos-mesos-slave-public.service
         
 
@@ -76,14 +76,14 @@ For each agent node in your DCOS cluster:
 
 3.  Add the script as an input to the forwarder:
     
-        "$SPLUNK_HOME/bin/splunk" add exec \
-            -source "$SPLUNK_HOME/bin/scripts/journald-agent.sh" \
+        "$SPLUNK_HOME/bin/splunk" add exec 
+            -source "$SPLUNK_HOME/bin/scripts/journald-agent.sh" 
             -interval 0
         
 
 4.  Add the task logs as inputs to the forwarder:
     
-        "$SPLUNK_HOME/bin/splunk" add monitor '/var/lib/mesos/slave' \
+        "$SPLUNK_HOME/bin/splunk" add monitor '/var/lib/mesos/slave' 
             -whitelist '/stdout$|/stderr$'
         
 
@@ -95,6 +95,6 @@ For each agent node in your DCOS cluster:
 
 For details on how to filter your logs with Splunk, see [Filtering DCOS logs with Splunk][3].
 
- [1]: ../release-notes/community-edition/1-3/
+ [1]: /overview/release-notes/community-edition/1-3/
  [2]: http://www.splunk.com/en_us/download/universal-forwarder.html
- [3]: ../../logging/filter-splunk/
+ [3]: /administration/logging/filter-splunk/

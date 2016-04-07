@@ -1,5 +1,5 @@
 ---
-UID: 56f049acc4241
+UID: 56f9844a27e08
 post_title: Filtering Task Logs with Splunk
 post_excerpt: ""
 layout: page
@@ -104,7 +104,7 @@ Here are example query templates for aggregating the DCOS logs with Splunk. Repl
     
         host=$agent_host1 AND ("$framework1" OR "$executor1" OR "$executor2") AND NOT agent=$agent
 
- [1]: /logging/splunk/
+ [1]: /administration/logging/splunk/
  [2]: #splunkui
  [3]: #propsconf
  [4]: http://docs.splunk.com/Documentation/Splunk/latest/admin/Propsconf

@@ -1,5 +1,5 @@
 ---
-UID: 56f049aca37ff
+UID: 56f9844a0781b
 post_title: System Logging
 post_excerpt: ""
 layout: page
@@ -50,4 +50,4 @@ To access the DCOS core component logs, you must have SSH access to your DCOS cl
     
            journalctl -u dcos-exhibitor -b
 
- [1]: /install/sshcluster/
+ [1]: /administration/sshcluster/

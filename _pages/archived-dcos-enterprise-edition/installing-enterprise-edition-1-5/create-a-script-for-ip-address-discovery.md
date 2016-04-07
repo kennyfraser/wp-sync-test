@@ -1,5 +1,5 @@
 ---
-UID: 56f049a8be87b
+UID: 56f984467df6e
 post_title: 'Step 1: Create a script for IP address discovery'
 post_excerpt: ""
 layout: page
@@ -53,7 +53,7 @@ In this step you create an IP detect script on your bootstrap node to broadcast 
             #!/usr/bin/env bash
             set -o nounset -o errexit
             export PATH=/usr/sbin:/usr/bin:$PATH
-            echo $(ip addr show eth0 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
+            echo $(ip addr show eth0 | grep -Eo '[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}' | head -1)
             
     
     *   #### Use the network route to the Mesos master
@@ -67,12 +67,12 @@ In this step you create an IP detect script on your bootstrap node to broadcast 
             
             MASTER_IP=172.28.128.3
             
-            echo $(/usr/sbin/ip route show to match 172.28.128.3 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | tail -1)
+            echo $(/usr/sbin/ip route show to match 172.28.128.3 | grep -Eo '[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}' | tail -1)
             
 
 ## Next step
 
 [Configure and install DCOS][2]
 
- [1]: ../getting-started/installing/installing-enterprise-edition/dcos-cleanup-script/
- [2]: ../configure-and-install-dcos/
+ [1]: /administration/installing/installing-enterprise-edition/dcos-cleanup-script/
+ [2]: /archived-dcos-enterprise-edition/installing-enterprise-edition-1-5/configure-and-install-dcos/

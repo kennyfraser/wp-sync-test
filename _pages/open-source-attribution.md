@@ -1,10 +1,10 @@
 ---
-UID: 56f049aba5e6f
+UID: 56f984490e478
 post_title: Mesosphere Open Source Attribution
 post_excerpt: ""
 layout: page
 published: true
-menu_order: 15
+menu_order: 16
 page_options_require_authentication: false
 page_options_show_link_unauthenticated: false
 hide_from_navigation: false

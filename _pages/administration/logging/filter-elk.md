@@ -1,5 +1,5 @@
 ---
-UID: 56f049acd0444
+UID: 56f9844a3b585
 post_title: Filtering Task Logs with ELK
 post_excerpt: ""
 layout: page
@@ -89,5 +89,5 @@ Here are some example query templates. Replace the template parameters `$executo
     
         host:$agent_host1 AND ("$framework1" OR "$executor1" OR "$executor2") AND NOT agent:$agent
 
- [1]: /logging/elk/
+ [1]: /administration/logging/elk/
  [2]: http://logz.io

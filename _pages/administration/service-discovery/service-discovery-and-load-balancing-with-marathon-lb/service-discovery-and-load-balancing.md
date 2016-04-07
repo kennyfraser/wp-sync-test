@@ -1,10 +1,10 @@
 ---
-UID: 56f049a8cf236
+UID: 56f984468c0c6
 post_title: Using marathon-lb
 post_excerpt: ""
 layout: page
 published: true
-menu_order: 100
+menu_order: 105
 page_options_require_authentication: false
 page_options_show_link_unauthenticated: false
 hide_from_navigation: false
@@ -21,24 +21,6 @@ To demonstrate marathon-lb, you can boot a DCOS cluster on AWS to run an interna
 
 1.  Install marathon-lb.
     
-    Check which version of the DCOS CLI is installed:
-    
-        $ dcos --version
-        
-    
-    If you using DCOS CLI 0.4.0 or above (DCOS version 1.6.1 or above), add the multiverse repository with the following command:
-    
-        $ dcos package repo add multiverse https://github.com/mesosphere/multiverse/archive/version-2.x.zip
-        
-    
-    If you are using DCOS CLI 0.3.x or below (DCOS version 1.6.0 or below), add the multiverse repository with these commands:
-    
-        $ dcos config prepend package.sources https://github.com/mesosphere/multiverse/archive/version-2.x.zip
-        $ dcos package update --validate
-        
-    
-    Now, install `marathon-lb`
-    
         $ dcos package install marathon-lb        
         
     
@@ -46,7 +28,7 @@ To demonstrate marathon-lb, you can boot a DCOS cluster on AWS to run an interna
     
     <img src="https://mesosphere.com/wp-content/uploads/2015/12/lb2.jpg" alt="lb2" width="628" height="440" class="aligncenter size-full wp-image-3821" />
 
-2.  Set up your internal load balancer. To do this, we must first specify some configuration options for the marathon-lb multiverse package. Create a file called `options.json` with the following contents:
+2.  Set up your internal load balancer. To do this, we must first specify some configuration options for the marathon-lb package. Create a file called `options.json` with the following contents:
     
         { "marathon-lb":{ "name":"marathon-lb-internal", "haproxy-group":"internal", "bind-http-https":false, "role":"" } }
         
@@ -213,7 +195,7 @@ Now, if you navigate to the ELB public DNS address in your browser, you should s
 
 <img src="https://mesosphere.com/wp-content/uploads/2015/12/lb6.jpg" alt="lb6" width="621" height="405" class="aligncenter size-full wp-image-3826" />
 
- [1]: /installing
- [2]: ../cli/install-cli
- [3]: ./administration/managing-a-dcos-cluster-in-aws/#scrollNav-1
+ [1]: /administration/installing/
+ [2]: /usage/cli/install/
+ [3]: /administration/managing-a-dcos-cluster-in-aws/#scrollNav-1
  [4]: /administration/sshcluster/

@@ -1,5 +1,5 @@
 ---
-UID: 56f049abb1c42
+UID: 56f984491da72
 post_title: >
   Mesosphere DCOS Community Edition
   Privacy Policy
