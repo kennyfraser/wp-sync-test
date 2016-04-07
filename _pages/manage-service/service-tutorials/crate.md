@@ -74,8 +74,8 @@ After installing, only a single Crate task is running on the DCOS cluster. To la
 
 To launch instances, POST the number of desired instances to the `/resize` endpoint:
 
-    $ curl -X POST localhost:4040/cluster/resize \
-          -H "Content-Type: application/json" \
+    $ curl -X POST localhost:4040/cluster/resize 
+          -H "Content-Type: application/json" 
           -d '{"instances": 3}'
     
 

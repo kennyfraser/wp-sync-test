@@ -38,7 +38,7 @@ This setting does not affect the output sent to stdout.
 
 This command manages your Mesosphere DCOS configuration file.
 
-A default configuration file named `dcos.toml` is created during initial DCOS CLI setup and is located in `~/.dcos/` on Unix, Linux, and OS X systems or at `C:\Users\<your username>\.dcos\` on most Windows systems.
+A default configuration file named `dcos.toml` is created during initial DCOS CLI setup and is located in `~/.dcos/` on Unix, Linux, and OS X systems or at `C:Users<your username>.dcos` on most Windows systems.
 
 `dcos config --help`, `-h`
 
