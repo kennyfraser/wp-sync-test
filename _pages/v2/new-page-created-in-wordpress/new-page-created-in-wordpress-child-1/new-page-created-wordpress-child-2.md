@@ -1,5 +1,4 @@
 ---
-
 post_title: 'New Page &#8211; Created in WordPress &#8211; Child 2'
 post_excerpt: ""
 layout: page

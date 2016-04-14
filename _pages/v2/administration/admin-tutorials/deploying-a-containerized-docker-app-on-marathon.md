@@ -1,5 +1,4 @@
 ---
-
 post_title: >
   Adding a Containerized Docker App to
   Marathon

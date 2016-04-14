@@ -1,5 +1,4 @@
 ---
-
 post_title: Changing the DCOS master node
 post_excerpt: ""
 layout: page

@@ -1,5 +1,4 @@
 ---
-
 post_title: Uninstalling the CLI
 post_excerpt: ""
 layout: page

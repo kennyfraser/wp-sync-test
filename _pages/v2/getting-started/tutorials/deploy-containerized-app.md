@@ -1,5 +1,4 @@
 ---
-
 post_title: >
   Deploying a Containerized App on a
   Public Node

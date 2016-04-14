@@ -1,5 +1,4 @@
 ---
-
 post_title: Installing on Amazon Web Services
 post_excerpt: ""
 layout: page

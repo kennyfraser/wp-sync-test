@@ -1,5 +1,4 @@
 ---
-
 post_title: Autoscaling based on app request rate
 post_excerpt: ""
 layout: page

@@ -1,5 +1,4 @@
 ---
-
 post_title: Service Discovery with Mesos-DNS
 post_excerpt: ""
 layout: page

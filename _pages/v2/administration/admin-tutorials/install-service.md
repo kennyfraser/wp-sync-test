@@ -1,5 +1,4 @@
 ---
-
 post_title: Installing a DCOS service
 post_excerpt: ""
 layout: page

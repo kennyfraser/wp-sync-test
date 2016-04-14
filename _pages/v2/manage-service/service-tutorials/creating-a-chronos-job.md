@@ -1,5 +1,4 @@
 ---
-
 post_title: Creating a Chronos job
 post_excerpt: ""
 layout: page

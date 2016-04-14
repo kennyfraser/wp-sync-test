@@ -1,5 +1,4 @@
 ---
-
 post_title: Mesosphere Open Source Attribution
 post_excerpt: ""
 layout: page

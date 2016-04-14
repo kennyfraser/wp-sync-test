@@ -1,5 +1,4 @@
 ---
-
 post_title: Terminology
 post_excerpt: ""
 layout: page

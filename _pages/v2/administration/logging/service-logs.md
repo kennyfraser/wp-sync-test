@@ -1,5 +1,4 @@
 ---
-
 post_title: Service Logging
 post_excerpt: ""
 layout: page

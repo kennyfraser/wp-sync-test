@@ -1,5 +1,4 @@
 ---
-
 post_title: Uninstalling on Amazon Web Services
 post_excerpt: ""
 layout: page

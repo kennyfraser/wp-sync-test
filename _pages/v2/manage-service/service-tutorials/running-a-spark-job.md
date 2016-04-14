@@ -1,5 +1,4 @@
 ---
-
 post_title: Running a Spark Job
 post_excerpt: ""
 layout: page

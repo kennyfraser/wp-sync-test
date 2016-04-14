@@ -1,5 +1,4 @@
 ---
-
 post_title: Kafka CLI
 post_excerpt: ""
 layout: page

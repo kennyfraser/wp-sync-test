@@ -1,5 +1,4 @@
 ---
-
 post_title: Automated command line installation
 post_excerpt: ""
 layout: page

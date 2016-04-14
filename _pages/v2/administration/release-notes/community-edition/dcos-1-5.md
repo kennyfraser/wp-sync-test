@@ -1,5 +1,4 @@
 ---
-
 post_title: DCOS 1.5
 post_excerpt: ""
 layout: page

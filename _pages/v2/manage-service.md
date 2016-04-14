@@ -1,5 +1,4 @@
 ---
-
 post_title: Managing Services
 post_excerpt: ""
 layout: page

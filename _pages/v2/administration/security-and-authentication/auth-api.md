@@ -1,5 +1,4 @@
 ---
-
 post_title: Authentication HTTP API Endpoint
 post_excerpt: ""
 layout: page

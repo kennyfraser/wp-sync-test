@@ -1,5 +1,4 @@
 ---
-
 post_title: Release Notes
 post_excerpt: ""
 layout: page

@@ -1,5 +1,4 @@
 ---
-
 post_title: Deploying Crate as a DCOS Service
 post_excerpt: ""
 layout: page

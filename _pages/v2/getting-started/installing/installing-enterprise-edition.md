@@ -1,5 +1,4 @@
 ---
-
 post_title: Installing Enterprise Edition
 post_excerpt: ""
 layout: page

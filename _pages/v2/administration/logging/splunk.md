@@ -1,5 +1,4 @@
 ---
-
 post_title: Log Management with Splunk
 post_excerpt: ""
 layout: page

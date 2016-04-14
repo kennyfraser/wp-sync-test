@@ -1,5 +1,4 @@
 ---
-
 post_title: Community Edition Release Notes
 post_excerpt: ""
 layout: page

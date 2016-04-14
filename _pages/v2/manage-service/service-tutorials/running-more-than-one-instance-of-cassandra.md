@@ -1,5 +1,4 @@
 ---
-
 post_title: Running multiple Cassandra instances
 post_excerpt: ""
 layout: page

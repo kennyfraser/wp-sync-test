@@ -1,5 +1,4 @@
 ---
-
 post_title: Labeling DCOS Tasks
 post_excerpt: ""
 layout: page

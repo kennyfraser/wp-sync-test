@@ -1,5 +1,4 @@
 ---
-
 post_title: Archived DCOS Enterprise Edition
 post_excerpt: ""
 layout: page

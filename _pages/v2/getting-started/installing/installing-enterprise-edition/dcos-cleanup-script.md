@@ -1,5 +1,4 @@
 ---
-
 post_title: DCOS cleanup script
 post_excerpt: ""
 layout: page

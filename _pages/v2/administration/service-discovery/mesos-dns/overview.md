@@ -1,5 +1,4 @@
 ---
-
 post_title: Overview of Mesos-DNS
 post_excerpt: ""
 layout: page

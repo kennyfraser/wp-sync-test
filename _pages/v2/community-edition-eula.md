@@ -1,5 +1,4 @@
 ---
-
 post_title: >
   Mesosphere DCOS Community Edition End
   User License Agreement

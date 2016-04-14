@@ -1,5 +1,4 @@
 ---
-
 post_title: HDFS Capacity
 post_excerpt: ""
 layout: page

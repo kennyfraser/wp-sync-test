@@ -1,5 +1,4 @@
 ---
-
 post_title: Cassandra
 post_excerpt: ""
 layout: page

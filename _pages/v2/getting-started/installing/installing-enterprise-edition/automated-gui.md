@@ -1,5 +1,4 @@
 ---
-
 post_title: Automated GUI installation
 post_excerpt: ""
 layout: page

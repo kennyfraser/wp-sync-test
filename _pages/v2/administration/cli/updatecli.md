@@ -1,5 +1,4 @@
 ---
-
 post_title: Updating the CLI
 post_excerpt: ""
 layout: page

@@ -1,5 +1,4 @@
 ---
-
 post_title: Autoscaling with Marathon
 post_excerpt: ""
 layout: page

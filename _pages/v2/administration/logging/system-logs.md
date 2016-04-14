@@ -1,5 +1,4 @@
 ---
-
 post_title: System Logging
 post_excerpt: ""
 layout: page

@@ -1,5 +1,4 @@
 ---
-
 post_title: 'New Page – Created in Git &amp;#821: Child'
 post_excerpt: ""
 layout: page

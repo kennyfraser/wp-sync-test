@@ -1,5 +1,4 @@
 ---
-
 post_title: Managing DCOS Marathon
 post_excerpt: ""
 layout: page

@@ -1,5 +1,4 @@
 ---
-
 post_title: Customizing a DCOS Service
 post_excerpt: ""
 layout: page

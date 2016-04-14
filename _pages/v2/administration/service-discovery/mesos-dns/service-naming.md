@@ -1,5 +1,4 @@
 ---
-
 post_title: Service Naming
 post_excerpt: ""
 layout: page

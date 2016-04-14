@@ -1,5 +1,4 @@
 ---
-
 post_title: Spark CLI
 post_excerpt: ""
 layout: page

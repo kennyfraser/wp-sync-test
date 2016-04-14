@@ -1,5 +1,4 @@
 ---
-
 post_title: Configuration parameters
 post_excerpt: ""
 layout: page

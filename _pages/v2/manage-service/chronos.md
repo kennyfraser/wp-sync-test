@@ -1,5 +1,4 @@
 ---
-
 post_title: Chronos
 post_excerpt: ""
 layout: page

@@ -1,5 +1,4 @@
 ---
-
 post_title: System Requirements
 post_excerpt: ""
 layout: page

@@ -1,5 +1,4 @@
 ---
-
 post_title: SSHing to a DCOS Cluster
 post_excerpt: ""
 layout: page

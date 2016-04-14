@@ -1,5 +1,4 @@
 ---
-
 post_title: Adding a Kafka broker
 post_excerpt: ""
 layout: page

@@ -1,5 +1,4 @@
 ---
-
 post_title: Mesosphere DCOS Documentation
 post_excerpt: ""
 layout: page

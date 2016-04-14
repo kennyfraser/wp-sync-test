@@ -1,5 +1,4 @@
 ---
-
 post_title: >
   Managing Authorization and
   Authentication

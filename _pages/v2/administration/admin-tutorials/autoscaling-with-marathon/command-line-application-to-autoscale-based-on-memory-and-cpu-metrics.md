@@ -1,5 +1,4 @@
 ---
-
 post_title: >
   Autoscaling based on memory and CPU
   metrics

@@ -1,5 +1,4 @@
 ---
-
 post_title: Customizing Your Spark Installation
 post_excerpt: ""
 layout: page

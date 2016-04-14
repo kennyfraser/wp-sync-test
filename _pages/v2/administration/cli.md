@@ -1,5 +1,4 @@
 ---
-
 post_title: Command Line Interface
 post_excerpt: ""
 layout: page

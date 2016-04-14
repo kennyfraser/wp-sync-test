@@ -1,5 +1,4 @@
 ---
-
 post_title: Getting Started
 post_excerpt: ""
 layout: page

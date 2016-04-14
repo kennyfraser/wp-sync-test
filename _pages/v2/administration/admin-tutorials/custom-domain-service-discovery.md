@@ -1,5 +1,4 @@
 ---
-
 post_title: >
   Using A Custom Domain For DCOS Service
   Discovery

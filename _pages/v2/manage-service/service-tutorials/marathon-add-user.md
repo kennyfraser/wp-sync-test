@@ -1,5 +1,4 @@
 ---
-
 post_title: Adding a Marathon User Instance
 post_excerpt: ""
 layout: page

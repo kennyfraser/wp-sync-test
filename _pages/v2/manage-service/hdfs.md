@@ -1,5 +1,4 @@
 ---
-
 post_title: HDFS
 post_excerpt: ""
 layout: page

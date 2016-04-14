@@ -1,5 +1,4 @@
 ---
-
 post_title: Installing Community Edition
 post_excerpt: ""
 layout: page

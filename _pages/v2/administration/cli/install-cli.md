@@ -1,5 +1,4 @@
 ---
-
 post_title: Installing the CLI
 post_excerpt: ""
 layout: page

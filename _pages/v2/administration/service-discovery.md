@@ -1,5 +1,4 @@
 ---
-
 post_title: Service Discovery and Load Balancing
 post_excerpt: ""
 layout: page

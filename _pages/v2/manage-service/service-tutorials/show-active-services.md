@@ -1,5 +1,4 @@
 ---
-
 post_title: Monitoring DCOS Services
 post_excerpt: ""
 layout: page

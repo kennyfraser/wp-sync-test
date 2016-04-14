@@ -1,5 +1,4 @@
 ---
-
 post_title: Security and Authentication
 post_excerpt: ""
 layout: page

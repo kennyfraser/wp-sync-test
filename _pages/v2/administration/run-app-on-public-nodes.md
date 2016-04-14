@@ -1,5 +1,4 @@
 ---
-
 post_title: Running Your App on Public Nodes
 post_excerpt: ""
 layout: page
