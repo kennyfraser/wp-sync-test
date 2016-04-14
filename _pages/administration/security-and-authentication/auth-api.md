@@ -24,8 +24,8 @@ Log in with a POST request against `acs/api/v1/auth/login`.
 
 Specify the user ID (`<user-id>`), password (`<password>`), and external hostname (`<master-host-name>`):
 
-    $ curl --data '{"uid":"<user-id>", "password":"<your-password>"}' \
-        --header "Content-Type:application/json" \
+    $ curl --data '{"uid":"<user-id>", "password":"<your-password>"}' 
+        --header "Content-Type:application/json" 
         http://<master-host-name>/acs/api/v1/auth/login
     
 

@@ -50,9 +50,8 @@ By default, the DCOS Cassandra service creates an instance named `cassandra`. Ad
     *   To run advanced Cassandra jobs, you must SSH into your cluster. For more information on SSHing into your cluster, see \[Establishing an SSH Connection\]\[5\].
         
         For example, to view several system tables in the Cassandra servers, from any node in your cluster, run the following command. Because this example downloads a Docker file, it may take a while.
-
-    $ docker run -i -t --net=host --entrypoint=/usr/bin/cqlsh spotify/cassandra -e " SELECT * FROM system.schema_keyspaces ; SELECT * FROM system.schema_columns ; SELECT * FROM system.schema_columnfamilies ;" cassandra-dcos-node.cassandra.dcos.mesos 9160
     
+    $ docker run -i -t --net=host --entrypoint=/usr/bin/cqlsh spotify/cassandra -e " SELECT * FROM system.schema_keyspaces ; SELECT * FROM system.schema_columns ; SELECT * FROM system.schema_columnfamilies ;" cassandra-dcos-node.cassandra.dcos.mesos 9160
 
 1.  Access the Cassandra cluster by using the DNS name created by Mesos-DNS: `cassandra-user3-node.cassandra.user3.mesos`.
     
